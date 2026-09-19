@@ -1,0 +1,590 @@
+﻿
+#
+# Menus: everything in data/gui/menus/*.xml
+#
+
+# generic
+@menu_language_name=English
+
+@menu_generic_yes=YES
+@menu_generic_no=NO
+@menu_generic_ok=OK
+@menu_generic_close=CLOSE
+@menu_generic_back=BACK
+@menu_generic_restart=RESTART
+@menu_generic_continue=CONTINUE
+@menu_generic_cancel=CANCEL
+@menu_generic_unlock=UNLOCK
+@menu_generic_success=SUCCESS
+@menu_generic_prev=PREV
+@menu_generic_next=NEXT
+@menu_generic_cannot_use=Can't use here
+@menu_generic_help=Help
+@menu_generic_copy=Copy
+@menu_generic_paste=Paste
+@menu_generic_start=START
+@menu_generic_error=ERROR
+@menu_generic_ignore=IGNORE
+@menu_generic_warning=WARNING
+@menu_generic_delete=DELETE
+@menu_generic_new=NEW
+@menu_generic_abandon=ABANDON
+@menu_generic_ask_confirmation=Are you sure?
+@menu_generic_show=Show
+@menu_generic_hide=Hide
+
+# replays.xml and hud.xml
+@menu_replays_openfolder_ttip=Open replays folder
+@menu_replays_replays=Replays
+@menu_replays_replays_upper=REPLAYS
+@menu_replays_incompatible=Replay is no longer compatible
+@menu_replays_backcompatible=Replay is compatible with an older version of the game.\nTo view it, the game will auto-switch to the older version.
+@menu_replays_incompatible_mods=Replay was recorded with a different set of mods than currently active.\nYou can view it, but it's very likely to cause issues.
+@menu_replays_older_question=This is an older replay,\nplay it using the old game version?
+@menu_replays_last_replay=Unsaved replay
+@menu_replays_rpl_failed=Failed to load replay.
+@menu_hud_rpl_pause=Pause/resume replay
+@menu_hud_rpl_rewind_ttip=Rewind to beginning
+@menu_hud_rpl_fwd_ttip=Skip forward (5 seconds)
+@menu_hud_rpl_slower=Decrease playback speed (KP-)
+@menu_hud_rpl_faster=Increase playback speed (KP+)
+@menu_hud_rpl_toggle_cinematic=Toggle cinematic mode
+@menu_hud_rpl_show=Show replay controls
+@menu_hud_rpl_hide=Hide replay controls
+@menu_replays_saved=Replay was saved! \n You'll be able to play it back later.
+@menu_replays_saved_campaign_warning=Replay was saved! \n Play it back now and accept the current mission result as final?
+@menu_hud_nvg_on=Enable NVG filter
+@menu_hud_nvg_off=Disable NVG filter
+@menu_hud_sussy_on=Always showing suspicion areas
+@menu_hud_sussy_off=Only showing suspicion areas when concealed
+@menu_hud_sniper_support=SNIPER SUPPORT
+@menu_hud_gocode_go=GO!
+
+# options.xml
+@menu_options_reset_game_progress=Reset game progress
+@menu_options_reset_game_progress_ttip=Resets the squad level, unlocked items, finished maps etc.
+@menu_options_import_game_progress=Import save-games
+@menu_options_import_game_progress_ttip=Download game progress from other devices/PCs.
+@menu_options_import_enter_code=Enter import code
+@menu_options_import_success=Successfully imported save-games!
+@menu_options_export_game_progress=Export save-games
+@menu_options_export_game_progress_ttip=Upload game progress to sync with other devices/PCs.
+
+@menu_options_gore_slider_ttip=Max out if you like blood.
+@menu_options_scroll_speed_ttip=Adjusts scroll speed for map edge and arrow keys.
+@menu_options_options=OPTIONS
+@menu_options_credits=CREDITS
+@menu_options_credits_additional=Additional Credits
+@menu_options_credits_thanks=Special Thanks
+@menu_options_credits_3rdparty=Third Party
+@menu_options_game=GAME
+@menu_options_colored_plans=Colored plans
+@menu_options_colored_plans_no=No
+@menu_options_colored_plans_individual=Individual
+@menu_options_colored_plans_class=Class
+
+@menu_options_sound=SOUND
+@menu_options_music_slider=Music
+@menu_options_master_slider=Master
+@menu_options_game_slider=Game
+@menu_options_dynreverb=Dynamic reverb
+@menu_options_dynreverb_ttip=Disable this if the game stutters or the audio glitches
+@menu_options_mute_in_background=Mute when alt-tabbed
+@menu_options_video=VIDEO
+@menu_options_res=Resolution
+@menu_options_windowed=Windowed
+@menu_options_fullscreen=Fullscreen
+@menu_options_fullwindowed=Borderless
+@menu_options_displaymode=Display Mode
+@menu_options_vsync=Vertical Sync
+@menu_options_maxfps=Limit framerate
+@menu_options_gore_slider=Gore
+@menu_options_aa=Antialiasing
+@menu_options_texturequality=High texture quality
+@menu_options_ssao=SSAO
+@menu_options_ssao_ttip=Screen space ambient occlusion
+@menu_options_shadowsquality=High shadows quality
+@menu_options_vfxquality=High visual effects quality
+@menu_options_vfxquality_ttip=This enables many visual effects that make the game look good. Uncheck this if the game runs really shitty.
+@menu_options_keybindings=KEYBINDINGS
+@menu_options_joystick_controls=CONTROLLER CONFIG
+@menu_options_apply=APPLY
+@menu_options_scroll_speed=Scroll Speed
+@menu_options_language=Language
+@menu_options_enablergb=Enable peripherals RGB Lighting
+@menu_options_enablergb_ttip=Use custom Razer Chroma and Asus ROG RGB integration
+@menu_options_lockmouse_to_screen=Lock mouse to screen in Borderless
+@menu_options_send_analytics=Send (anonymous) data about game behavior
+@menu_options_send_analytics_ttip=Will send anonymous stats for: crashes, which types of missions you're playing and your win rate.
+@menu_options_disabled=Disabled
+@menu_options_ultra=Ultra
+@menu_options_high=High
+@menu_options_low=Low
+@menu_options_details=DETAILS
+
+
+# customization.xml
+@menu_cust_trooper_rank_ttip=Trooper rank: each promotion increases the innate skills.
+@menu_cust_equipment_stats_title=EQUIPMENT
+@menu_cust_mobility=Mobility
+@menu_cust_mobility_ttip=Affects turning and aiming speed
+@menu_cust_mobility_debuff_ttip=Mobility temporarily affected by fatigue: you will not be able to Sprint
+@menu_cust_concealment=Concealment
+@menu_cust_concealment_ttip=Affects how fast and far your cover is blown
+@menu_cust_conceal_overt=OVERT
+@menu_cust_conceal_overt_ttip=Enemies will instantly identify you as a threat and engage you
+@menu_cust_conceal_sus=SUSPICIOUS
+@menu_cust_conceal_sus_ttip=Enemies will identify you as a threat if you stay too long in their sight
+@menu_cust_conceal_covert=COVERT
+@menu_cust_conceal_covert_ttip=Regular enemies will think you're just a local, unless you start shooting or enter restricted areas
+@menu_cust_item_caliber=Caliber
+@menu_cust_item_operation=Operation
+@menu_cust_item_magazine=Magazine
+@menu_cust_cannot_paste_all=Not all equipment was transfered.\n\n Equipment that is class-specific or locked with Battle Honors cannot be transfered.
+@menu_cust_incorrect_name=Name already used in the current squad.
+@menu_cust_error_name_locked=Cannot change name while squad is locked in campaign.
+@customization_unlock_nostars_title=Not enough stars
+@customization_unlock_nostars=You don't have enough stars,\n finish more missions and come back.
+@customization_unlock_nobh_title=Not enough Battle Honors
+@customization_unlock_nobh=You don't have enough Battle Honors, earn them by completing campaigns with this squad.
+@customization_battlehonors_ttip=Available Battle Honors \n Battle Honors are earned by this squad in campaigns. Use them to upgrade troops and unlock extra equipment.
+@customization_battlehonors_upgrade_ttip=Battle Honors upgrades: pick two (they can be re-assigned at any time)
+@customization_unlock_title=UNLOCK ITEM?
+
+@menu_cust_item_aimspeed=Aim speed
+@menu_cust_item_accuracy=Accuracy
+@menu_cust_item_crit=Crit chance
+@menu_cust_item_reloadspeed=Reload speed
+@menu_cust_item_maneuverability=Maneuverability
+@menu_cust_item_armorstats=STATS
+@menu_cust_item_helmetarmor=Helmet armor
+@menu_cust_item_frontarmor=Front armor
+@menu_cust_item_sidearmor=Side armor
+@menu_cust_item_reararmor=Rear armor
+@menu_cust_item_fov=Field of view
+@menu_cust_item_empty=Empty
+@menu_cust_copy=Copy loadout (Ctrl+C)
+@menu_cust_paste=Paste loadout (Ctrl+V)
+
+
+@menu_cust_abilities_title=ABILITIES
+@menu_cust_abilities_debuff_ttip=Abilities temporarily affected by fatigue
+@menu_cust_ability_marksmanship=Marksmanship
+@menu_cust_ability_marksmanship_ttip=Weapon accuracy (each promotion increases innate skill)
+@menu_cust_ability_assault=Assault shooting
+@menu_cust_ability_assault_ttip=Aiming speed (each promotion increases innate skill)
+@menu_cust_ability_field=Field skills
+@menu_cust_ability_field_ttip=Handling speed of equipment (explosives/crowbars/lockpicks) (each promotion increases innate skill)
+@menu_cust_ability_melee=Melee
+@menu_cust_ability_melee_ttip=Coming soon
+@menu_cust_ability_physical=Physical
+@menu_cust_ability_physical_ttip=Coming soon
+
+@menu_cust_stats_title=STATS
+@menu_cust_stats_campaigns=Campaigns played
+@menu_cust_stats_missions=Missions completed
+@menu_cust_stats_missions_failed=Missions failed
+@menu_cust_stats_shots=Shots fired
+@menu_cust_stats_injuries=Injuries
+@menu_cust_stats_grenades=Grenades used
+@menu_cust_stats_doorsblown=Doors blown up
+@menu_cust_stats_doorskicked=Doors kicked
+@menu_cust_stats_walked=Distance walked (meters)
+@menu_cust_stats_wallsbreached=Walls breached
+
+# squads.xml
+@menu_squads_new=NEW SQUAD
+@menu_squads_deploy=DEPLOY
+@menu_squads_level=LEVEL
+@menu_squads_create=CREATE
+@menu_squads_activity=ACTIVITY REPORT
+@menu_squads_medals=MEDALS
+@menu_squads_medal_award_ttip=Awarded for completing %s
+@menu_squads_delete_info=DELETE SQUAD
+@menu_squads_delete_in_campaign=Squad is currently assigned to a campaign.\n Deleting will result in losing the campaign's progress. Are you sure?
+@menu_squads_deployed_in=Deployed in:
+@menu_squads_available=AVAILABLE
+@menu_squads_squadrank_ttip=Squad level: each level up adds %d doctrine points.
+@menu_squads_doctrine_points=DOCTRINE POINTS
+@menu_squads_battle_honors=BATTLE HONORS
+
+# deploy.xml
+@menu_deploy_reset_ttip=REMOVE ALL
+@menu_deploy_go_ttip=Go
+@menu_deploy_mainmenu=Open Main Menu
+@menu_deploy_numtroops=DEPLOYED TROOPS
+@menu_deploy_customize=EQUIPMENT
+#these two below are called in game code
+@menu_deploy_constraint_concealment=Concealment must be at least %d
+@menu_deploy_constraint_mobility=Mobility must be at least %d
+@menu_deploy_constraint_mandatory=Deploy slot must be used
+@menu_deploy_undeployed_constraint=Some troops were undeployed due to no longer fitting into their deploy slot restrictions.
+
+# doctrine.xml
+@menu_doctrine_available_ttip=Available doctrine points \n Doctrine points are awarded by leveling your squad. Each level up adds %d doctrine points.
+@menu_doctrine_reset=RESET
+@menu_doctrine_required_level=REQUIRES SQUAD LEVEL %d
+@menu_doctrine_level_elite=ELITE LEVEL SQUAD
+@menu_doctrine_level_vet=VETERAN SQUAD
+@menu_doctrine_branch_handguns=HANDGUNS
+@menu_doctrine_branch_rifles=RIFLES
+@menu_doctrine_branch_covert=COVERT SKILLS
+@menu_doctrine_branch_shields=SHIELDS
+@menu_doctrine_branch_support=SUPPORT
+@menu_doctrine_reset_locked=Cannot reset Doctrine while the squad is locked into an Operation campaign
+
+# game.xml
+@menu_game_fb_ttip=Throw flashbang
+@menu_game_fb_none_ttip=Out of flashbangs
+@menu_game_fg_ttip=Throw frag grenade
+@menu_game_fg_none_ttip=Out of frag grenades
+@menu_game_stinger_ttip=Throw stinger grenade
+@menu_game_stinger_none_ttip=Out of stinger grenades
+@menu_game_smoke_ttip=Throw smoke grenade
+@menu_game_smoke_none_ttip=Out of smoke grenades
+@menu_game_molotov_ttip=Throw molotov
+@menu_game_molotov_none_ttip=Out of bottles
+@menu_game_slapcharge_ttip=Slap a small explosive charge to blow locks or windows
+@menu_game_slapcharge_none_ttip=Can't slap, out of slap charges :(
+@menu_game_doorcharge_ttip=Plant an explosive charge to blow up the door
+@menu_game_doorcharge_none_ttip=Pocket's empty, buddy :(
+@menu_game_democharges_ttip=Plant demolition charges
+@menu_game_charges_ttip=Plant breaching charges
+@menu_game_charges_none_ttip=Out of breaching charges
+@menu_game_charges_detonate_ttip=Detonate breaching charge
+ # keep the < > below, we'll replace the contents with whatever the key is bound to
+@menu_game_charges_detonate_key=<Left Click> to detonate
+@menu_game_door_kick_ttip=Kick the door open! Fast and good for first impressions.
+@menu_game_door_open_ttip=Hand-open the door. Polite and stealthy.
+@menu_game_door_open_disabled=Cannot open, door is locked
+@menu_game_door_close_ttip=Close the door
+@menu_game_door_close_disabled=Can't close it, too damaged
+@menu_game_tool_disabled_ttip=This tool cannot be used here
+@menu_game_tool_none_ttip=You don't have the necessary equipment
+@menu_game_spy_ttip=Use spy camera
+@menu_game_spy_none_ttip=You don't have a Spy Camera equipped
+@menu_game_suppress_ttip=Suppress area
+@menu_game_gocodea_ttip=Wait for Go Code Alpha
+@menu_game_gocodeb_ttip=Wait for Go Code Bravo
+@menu_game_gocodec_ttip=Wait for Go Code Charlie
+@menu_game_gocoded_ttip=Wait for Go Code Delta
+@menu_game_shotgunbreach_ttip=Shotgun breach
+@menu_game_tec_torch_ttip=Cut with thermal torch
+@menu_game_hammerbreach_ttip=Dynamic hammer breach
+@menu_game_hammerbreach_none_ttip=You don't have a Dynamic Hammer equipped
+@menu_game_boltcutter_ttip=Cut with bolt cutters
+@menu_game_crowbarbreach_ttip=Manual breach
+@menu_game_feet_of_steel_ttip=Kick-a-lot
+@menu_game_feet_of_steel_tawr_ttip=Tawr's Hoof
+@menu_game_lockpick_ttip=Pick lock
+@menu_game_lockpick_machine_ttip=Drill lock
+@menu_game_hostage_follow_toggle_ttip=Follow me
+@menu_game_hostage_follow_toggle_ttip_disabled=Follow me \n (Requires the 'Persuasion' doctrine)
+@menu_game_command_stop_following_ttip=Stop following
+@menu_game_hostage_secure_ttip=Rescue hostage
+@menu_game_hostage_evacuate_ttip=Run To Exit
+@menu_game_hostage_evacuate_ttip_disabled=Run To Exit \n (Requires the 'Advanced Language' doctrine)
+@menu_game_persuade_reveal_ttip=Persuade to reveal closeby enemies
+@menu_game_persuade_reveal_ttip_disabled=Persuade to reveal closeby enemies \n (Requires the 'Persuasion' doctrine)
+@menu_game_scatter_civs_ttip=Scatter nearby civilians
+@menu_game_scatter_civs_ttip_disabled=Scatter nearby civilians \n (Requires the 'Advanced Language' doctrine)
+@menu_game_enemy_arrest_ttip=Arrest
+@menu_game_bomb_defuse_ttip=Defuse bomb
+@menu_game_sabotage_ttip=Sabotage equipment
+@menu_game_interact_ttip=Use
+@menu_game_mount_ttip=Mount weapon
+@menu_game_reload_ttip=Reload weapon
+@menu_game_reload_disabled_ttip=Weapon is fully loaded
+@menu_game_sprint_ttip=Toggle between sprint / walk
+@menu_game_sprint_disabled_ttip=Cannot sprint
+@menu_game_crouch_toggle_ttip=Toggle between crouch / stand
+@menu_game_crouch_toggle_disabled_ttip=Cannot crouch
+@menu_game_switch_weapons_ttip=Change between primary/secondary weapon
+@menu_game_nosecondary_ttip=No secondary weapon equipped
+@menu_game_delete_wp_ttip=Delete waypoint
+@menu_game_delete_path_ttip=Delete path from this point onward
+@menu_game_waitclear_ttip=Wait for clear: don't move until there are no more tangos in sight
+@menu_game_jump_obstacle_ttip=Jump over obstacle
+@menu_game_jump_window_ttip=Jump through window
+@menu_game_windowclear_ttip=Clear window
+@menu_game_windowclear_disabled_ttip=Can't clear, there's nothing in the way
+@menu_game_grenadelaunch_ttip=Use grenade launcher
+@menu_game_rocketlaunch_ttip=Shoot rocket
+@menu_game_grenadelaunch_none_ttip=Out of ammo
+@menu_game_go_silent_toggle_ttip=Toggle between 'Go silent' (hold fire unless we're seen) and 'Go loud' (shoot at sight)
+@menu_game_always_wait_toggle_ttip=Toggle between 'Keep moving' (don't stop if you see a target) and 'Wait for clear' (stop to shoot at targets)
+@menu_game_speed_sync_toggle_ttip=Match speed of nearby allies (to slowest)
+@menu_game_path_options=Show path options
+@menu_game_target_options=Show target options
+@menu_game_hide_ttip=Hide your weapons and play civilian
+@menu_game_hide_disabled_ttip=Cannot hide while OVERT
+
+# how_to_play.xml
+@menu_htp_basic=MOVEMENT 101
+@menu_htp_basic1=Drag from trooper to draw their path. Troopers follow it automatically. (1/4)
+@menu_htp_basic2=Aimpoint Arrow: Quickly look in a direction for a few steps. (2/4)
+@menu_htp_basic3=Slice the Pie: Aim on a specified point and pivot around it. (3/4)
+@menu_htp_basic4=Strafe: Lock Aim at specified angle - perfect for moving in formation. (4/4)
+  #comment: these will have keybind icons between them. They will become "hold RClick then LClick to cycle aim modes"
+@menu_htp_basic5_part1=hold
+@menu_htp_basic5_part2=then
+@menu_htp_basic5_part3=to cycle aim modes
+  #comment: this is used in-between alternative keybinds, to specify you can choose between them, for example "RClick OR LClick"
+@menu_htp_basic5_part4=OR
+
+@menu_htp_doors=KICKING DOORS
+@menu_htp_doors1=Drag path through door for default action (1/4)
+  #comment: menu_htp_doors2/3 is preceeded by the keybind icon. So it becomes "Right-click on waypoint for more options.", or "L2 on waypoint for more options."
+@menu_htp_doors2=on waypoint for more entry options (2/4)
+@menu_htp_doors3=on waypoint for more entry options (3/4)
+@menu_htp_doors4=Handling the door can also be done without exposing yourself to its opening.
+
+@menu_htp_path=EDITING THE PATH
+@menu_htp_path1=Sections of the path can be replaced (1/3)
+@menu_htp_path2=If you start an edit and don't rejoin the path, the previous section will be deleted (2/3)
+  #menu_htp_path3 is preceeded by the keybind icon (a right-click mouse icon)
+@menu_htp_path3=to cancel an in-progress edit.
+
+@menu_htp_gocodes=GO CODES SYNC.
+@menu_htp_cover=COVER IS GOOD FOR YOU
+@menu_htp_snipers=SNIPERS
+@menu_htp_snipers2=Use the 'Sniper Support' button to fire (1/2)
+@menu_htp_snipers3=Drag & drop the sniper onto an area to keep a watch on it.
+@menu_htp_title=How do I play this game?!
+@menu_htp_windows=WINDOWS
+@menu_htp_rescue=VIPs AND HOSTAGES
+@menu_htp_crouch=CROUCHING IN COVER HIDES YOU FROM ENEMIES
+@menu_htp_concealment=CIA - CONCEALMENT
+@menu_htp_danger_zones=CIA - DANGER ZONES
+@menu_htp_undercover=CIA - UNDERCOVER
+@menu_htp_turningofflights=TURNING OFF LIGHTS
+@menu_htp_blowupwalls=BLOWING UP WALLS
+@menu_htp_jumping=JUMPING OVER OBSTACLES
+
+@menu_htp_sd_buttons=CONTROLLER
+@menu_htp_sd_touch=TOUCHSCREEN
+@menu_htp_ctrl_L2=Action menu / look-at
+@menu_htp_ctrl_dpadv=Cycle selection
+@menu_htp_ctrl_Lstick=Camera pan
+@menu_htp_ctrl_Rstick=Camera zoom
+@menu_htp_ctrl_R2=Select / cycle look-at modes
+@menu_htp_ctrl_A=Play / pause
+@menu_htp_ctrl_X=Toggle stealth mode
+@menu_htp_ctrl_Y=Force fire (in stealth mode)
+@menu_htp_ctrl_rtrackpad_name=RIGHT TRACKPAD
+@menu_htp_ctrl_rtrackpad=Cursor
+@menu_htp_ctrl_rtrackpadClick=Select
+
+@menu_htp_touch_tap_select=TAP \n Select
+@menu_htp_touch_drag=DRAG \n Draw path
+@menu_htp_touch_longpress_release=LONG PRESS + RELEASE \n Action menu
+@menu_htp_touch_longpress_drag=LONG PRESS + DRAG: \n Look-at / Pie
+@menu_htp_touch_two_fingers=TWO FINGERS \n Zoom / Pan
+@menu_htp_touch_triple_tap=TRIPLE TAP \n Play / Pause
+
+
+
+# hud.xml
+@menu_hud_pause=Pause gameplay
+@menu_hud_resume=Resume gameplay
+@menu_hud_sniperfire_ttip=Fire!
+@menu_hud_gocodea_ttip=Go Code Alpha
+@menu_hud_gocodeb_ttip=Go Code Bravo
+@menu_hud_gocodec_ttip=Go Code Charlie
+@menu_hud_gocoded_ttip=Go Code Delta
+@menu_hud_planning=PLANNING MODE
+@menu_hud_resetplans_ttip=Reset current planning
+@menu_hud_trooplist_hide=Hide Troops List
+@menu_hud_trooplist_show=Show Troops List
+@menu_hud_injury_unavailable=Unavailable, recovering from injuries.
+@menu_hud_injury_available=Injured but available.
+@menu_hud_injury_heal_in_num_days=Fully healed in %d days.
+@menu_hud_KIA=Killed In Action\n No longer available for deployment.
+@menu_hud_fatigued=Fatigued by a previous mission of today. Will be rested tomorrow.
+
+  # `Auto-triggered` shows up for each gocode when they're in `auto` mode, meaning they don't require manual activation, but are triggered once all troops reach it.
+@menu_hud_gocode_auto=Auto-triggered
+
+  # keep the < > below, we'll replace the contents with whatever the key is bound to. This shows up on top of gocodes, to instruct the player on how to enable auto-activation
+@menu_hud_gocode_make_auto=<Shift + Click> to enable auto-trigger mode
+
+  # `menu_hud_gocode_num_waiting` means the number of troops waiting on a certain gocode to be activated, e.g. `4 waiting` on Go Code Alpha
+@menu_hud_gocode_num_waiting=%d waiting
+
+
+
+# menus.xml
+@menu_m_missionpack_stars=Total stars in pack
+@menu_m_missionpack_wins=Total wins in pack
+@menu_m_challenges_active=(Active)
+@menu_m_challenges_failed=(Failed)
+@menu_m_challenges_inactive=(Inactive)
+@menu_m_challenge=CHALLENGES
+@menu_m_challenge_onetroop=Lone Wolf
+@menu_m_challenge_onetroop_ttip=Challenge: Lone Wolf - Use only one trooper to complete the mission.
+@menu_m_challenge_realtime=No Pause
+@menu_m_challenge_realtime_ttip=Challenge: No Pause - Complete the mission without pausing, in real-time.
+@menu_m_challenge_singleplan=Single Plan
+@menu_m_challenge_singleplan_ttip=Challenge: Single Plan - Use a complete plan to win the mission.
+@menu_m_challenge_clockrace=Clock Race
+@menu_m_challenge_clockrace_ttip=Challenge: Clock Race - Beat our best mission time
+@menu_m_challenge_cleanrun=Clean Run
+@menu_m_challenge_cleanrun_ttip=Challenge: Clean Run - Finish the mission with no injuries and no civilian casualties.
+@menu_m_challenge_stealth=Undetected
+@menu_m_challenge_stealth_ttip=Challenge: Undetected - The Alarm is never raised.
+@menu_m_stats_kills_ttip=Kills
+@menu_m_stats_shots_ttip=Shots fired
+@menu_m_stats_accuracy_ttip=Accuracy
+@menu_m_stats_hitstaken_ttip=Hits taken
+@menu_m_stats_explosives_ttip=Explosives used
+@menu_m_stats_doors_ttip=Doors breached
+@menu_m_stats_distance_ttip=Distance walked
+@menu_m_stats_status_ttip=Status
+@menu_m_stats_xp_ttip=Total XP (also includes: team bonuses (stars/challenges), silent takedowns, enemies stunned, arrests, rescues, defusals, breached walls)
+@menu_m_options=OPTIONS
+@menu_m_optionsgame_ttip=Game options
+@menu_m_optionseditor_ttip=EDITOR
+@menu_m_stats_improved_result=New personal best!
+@menu_m_stats_elapsed=ELAPSED TIME
+@menu_m_stats_elapsed_best=Your personal best:
+@menu_m_stats_missions_completed=Missions completed
+@menu_m_stats_casualties=Units KIA
+@menu_m_stats_kills=Hostiles pacified
+@menu_m_stats_civcasualties=Civilian casualties
+@menu_m_stats_hostageresult=Hostages lost
+@menu_m_stats_hostagessaved=Hostages rescued
+@menu_m_stats_hvtsecured=HVTs secured
+@menu_m_stats_warcrimes=Warcrimes
+@menu_m_stats_xp=Total XP
+@menu_m_ingame_resume=RESUME
+@menu_m_ingame_replay_mission=PLAY AGAIN
+@menu_m_singlemission=MISSIONS
+@menu_m_randommap=MISSION GENERATOR
+@menu_m_viewreplay_ttip=View and save replay
+@menu_m_viewreplay=VIEW REPLAY
+@menu_m_showmap_ttip=Show map
+@menu_m_mapdetails_ttip=Show detailed stats
+@menu_m_doctrine=DOCTRINE
+@menu_m_squad=SQUAD
+@menu_m_selectmis=SELECT MISSION
+@menu_m_yourcreations=YOUR CREATIONS
+@menu_m_workshopmissions=STEAM WORKSHOP MISSIONS
+@menu_m_openworkshop=OPEN WORKSHOP
+@menu_m_download_random_mission=RANDOM WORKSHOP MAP
+@menu_m_show_in_workshop=Show in Workshop
+@menu_m_workshopfaileddownload=Failed to download workshop map.\nThis happens when in offline mode or server is not responding.
+@menu_m_missiongen=MISSION GENERATOR
+@menu_m_missiongen_seed=RANDOM SEED
+@menu_m_missiongen_msize=MAP TYPE
+@menu_m_missiongen_rnd=Any
+@menu_m_missiongen_apartment=Apartments
+@menu_m_missiongen_small=Small
+@menu_m_missiongen_med=Medium Maps
+@menu_m_missiongen_large=Large Maps
+@menu_m_missiongen_str=OPPOSITION STRENGTH
+@menu_m_missiongen_mtype=MISSION TYPE
+@menu_m_missiongen_copy=Copy seed
+@menu_m_missiongen_copied=Random seed copied to clipboard!
+@menu_m_brief_obj=OBJECTIVES
+@menu_m_brief=BRIEFING
+@menu_m_brief_go=GO
+@menu_m_restart_required_title=RESTART REQUIRED
+@menu_m_restart_required_line=A game restart is needed to apply changes.
+@menu_m_restart_ack=RESTART NOW
+@menu_m_restart_ack2=LATER
+@menu_m_missioncompleted=MISSION COMPLETED
+@menu_m_missionlost=MISSION LOST
+@menu_m_backtomenu=BACK TO MENU
+@menu_m_quit=QUIT GAME
+@menu_m_next_mission=NEXT MISSION
+@menu_m_quit_mission=QUIT MISSION
+@menu_m_quit_replay=QUIT REPLAY
+@menu_m_num_deployable=Maximum number of troops you can deploy
+@menu_m_sendfeedbackbugtitle=FEEDBACK / BUG REPORT
+@menu_m_sendfeedback=SEND FEEDBACK
+@menu_m_sendbugreport_ttip=Report a bug
+@menu_m_sendfeedback_ttip=Be gentle
+@menu_m_sendfeedback_email=Your email (optional, but recommended if we could help solve your issue)
+@menu_m_sendfeedback_msg=Your message
+@menu_m_sendfeedback_scrrepl=Include screenshot/replay
+@menu_m_sendfeedback_log=Include log file
+@menu_m_sendfeedback_crash=Include latest crash report
+@menu_m_sendfeedback_sent_title=REPORT SENT
+@menu_m_sendfeedback_sending=Sending...
+@menu_m_sendfeedback_sent_text=Thank you!
+@menu_m_sendfeedback_sent_logs=\n Thank you! \n\n We'll try to reply as soon as possible.
+@menu_m_sendfeedback_send_fail_text=Could not send report. Make sure you are connected to the internet, or if you added an email make sure it is correctly formatted.
+@menu_m_sendfeedback_err_email=Email address is not valid.
+@menu_m_sendfeedback_err_empty1=No email + no message = no feedback.
+@menu_m_sendfeedback_err_empty2=No message + no logs = no feedback.
+@menu_m_send=SEND
+@menu_m_map_thumbsup_ttip=I like this map!
+@menu_m_mapdeletecaption=DELETE MAP
+@#menu_m_mapdeleteconfirmation=Are you sure?\n\n The map looks pretty cool...
+@#menu_m_mapdeleteconfirmation=Are you sure?\n\n You could do better I suppose...
+@#menu_m_mapdeleteconfirmation=Are you sure?\n\n This map could be #1 on Workshop...
+@#menu_m_mapdeleteconfirmation=Are you sure?\n\n Would be a shame really...
+@menu_m_mapunsubscribecaption=UNSUBSCRIBE
+@#menu_m_mapunsubscribeconfirmation=This is a fine map!\n\nAre you sure you want to remove it?
+@#menu_m_mapunsubscribeconfirmation=This is a cool map, you can tell they worked a lot on it!\n\nAre you sure you want to remove it?
+@#menu_m_mapunsubscribeconfirmation=Already saying goodbye to '%s'?!\n\nAre you sure you want to remove it?
+@#menu_m_mapunsubscribeconfirmation=Nooooo, not '%s'!!\n\nAre you sure you want to remove it?
+@#menu_m_mapunsubscribeconfirmation=Whaaat, I thought '%s' was your favorite :(\n\nAre you sure you want to remove it?
+@menu_m_mapunsubscribeconfirmation2=Look. We made this. OK maybe Valve helped a bit as well, but still... not cool...\n\nAre you sure you want to remove it?
+@menu_m_squads=SQUADS
+@menu_m_sortfilter_date=Date downloaded
+@menu_m_sortfilter_name=Name
+@menu_m_sortfilter_upvotes=Upvotes
+@menu_m_sortfilter_completed=Result
+@menu_m_sortfilter_size=Size
+@menu_m_sortfilter_author=Author
+@menu_m_sortfilter_type=Type
+@menu_m_searchfilter=SEARCH:
+@menu_m_sortfilter=SORT:
+@menu_m_create_new_map=OPEN EDITOR
+@menu_m_unlock_requirements_bundle=Complete "%s" to unlock
+@menu_m_unlock_requirements_missions=Complete %d more single missions to unlock
+@menu_m_whatsnew=What's New
+@menu_m_briefing_toggle=Toggle mission briefing
+
+# mods.xml
+@menu_mods=Mods
+@menu_mods_uppercase=MODS
+@menu_mods_enabled=Enabled
+@menu_mods_disabled=Disabled
+@menu_mods_conflict=This mod conflicts with:\n '%s' \n\n May not work as intended, see log for details.
+@menu_mods_wrongversion=This mod was built for an older game version, may not function as intended.
+@menu_mods_thumbsup_ttip=I like this mod!
+@menu_mods_unsubscribe=Unsubscribe and remove
+@#menu_m_modunsubscribeconfirmation=This is a fine mod!\n\n Are you sure you want to remove it?
+@#menu_m_modunsubscribeconfirmation=This is a cool mod, you can tell they worked a lot on it!\n\nAre you sure you want to remove it?
+@#menu_m_modunsubscribeconfirmation=Already saying goodbye to '%s'?!\n\n Are you sure you want to remove it?
+@#menu_m_modunsubscribeconfirmation=Nooooo, not '%s'!!\n\n Are you sure you want to remove it?
+@#menu_m_modunsubscribeconfirmation=Whaaat, I thought '%s' was your favorite :(\n\n Are you sure you want to remove it?
+@menu_mods_upload_addinfo=Additional information
+@menu_mods_upload_changes_title=CHANGES
+@menu_mods_upload_changes_txt=Any additional details (like images, videos, further description) can be edited in the item's Workshop page and will be preserved with future updates.
+@menu_mods_upload_deps_title=DEPENDENCIES
+@menu_mods_upload_deps_txt=Dependencies can be edited in the item's Workshop page, via the <Add/Remove Required Items> option.
+@menu_mods_upload_req_title= - NEEDS A TITLE
+@menu_mods_upload_req_tags= - NEEDS AT LEAST ONE TAG
+@menu_mods_upload_req_image= - NEEDS A MOD_IMAGE.JPG IN IT'S FOLDER (16X9 ASPECT RATIO PREFERRED)
+@menu_mods_downloading=Download in progress...
+@menu_mods_click_to_open_help=(click to open mods reference folder)
+@menu_mods_loading_order_title=MODS LOADING ORDER
+@menu_mods_loading_order_line1=The order is usually irrelevant, unless specified in the mod description.
+@menu_mods_loading_order_line2=Current loading order (same as the order in which you activated the mods):
+@menu_mods_loading_order_no_mods=No mods active.
+
+@menu_mods_disabled_had_dependents=This mod had %d enabled mods that depended on it. Those will be now disabled.
+@menu_mods_enabled_has_dependents=This mod depends on %d other mods, those were also enabled.
+@menu_mods_enabled_needs_dependents=This mod depends on %d other mods which you haven't subscribed to, downloading them now.
+@menu_mods_unsubscribed_had_dependents=Unsubscribed mod had %d enabled mods that depended on it. They will be now disabled.
+@menu_mods_updated_info=One of your mods was just updated. You will need to restart the game.
+
+# unlocks.xml
+@menu_unlocks_unlocked=UNLOCKED
+@menu_unlocks_missionpack=NEW MISSION PACK
+@menu_unlocks_missionpacks=NEW MISSION PACKS
+@menu_unlocks_squad=NEW SQUAD
+@menu_unlocks_gamemode=NEW GAME MODE

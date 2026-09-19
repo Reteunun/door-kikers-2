@@ -1,0 +1,149 @@
+
+@keybind_menu_title=CONTROLS
+@keybind_menu_code=ACTION
+@keybind_menu_bind1=Key 1
+@keybind_menu_bind2=Key 2
+@keybind_menu_bind_tips=ESC to cancel, CTRL + SHIFT + DEL to unbind
+@keybind_menu_wrong_key=Key already bound to %s
+
+@keybind_menu_change=CHANGE
+@keybind_menu_default=Reset:
+@keybind_menu_default1=Default
+@keybind_menu_default2=WASD camera movement
+
+@keybind_toggle_play=Pause/Resume
+@keybind_path=Change path
+@keybind_path_extra=%s (drag on path / trooper)
+@keybind_path_ttip=(drag on path / trooper)
+@keybind_action_menu=Action Menu
+@keybind_action_menu_extra=%s (on path / trooper)
+@keybind_action_menu_ttip=(on path / trooper)
+@keybind_look_at=Look At
+@keybind_look_at_extra=%s (drag on path / trooper)
+@keybind_look_at_ttip=(drag on path / trooper)
+@keybind_look_at_pie=Slice the pie (hold while looking)
+@keybind_look_at_strafe=Strafe look (hold while looking)
+@keybind_gocodes=GoCodes
+@keybind_go_a=GoCode Alpha
+@keybind_go_b=GoCode Bravo
+@keybind_go_c=GoCode Charlie
+@keybind_go_d=GoCode Delta
+@keybind_go_wait_for_clear=Set Wait for clear
+@keybind_go_wait_for_clear_extra=%s (in action menu) / (+ SHIFT to toggle globally)
+@keybind_go_wait_for_clear_ttip=(in action menu) / (+ SHIFT to toggle globally)
+@keybind_reload_waypoint=Set Reload
+@keybind_reload_waypoint_extra=%s (in action menu)
+@keybind_reload_waypoint_ttip=(in action menu)
+@keybind_stop_in_place=Place Stop gocode
+@keybind_stop_in_place_extra=Hold %s + Click (on path)
+@keybind_stop_in_place_ttip=Hold <key> + Click (on path)
+@keybind_speed_sync=Place Speed Sync gocode
+@keybind_speed_sync_extra=Hold %s + Click (on path)
+@keybind_speed_sync_ttip=Hold <key> + Click (on path)
+@keybind_delete_waypoint=Delete clicked waypoint
+@keybind_delete_waypoint_extra=Hold %s + Click (on path)
+@keybind_delete_waypoint_ttip=Hold <key> + Click (on path)
+@keybind_trigger_stealth_fire=Stealth Fire
+@keybind_trigger_stealth_fire_extra=%s ( + SHIFT to Toggle)
+@keybind_trigger_stealth_fire_ttip=SHIFT + <key> toggles global Go Silent/Loud
+@keybind_cycle_troop_selection=Select next trooper
+@keybind_toggle_troop_list=Show/Hide Troops List
+@keybind_sniper_fire=Sniper Fire
+@keybind_sniper_cycle_target=Cycle sniper targets
+@keybind_sniper_firecycle=Sniper fire/cycle
+@keybind_slow_mo=Slow Motion
+@keybind_spawn_football=Spawn Football
+@keybind_cam_panning=Camera Pan
+@keybind_cam_panning_ttip=Or hold Middle Click
+@keybind_cam_pan_up=Camera Pan Up
+@keybind_cam_pan_left=Camera Pan Left
+@keybind_cam_pan_down=Camera Pan Down
+@keybind_cam_pan_right=Camera Pan Right
+@keybind_cam_zoom=Camera Zoom
+@keybind_cam_move_up=Camera Zoom Out
+@keybind_cam_move_down=Camera Zoom In
+@keybind_cam_tilt=Camera Tilt
+@keybind_cam_tilt_down=Camera Tilt Down
+@keybind_cam_tilt_up=Camera Tilt Up
+
+@menu_options_sketchtool=Sketch Tool
+
+@keybind_or=or
+@key_arrows=Arrow keys
+@key_wasd=WASD
+
+@key_unbound=<NOT ASSIGNED>
+@key_assign=<ASSIGN NEW KEY>
+
+@mouse_button1=Left Click
+@mouse_button2=Right Click
+@mouse_button3=Middle Click
+@mouse_wheel=Mouse Scroll
+
+@key_backspace=BACKSPACE
+@key_tab=TAB
+@key_return=ENTER
+@key_esc=ESC
+@key_space=SPACE
+
+@key_delete=DELETE
+@key_pgup=PAGE UP
+@key_pgdn=PAGE DOWN
+@key_end=END
+@key_home=HOME
+@key_insert=INSERT
+
+@key_left=LEFT
+@key_up=UP
+@key_right=RIGHT
+@key_down=DOWN
+
+@key_shift=SHIFT
+@key_control=CTRL
+@key_menualt=MENU/ALT
+@key_lshift=LSHIFT
+@key_rshift=RSHIFT
+@key_lctrl=LCONTROL
+@key_rctrl=RCONTROL
+@key_lmenu=KEY_LMENU
+@key_rmenu=KEY_RMENU
+@key_lwin=KEY_LWIN
+@key_rwin=KEY_RWIN
+
+@key_printscreen=PRINT SCR
+@key_pause=PAUSE
+@key_capital=CAPITAL
+@key_numlock=NUM LOCK
+@key_scrolllock=SCROLL LOCK
+
+@key_num0=NUMPAD0
+@key_num1=NUMPAD1
+@key_num2=NUMPAD2
+@key_num3=NUMPAD3
+@key_num4=NUMPAD4
+@key_num5=NUMPAD5
+@key_num6=NUMPAD6
+@key_num7=NUMPAD7
+@key_num8=NUMPAD8
+@key_num9=NUMPAD9
+@key_nummul=NUM MULTIPLY
+@key_numadd=NUM ADD
+@key_numsep=NUM SEPARATOR
+@key_numsub=NUM SUBTRACT
+@key_numdec=NUM DECIMAL
+@key_numdiv=NUM DIVIDE
+
+@key_f1=F1
+@key_f2=F2
+@key_f3=F3
+@key_f4=F4
+@key_f5=F5
+@key_f6=F6
+@key_f7=F7
+@key_f8=F8
+@key_f9=F9
+@key_f10=F10
+@key_f11=F11
+@key_f12=F12
+
+@key_plus=PLUS

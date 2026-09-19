@@ -1,0 +1,1396 @@
+<Equipment>
+
+	<!-- TSS4 Integrally Suppressed Pistol -->
+
+	<Bind eqp="TSS4 Pistol">
+		<to name="CIA"/>
+
+		<to name="22LR_SupHandgun"/>
+
+		<to name="IronSights_Pistol"/>
+	</Bind>
+	<Firearm name="TSS4 Pistol" inventoryBinding="SecondaryWeapon" category="pistol" unlockCost="5"
+			tooltip="@firearm_tss4_pistol_name"
+			description="@firearm_tss4_pistol_desc"
+			img="data/models/weapons/tss4_ui.dds"
+
+			animationSet="pistol"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-1" turnSpeedModifierPercent="0"/>
+		<ConcealmentModifier add="-1"/>
+		<RenderObject3D model="data/models/weapons/tss4.khm" attachSlot="prop_sidearm" diffuseTex="data/models/weapons/tss4.dds" skipGOSSAO="true"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="10"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="1400"
+			reloadEmptyTime="1800"
+			changeInTime="1100"
+			changeOutTime="1200"
+			readyTime="140"
+			guardTime="120"
+
+			accuracyStart="120"
+			accuracyEnd="40"
+			accuracyStartDist="5"
+			accuracyEndDist="15"
+			
+			meleeDamageBonus="90"
+			meleeStunBonus="500"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_22lr_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingSmall"
+			magazineEntity="pm63_mag"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="3.0"
+			ai_rangeMax="15.0"
+			ai_stopWhenShooting="false"
+		/>
+
+		<AttackTypes>
+			<AttackType name="CIA_CloseRangeDispatch" rangeMeters="2"/>		
+			<AttackType name="CIA_PistolAimedFireShort9mil" rangeMeters="8"/>			
+			<AttackType name="CIA_DoubleTap9mil" rangeMeters="8" disabled="true"/>			
+			<AttackType name="CIA_PistolAimedFire9mil" rangeMeters="15"/>
+			<AttackType name="Rangers_PistolAimedFireLong9mil" rangeMeters="20"/>
+			<AttackType name="Rangers_PistolAimedFireLong9milXX" rangeMeters="9999"/>		
+		</AttackTypes>						
+
+		<MuzzleFlash lightTemplate="ShotLightSmall" tracerTemplate="Tracer_Pistol">
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_05" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_06" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_07" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_08" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="pistol_eqp"/>
+			<Unequip name="pistol_neqp"/>
+			<Reload name="pistol_reld"/>
+			<ReloadEmpty name="pistol_reldempt"/>
+			<Fire name="hushpuppy_fire"/>
+			<ShellDrop name="pistol_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+<!-- PPK Pistol -->
+
+	<Bind eqp="PPK Pistol CIA">
+		<to name="Undercover"/>
+
+		<to name="380JHP90GR_PPK"/>
+		<to name="380EHP70GR_PPK"/>
+
+		<to name="IronSights_Pistol"/>
+	</Bind>
+	<Firearm name="PPK Pistol CIA" inventoryBinding="SecondaryWeapon" category="pistol" unlockCost="5"
+			tooltip="@firearm_ppk_name"
+			description="@firearm_ppk_desc"
+			img="data/models/weapons/ppk_ui.dds"
+
+			animationSet="pistol"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-0.5" turnSpeedModifierPercent="0"/>
+		<ConcealmentModifier add="-0.5"/>
+		<RenderObject3D model="data/models/weapons/ppk.khm" attachSlot="prop_sidearm" diffuseTex="data/models/weapons/ppk.dds" skipGOSSAO="true"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="6"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="1100"
+			reloadEmptyTime="1600"
+			changeInTime="500"
+			changeOutTime="850"
+			readyTime="90"
+			guardTime="90"
+
+			accuracyStart="90"
+			accuracyEnd="30"
+			accuracyStartDist="7"
+			accuracyEndDist="15"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_380_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingSmall"
+			magazineEntity="pm63_mag"
+			suppressedSwitch="PPK Sup Pistol CIA"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="3.0"
+			ai_rangeMax="7.0"
+			ai_stopWhenShooting="false"
+		/>
+		
+		<AttackTypes>		
+			<AttackType name="CIA_DoubleTap9mil" rangeMeters="2" disabled="true"/>			
+			<AttackType name="CIA_PistolAimedFireShort9mil" rangeMeters="6"/>
+			<AttackType name="CIA_ControlledPair9mil" rangeMeters="6" disabled="true"/>
+			<AttackType name="CIA_PistolAimedFire9mil" rangeMeters="12"/>
+			<AttackType name="Rangers_PistolAimedFireLong9mil" rangeMeters="16"/>
+			<AttackType name="Rangers_PistolAimedFireLong9milXX" rangeMeters="9999"/>		
+		</AttackTypes>					
+		
+		
+
+		<MuzzleFlash lightTemplate="ShotLightSmall" tracerTemplate="Tracer_Pistol">
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_01" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_02" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_03" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_04" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="pistol_eqp"/>
+			<Unequip name="pistol_neqp"/>
+			<Reload name="pistol_reld"/>
+			<ReloadEmpty name="pistol_reldempt"/>
+			<Fire name="ppk_fire"/>
+			<ShellDrop name="pistol_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+	<Bind eqp="PPK Sup Pistol CIA">
+		<to name="Undercover"/>
+
+		<to name="380JHP90GR_PPKSup"/>
+		<to name="380EHP70GR_PPKSup"/>
+
+		<to name="IronSights_Pistol"/>
+	</Bind>
+	<Firearm name="PPK Sup Pistol CIA" inventoryBinding="SecondaryWeaponMuzzle" category="pistol" unlockCost=""
+			tooltip="@firearm_ppksup_name"
+			description="@firearm_ppksup_desc"
+			img="data/models/weapons/ppk_ui.dds"
+
+			animationSet="pistol"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-0.7" turnSpeedModifierPercent="0"/>
+		<ConcealmentModifier add="-0.8"/>
+		<RenderObject3D model="data/models/weapons/ppk.khm" attachSlot="prop_sidearm" diffuseTex="data/models/weapons/ppk.dds" skipGOSSAO="true"/>
+		<RenderObject3D model="data/models/weapons/attachments/silencer_02.khm" attachSlot="silencer_socket" skipGOSSAO="true" diffuseTex="data/models/weapons/attachments/silencer_01a.dds"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="6"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="1250"
+			reloadEmptyTime="1800"
+			changeInTime="800"
+			changeOutTime="950"
+			readyTime="120"
+			guardTime="100"
+
+			accuracyStart="90"
+			accuracyEnd="30"
+			accuracyStartDist="7"
+			accuracyEndDist="15"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_380_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingSmall"
+			magazineEntity="pm63_mag"
+			suppressedSwitch="PPK Pistol CIA"
+			suppressedImg="data/models/weapons/attachments/basic_silencer_02_ui.dds"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="3.0"
+			ai_rangeMax="15.0"
+			ai_stopWhenShooting="false"
+		/>
+		
+		<AttackTypes>		
+			<AttackType name="CIA_DoubleTap9mil" rangeMeters="3" disabled="true"/>			
+			<AttackType name="CIA_PistolAimedFireShort9mil" rangeMeters="6"/>
+			<AttackType name="CIA_ControlledPair9mil" rangeMeters="6" disabled="true"/>
+			<AttackType name="CIA_PistolAimedFire9mil" rangeMeters="10"/>
+			<AttackType name="Rangers_PistolAimedFireLong9mil" rangeMeters="15"/>
+			<AttackType name="Rangers_PistolAimedFireLong9milXX" rangeMeters="9999"/>		
+		</AttackTypes>							
+
+		<MuzzleFlash lightTemplate="ShotLightSmall" tracerTemplate="Tracer_Pistol">
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_05" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_06" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_07" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_08" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="pistol_eqp"/>
+			<Unequip name="pistol_neqp"/>
+			<Reload name="pistol_reld"/>
+			<ReloadEmpty name="pistol_reldempt"/>
+			<Fire name="ppksup_fire"/>
+			<ShellDrop name="pistol_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+
+<!-- G19 Pistol -->
+
+	<Bind eqp="G19 Pistol CIA BOps">
+		<to name="CIA"/>
+
+		<to name="919FMJM882_G19X Pistol"/>
+		<to name="919FMJM1152_Handgun"/>
+		<to name="919JHPM1153_Handgun"/>
+		<to name="919FMJ108GRHP_Handgun"/>
+
+		<to name="IronSights_Pistol"/>
+	</Bind>
+	<Firearm name="G19 Pistol CIA BOps" inventoryBinding="SecondaryWeapon" category="pistol" unlockCost="2"
+			tooltip="@firearm_g19_name"
+			description="@firearm_g19hp_desc"
+			img="data/models/weapons/g19_sup_ui.dds"
+
+			animationSet="pistol"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-0.8" turnSpeedModifierPercent="0"/>
+		<ConcealmentModifier add="-0.8"/>
+		<RenderObject3D model="data/models/weapons/g19.khm" attachSlot="prop_sidearm" diffuseTex="data/models/weapons/g19.dds" skipGOSSAO="true"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="15"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="1100"
+			reloadEmptyTime="1450"
+			changeInTime="700"
+			changeOutTime="865"
+			readyTime="110"
+			guardTime="100"
+
+			accuracyStart="120"
+			accuracyEnd="45"
+			accuracyStartDist="7"
+			accuracyEndDist="15"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_9x19_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingSmall"
+			magazineEntity="pm63_mag"
+			suppressedSwitch="G19Sup Pistol CIA BOps"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="3.0"
+			ai_rangeMax="15.0"
+			ai_stopWhenShooting="false"
+		/>
+
+		<!-- AttackTypes>
+			<AttackType name="Rangers_DoubleTap9mil" rangeMeters="4"/>
+			<AttackType name="Rangers_ControlledPair9mil" rangeMeters="9"/>
+			<AttackType name="Rangers_PistolAimedFire9mil" rangeMeters="15"/>
+			<AttackType name="Rangers_PistolAimedFireLong9mil" rangeMeters="22"/>
+			<AttackType name="Rangers_PistolAimedFireLong9milXX" rangeMeters="9999"/>
+		</AttackTypes -->
+		
+		<AttackTypes>		
+			<AttackType name="CIA_EmergencyFire9mil" rangeMeters="1.5"/>
+			<AttackType name="CIA_DoubleTap9mil" rangeMeters="4" disabled="true"/>			
+			<AttackType name="CIA_PistolAimedFireShort9mil" rangeMeters="8"/>
+			<AttackType name="CIA_ControlledPair9mil" rangeMeters="8" disabled="true"/>
+			<AttackType name="CIA_PistolAimedFire9mil" rangeMeters="13"/>
+			<AttackType name="Rangers_PistolAimedFireLong9mil" rangeMeters="19"/>
+			<AttackType name="Rangers_PistolAimedFireLong9milXX" rangeMeters="9999"/>		
+		</AttackTypes>					
+
+		<MuzzleFlash lightTemplate="ShotLightSmall" tracerTemplate="Tracer_Pistol">
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_01" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_02" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_03" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_04" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="pistol_eqp"/>
+			<Unequip name="pistol_neqp"/>
+			<Reload name="pistol_reld"/>
+			<ReloadEmpty name="pistol_reldempt"/>
+			<Fire name="g19_fire"/>
+			<ShellDrop name="pistol_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+	<Bind eqp="G19Sup Pistol CIA BOps">
+		<to name="CIA"/>
+
+		<to name="919FMJM882_G19XSupSmall"/>
+		<to name="919FMJM1152_SupSmallHandgun"/>
+		<to name="919JHPM1153_SupSmallHandgun"/>
+		<to name="919FMJ108GRHP_SupSmallHandgun"/>
+
+		<to name="IronSights_Pistol"/>
+	</Bind>
+	<Firearm name="G19Sup Pistol CIA BOps" inventoryBinding="SecondaryWeaponMuzzle" category="pistol" unlockCost=""
+			tooltip="@firearm_g19sup_name"
+			description="@firearm_g19hpsup_desc"
+			img="data/models/weapons/g19_sup_ui.dds"
+
+			animationSet="pistol"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-0.8" turnSpeedModifierPercent="0"/>
+		<ConcealmentModifier add="-1"/>
+		<RenderObject3D model="data/models/weapons/g19.khm" attachSlot="prop_sidearm" diffuseTex="data/models/weapons/g19.dds" skipGOSSAO="true"/>
+		<RenderObject3D model="data/models/weapons/attachments/silencer_02.khm" attachSlot="silencer_socket" skipGOSSAO="true" diffuseTex="data/models/weapons/attachments/silencer_01a.dds"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="15"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="1180"
+			reloadEmptyTime="1550"
+			changeInTime="800"
+			changeOutTime="930"
+			readyTime="125"
+			guardTime="100"
+
+			accuracyStart="120"
+			accuracyEnd="45"
+			accuracyStartDist="7"
+			accuracyEndDist="15"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_9x19_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingSmall"
+			magazineEntity="pm63_mag"
+			suppressedSwitch="G19 Pistol CIA BOps"
+			suppressedImg="data/models/weapons/attachments/basic_silencer_02_ui.dds"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="3.0"
+			ai_rangeMax="15.0"
+			ai_stopWhenShooting="false"
+		/>
+		
+		<AttackTypes>		
+			<AttackType name="CIA_EmergencyFire9mil" rangeMeters="1.5"/>
+			<AttackType name="CIA_DoubleTap9mil" rangeMeters="5" disabled="true"/>			
+			<AttackType name="CIA_PistolAimedFireShort9mil" rangeMeters="9"/>
+			<AttackType name="CIA_ControlledPair9mil" rangeMeters="9" disabled="true"/>
+			<AttackType name="CIA_PistolAimedFire9mil" rangeMeters="13"/>
+			<AttackType name="Rangers_PistolAimedFireLong9mil" rangeMeters="19"/>
+			<AttackType name="Rangers_PistolAimedFireLong9milXX" rangeMeters="9999"/>		
+		</AttackTypes>					
+
+		<MuzzleFlash lightTemplate="ShotLightSmall" tracerTemplate="Tracer_Pistol">
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_05" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_06" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_07" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_08" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="pistol_eqp"/>
+			<Unequip name="pistol_neqp"/>
+			<Reload name="pistol_reld"/>
+			<ReloadEmpty name="pistol_reldempt"/>
+			<Fire name="m9sup_fire"/>
+			<ShellDrop name="pistol_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+	<!-- G19X Pistol -->
+
+<!-- TODO - no class! and not up to date with doctrines etc -->
+	<Bind eqp="G19X Pistol CIA BOps">
+
+		<to name="919FMJM882_G19X Pistol"/>
+		<to name="919FMJM1152_Handgun"/>
+		<to name="919JHPM1153_Handgun"/>
+		<to name="919FMJ108GRHP_Handgun"/>
+
+		<to name="IronSights_Pistol"/>
+	</Bind>
+	<Firearm name="G19X Pistol CIA BOps" inventoryBinding="SecondaryWeapon" category="pistol" unlockCost="3"
+			tooltip="@firearm_g19x_name"
+			description="@firearm_g19x_desc"
+			img="data/models/weapons/g19x_ui.dds"
+
+			animationSet="pistol"
+		>
+
+		<MobilityModifiers moveSpeedModifierPercent="-1" turnSpeedModifierPercent="0"/>
+		<ConcealmentModifier add="-1"/>
+		<RenderObject3D model="data/models/weapons/g19x.khm" attachSlot="prop_sidearm" diffuseTex="data/models/weapons/g19x.dds" skipGOSSAO="true"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="17"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="1300"
+			reloadEmptyTime="1600"
+			changeInTime="700"
+			changeOutTime="850"
+			readyTime="115"
+			guardTime="100"
+
+			accuracyStart="121"
+			accuracyEnd="47"
+			accuracyStartDist="7"
+			accuracyEndDist="15"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_9x19_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingSmall"
+			magazineEntity="pm63_mag"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="3.0"
+			ai_rangeMax="15.0"
+			ai_stopWhenShooting="false"
+		/>
+
+		<AttackTypes>		
+			<AttackType name="CIA_EmergencyFire9mil" rangeMeters="1.5"/>
+			<AttackType name="CIA_DoubleTap9mil" rangeMeters="5" disabled="true"/>			
+			<AttackType name="CIA_PistolAimedFireShort9mil" rangeMeters="8"/>
+			<AttackType name="CIA_ControlledPair9mil" rangeMeters="8" disabled="true"/>
+			<AttackType name="CIA_PistolAimedFire9mil" rangeMeters="13"/>
+			<AttackType name="Rangers_PistolAimedFireLong9mil" rangeMeters="19"/>
+			<AttackType name="Rangers_PistolAimedFireLong9milXX" rangeMeters="9999"/>		
+		</AttackTypes>			
+
+		<MuzzleFlash lightTemplate="ShotLightSmall" tracerTemplate="Tracer_Pistol">
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_01" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_02" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_03" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_04" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="pistol_eqp"/>
+			<Unequip name="pistol_neqp"/>
+			<Reload name="pistol_reld"/>
+			<ReloadEmpty name="pistol_reldempt"/>
+			<Fire name="g19_fire"/>
+			<ShellDrop name="pistol_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+<!-- G19 Custom Pistol -->
+
+	<Bind eqp="G19Custom Pistol CIA BOps">
+		<to name="CIA"/>
+
+		<to name="919FMJM882_G19X Pistol"/>
+		<to name="919FMJM1152_Handgun"/>
+		<to name="919JHPM1153_Handgun"/>
+		<to name="919FMJ108GRHP_Handgun"/>
+
+		<to name="IronSights_PistolCustomizable"/>
+		<to name="RedDot_Pistol"/>
+	</Bind>
+	<Firearm name="G19Custom Pistol CIA BOps" inventoryBinding="SecondaryWeapon" category="pistol" unlockCost="6"
+			tooltip="@firearm_g19cust_name"
+			description="@firearm_g19cust_desc"
+			img="data/models/weapons/g19_cia_ui.dds"
+
+			animationSet="pistol"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-1.8" turnSpeedModifierPercent="0"/>
+		<ConcealmentModifier add="-1"/>
+		<RenderObject3D model="data/models/weapons/g19_cia.khm" attachSlot="prop_sidearm" diffuseTex="data/models/weapons/g19_cia.dds" skipGOSSAO="true"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="20"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="1400"
+			reloadEmptyTime="1650"
+			changeInTime="800"
+			changeOutTime="900"
+			readyTime="120"
+			guardTime="100"
+
+			accuracyStart="135"
+			accuracyEnd="55"
+			accuracyStartDist="7"
+			accuracyEndDist="15"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_9x19_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingSmall"
+			magazineEntity="pm63_mag"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="3.0"
+			ai_rangeMax="15.0"
+			ai_stopWhenShooting="false"
+		/>
+		
+		<AttackTypes>		
+			<AttackType name="CIA_EmergencyFire9mil" rangeMeters="1.5"/>
+			<AttackType name="CIA_DoubleTap9mil" rangeMeters="6.5" disabled="true"/>			
+			<AttackType name="CIA_PistolAimedFireShort9mil" rangeMeters="11"/>
+			<AttackType name="CIA_ControlledPair9mil" rangeMeters="11" disabled="true"/>
+			<AttackType name="CIA_PistolAimedFire9mil" rangeMeters="14"/>
+			<AttackType name="Rangers_PistolAimedFireLong9mil" rangeMeters="21"/>
+			<AttackType name="Rangers_PistolAimedFireLong9milXX" rangeMeters="9999"/>		
+		</AttackTypes>					
+
+		<MuzzleFlash lightTemplate="ShotLightSmall" tracerTemplate="Tracer_Pistol">
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_01" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_02" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_03" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_04" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="pistol_eqp"/>
+			<Unequip name="pistol_neqp"/>
+			<Reload name="pistol_reld"/>
+			<ReloadEmpty name="pistol_reldempt"/>
+			<Fire name="g19comp_fire"/>
+			<ShellDrop name="pistol_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+	<!-- G17 Pistol -->
+
+	<Bind eqp="G17 Pistol CIA BOps">
+		<to name="CIA"/>
+
+		<to name="919FMJM882_G19X Pistol"/>
+		<to name="919FMJM1152_Handgun"/>
+		<to name="919JHPM1153_Handgun"/>
+		<to name="919FMJ108GRHP_Handgun"/>
+
+		<to name="IronSights_Pistol"/>
+	</Bind>
+	<Firearm name="G17 Pistol CIA BOps" inventoryBinding="SecondaryWeapon" category="pistol" unlockCost="0"
+			tooltip="@firearm_g17_name"
+			description="@firearm_g17_desc"
+			img="data/models/weapons/g22_ui.dds"
+
+			animationSet="pistol"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-1.2" turnSpeedModifierPercent="0"/>
+		<ConcealmentModifier add="-1"/>
+		<RenderObject3D model="data/models/weapons/g2240.khm" attachSlot="prop_sidearm" diffuseTex="data/models/weapons/g2240.dds" skipGOSSAO="true"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="17"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="1200"
+			reloadEmptyTime="1600"
+			changeInTime="700"
+			changeOutTime="900"
+			readyTime="120"
+			guardTime="100"
+
+			accuracyStart="125"
+			accuracyEnd="50"
+			accuracyStartDist="7"
+			accuracyEndDist="15"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_9x19_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingSmall"
+			magazineEntity="pm63_mag"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="3.0"
+			ai_rangeMax="15.0"
+			ai_stopWhenShooting="false"
+		/>
+
+		<!-- AttackTypes>
+			<AttackType name="Rangers_DoubleTap9mil" rangeMeters="5.5"/>
+			<AttackType name="Rangers_ControlledPair9mil" rangeMeters="12"/>
+			<AttackType name="Rangers_PistolAimedFire9mil" rangeMeters="17"/>
+			<AttackType name="Rangers_PistolAimedFireLong9mil" rangeMeters="25"/>
+			<AttackType name="Rangers_PistolAimedFireLong9milXX" rangeMeters="9999"/>
+		</AttackTypes-->
+		
+		<AttackTypes>		
+			<AttackType name="CIA_EmergencyFire9mil" rangeMeters="1.5"/>
+			<AttackType name="CIA_DoubleTap9mil" rangeMeters="5" disabled="true"/>			
+			<AttackType name="CIA_PistolAimedFireShort9mil" rangeMeters="9"/>
+			<AttackType name="CIA_ControlledPair9mil" rangeMeters="9" disabled="true"/>
+			<AttackType name="CIA_PistolAimedFire9mil" rangeMeters="15"/>
+			<AttackType name="Rangers_PistolAimedFireLong9mil" rangeMeters="22"/>
+			<AttackType name="Rangers_PistolAimedFireLong9milXX" rangeMeters="9999"/>		
+		</AttackTypes>			
+
+		<MuzzleFlash lightTemplate="ShotLightSmall" tracerTemplate="Tracer_Pistol">
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_01" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_02" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_03" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_04" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="pistol_eqp"/>
+			<Unequip name="pistol_neqp"/>
+			<Reload name="pistol_reld"/>
+			<ReloadEmpty name="pistol_reldempt"/>
+			<Fire name="g17_fire"/>
+			<ShellDrop name="pistol_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+	<!-- G2240 Pistol -->
+
+	<Bind eqp="G2240 Pistol CIA BOps">
+		<to name="CIA"/>
+
+		<to name="40JHP180GR_G2240 Pistol"/>
+		<to name="40FMJ180GR_G2240 Pistol"/>
+		<to name="40JHP165GR_G2240 Pistol"/>
+
+		<to name="IronSights_Pistol"/>
+	</Bind>
+	<Firearm name="G2240 Pistol CIA BOps" inventoryBinding="SecondaryWeapon" category="pistol" unlockCost="2"
+			tooltip="@firearm_g2240_name"
+			description="@firearm_g2240_desc"
+			img="data/models/weapons/g22_ui.dds"
+
+			animationSet="pistol"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-1.2" turnSpeedModifierPercent="0"/>
+		<ConcealmentModifier add="-1"/>
+		<RenderObject3D model="data/models/weapons/g2240.khm" attachSlot="prop_sidearm" diffuseTex="data/models/weapons/g2240.dds" skipGOSSAO="true"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="15"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="1300"
+			reloadEmptyTime="1700"
+			changeInTime="750"
+			changeOutTime="900"
+			readyTime="125"
+			guardTime="100"
+
+			accuracyStart="125"
+			accuracyEnd="49"
+			accuracyStartDist="7"
+			accuracyEndDist="15"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_40sw_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingSmall"
+			magazineEntity="pm63_mag"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="3.0"
+			ai_rangeMax="15.0"
+			ai_stopWhenShooting="false"
+		/>
+		
+		<AttackTypes>		
+			<AttackType name="CIA_EmergencyFire9mil" rangeMeters="1.5"/>
+			<AttackType name="CIA_DoubleTap9mil" rangeMeters="4" disabled="true"/>			
+			<AttackType name="CIA_ControlledPair9mil" rangeMeters="8" disabled="true"/>
+			<AttackType name="CIA_PistolAimedFireShort9mil" rangeMeters="9"/>			
+			<AttackType name="CIA_PistolAimedFire9mil" rangeMeters="14"/>
+			<AttackType name="Rangers_PistolAimedFireLong9mil" rangeMeters="22"/>
+			<AttackType name="Rangers_PistolAimedFireLong9milXX" rangeMeters="9999"/>		
+		</AttackTypes>					
+
+		<MuzzleFlash lightTemplate="ShotLightSmall" tracerTemplate="Tracer_Pistol">
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_01" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_02" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_03" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_04" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="pistol_eqp"/>
+			<Unequip name="pistol_neqp"/>
+			<Reload name="pistol_reld"/>
+			<ReloadEmpty name="pistol_reldempt"/>
+			<Fire name="g22_fire"/>
+			<ShellDrop name="pistol_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+	<!-- M18 Pistol -->
+
+	<Bind eqp="M18 Pistol CIA BOps">
+		<to name="CIA"/>
+
+		<to name="919FMJM882_M18 Pistol"/>
+		<to name="919FMJM1152_Handgun"/>
+		<to name="919JHPM1153_Handgun"/>
+		<to name="919FMJ108GRHP_Handgun"/>
+
+		<to name="IronSights_PistolCustomizable"/>
+		<to name="RedDot_Pistol"/>
+	</Bind>
+	<Firearm name="M18 Pistol CIA BOps" inventoryBinding="SecondaryWeapon" category="pistol" unlockCost="2"
+			tooltip="@firearm_m18_name"
+			description="@firearm_m18_desc"
+			img="data/models/weapons/m18_ui.dds"
+
+			animationSet="pistol"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-1.6" turnSpeedModifierPercent="0"/>
+		<ConcealmentModifier add="-1"/>
+		<RenderObject3D model="data/models/weapons/m18.khm" attachSlot="prop_sidearm" diffuseTex="data/models/weapons/m17.dds" skipGOSSAO="true"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="17"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="1200"
+			reloadEmptyTime="1450"
+			changeInTime="700"
+			changeOutTime="880"
+			readyTime="100"
+			guardTime="100"
+
+			accuracyStart="110"
+			accuracyEnd="40"
+			accuracyStartDist="7"
+			accuracyEndDist="15"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_9x19_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingSmall"
+			magazineEntity="pm63_mag"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="3.0"
+			ai_rangeMax="15.0"
+			ai_stopWhenShooting="false"
+		/>
+		
+		<AttackTypes>		
+			<AttackType name="CIA_EmergencyFire9mil" rangeMeters="1.5"/>
+			<AttackType name="CIA_DoubleTap9mil" rangeMeters="4" disabled="true"/>		
+			<AttackType name="CIA_ControlledPair9mil" rangeMeters="7" disabled="true"/>			
+			<AttackType name="CIA_PistolAimedFireShort9mil" rangeMeters="10"/>
+			<AttackType name="CIA_PistolAimedFire9mil" rangeMeters="15"/>
+			<AttackType name="Rangers_PistolAimedFireLong9mil" rangeMeters="19"/>
+			<AttackType name="Rangers_PistolAimedFireLong9milXX" rangeMeters="9999"/>		
+		</AttackTypes>		
+
+		<MuzzleFlash lightTemplate="ShotLightSmall" tracerTemplate="Tracer_Pistol">
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_01" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_02" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_03" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_04" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="pistol_eqp"/>
+			<Unequip name="pistol_neqp"/>
+			<Reload name="pistol_reld"/>
+			<ReloadEmpty name="pistol_reldempt"/>
+			<Fire name="m18_fire"/>
+			<ShellDrop name="pistol_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+	<!-- M17 Pistol -->
+
+	<Bind eqp="M17 Pistol CIA BOps">
+		<to name="CIA"/>
+
+		<to name="919FMJM882_M17 Pistol"/>
+		<to name="919FMJM1152_Handgun"/>
+		<to name="919JHPM1153_Handgun"/>
+		<to name="919FMJ108GRHP_Handgun"/>
+
+		<to name="IronSights_PistolCustomizable"/>
+		<to name="RedDot_Pistol"/>
+	</Bind>
+	<Firearm name="M17 Pistol CIA BOps" inventoryBinding="SecondaryWeapon" category="pistol" unlockCost="2"
+			tooltip="@firearm_m17_name"
+			description="@firearm_m17_desc"
+			img="data/models/weapons/m17_ui.dds"
+
+			animationSet="pistol"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-1.85" turnSpeedModifierPercent="0"/>
+		<ConcealmentModifier add="-1"/>
+		<RenderObject3D model="data/models/weapons/m17.khm" attachSlot="prop_sidearm" diffuseTex="data/models/weapons/m17.dds" skipGOSSAO="true"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="17"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="1300"
+			reloadEmptyTime="1500"
+			changeInTime="800"
+			changeOutTime="900"
+			readyTime="125"
+			guardTime="100"
+
+			accuracyStart="140"
+			accuracyEnd="45"
+			accuracyStartDist="7"
+			accuracyEndDist="15"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_9x19_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingSmall"
+			magazineEntity="pm63_mag"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="3.0"
+			ai_rangeMax="15.0"
+			ai_stopWhenShooting="false"
+		/>
+		
+		<AttackTypes>		
+			<AttackType name="CIA_EmergencyFire9mil" rangeMeters="1.5"/>
+			<AttackType name="CIA_DoubleTap9mil" rangeMeters="4.5" disabled="true"/>		
+			<AttackType name="CIA_ControlledPair9mil" rangeMeters="9" disabled="true"/>			
+			<AttackType name="CIA_PistolAimedFireShort9mil" rangeMeters="11"/>
+			<AttackType name="CIA_PistolAimedFire9mil" rangeMeters="17"/>
+			<AttackType name="Rangers_PistolAimedFireLong9mil" rangeMeters="22"/>
+			<AttackType name="Rangers_PistolAimedFireLong9milXX" rangeMeters="9999"/>		
+		</AttackTypes>						
+
+		<MuzzleFlash lightTemplate="ShotLightSmall" tracerTemplate="Tracer_Pistol">
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_01" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_02" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_03" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_04" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="pistol_eqp"/>
+			<Unequip name="pistol_neqp"/>
+			<Reload name="pistol_reld"/>
+			<ReloadEmpty name="pistol_reldempt"/>
+			<Fire name="m17_fire"/>
+			<ShellDrop name="pistol_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+	<!-- M9 Pistol -->
+
+<!-- TODO no class -->
+	<Bind eqp="M9 Pistol CIA BOps">
+
+		<to name="919FMJM882_Handgun"/>
+		<to name="919FMJM1152_Handgun"/>
+		<to name="919JHPM1153_Handgun"/>
+		<to name="919FMJ108GRHP_Handgun"/>
+
+		<to name="IronSights_Pistol"/>
+	</Bind>
+	<Firearm name="M9 Pistol CIA BOps" inventoryBinding="SecondaryWeapon" category="pistol" unlockCost="2"
+			tooltip="@firearm_m9_name"
+			description="@firearm_m9_desc"
+			img="data/models/weapons/m9_ui.dds"
+
+			animationSet="pistol"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-2" turnSpeedModifierPercent="0"/>
+		<ConcealmentModifier add="-1"/>
+		<RenderObject3D model="data/models/weapons/m9.khm" attachSlot="prop_sidearm" diffuseTex="data/models/weapons/m9.dds" skipGOSSAO="true"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="15"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="1400"
+			reloadEmptyTime="1800"
+			changeInTime="800"
+			changeOutTime="1000"
+			readyTime="120"
+			guardTime="100"
+
+			accuracyStart="125"
+			accuracyEnd="60"
+			accuracyStartDist="7"
+			accuracyEndDist="15"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_9x19_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingSmall"
+			magazineEntity="pm63_mag"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="3.0"
+			ai_rangeMax="15.0"
+			ai_stopWhenShooting="false"
+		/>
+
+		
+		<AttackTypes>		
+			<AttackType name="CIA_EmergencyFire9mil" rangeMeters="1.5"/>
+			<AttackType name="CIA_DoubleTap9mil" rangeMeters="4" disabled="true"/>		
+			<AttackType name="CIA_ControlledPair9mil" rangeMeters="8" disabled="true"/>			
+			<AttackType name="CIA_PistolAimedFireShort9mil" rangeMeters="14"/>
+			<AttackType name="CIA_PistolAimedFire9mil" rangeMeters="20"/>
+			<AttackType name="Rangers_PistolAimedFireLong9mil" rangeMeters="27"/>
+			<AttackType name="Rangers_PistolAimedFireLong9milXX" rangeMeters="9999"/>		
+		</AttackTypes>				
+
+		<MuzzleFlash lightTemplate="ShotLightSmall" tracerTemplate="Tracer_Pistol">
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_01" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_02" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_03" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_04" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="pistol_eqp"/>
+			<Unequip name="pistol_neqp"/>
+			<Reload name="pistol_reld"/>
+			<ReloadEmpty name="pistol_reldempt"/>
+			<Fire name="m9_fire"/>
+			<ShellDrop name="pistol_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+	<!-- HK45CT Pistol -->
+
+	<Bind eqp="HK45CT CIA UCov">
+		<to name="Undercover"/>
+
+		<to name="45FMJM1911_1911 Pistol"/>
+		<to name="45JHP185GR_Pistol"/>
+		<to name="45JHP160GR_Pistol"/>
+
+		<to name="IronSights_Pistol"/>
+	</Bind>
+	<Firearm name="HK45CT CIA UCov" inventoryBinding="SecondaryWeapon" category="pistol" unlockCost="5" discountedBy="HK45CT CIA BOps"
+			tooltip="@firearm_hk45ct_pistol_name"
+			description="@firearm_hk45ct_pistol_desc"
+			img="data/models/weapons/hk45ct_ui.dds"
+			animationSet="pistol"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-1.6" turnSpeedModifierPercent="0"/>
+		<ConcealmentModifier add="-1"/>
+		<RenderObject3D model="data/models/weapons/hk45ct.khm" attachSlot="prop_sidearm" diffuseTex="data/models/weapons/hk45ct.dds" skipGOSSAO="true"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="8"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="1400"
+			reloadEmptyTime="1550"
+			changeInTime="750"
+			changeOutTime="1100"
+			readyTime="130"
+			guardTime="100"
+
+			accuracyStart="130"
+			accuracyEnd="60"
+			accuracyStartDist="7"
+			accuracyEndDist="15"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_45acp_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingSmall"
+			magazineEntity="pm63_mag"
+			suppressedSwitch="HK45CTSup CIA UCov"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="3.0"
+			ai_rangeMax="15.0"
+			ai_stopWhenShooting="false"
+		/>
+		
+		<AttackTypes>		
+			<AttackType name="CIA_EmergencyFire45" rangeMeters="1.5"/>
+			<AttackType name="CIA_HKDoubleTap45" rangeMeters="3.5" disabled="true"/>		
+			<AttackType name="CIA_HKControlledPair45" rangeMeters="7" disabled="true"/>			
+			<AttackType name="CIA_PistolAimedFireShort45" rangeMeters="10"/>
+			<AttackType name="CIA_HKPistolAimedFire45" rangeMeters="15"/>
+			<AttackType name="Rangers_PistolAimedFireLong45" rangeMeters="25"/>
+			<AttackType name="Rangers_PistolAimedFireLong45XX" rangeMeters="9999"/>		
+		</AttackTypes>								
+
+		<MuzzleFlash lightTemplate="ShotLightSmall" tracerTemplate="Tracer_Pistol">
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_01" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_02" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_03" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_04" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="pistol_eqp"/>
+			<Unequip name="pistol_neqp"/>
+			<Reload name="pistol_reld"/>
+			<ReloadEmpty name="pistol_reldempt"/>
+			<Fire name="hk45_fire"/>
+			<ShellDrop name="pistol_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+	<Bind eqp="HK45CTSup CIA UCov">
+		<to name="Undercover"/>
+
+		<to name="45FMJM1911_SuppressedPistol"/>
+		<to name="45JHP185GR_SuppressedPistol"/>
+		<to name="45JHP160GR_SuppressedPistol"/>
+
+		<to name="IronSights_Pistol"/>
+	</Bind>
+	<Firearm name="HK45CTSup CIA UCov" inventoryBinding="SecondaryWeaponMuzzle" category="pistol" unlockCost="0"
+			tooltip="@firearm_hk45ctsup_pistol_name"
+			description="@firearm_hk45ctSup_pistol_desc"
+			img="data/models/weapons/hk45ct_ui.dds"
+
+			animationSet="pistol"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-1.6" turnSpeedModifierPercent="0"/>
+		<ConcealmentModifier add="-2"/>
+		<RenderObject3D model="data/models/weapons/hk45ct.khm" attachSlot="prop_sidearm" diffuseTex="data/models/weapons/hk45ct.dds" skipGOSSAO="true"/>
+		<RenderObject3D model="data/models/weapons/attachments/silencer_01.khm" attachSlot="silencer_socket" skipGOSSAO="true" diffuseTex="data/models/weapons/attachments/silencer_01a.dds"/>
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="8"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="1500"
+			reloadEmptyTime="1600"
+			changeInTime="1000"
+			changeOutTime="1300"
+			readyTime="140"
+			guardTime="110"
+
+			accuracyStart="130"
+			accuracyEnd="60"
+			accuracyStartDist="7"
+			accuracyEndDist="15"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_45acp_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingSmall"
+			magazineEntity="pm63_mag"
+			suppressedSwitch="HK45CT CIA UCov"
+			suppressedImg="data/models/weapons/attachments/basic_silencer_ui.dds"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="3.0"
+			ai_rangeMax="15.0"
+			ai_stopWhenShooting="false"
+		/>
+		
+		<AttackTypes>		
+			<AttackType name="CIA_EmergencyFire45" rangeMeters="1.5"/>
+			<AttackType name="CIA_HKDoubleTap45" rangeMeters="4.5" disabled="true"/>	
+			<AttackType name="CIA_PistolAimedFireShort45" rangeMeters="10"/>			
+			<AttackType name="CIA_HKControlledPair45" rangeMeters="10" disabled="true"/>			
+			<AttackType name="CIA_HKPistolAimedFire45Sup" rangeMeters="16"/>
+			<AttackType name="Rangers_PistolAimedFireLong45" rangeMeters="25"/>
+			<AttackType name="Rangers_PistolAimedFireLong45XX" rangeMeters="9999"/>		
+		</AttackTypes>						
+		
+
+		<MuzzleFlash lightTemplate="ShotLightSmall" tracerTemplate="Tracer_Pistol">
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_05" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_06" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_07" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_08" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="pistol_eqp"/>
+			<Unequip name="pistol_neqp"/>
+			<Reload name="pistol_reld"/>
+			<ReloadEmpty name="pistol_reldempt"/>
+			<Fire name="hk45sup_fire"/>
+			<ShellDrop name="pistol_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+	<Bind eqp="HK45CT CIA BOps">
+		<to name="BlackOps"/>
+
+		<to name="45FMJM1911_1911 Pistol"/>
+		<to name="45JHP185GR_Pistol"/>
+		<to name="45JHP160GR_Pistol"/>
+
+		<to name="IronSights_Pistol"/>
+	</Bind>
+	<Firearm name="HK45CT CIA BOps" inventoryBinding="SecondaryWeapon" category="pistol" unlockCost="5" discountedBy="HK45CT CIA UCov"
+			tooltip="@firearm_hk45ct_pistol_name"
+			description="@firearm_hk45ct_pistol_desc"
+			img="data/models/weapons/hk45ct_mag_ui.dds"
+			animationSet="pistol"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-1.6" turnSpeedModifierPercent="0"/>
+		<ConcealmentModifier add="-1.5"/>
+		<RenderObject3D model="data/models/weapons/hk45ct.khm" attachSlot="prop_sidearm" diffuseTex="data/models/weapons/hk45ct.dds" skipGOSSAO="true"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="10"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="1550"
+			reloadEmptyTime="1600"
+			changeInTime="750"
+			changeOutTime="1100"
+			readyTime="130"
+			guardTime="100"
+
+			accuracyStart="130"
+			accuracyEnd="60"
+			accuracyStartDist="7"
+			accuracyEndDist="15"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_45acp_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingSmall"
+			magazineEntity="pm63_mag"
+			suppressedSwitch="HK45CTSup CIA BOps"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="3.0"
+			ai_rangeMax="15.0"
+			ai_stopWhenShooting="false"
+		/>
+		
+		<AttackTypes>		
+			<AttackType name="CIA_EmergencyFire45" rangeMeters="1.5"/>
+			<AttackType name="CIA_HKDoubleTap45" rangeMeters="4" disabled="true"/>		
+			<AttackType name="CIA_HKControlledPair45" rangeMeters="8" disabled="true"/>			
+			<AttackType name="CIA_PistolAimedFireShort45" rangeMeters="11"/>
+			<AttackType name="CIA_HKPistolAimedFire45" rangeMeters="15"/>
+			<AttackType name="Rangers_PistolAimedFireLong45" rangeMeters="25"/>
+			<AttackType name="Rangers_PistolAimedFireLong45XX" rangeMeters="9999"/>		
+		</AttackTypes>						
+
+		<MuzzleFlash lightTemplate="ShotLightSmall" tracerTemplate="Tracer_Pistol">
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_01" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_02" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_03" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_04" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="pistol_eqp"/>
+			<Unequip name="pistol_neqp"/>
+			<Reload name="pistol_reld"/>
+			<ReloadEmpty name="pistol_reldempt"/>
+			<Fire name="hk45_fire"/>
+			<ShellDrop name="pistol_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+	<Bind eqp="HK45CTSup CIA BOps">
+		<to name="BlackOps"/>
+
+		<to name="45FMJM1911_SuppressedPistol"/>
+		<to name="45JHP185GR_SuppressedPistol"/>
+		<to name="45JHP160GR_SuppressedPistol"/>
+
+		<to name="IronSights_Pistol"/>
+	</Bind>
+	<Firearm name="HK45CTSup CIA BOps" inventoryBinding="SecondaryWeaponMuzzle" category="pistol" unlockCost="0"
+			tooltip="@firearm_hk45ctsup_pistol_name"
+			description="@firearm_hk45ctSup_pistol_desc"
+			img="data/models/weapons/hk45ct_mag_ui.dds"
+
+			animationSet="pistol"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-1.6" turnSpeedModifierPercent="0"/>
+		<ConcealmentModifier add="-2.5"/>
+		<RenderObject3D model="data/models/weapons/hk45ct.khm" attachSlot="prop_sidearm" diffuseTex="data/models/weapons/hk45ct.dds" skipGOSSAO="true"/>
+		<RenderObject3D model="data/models/weapons/attachments/silencer_01.khm" attachSlot="silencer_socket" skipGOSSAO="true" diffuseTex="data/models/weapons/attachments/silencer_01a.dds"/>
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="10"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="1660"
+			reloadEmptyTime="1700"
+			changeInTime="1000"
+			changeOutTime="1300"
+			readyTime="140"
+			guardTime="110"
+
+			accuracyStart="130"
+			accuracyEnd="60"
+			accuracyStartDist="7"
+			accuracyEndDist="15"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_45acp_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingSmall"
+			magazineEntity="pm63_mag"
+			suppressedSwitch="HK45CT CIA BOps"
+			suppressedImg="data/models/weapons/attachments/basic_silencer_ui.dds"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="3.0"
+			ai_rangeMax="15.0"
+			ai_stopWhenShooting="false"
+		/>
+		
+		<AttackTypes>		
+			<AttackType name="CIA_EmergencyFire45" rangeMeters="1.5"/>
+			<AttackType name="CIA_HKDoubleTap45" rangeMeters="5" disabled="true"/>		
+			<AttackType name="CIA_PistolAimedFireShort45" rangeMeters="10"/>
+			<AttackType name="CIA_HKControlledPair45" rangeMeters="10" disabled="true"/>						
+			<AttackType name="CIA_HKPistolAimedFire45Sup" rangeMeters="16"/>
+			<AttackType name="Rangers_PistolAimedFireLong45" rangeMeters="25"/>
+			<AttackType name="Rangers_PistolAimedFireLong45XX" rangeMeters="9999"/>		
+		</AttackTypes>				
+
+		<MuzzleFlash lightTemplate="ShotLightSmall" tracerTemplate="Tracer_Pistol">
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_05" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_06" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_07" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_08" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="pistol_eqp"/>
+			<Unequip name="pistol_neqp"/>
+			<Reload name="pistol_reld"/>
+			<ReloadEmpty name="pistol_reldempt"/>
+			<Fire name="hk45sup_fire"/>
+			<ShellDrop name="pistol_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+
+
+	<!-- 1911 Pistol -->
+
+	<Bind eqp="1911 Pistol CIA BOps">
+		<to name="CIA"/>
+
+		<to name="45FMJM1911_1911 Pistol"/>
+		<to name="45JHP185GR_Pistol"/>
+		<to name="45JHP160GR_Pistol"/>
+
+		<to name="IronSights_Pistol"/>
+	</Bind>
+	<Firearm name="1911 Pistol CIA BOps" inventoryBinding="SecondaryWeapon" category="pistol" unlockCost="5"
+			tooltip="@firearm_1911_pistol_name"
+			description="@firearm_1911modern_pistol_desc"
+			img="data/models/weapons/1911_ui.dds"
+
+			animationSet="pistol"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-2.1" turnSpeedModifierPercent="0"/>
+		<ConcealmentModifier add="-1"/>
+		<RenderObject3D model="data/models/weapons/1911_02.khm" attachSlot="prop_sidearm" diffuseTex="data/models/weapons/1911.dds" skipGOSSAO="true"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="8"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="1000"
+			reloadEmptyTime="1400"
+			changeInTime="800"
+			changeOutTime="1000"
+			readyTime="120"
+			guardTime="100"
+
+			accuracyStart="145"
+			accuracyEnd="70"
+			accuracyStartDist="7"
+			accuracyEndDist="15"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_45acp_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingSmall"
+			magazineEntity="pm63_mag"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="3.0"
+			ai_rangeMax="15.0"
+			ai_stopWhenShooting="false"
+		/>
+		
+		<AttackTypes>		
+			<AttackType name="CIA_EmergencyFire45" rangeMeters="1.5"/>
+			<AttackType name="CIA_DoubleTap45" rangeMeters="3.5" disabled="true"/>		
+			<AttackType name="CIA_PistolAimedFireShort45" rangeMeters="8.5"/>			
+			<AttackType name="CIA_ControlledPair45" rangeMeters="8.5" disabled="true"/>			
+			<AttackType name="CIA_HKPistolAimedFire45" rangeMeters="15"/>
+			<AttackType name="Rangers_PistolAimedFireLong45" rangeMeters="28"/>
+			<AttackType name="Rangers_PistolAimedFireLong45XX" rangeMeters="9999"/>		
+		</AttackTypes>							
+
+		<MuzzleFlash lightTemplate="ShotLightSmall" tracerTemplate="Tracer_Pistol">
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_01" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_02" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_03" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_04" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="pistol_eqp"/>
+			<Unequip name="pistol_neqp"/>
+			<Reload name="pistol_reld"/>
+			<ReloadEmpty name="pistol_reldempt"/>
+			<Fire name="1911_fire"/>
+			<ShellDrop name="pistol_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+</Equipment>

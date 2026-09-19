@@ -1,0 +1,342 @@
+﻿#
+# Doctrines Names and Info
+#
+
+#
+# RANGERS HANDGUNS
+#
+
+@doctrine_rangers_handguns_shortrangedrills_name=Short Range Drills
+@doctrine_rangers_handguns_shortrangedrills_descr=The squad drills on close range targets, improving accuracy and engagement speed when shooting handguns at distances up to 7m.
+
+@doctrine_rangers_handguns_mediumrangedrills_name=Medium Range Drills
+@doctrine_rangers_handguns_mediumrangedrills_descr=The squad drills on targets at 7 to 15m distance, working to improve their hit probability and aiming speed.
+
+@doctrine_rangers_handguns_controlledpairs_name=Controlled Pairs
+@doctrine_rangers_handguns_controlledpairs_descr=Troopers learn to better control handgun recoil and engage close range targets with a pair of quick fired shots, maximizing Kill Probability.
+
+@doctrine_rangers_handguns_shotplacement_name=Shot Placement
+@doctrine_rangers_handguns_shotplacement_descr=Your troopers focus on placing shots within the vital zones of targets, increasing Kill Probability against targets at ranges up to 7m.
+
+@doctrine_rangers_handguns_suppressedshooting_name=Suppressed Shooting
+@doctrine_rangers_handguns_suppressedshooting_descr=Troopers practice shooting suppressed handguns and overcoming the occluded sight picture and decreased accuracy.
+
+@doctrine_rangers_handguns_transition_name=Transition
+@doctrine_rangers_handguns_transition_descr=Troopers practice drawing their handguns from holsters and drill to transition to them when running their primary dry at close range.
+
+@doctrine_rangers_handguns_fastreload_name=Fast Reload
+@doctrine_rangers_handguns_fastreload_descr=Troopers practice quickly reloading their handgun in combat, with a focus on speed reloads for when the gun goes dry.
+
+#
+# RANGERS RIFLES
+#
+
+@doctrine_rangers_rifles_shortrangedrills_name=Short Range Drills
+@doctrine_rangers_rifles_shortrangedrills_descr=The troopers practice engaging close range targets with their rifles, focusing on improving their first shot time and subsequent rate of fire, without sacrificing accuracy.
+
+@doctrine_rangers_rifles_shortrangeburst_name=Short Range Burst
+@doctrine_rangers_rifles_shortrangeburst_descr=The squad will use Automatic and Burst fire modes when engaging targets closer than 7m, depending on their weapon's capability.
+
+@doctrine_rangers_rifles_roomclearingdrills_name=Room Clearing Drills
+@doctrine_rangers_rifles_roomclearingdrills_descr=Troopers practice engaging multiple targets in complex CQB scenarios, improving their target-to-target transition time.
+
+@doctrine_rangers_rifles_mediumrangedrills_name=Medium Range Drills
+@doctrine_rangers_rifles_mediumrangedrills_descr=Troopers drill on targets at ranges of 7 to 15m, working out how to engage them faster and more accurately.
+
+@doctrine_rangers_rifles_mediumrangeburst_name=Medium Range Burst
+@doctrine_rangers_rifles_mediumrangeburst_descr=Troopers will engage enemies at Medium Range with bursts of automatic fire, if their firearm supports it.
+
+@doctrine_rangers_rifles_surgicalshooting_name=Surgical Shooting
+@doctrine_rangers_rifles_surgicalshooting_descr=Your troops focus on hitting the A-zone of their targets, improving accuracy and Kill Probability.
+
+@doctrine_rangers_rifles_obscuredtargets_name=Obscured Targets
+@doctrine_rangers_rifles_obscuredtargets_descr=Your squad practices engaging targets partially obscured by hard cover, reducing its effectiveness.
+
+@doctrine_rangers_rifles_barricadeshooting_name=Barricade Shooting
+@doctrine_rangers_rifles_barricadeshooting_descr=Troopers practice shooting from difficult positions, behind cover, increasing its effectiveness and using it to improve recoil control.
+
+@doctrine_rangers_rifles_longrangedrills_name=Long Range Drills
+@doctrine_rangers_rifles_longrangedrills_descr=The squad drills on engaging targets at long range, increasing accuracy and engagement speed in such scenarios.
+
+@doctrine_rangers_rifles_fastreload_name=Fast Reload
+@doctrine_rangers_rifles_fastreload_descr=Your squad takes time to practice reloading their rifles, aiming to get the weapons back into the fight as fast as possible.
+
+
+
+#
+# RANGERS SUPPORT
+#
+
+@doctrine_rangers_support_assaultsaws_name=Assault SAWs
+@doctrine_rangers_support_assaultsaws_descr=Your support guys practice door kicking with the squad, improving their un-supported engagement times and their movement speed.
+
+@doctrine_rangers_support_improvedsuppression_name=Improved Suppression
+@doctrine_rangers_support_improvedsuppression_descr=The Support Gunners improve their burst pattern to deal increased suppression to the enemy.
+
+@doctrine_rangers_support_assaultmarksmen_name=Assault Marksmen
+@doctrine_rangers_support_assaultmarksmen_descr=The Designated Marksmen in the Squad practice CQB drills with the Assaulters, learning to take corners and aim faster with their fishing rods.
+
+@doctrine_rangers_support_languageskills_name=Language Skills
+@doctrine_rangers_support_languageskills_descr=The troops learn a few basic interactions in the main Nowheraki languages, getting them better reactions from nearby civilians.
+
+@doctrine_rangers_support_melee_name=Melee Practice
+@doctrine_rangers_support_melee_descr=The troops practice their basic melee attacks to better handle close encounters of the jihadi kind and stun their opponents longer.
+
+@doctrine_rangers_support_throwables_name=Throwables Training
+@doctrine_rangers_support_throwables_descr=Troops practice deploying their throwables faster, to shorten their vulnerability time and catch the enemy off-guard.
+
+@doctrine_rangers_support_selffirstaid_name=Self-First Aid
+@doctrine_rangers_support_selffirstaid_descr=Your troopers practice applying Tactical Emergency Care to themselves when injured, and this leads to faster recovery times in campaigns.
+
+#
+# RANGERS ELITE
+#
+@doctrine_rangers_elite_extraconditioning_name=Extra Conditioning
+@doctrine_rangers_elite_extraconditioning_descr=The squad spends extra time working out, improving their movement speed and maneuvering with heavy weapons.
+
+@doctrine_rangers_elite_advancedlanguage_name=Advanced Language Skills
+@doctrine_rangers_elite_advancedlanguage_descr=The troopers learn more advanced commands they can give to the locals, to actively direct them out of the field of battle.
+
+@doctrine_rangers_elite_advancedcombatives_name=Advanced Combatives
+@doctrine_rangers_elite_advancedcombatives_descr=The troops practice muzzle and butt strikes and pouncing on their enemies from behind, stunning them to a greater extent or taking them out of combat.
+
+@doctrine_rangers_elite_advancedshooting_name=Advanced Shooting
+@doctrine_rangers_elite_advancedshooting_descr=Your riflemen focus on delivering hits to the A zone as fast as possible, effectively increasing their chance to end the fight early.
+
+@doctrine_rangers_elite_explosivebreaching_name=Explosive Breaching
+@doctrine_rangers_elite_explosivebreaching_descr=The troops practice blowing stuff up until they learn not to fear the bombs, and they can mount them much faster.
+
+@doctrine_rangers_elite_assaultplanning_name=Assault Planning
+@doctrine_rangers_elite_assaultplanning_descr=The squad practices assaulting a single target area designated as the 'Hot Room' to perfection, learning its layout and potential threats and pitfalls to gain confidence and battle efficiency.
+
+@doctrine_rangers_elite_violenceofaction_name=Violence of Action
+@doctrine_rangers_elite_violenceofaction_descr=Your troopers learn to move with impunity and dominate the room during CQB, terrifying lesser trained enemies when they deliver kills at close range.
+
+
+#
+# NOWHERAKI SWAT HANDGUNS
+#
+
+@doctrine_nws_handguns_shortrangedrills_name=Basic Handgunnery
+@doctrine_nws_handguns_shortrangedrills_descr=The squad learns the basics of shooting handguns accurately, practicing on targets placed at room distance - up to 7 meters.
+
+@doctrine_nws_handguns_mediumrangedrills_name=Medium Range Practice
+@doctrine_nws_handguns_mediumrangedrills_descr=The squaddies push their targets farther, learning to engage accurately targets at distances up to 15 meters.
+
+@doctrine_nws_handguns_longrangedrills_name=Long Range Contest
+@doctrine_nws_handguns_longrangedrills_descr=Your squad plays with targets placed at distances up to 50m, to the amusement of their US allies and advisors.
+
+@doctrine_nws_handguns_shotplacement_name=Aim Small Miss Small
+@doctrine_nws_handguns_shotplacement_descr=Troopers focus on where their shots land on target, increasing Kill Probability and overall chance to land a hit on targets up to 15m.
+
+@doctrine_nws_handguns_fastreload_name=Fast Reload
+@doctrine_nws_handguns_fastreload_descr=Your troops practice fiddling with pistol magazines and reloading their handguns as fast as possible when they go click instead of bang.
+
+#
+# NOWHERAKI SWAT RIFLES
+#
+
+@doctrine_nws_rifles_burstfire_name=Burst Fire
+@doctrine_nws_rifles_burstfire_descr=The troops learn to let go of their wild automatic volleys and deliver controlled burst on target, to better effect.
+
+@doctrine_nws_rifles_rapidfire_name=Rapid Fire
+@doctrine_nws_rifles_rapidfire_descr=The troops go even slower but also faster, learning to engage targets with fast, accurate shots aimed separately.
+
+@doctrine_nws_rifles_recoilcontrol_name=Recoil Control
+@doctrine_nws_rifles_recoilcontrol_descr=Squaring on the target and getting a good left hand grip on the rifle, the squaddies learn to control recoil and deliver subsequent shots faster and more precisely.
+
+@doctrine_nws_rifles_longrangepractice_name=Long Range Practice
+@doctrine_nws_rifles_longrangepractice_descr=The squad practice shooting their rifles at ranges longer than 30m, improving their aiming speed and chance to land a hit.
+
+@doctrine_nws_rifles_spottingshots_name=Spotting Shots
+@doctrine_nws_rifles_spottingshots_descr=Troops learn to make quick corrections based on the impacts of their shots at long and very long range, improving accuracy and landing on target.
+
+@doctrine_nws_rifles_reloadfun_name=Reload Fun
+@doctrine_nws_rifles_reloadfun_descr=The troops engage in Speed Reload practice and friendly competition, improving their Speed Reload time and getting their rifles back into action faster.
+
+@doctrine_nws_rifles_accuracyfocus_name=Accuracy Focus
+@doctrine_nws_rifles_accuracyfocus_descr=The troops practice shooting accurately at targets at all ranges, improving their basic chance to hit.
+
+@doctrine_nws_rifles_precisiondrills_name=Precision Drills
+@doctrine_nws_rifles_precisiondrills_descr=Your troops move up in precision and practice not just hitting the targets, but hitting them where it hurts - in the A zone, for a higher Critical Hit chance.
+
+@doctrine_nws_rifles_scopeadvantages_name=Scope Advantages
+@doctrine_nws_rifles_scopeadvantages_descr=Troopers practice shooting with magnified optics and maximizing the precision and aiming speed advantage offered by these.
+
+@doctrine_nws_rifles_targetswitching_name=Target Switching
+@doctrine_nws_rifles_targetswitching_descr=Your troops learn to switch targets quickly after downing one with their rifle fire.
+
+@doctrine_nws_rifles_usweaponsfamiliarization_name=US Weapons Familiarization
+@doctrine_nws_rifles_usweaponsfamiliarization_descr=Your troops practice with their goodies from Uncle Sam, learning about bolt-stops and peep sights, button mag releases and left-side safety-levers, improving their operating speed in the process.
+
+#
+# NOWHERAKI SWAT SHIELDS
+#
+
+@doctrine_nws_shields_shieldworkout_name=Shield Workout
+@doctrine_nws_shields_shieldworkout_descr=Your Assaulters practice moving fast with the Shield up and intentionally hitting people with it, if required.
+
+@doctrine_nws_shields_one-handshooting_name=One-hand shooting
+@doctrine_nws_shields_one-handshooting_descr=Assaulters practice shooting their secondaries one handed, increasing their accuracy when also holding a shield.
+
+@doctrine_nws_shields_improvedstacking_name=Improved stacking
+@doctrine_nws_shields_improvedstacking_descr=Assault teams practice moving in formation behind the shield-man and get a boost in speed when syncronized together.
+
+@doctrine_nws_shields_one-handreloads_name=One-hand reloads
+@doctrine_nws_shields_one-handreloads_descr=Troopers practice one handed reloads of their secondaries so they can do it faster when running dry on shield duty.
+
+@doctrine_nws_shields_stacktactics_name=Stack Tactics
+@doctrine_nws_shields_stacktactics_descr=Troopers learn to better utilize shield coverage and gain partial cover status when stacked behind one.
+
+@doctrine_nws_shields_shield-bracing_name=Shield-Bracing
+@doctrine_nws_shields_shield-bracing_descr=When stationary, shooters in the stack brace their gun on the shield to the front, gaining a bonus in aiming speed at medium and long range.
+
+#
+# NOWHERAKI SWAT TACTICS / LOGISTICS
+#
+
+@doctrine_nws_tactics_leadership_name=Leadership
+@doctrine_nws_tactics_leadership_descr=The troops exercise with the Squad Leader, learning to trust and follow him and gaining a bit of his firing accuracy and suppression recovery.
+
+@doctrine_nws_tactics_militiatraining_name=Militia Training
+@doctrine_nws_tactics_militiatraining_descr=Dedicate resources to drill your Militia contingent, getting them to shoot faster and slightly deadlier, and increasing their suppression resistance.
+
+@doctrine_nws_tactics_massfires_name=Mass Fires
+@doctrine_nws_tactics_massfires_descr=Troopers practice massing their firepower on particular targets, increasing Accuracy and Kill Probability when targets are already suppressed.
+
+@doctrine_nws_tactics_combatstance_name=Combat Stance
+@doctrine_nws_tactics_combatstance_descr=The troopers adopt a modern shooting stance, leaning forward and squaring on the target to better control recoil and optimize armor coverage on vital organs.
+
+@doctrine_nws_tactics_prioritybombers_name=Priority Bombers
+@doctrine_nws_tactics_prioritybombers_descr=Your squad learns to recognize and focus their fires on suicide bombers and targeting them with headshots and reducing the chance of a post-mortem vest-detonation.
+
+@doctrine_nws_tactics_improvedmedevac_name=Improved Medevac
+@doctrine_nws_tactics_improvedmedevac_descr=Divert resources to evacuate casualties faster and increase their survival chance from 30 percent to 60 percent.
+
+#
+# CIA HANDGUNS
+#
+
+@doctrine_cia_handguns_closequartersspeed_name=Close Quarters Speed
+@doctrine_cia_handguns_closequartersspeed_descr=Your agents drill extensively on targets at room distance -  up to 7m, working with a partial sight picture to get hits on target as fast as possible.
+
+@doctrine_cia_handguns_closequartersprecision_name=Close Quarters Precision
+@doctrine_cia_handguns_closequartersprecision_descr=Agents train to deliver Close Range precise shots on Reduced targets, increasing their Kill Probability in real encounters.
+
+@doctrine_cia_handguns_doubletaps_name=Double Taps
+@doctrine_cia_handguns_doubletaps_descr=When engaging close range targets, Agents deliver two shots in quick succession for one sight picture - for maximum Kill Probability.
+
+@doctrine_cia_handguns_extendedrangeaccuracy_name=Extended Range Accuracy
+@doctrine_cia_handguns_extendedrangeaccuracy_descr=Agents drill to engage targets further than normal Handgun range - farther than 7m. They focus on accuracy and landing shots on target.
+
+@doctrine_cia_handguns_shootingfromretention_name=Shooting from retention
+@doctrine_cia_handguns_shootingfromretention_descr=Agents learn to hold their handguns closer to the body when maneuvering near obstacles, and deliver fast unsighted shots if a target presents itself.
+
+@doctrine_cia_handguns_quickdraw_name=Quick Draw
+@doctrine_cia_handguns_quickdraw_descr=Your troops practice drawing their handguns as quickly as possible, particularly from concealment - and improve the time they need to get them into action.
+
+@doctrine_cia_handguns_extendedrangespeed_name=Extended Range Speed
+@doctrine_cia_handguns_extendedrangespeed_descr=Your agents improve their par times when engaging targets farther than 7m, balancing speed and accuracy on the side of speed and not that perfect sight picture.
+
+@doctrine_cia_handguns_concealmentrigs_name=Concealment Rigs
+@doctrine_cia_handguns_concealmentrigs_descr=Your agents equip and practice with deep cover rigs for their handguns, improving their concealment status till they're almost undetectable.
+
+@doctrine_cia_handguns_drawfromconcealment_name=Draw from Concealment
+@doctrine_cia_handguns_drawfromconcealment_descr=Agents practice drawing their handguns from concealment, capitalizing on that first second of confusion to get the gun up as soon as possible.
+
+@doctrine_cia_handguns_transition_name=Transition
+@doctrine_cia_handguns_transition_descr=Your troops drill to drop their primary as fast as possible when it goes empty in a close range shootout and transition to their secondary, to stay in the fight.
+
+@doctrine_cia_handguns_tacticalreloads_name=Tactical Reloads
+@doctrine_cia_handguns_tacticalreloads_descr=Agents practice reloading their handguns quickly, with a focus on tactical reloads to keep them topped up during long room clearing sessions.
+
+
+#
+# CIA RIFLES
+#
+
+@doctrine_cia_rifles_closequartersspeed_name=Close Quarters Speed
+@doctrine_cia_rifles_closequartersspeed_descr=Your agents work to deliver fast hits on room-distance targets with their primaries, snapping up on target as fast as possible.
+
+@doctrine_cia_rifles_closequartersprecision_name=Close Quarters Precision
+@doctrine_cia_rifles_closequartersprecision_descr=Agents focus on where they land their hits on their targets, ensuring better Kill Probability but without sacrificing speed.
+
+@doctrine_cia_rifles_riflereloads_name=Rifle Reloads
+@doctrine_cia_rifles_riflereloads_descr=Your agents drill extensively on reloading their rifles in combat, improving their times for both tactical reloads and speed reloads.
+
+@doctrine_cia_rifles_mediumrangeaimspeed_name=Medium Range Aim Speed
+@doctrine_cia_rifles_mediumrangeaimspeed_descr=Your troops practice engaging targets in the 7 to 15m range, looking to get shots on target as fast as possible.
+
+@doctrine_cia_rifles_extendedrangeaccuracy_name=Extended Range Accuracy
+@doctrine_cia_rifles_extendedrangeaccuracy_descr=Agents practice engaging targets farther than 7m and up to 25m, working to have guaranteed hits on target in that range.
+
+@doctrine_cia_rifles_burstfire_name=Burst Fire
+@doctrine_cia_rifles_burstfire_descr=Agents train to engage close range targets with bursts of automatic fire, looking to improve their effect on target but sacrificing a bit of accuracy.
+
+@doctrine_cia_rifles_fastfire_name=Fast Fire
+@doctrine_cia_rifles_fastfire_descr=Your agents train to engage targets at close range with fast, accurate shots fired in quick succession.
+
+@doctrine_cia_rifles_extendedrangefastfire_name=Extended Range Fast Fire
+@doctrine_cia_rifles_extendedrangefastfire_descr=Your troops take their Fast Fire farther than close range, learning to deal the same volley of death at distances up to 25m.
+
+@doctrine_cia_rifles_longrangespecialization_name=Long Range Specialization
+@doctrine_cia_rifles_longrangespecialization_descr=Agents focus on engaging targets farther than 25m, improving chance to hit and Kill Probability.
+
+@doctrine_cia_rifles_opforweaponry_name=OPFOR Weaponry
+@doctrine_cia_rifles_opforweaponry_descr=Your troops practice ardously with weapons sourced from the hard-working insurgents of wherever, learning to operate them efficiently while looking like locals.
+
+@doctrine_cia_rifles_ambush_name=Ambush
+@doctrine_cia_rifles_ambush_descr=Your troops coordinate when engaging unaware targets simultaneously, keeping their Unaware Kill Probability bonus for 2 seconds after opening fire.
+
+@doctrine_cia_rifles_barricadeshooting_name=Barricade Shooting
+@doctrine_cia_rifles_barricadeshooting_descr=Troops practice engaging distant targets from position of cover, using available support to gain a stable firing position and become more accurate.
+
+@doctrine_cia_rifles_speedislife_name=Speed is Life
+@doctrine_cia_rifles_speedislife_descr=Your agents train to move faster with their weapon ready to engage, keeping the enemy guessing and gaining the upper hand.
+
+@doctrine_cia_rifles_deathdealing_name=Death Dealing
+@doctrine_cia_rifles_deathdealing_descr=Agents learn to not mess around in Close Quarters and quickly headshot targets that survive initial attacks.
+
+@doctrine_cia_rifles_shortstoking_name=Short Stocking
+@doctrine_cia_rifles_shortstoking_descr=Your troops practice moving around obstacles with the rifle stock raised above their shoulder, thus making for a much faster return to firing position once the obstacle is cleared.
+
+
+#
+# CIA COVERT SKILLS
+#
+
+@doctrine_cia_covert_localcustoms_name=Local Customs
+@doctrine_cia_covert_localcustoms_descr=Learning from your local assets improves your agents capacity to blend-in and fool the casual observer. Each point decreases the speed at which enemies burn through your concealment and manage to detect you.
+
+@doctrine_cia_covert_improveddisguses_name=Improved Disguises
+@doctrine_cia_covert_improveddisguses_descr=Your agents study the locals and source better items to help conceal their equipment, gaining +2 Total Concealment.
+
+@doctrine_cia_covert_languagebasics_name=Language Basics
+@doctrine_cia_covert_languagebasics_descr=The troops learn a few basic interactions in the main Nowheraki languages, getting them better reactions from nearby civilians.
+
+# if this name changes, make sure to also change the tooltip for menu_game_hostage_evacuate_ttip_disabled
+@doctrine_cia_covert_advancedlanguage_name=Advanced Language
+@doctrine_cia_covert_advancedlanguage_descr=Agents learn more advanced commands they can give to the locals, to actively direct them out of the field of battle.
+
+# if this name changes, make sure to also change the tooltip for menu_game_persuade_reveal_ttip_disabled
+@doctrine_cia_covert_persuasion_name=Persuasion
+@doctrine_cia_covert_persuasion_descr=Agents learn to put their language skills to good use and channel their inner interrogator, obtaining vital information from civilians and surrendered suspects.
+
+@doctrine_cia_covert_humintnetwork_name=Humint Network
+@doctrine_cia_covert_humintnetwork_descr=You extend your network of local assets and get intel on enemy positions, at mission start.
+
+@doctrine_cia_covert_advanceintel_name=Advance Intel
+@doctrine_cia_covert_advanceintel_descr=Your Intel Network becomes more powerful, higlighting mission objectives for 10 seconds on mission start.
+
+@doctrine_cia_covert_hand2hand_name=Hand 2 Hand
+@doctrine_cia_covert_hand2hand_descr=The troops practice muzzle and butt strikes and pouncing on their enemies from behind, stunning them to a greater extent or taking them out of combat.
+
+#
+# Buffs/Debuffs
+#
+@buff_inspired=Inspired by leader
+@buff_FAinspired=Aiming boosted by Advisor
+@buff_FAowndesc=Advisor: Boosts Aiming of Allies
+@buff_Vetinspired=Inspired by nearby Veteran
+@buff_Vetowndesc=Veteran: Lowers Suppression
+@buff_scaredshitless=Scared by violence

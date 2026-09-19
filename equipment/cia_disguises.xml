@@ -1,0 +1,20 @@
+<Equipment>
+	<Bind eqp="Poncho" to="BlackOps"/>
+	<Disguise name="Poncho" inventoryBinding="SupportGear1"
+			tooltip="@disguise_poncho_name"
+			description="@disguise_poncho_desc"
+			img="data/models/equipment/poncho_ui.dds"
+			movie="data/movies/poncho.ogv"
+			quantity="1"
+
+			animationSet="generic_device"
+			discardWithEntityWhenEmpty="DroppedPoncho"
+		>
+		<RenderObject3D model="data/models/humans/attachments/cia_poncho_01.khm" diffuseTex="data/models/humans/attachments/cia_poncho_01.dds" windAnimated="1"/>
+		
+		<ConcealmentModifier add="5"/>
+		<MobilityModifiers moveSpeedModifierPercent="0" turnSpeedModifierPercent="0"/>
+		
+	</Disguise>
+	
+</Equipment>

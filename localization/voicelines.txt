@@ -1,0 +1,30 @@
+@data_sounds_voice_enemies_vox_eat_this_wav=Eat this!
+@data_sounds_voice_rangers_vox_trpr_01_armorhit_01_wav=Armor saved me !
+
+@data_sounds_voice_enemies_vox_look_go_1_wav=Check it out
+@data_sounds_voice_enemies_vox_look_go_2_wav=What was that ?
+@data_sounds_voice_enemies_vox_look_go_3_wav=Hmm
+
+@data_sounds_voice_enemies_vox_look_go_alert_1_wav=You, go check it out !
+@data_sounds_voice_enemies_vox_look_go_alert_2_wav=Get them !
+@data_sounds_voice_enemies_vox_look_go_alert_3_wav=Go !
+
+@data_sounds_voice_enemies_vox_look_hold_1_wav=Hold
+@data_sounds_voice_enemies_vox_look_hold_2_wav=Wait them out
+@data_sounds_voice_enemies_vox_look_hold_3_wav=No, stay here
+@data_sounds_voice_enemies_vox_look_hold_4_wav=Who's there ?
+
+@data_sounds_voice_enemies_vox_look_done_1_wav=Nothing ...
+@data_sounds_voice_enemies_vox_look_done_2_wav=? ? ?
+@data_sounds_voice_enemies_vox_look_done_3_wav=Hmm
+
+@data_sounds_voice_enemies_vox_look_done_alert_1_wav=They're gone
+@data_sounds_voice_enemies_vox_look_done_alert_2_wav=I'll find you !
+@data_sounds_voice_enemies_vox_look_done_alert_3_wav=Gone ...
+
+@data_sounds_voice_enemies_vox_kill_1_wav=Yeah !
+@data_sounds_voice_enemies_vox_kill_2_wav=Wooo
+@data_sounds_voice_enemies_vox_kill_3_wav=Got one !
+
+@data_sounds_voice_enemies_vox_enemy_warn_grenade_wav=Grenade !
+

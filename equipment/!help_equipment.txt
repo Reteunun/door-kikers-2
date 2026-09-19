@@ -1,0 +1,209 @@
+
+Note: the descriptions given here may be outdated/incomplete.
+
+------------------------
+------------------------
+Equipment items are sorted in the customization screen in the order of the filenames they are part of, then in the order of their appearance inside of said xml files.
+For that, they are given a hidden sortId number which is incremented for each equipment.
+To do custom ordering, a user can specify the sortId of the equipment like: sortId="0" (using zero will make it show up first in the list).
+If multiple items have the same sorting number, they'll be ordered by their names.
+
+Modded equipment xml files will always be loaded last, after the stock game's files, therefore will always show up last by default.
+
+
+------------------------
+------------------------
+To make a weapon/equipment item show up in the customization of a certain unit/class, you need to define:
+<Bind eqp="Equipment name" to="Class name"/>
+e.g. <Bind eqp="Breacher Shotgun" to="Assault"/>
+
+These can be in separate files from the equipment, allowing you to add existing weapons to new classes/units of troops.
+Each <Bind> is additive, allowing you to add functionality (like new Ammo for weapons) without breaking existing one.
+
+This also works, to keep multiple bindings under a single parent item:
+<Bind eqp="M9 Pistol">
+	<!-- all classes of the Rangers unit -->
+	<to name="Rangers"/>
+	
+	<!-- alternatively, you can specify single-classes of a unit -->
+	<to name="Assault"/>
+	<to name="Support"/>
+	<to name="Marksman"/>
+	<to name="Medic"/>
+	<to name="Grenadier"/>
+
+	<!-- ammo, the first one is the default 
+		Note: instead of binding ammo to pistols (which would be the logical way), we do it the other way, to be able to keep track of the defaults and have a 1-to-many equivalence which is easier to use in code
+	-->
+	<to name="919FMJM882_Handgun"/>
+	<to name="919FMJM1152_Handgun"/>
+	<to name="919JHPM1153_Handgun"/>
+
+	<!-- scopes, the first one is the default -->
+	<to name="IronSights_Pistol"/>
+</Bind>
+
+In the example above, if you add a new class that needs the M9, you must only write (in a custom equipment xml of yours):
+<Bind eqp="M9 Pistol" to="MyNewClass">
+If you want to add a new Scope to the M9:
+<Bind eqp="M9 Pistol" to="MyNewScope">
+
+If you want to add a new weapon, you must also add it to all existing classes to which you want to bind it:
+<Bind eqp="MyNewWeapon">
+	<to name="Assault">
+	<to name="Support">
+	
+	<to name="919FMJM882_Handgun"/>
+	
+	<to name="IronSights"/>
+</Bind>
+
+
+To add an equipment for all classes of a unit, specify the unit name in the 'to' parameter
+<Bind eqp="Frag Grenade" to="CIA"/>
+
+
+There is also an Unbind option:
+<Unbind eqp="name" to="target">
+which will do exactly what you think it does. We don't use it in the game, but it's there for modding purposes.
+However it's not really recommended to unbind existing equipment, since it could interact with what other mods are doing.
+
+
+------------------------
+------------------------
+Possible "inventory" field values:
+	- PrimaryWeapon
+	- SecondaryWeapon
+	- Armor
+	- UtilityPouch
+	- SupportGear1/2/3 - only SupportGear1 can be customized, for support that is always equipped but doesn't show use SupportGear2/3 (like lockpicks)
+	- MountedGun
+	- Custom1-9 - reserved for mods
+
+------------------------
+------------------------
+Possible "category" field values:
+	- pistol/rifle/shotgun/rpg
+	This is currently used to discern between weapon classes in code. Needed for doctrine abilities and some actions, like we can only breach a door with shotguns.
+	We could also use them as some sorts of tagging system for modifiers.
+
+
+------------------------
+------------------------
+Possible "damageType" field values:
+	- 0 (bullet, default)
+	- 1 (grenade)
+	- 2 (explosive)
+
+
+For firearms, it's defined in Ammo.
+For grenades, it's in <Projectile> -> <DamageEffect>
+For explosives, it's in <ModifiableParams>
+
+If damageType=0, you need to specify armorPenetration, which is taken into consideration when damaging troopers.
+If damageType=1 or 2, armorPenetration does not apply.
+
+damageType also influences how entities get destroyed, where each entity defines on what damage it breaks.
+e.g. Doors will get destroyed only on damageType=2
+
+------------------------
+------------------------
+Firearm <ModifiableParams>
+
+	-- these define base weapon accuracy, can be modified by AttackType/Abilities/Doctrine/etc.
+		the accuracy value is linearly interpolated in the given range, between start/end values
+		Accuracy defines the size of the shooting cone towards the enemey. 
+			accuracy=100 means a cone the size of the enemy (all bullets will hit)
+			accuracy=50 means a cone twice the size of the enemy (half the bullets will hit)
+			accuracy=200 means a cone half the size of the enemy (more bullets will hit the enemy's center)
+	accuracyStart="70"
+	accuracyEnd="30"
+	accuracyStartDist="0"
+	accuracyEndDist="100"
+
+------------------------
+Firearms <AttackTypes> for normal shooting
+Blindfire uses BlindFire_Auto by default, but you can override it with <AttackTypesBlindfire>
+Suppressive Fire (the Ranger Support ability) uses AreaSuppression_Auto by default
+	But you can override it with <AttackTypesSuppressiveFire>
+
+------------------------
+------------------------
+Ammo <Params> - Most of these override base stats, but some will just change them
+	roundsPerSecond 		- override
+	audibleSoundRadius 		- override
+	physicsImpactForce		- override
+	damageType				- override
+	numPellets				- override
+	silenced				- override
+	suppressionScale		- override
+	overpenetrates			- true/false, override
+	accuracyMultiplier		- percentage multiplier, default to 100 (no effect)
+	accuracyAdd				- added amount, default to 0.0 (no effect)
+
+	And there's also these things:
+		<!-- the damage value is linearly interpolated in the given range, between min/max damage -->
+		<Damage start="24" end="20" startDist="0" endDist="50"/>
+		<!-- base value, can be modified by AttackType/Abilities/Doctrine/etc. -->
+		<CriticalChancePercent start="35" end="10" startDist="15" endDist="30"/>
+		<!-- i.e. divides distance range in (end - start) discrete intervals for AP -->
+		<ArmorPenetration start="5" end="4" startDist="0" endDist="20"/>
+
+
+------------------------
+------------------------
+Misc Equipment <ModifiableParams>
+	
+These work even if item is not equipped:
+	suppressionRecoveryAdd 		- percentage increase of default suppression recovery (default to 0, so no change)
+	meleeStunBonus				- see melee below
+	meleeSpeedAdd				- see melee below
+
+These only work while item is equipped (i.e. held in hand):
+	brightLight					- makes person visible in the dark, set it to 1 to enable. Works on Scopes only while aiming
+	nightVision					- makes person see in the dark, set it to 1 to enable. Works on Scopes only while aiming
+	flinchResistance			- less chance to flinch by reducing damage taken by this amount ( so 10 resistance means a 30dmg hit is considered a 20dmg hit for flinch chance)
+	beingSpottedRate			- percent increase to speed at which enemies see through your disguise
+	readyTimeAddBlocked			- modifies ready time when raising weapon from a "blocked" state (i.e. had an obstacle in front, like a wall or an ally)
+	guardTimeAddBlocked			- ^ same, for guard time
+	meleeDamageBonus			- see melee below
+	meleeReach					- see melee below
+	
+You can add fovDegrees="xx" to some items in the <ModifiableParams> list in order to modify the base FOV, and it will be used in the following order (higher on the list will override the values below)
+	Any equipped item, with Firearm Scope settings while "aiming" (when shooting and during Look commands)
+	Shields
+	HelmetNVG
+
+------------------------
+------------------------
+All time settings are in milliseconds, unless name says otherwise.
+
+
+------------------------
+------------------------
+PROJECTILE PARAMS
+	If 'minVelocity' is defined and > 0, the projectile will be self propelled (rocket). It will then accelerate with the defined 'acceleration' value towards 'maxVelocity'.
+		minVelocity/maxVelocity/acceleration are defined in meters per second.
+
+	If 'mass' > 0, the projectile will be affected by gravity
+	
+	If 'noWarningVoiceline="true"' it will make enemies that see it not yell a WARN_GRENADE voiceline
+------------------------
+------------------------
+MELEE STUFF
+
+Melee weapons are Firearms with the "melee" category
+Hitting with them will use the particles defined in <MuzzleFlash> <Flare> and "lightTemplate", and the sounds for "Fire" and "ShellDrop"
+
+All of the following can be added in <ModifiableParams>
+Equipped weapon gives
+	"meleeAttackDuration" - duration of attack animation. Total milliseconds, scaled by "meleeSpeedAdd"
+	"meleeAttackCooldown" - pause between attacks, including attack animation. Total milliseconds, scaled by "meleeSpeedAdd"
+	"meleeReach" - minimum distance to do the attack. In meters
+	"meleeDamageBonus" - flat damage, added on top of the global "meleeDamage" setting (in the gameplay xml)
+
+All equipped equipment can give (including ones not being weilded):
+	"meleeStunBonus" - percent increase in stun time, also affects knockback at 33% effectiveness
+	"meleeSpeedAdd" - percent increase in execution time of the melee attack (and cooldown). So 200 means twice as fast, 300 means three times as fast, etc.
+
+Doctrines (including permanent trooper bonuses and temporary buffs) can give meleeDamageBonus, meleeStunBonus and meleeSpeedAdd

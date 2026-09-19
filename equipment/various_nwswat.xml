@@ -1,0 +1,936 @@
+<Equipment>
+
+<!--
+GRENADES
+-->
+	<Bind eqp="NWS Smoke Grenade Single">
+		<to name="Nowheraki"/>
+	</Bind>
+	<Grenade name="NWS Smoke Grenade Single" inventoryBinding="UtilityPouch"
+			quantity="1"
+
+			tooltip="@grenade_smokesingle_name"
+			description="@grenade_smoke_desc"
+			img="data/models/equipment/smoke_grenade_ui.dds"
+			movie="data/movies/smoke_grenade.ogv"
+
+			animationSet="grenade"
+			soundUse="grenade_use"
+			soundUseVoice="VOX_GEAR_SMOKE"
+		>
+		<RenderObject3D model="data/models/equipment/smoke_grenade.khm" skipGOSSAO="true" diffuseTex="data/models/equipment/smoke_grenade.dds"/>
+		<ConcealmentModifier add="-0.5"/>
+		<MobilityModifiers moveSpeedModifierPercent="-0.5" turnSpeedModifierPercent="0"/>
+
+		<!--
+		- throwTime is the full time required to throw it, it is split in half between when the hand starts moving and the grenade launches and the recovery
+		- the effectRange Radius contains the previous one, but the effects do not concatenate
+		- explosion time is adjusted automatically depending on the distance to target, but have a minimum explosion time
+		-->
+		<ModifiableParams
+			changeInTime="0"
+			changeOutTime="0"
+			throwTime="1000"
+			throwTimeCorner="1400"
+		/>
+
+		<!-- NOTE: Explosion particle is tweaked to last about as long as duration -->
+		<Projectile
+			bodyTemplate="SmokeGrenade"
+			trailParticles="SmokeGrenadeTrail"
+			pathIconTexture="data/textures/gui/contextual/pathicon_flashbang_active.tga"
+
+			soundExplosion=""
+			soundOnSpawn="smoke_throw"
+			soundFollow="smoke_loop"
+			soundHitFloor="grenade_hit_floor"
+			
+
+			friendlyFire="false"
+			triggerOnImpact="false"
+			triggerTimeAfterTargetHitMsec="200"
+
+			physicsDetonationForce="5"
+			audibleLaunchSoundRadius="0"
+			audibleDetonationSoundRadius="10">
+
+			<FX
+				particles="SmokeGrenadeExplosion"
+				anim2D="">
+			</FX>
+
+			<EffectRange radiusMeters="2.5">
+				<SmokeEffect durationMSec="14300" />
+			</EffectRange>
+		</Projectile>
+	</Grenade>
+
+
+	<Bind eqp="NWS Door Charge" to="SwatSapper"/>
+	<ExplosiveCharge name="NWS Door Charge" inventoryBinding="UtilityPouch"
+			quantity="1"
+
+			tooltip="@nws_doorcharge_name"
+			description="@nws_doorcharge_desc"
+			img="data/models/equipment/door_charge_ui.dds"
+			movie="data/movies/slap_charge.ogv"
+
+			animationSet="generic_device"
+			soundUse="equip_charge"
+			crouchOnUse="true"
+		>
+		<RenderObject3D model="data/models/humans/attachments/backpack_door_charge.khm" attachSlot="vest_back_right" skipGOSSAO="true" diffuseTex="data/models/equipment/door_charges.dds"/>
+		<ConcealmentModifier add="-1"/>
+		<MobilityModifiers moveSpeedModifierPercent="-2" turnSpeedModifierPercent="0"/>
+
+		<!-- Area2 contains Area1 (should be larger than..). The effects don't stack though. -->
+		<ModifiableParams
+			changeInTime="1200"
+			changeOutTime="1200"
+			efficiencyPercent="100"
+			deployTime="4000"
+
+			area1WidthMeters="0.9"
+			area1LengthMeters="3.5"
+			area1Damage="100"
+			area1StunTime="3000"
+
+			area2WidthMeters="2"
+			area2LengthMeters="7"
+			area2Damage="38"
+			area2StunTime="3500"
+
+			audibleSoundRadius="40"
+			audibleSoundRadiusForPlacing="1.5"
+			physicsDetonationForce="80"
+			damageType="2"
+		/>
+
+		<Params
+			bodyTemplate="DoorChargeBody"
+			explosionSound="expl_breach_charge">
+
+			<FX
+				particles="BreachingCharge"
+				entity1="ExplosionLight"
+				entity2="scorch_mark_breach"
+				entity3="FX_dust_small"
+				deleteAfterMS3="20000">
+			</FX>
+		</Params>
+	</ExplosiveCharge>
+
+	<Bind eqp="NWS Door Charge Kit" to="SwatSapper"/>
+	<ExplosiveCharge name="NWS Door Charge Kit" inventoryBinding="SupportGear1"
+			quantity="4"
+
+			tooltip="@nws_doorcharge_kit_name"
+			description="@nws_doorcharge_desc"
+			img="data/models/equipment/door_charge_ui.dds"
+			movie="data/movies/slap_charge.ogv"
+
+			animationSet="generic_device"
+			soundUse="equip_charge"
+			crouchOnUse="true"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-3" turnSpeedModifierPercent="0"/>
+		<ConcealmentModifier add="-2" />
+		<!-- Area2 contains Area1 (should be larger than..). The effects don't stack though. -->
+		<ModifiableParams
+			changeInTime="1200"
+			changeOutTime="1200"
+			efficiencyPercent="100"
+			deployTime="4000"
+
+			area1WidthMeters="0.9"
+			area1LengthMeters="3.5"
+			area1Damage="100"
+			area1StunTime="3000"
+
+			area2WidthMeters="2"
+			area2LengthMeters="7"
+			area2Damage="38"
+			area2StunTime="3500"
+
+			audibleSoundRadius="40"
+			audibleSoundRadiusForPlacing="1.5"
+			physicsDetonationForce="80"
+			damageType="2"
+		/>
+
+		<Params
+			bodyTemplate="DoorChargeBody"
+			explosionSound="expl_breach_charge">
+
+			<FX
+				particles="BreachingCharge"
+				entity1="ExplosionLight"
+				entity2="scorch_mark_breach"
+				entity3="FX_dust_small"
+				deleteAfterMS3="20000">
+			</FX>
+		</Params>
+	</ExplosiveCharge>
+
+
+	<Bind eqp="Molotov Single">
+		<to name="Nowheraki"/>
+	</Bind>
+	<!-- note: make sure to also add as a grenade throw action in action_waypoints.xml -->
+	<Grenade name="Molotov Single" inventoryBinding="UtilityPouch"
+			quantity="1"
+
+			tooltip="@grenade_molotov_name"
+			description="@grenade_molotov_desc"
+			img="data/models/equipment/molotov_ui.dds"
+			movie="data/movies/molotov.ogv"
+
+			soundUse="molotov_use"
+			soundUseVoice="VOX_GEAR_MOLOTOV"
+
+			animationSet="grenade"
+		>
+		<RenderObject3D model="data/models/equipment/mol_bottle.khm" skipGOSSAO="true" diffuseTex="data/models/equipment/mol_bottle.dds"/>
+		<ConcealmentModifier add="-0.5"/>
+		<MobilityModifiers moveSpeedModifierPercent="0" turnSpeedModifierPercent="0"/>
+
+		<ModifiableParams
+			changeInTime="0"
+			changeOutTime="0"
+			throwTime="1500"
+			throwTimeCorner="1900"
+			
+			brightLight="1"
+		/>
+
+		<!-- soundExplosion="glass_break" -->
+		<!-- soundOnSpawn="molotov_use" -->
+
+		<Projectile
+			bodyTemplate="MolotovThrownBottle"
+			pathIconTexture="data/textures/gui/contextual/pathicon_stinger_active.tga"
+
+			trailParticles="Molotov_Trail"
+			lightTemplate="Light_FireLarge"
+
+			soundFollow="fire"
+			soundHitFloor="glass_break"
+
+			friendlyFire="true"
+			triggerOnImpact="true"
+			triggerTimeAfterTargetHitMsec="0"
+
+			physicsDetonationForce="5"
+			audibleLaunchSoundRadius="2"
+			audibleDetonationSoundRadius="15"
+			>
+
+			<!-- spawn these when exploding -->
+			<FX
+				particles="Molotov_Explosion"
+				entity1="scorch_mark_molotov_central"
+				randRotation1="true"
+				entity2="fire_molotov"
+				deleteAfterMS2="15000"
+				entity3="Light_FireLarge"
+				deleteAfterMS3="15000"
+			/>
+
+			<Shrapnel projectileSource="Extra_MolotovShrapnel" min="4" max="6" spreadRadius="2.0" />
+
+			<EffectRange radiusMeters="1.0">
+				<DamageEffect chancePercent="100" damage="45" damageType="0"  armorPenetration="0"/>
+				<FireEffect durationMSec="8000"/>
+				<DOTEffect durationMSec="15000" dps="10.0"/>
+			</EffectRange>
+
+			<EffectRange radiusMeters="2.0">
+				<!-- <StunEffect chancePercent="100" innerRangeTimeMSec="1500" outerRangeTimeMSec="1500"/> -->
+				<ScatterEffect chancePercent="100" durationMSec="8000"/>
+				<SuppressEffect amount="30" durationMSec="8000"/>
+				<!-- <SmokeEffect durationMSec="1030" /> -->
+			</EffectRange>
+			<EffectRange radiusMeters="3">
+				<ScatterEffect chancePercent="85" armorPenetration="0" innerRangeTimeMSec="8000" outerRangeTimeMSec="5000"/>
+				<SuppressEffect amount="15"/>
+			</EffectRange>
+
+		</Projectile>
+	</Grenade>
+
+	<Grenade name="Extra_MolotovShrapnel" inventoryBinding="UtilityPouch"
+			animationSet="grenade"
+		>
+
+		<Projectile
+			bodyTemplate="MolotovShrapnel"
+
+			trailParticles="Molotov_ExtraTrail"
+			lightTemplate="Light_FireSmall"
+
+			friendlyFire="true"
+			triggerOnImpact="true"
+			triggerTimeAfterTargetHitMsec="1500"
+
+			physicsDetonationForce="2"
+			audibleLaunchSoundRadius="0"
+			audibleDetonationSoundRadius="0">
+
+			<!-- spawn these when exploding -->
+			<FX
+				particles="Molotov_ExtraExplosion"
+				entity1="scorch_mark_molotov_secondary"
+				randRotation1="true"
+			/>
+
+			<EffectRange radiusMeters="0.75">
+				<DamageEffect chancePercent="100" damage="35" damageType="0"  armorPenetration="0"/>
+				<FireEffect durationMSec="8000"/>
+				<DOTEffect durationMSec="13000" dps="10.0"/>
+			</EffectRange>
+		</Projectile>
+	</Grenade>
+
+<!--
+ARMOR
+-->
+
+	<Bind eqp="NWS Vest FrontPlate">
+		<to name="SwatAssaulter"/>
+		<to name="SwatLeader"/>
+		<to name="SwatSapper"/>
+	</Bind>
+	<Armor name="NWS Vest FrontPlate" inventoryBinding="Armor" unlockCost="4"
+			tooltip="@armor_nws_frontplate_name"
+			description="@armor_nws_frontplate_desc"
+			img="data/models/equipment/armor_singleleveliii_ui.dds"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-5" turnSpeedModifierPercent="0"/>
+		<ConcealmentModifier add="-3" />
+
+		<Params>
+			<ProtectionArc degrees="90" coveragePercent="37" piercingProtectionLevel="50"/>
+			<ProtectionArc degrees="270" coveragePercent="0" piercingProtectionLevel="0"/>
+			<ProtectionArc degrees="360" coveragePercent="0" piercingProtectionLevel="0"/>
+		</Params>
+	</Armor>
+	
+	<Bind eqp="NWS Vest FrontPlateMilitia">
+		<to name="SwatMilitia"/>
+	</Bind>
+	<Armor name="NWS Vest FrontPlateMilitia" inventoryBinding="Armor" unlockCostBH="2"
+			tooltip="@armor_nws_frontplate_name"
+			description="@armor_nws_frontplate_desc"
+			img="data/models/equipment/armor_singleleveliii_ui.dds"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-5" turnSpeedModifierPercent="0"/>
+		<ConcealmentModifier add="-3" />
+
+		<Params>
+			<ProtectionArc degrees="90" coveragePercent="37" piercingProtectionLevel="50"/>
+			<ProtectionArc degrees="270" coveragePercent="0" piercingProtectionLevel="0"/>
+			<ProtectionArc degrees="360" coveragePercent="0" piercingProtectionLevel="0"/>
+		</Params>
+	</Armor>	
+
+
+	<Bind eqp="NWS Vest Level III">
+		<to name="SwatAssaulter"/>
+		<to name="SwatLeader"/>
+		<to name="SwatSapper"/>
+	</Bind>
+	<Armor name="NWS Vest Level III" inventoryBinding="Armor" unlockCost="7"
+			tooltip="@armor_nws_basicvest_name"
+			description="@armor_nws_basicvest_desc"
+			img="data/models/equipment/armor_basic_ui.dds"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-9" turnSpeedModifierPercent="-1"/>
+		<ConcealmentModifier add="-3" />
+
+		<Params>
+			<ProtectionArc degrees="90" coveragePercent="37" piercingProtectionLevel="50"/>
+			<ProtectionArc degrees="270" coveragePercent="0" piercingProtectionLevel="0"/>
+			<ProtectionArc degrees="360" coveragePercent="37" piercingProtectionLevel="50"/>
+		</Params>
+	</Armor>
+
+	<Bind eqp="NWS Vest Extended">
+		<to name="SwatSapper"/>
+	</Bind>
+	<Armor name="NWS Vest Extended" inventoryBinding="Armor" unlockCost="0"
+			tooltip="@armor_nws_extended_name"
+			description="@armor_nws_extended_desc"
+			img="data/models/equipment/armor_extended_ui.dds"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-18" turnSpeedModifierPercent="-11"/>
+		<ConcealmentModifier add="-6" />
+
+		<Params>
+			<ProtectionArc degrees="90" coveragePercent="70" piercingProtectionLevel="50"/>
+			<ProtectionArc degrees="270" coveragePercent="40" piercingProtectionLevel="50"/>
+			<ProtectionArc degrees="360" coveragePercent="40" piercingProtectionLevel="50"/>
+		</Params>
+
+		<ModifiableParams
+			suppressionRecoveryAdd="10"
+		/>
+	</Armor>
+	
+	<Bind eqp="NWS Vest Extended Leader">
+		<to name="SwatLeader"/>
+	</Bind>
+	<Armor name="NWS Vest Extended Leader" inventoryBinding="Armor" unlockCost="6"
+			tooltip="@armor_nws_extended_name"
+			description="@armor_nws_extended_leader_desc"
+			img="data/models/equipment/armor_extended_ui.dds"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-18" turnSpeedModifierPercent="-11"/>
+		<ConcealmentModifier add="-6" />
+
+		<Params>
+			<ProtectionArc degrees="90" coveragePercent="70" piercingProtectionLevel="50"/>
+			<ProtectionArc degrees="270" coveragePercent="40" piercingProtectionLevel="50"/>
+			<ProtectionArc degrees="360" coveragePercent="40" piercingProtectionLevel="50"/>
+		</Params>
+
+		<ModifiableParams
+			suppressionRecoveryAdd="10"
+		/>
+	</Armor>
+	
+
+	<Bind eqp="NWS Vest Level IV Front">
+		<to name="SwatAssaulter"/>
+		<to name="SwatLeader"/>
+		<to name="SwatSapper"/>
+	</Bind>
+	<Armor name="NWS Vest Level IV Front" inventoryBinding="Armor" unlockCostBH="5"
+			tooltip="@armor_nws_lvl4front_name"
+			description="@armor_nws_lvl4front_desc"
+			img="data/models/equipment/armor_leveliv_ui.dds"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-11" turnSpeedModifierPercent="-2"/>
+		<ConcealmentModifier add="-3" />
+
+		<Params>
+			<ProtectionArc degrees="90" coveragePercent="40" piercingProtectionLevel="60"/>
+			<ProtectionArc degrees="270" coveragePercent="00" piercingProtectionLevel="0"/>
+			<ProtectionArc degrees="360" coveragePercent="37" piercingProtectionLevel="50"/>
+		</Params>
+	</Armor>
+
+	<Bind eqp="NWS Shield Lvl III">
+		<to name="SwatAssaulter"/>
+	</Bind>
+	<Shield name="NWS Shield Lvl III" inventoryBinding="PrimaryWeapon" unlockCost="10" category="shield" 
+			tooltip="@shield_nws_lvl3_name"
+			description="@shield_nws_lvl3_desc"
+			img="data/models/equipment/shield_01_ui.dds"
+			movie="data/movies/shield.ogv"
+			holdBone="shield"
+			animationSet="shield"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-22" turnSpeedModifierPercent="-60"/>
+		<RenderObject3D model="data/models/equipment/shield_01.khm" diffuseTex="data/models/equipment/shield_01.dds" attachSlot="prop_back_rifle"/>
+
+		<ModifiableParams
+			fovDegrees="75"
+			fovRangeMeters="999999"
+			fovRadiusMeters="0.4"
+			suppressionRecoveryAdd="20"
+			meleeSpeedAdd="-40"
+		/>
+
+		<Params>
+			<ProtectionArc degrees="90" coveragePercent="90" piercingProtectionLevel="50"/>
+
+			<FX
+				particles="Hit_Metal_Shield"
+			/>
+
+			<!-- this gets applied to the weapon held in the right hand, when the shield is also equipped. 'AttackTypeModifier' does not work here.  -->
+			<EquipmentModifier>
+				<AddTo
+					reloadTime="+2000"
+					reloadEmptyTime="+2000"
+					readyTime="+100"
+					guardTime="+100"
+					changeInTime="+300"
+					changeOutTime="+300"
+
+					accuracyStart="-40"
+					accuracyEnd="-70"
+				/>
+			</EquipmentModifier>
+		</Params>
+	</Shield>
+
+	<Bind eqp="NWS Shield Lvl IV">
+		<to name="SwatAssaulter"/>
+	</Bind>
+	<Shield name="NWS Shield Lvl IV" inventoryBinding="PrimaryWeapon" unlockCost="0" unlockCostBH="8" category="shield" 
+			tooltip="@shield_nws_lvl4_name"
+			description="@shield_nws_lvl4_desc"
+			img="data/models/equipment/shield_02_ui.dds"
+			holdBone="shield"
+			animationSet="shield"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-27" turnSpeedModifierPercent="-65"/>
+		<RenderObject3D model="data/models/equipment/shield_02.khm" diffuseTex="data/models/equipment/shield_02.dds" attachSlot="prop_back_rifle"/>
+
+		<ModifiableParams
+			fovDegrees="80"
+			fovRangeMeters="999999"
+			fovRadiusMeters="0.4"
+			suppressionRecoveryAdd="20"
+			meleeSpeedAdd="-65"
+		/>
+
+		<Params>
+			<ProtectionArc degrees="75" coveragePercent="80" piercingProtectionLevel="60"/>
+
+			<FX
+				particles="Hit_Metal_Shield"
+			/>
+
+			<!-- this gets applied to the weapon held in the right hand, when the shield is also equipped. 'AttackTypeModifier' does not work here.  -->
+			<EquipmentModifier>
+				<AddTo
+					reloadTime="+2000"
+					reloadEmptyTime="+2000"
+					readyTime="+100"
+					guardTime="+100"
+					changeInTime="+300"
+					changeOutTime="+300"
+
+					accuracyStart="-40"
+					accuracyEnd="-70"
+				/>
+			</EquipmentModifier>
+		</Params>
+	</Shield>
+
+
+
+<!--
+UTILITY POUCH
+-->
+
+
+
+<!--
+BACKPACK
+-->
+
+	<!--
+		Unlocks the ability to destroy a locked door via multiple kicks.
+		Does not require un-equipping the primary weapon in order to use.
+		Replaces the normal Kick action when in inventory.
+	-->
+	<FeetOfSteel name="FeetOfSteel" inventoryBinding="SupportGear3">
+		<!--
+			The total time it takes to destroy a door is taken from the door's "breachTimeMsec" param (the same one used for crowbars)
+			   It is then multiplied by the efficiency percent.
+			   Then it's slightly adjusted in order to make the door break on precisely the last kick event.
+			Note that efficiency is modified by fieldSkills innate ability, which currently starts at -25% (a -25,+25 range is a bit too much?)
+			The number of kicks = breachTimeMsec / timePerKickMsec
+
+			'damagePerKick' is not used for doors! But it will be used when kicking any other entity type (if we bind this equipment to other entity types)
+			  For those, the total destroy time = (entityHealth / damagePerKick) * timePerKick
+		      'damageType' is here just for fun.
+		-->
+		<ModifiableParams
+			efficiencyPercent="80"
+			audibleSoundRadius="12.0"
+			timePerKickMsec="1000"
+			damagePerKick="20"
+			damageType="1"
+		/>
+		<MobilityModifiers moveSpeedModifierPercent="0" turnSpeedModifierPercent="0"/>
+	</FeetOfSteel>
+
+	<Bind eqp="NWS Demo Charge" to="SwatSapper"/>
+	<ExplosiveCharge name="NWS Demo Charge" inventoryBinding="SupportGear1"
+			quantity="3"
+
+			tooltip="@nws_demo_charge_name"
+			description="@nws_demo_charge_desc"
+			img="data/models/equipment/demo_charge_ui.dds"
+			movie="data/movies/breaching_charge.ogv"
+
+			animationSet="generic_device"
+			soundUse="equip_charge"
+			crouchOnUse="true"
+		>
+		<RenderObject3D model="data/models/humans/attachments/backpack_demo_charge.khm" attachSlot="vest_back_left" skipGOSSAO="true" diffuseTex="data/models/humans/attachments/backpack_demo_charge.dds"/>
+		<MobilityModifiers moveSpeedModifierPercent="-10" turnSpeedModifierPercent="-1"/>
+		<!-- this makes the item show on the back of the human, but we need a different model
+		<RenderObject3D model="data/models/equipment/breaching_charge.khm" attachSlot="prop_back_rifle" skipGOSSAO="true" diffuseTex="data/models/equipment/breaching_charge.dds"/>
+		-->
+
+		<!-- Area2 contains Area1 (should be larger than..). The effects don't stack though. -->
+		<!-- efficiencyPercent is changed by abilities and will apply onto deployTime. E.g. efficiencyPercent=200 means it will deploy 2x faster, meaning deployTime/2 -->
+		<ModifiableParams
+			changeInTime="800"
+			changeOutTime="600"
+			efficiencyPercent="100"
+			deployTime="3000"
+
+			area1WidthMeters="2"
+			area1LengthMeters="2"
+			area1Damage="999"
+			area1StunTime="3000"
+
+			area2WidthMeters="3"
+			area2LengthMeters="5"
+			area2Damage="30"
+			area2StunTime="1800"
+
+			audibleSoundRadius="40"
+			audibleSoundRadiusForPlacing="1.5"
+			physicsDetonationForce="150"
+			damageType="2"
+		/>
+
+		<Params
+			bodyTemplate="DemoChargeBody"
+			explosionSound="expl_breach_charge">
+
+			<FX
+				particles="BreachingCharge"
+				entity1="ExplosionLight"
+				entity2="scorch_mark_breach"
+				entity3="FX_dust_large"
+				deleteAfterMS3="35000">
+			</FX>
+
+		</Params>
+	</ExplosiveCharge>
+
+<!-- Rocket Launchers-->
+
+	<Bind eqp="MWS RPG 7">
+		<to name="338_SniperRifle"/> <!-- doesn't do anything, needed to avoid errors -->
+	</Bind>
+	<Firearm name="MWS RPG 7" inventoryBinding="PrimaryWeapon" category="rpg" unlockCost="0"
+			tooltip="@firearm_RPG7nws_name"
+			description="@firearm_RPG7nws_desc"
+			img="data/models/weapons/rpg7_ui.dds"
+			animationSet="rpg7"
+			soundUseVoice="VOX_GEAR_ROCKET"
+		>
+		<RenderObject3D model="data/models/weapons/rpg7.khm" attachSlot="prop_back_rifle" skipGOSSAO="true" diffuseTex="data/models/weapons/rpg7.dds">
+			<Specular shininess="32" intensity="4.0"/>
+		</RenderObject3D>
+		<MobilityModifiers moveSpeedModifierPercent="-30" turnSpeedModifierPercent="-30"/>
+
+		<ModifiableParams
+			projectilesPerMagazine="4"
+
+			reloadTime="6000"
+			reloadEmptyTime="6000"
+			changeInTime="1300"
+			changeOutTime="600"
+			readyTime="700"
+			guardTime="300"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_93mmHEAT_name"
+			operationInfoText="@firearm_operation_singleshot_name"
+			ai_rangeMin="10.0"
+			ai_rangeOptimal="20.0"
+			ai_rangeMax="300.0"
+			ai_stopWhenShooting="true"
+		/>
+
+		<AttackTypesProjectile>
+			<AttackType name="CIA_RPG_QuickAimClose" rangeMeters="14"/>
+			<AttackType name="CIA_RPG_QuickAim" rangeMeters="9999"/>
+
+		</AttackTypesProjectile>
+
+		<MuzzleFlash lightTemplate="ShotLightLarge">
+			<Flare particles="RpgLaunch_01" />
+		</MuzzleFlash>
+
+		<Projectile
+			bodyTemplate="Rpg7RocketBody"
+			trailParticles="RpgTrail"
+			lightTemplate="Rocket Red"
+
+			soundExplosion="rpg_expl"
+			soundOnSpawn="rpg7_fire"
+			soundFollow="rpg_fly_travel"
+
+			ai_aimForCover="true"
+			ai_launchBlastRadius="3.0"
+
+			minVelocity="2.0"
+			maxVelocity="20.0"
+			acceleration="8.0"
+			mass="0.03"
+			friendlyFire="true"
+			triggerOnImpact="true"
+
+			roundsPerSecond="1.0"
+			accuracyPercent="65"
+			physicsDetonationForce="100"
+			audibleLaunchSoundRadius="15"
+			audibleDetonationSoundRadius="100"
+			>
+
+			<FX
+				particles="RpgExplosion"
+				entity1="ExplosionLight"
+				entity2="Explosion Scorch Mark"
+				entity3="FX_dust_large"
+				deleteAfterMS3="35000"
+				anim2D="">
+			</FX>
+`
+			<EffectRange radiusMeters="2">
+				<DamageEffect chancePercent="100" damage="999" damageType="2"/>
+			</EffectRange>
+
+			<EffectRange radiusMeters="5">
+				<StunEffect chancePercent="50" innerRangeTimeMSec="1000" outerRangeTimeMSec="200"/>
+				<ScatterEffect chancePercent="100"/>
+				<SuppressEffect amount="30"/>
+			</EffectRange>
+		</Projectile>
+
+		<Sounds> <!-- max 4 variants for each action -->
+			<Equip name="rifle_eqp"/>
+			<Unequip name="rifle_neqp"/>
+			<!-- <Reload name="rifle_reld"/> -->
+			<!-- <ReloadEmpty name="rifle_reldempt"/> -->
+			<!-- <Fire name="type56_fire"/> -->
+			<!-- <ShellDrop name="rifle_shell_drop"/> -->
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+	<Bind eqp="NWS RPG 26">
+		<to name="SwatAssaulter"/>
+		<to name="SwatSapper"/>
+
+		<to name="338_SniperRifle"/> <!-- ammo doesn't do anything, needed to avoid errors -->
+	</Bind>
+	<Firearm name="NWS RPG 26" inventoryBinding="SupportGear1" category="rpg" unlockCost="6"
+			tooltip="@firearm_RPG26cia_name"
+			description="@firearm_RPG26nws_desc"
+			img="data/models/weapons/rpg26_ui.dds"
+			animationSet="rpg26"
+			movie="data/movies/rocket_launcher.ogv"
+			discardWithEntityWhenEmpty="DiscardedRpg26"
+			soundUseVoice="VOX_GEAR_ROCKET"
+		>
+
+		<RenderObject3D model="data/models/weapons/rpg26_trooper.khm" attachSlot="prop_back_rpg" skipGOSSAO="true" diffuseTex="data/models/weapons/rpg26.dds">
+			<Specular shininess="32" intensity="4.0"/>
+		</RenderObject3D>
+		<MobilityModifiers moveSpeedModifierPercent="-8" turnSpeedModifierPercent="-4"/>
+		<ConcealmentModifier add="-4" />
+		<ModifiableParams
+			projectilesPerMagazine="1"
+
+			reloadTime="3000"
+			reloadEmptyTime="3000"
+			changeInTime="1150"
+			changeOutTime="500"
+			readyTime="350"
+			guardTime="350"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_72mmHEAT_name"
+			operationInfoText="@firearm_operation_singleshotthrow_name"
+			ai_rangeMin="12.0"
+			ai_rangeOptimal="20.0"
+			ai_rangeMax="80.0"
+			ai_stopWhenShooting="true"
+		/>
+
+
+		<AttackTypesProjectile>
+			<AttackType name="CIA_RPG_QuickAimClose" rangeMeters="14"/>
+			<AttackType name="CIA_RPG_QuickAim" rangeMeters="9999"/>
+		</AttackTypesProjectile>
+
+		<MuzzleFlash lightTemplate="ShotLightLarge">
+			<Flare particles="RpgLaunch_02" />
+		</MuzzleFlash>
+
+		<Projectile
+			bodyTemplate="Rpg26RocketBody"
+			trailParticles="RpgTrail2"
+			lightTemplate="Rocket Red"
+
+			soundExplosion="rpg_expl"
+			soundOnSpawn="rpg26_fire"
+			soundFollow="rpg_fly_travel"
+
+			ai_aimForCover="false"
+			ai_launchBlastRadius="3.0"
+
+			minVelocity="2.0"
+			maxVelocity="20.0"
+			acceleration="4.0"
+			mass="0.0"
+			friendlyFire="true"
+			triggerOnImpact="true"
+
+			roundsPerSecond="2.0"
+			accuracyPercent="82"
+			physicsDetonationForce="100"
+			audibleLaunchSoundRadius="15"
+			audibleDetonationSoundRadius="100"
+			>
+
+			<FX
+				particles="RpgExplosion"
+				entity1="ExplosionLight"
+				entity2="Explosion Scorch Mark"
+				entity3="FX_dust_large"
+				deleteAfterMS3="35000"
+				anim2D="">
+			</FX>
+`
+			<EffectRange radiusMeters="2">
+				<DamageEffect chancePercent="100" damage="999" damageType="2"/>
+				<SuppressEffect amount="50"/>
+			</EffectRange>
+
+			<EffectRange radiusMeters="3">
+				<DamageEffect chancePercent="100" damage="10" damageType="1"/>
+				<StunEffect chancePercent="100" innerRangeTimeMSec="1000" outerRangeTimeMSec="500"/>
+				<ScatterEffect chancePercent="100"/>
+				<SuppressEffect amount="40"/>
+				<SmokeEffect durationMSec="1900" />
+			</EffectRange>
+
+			<EffectRange radiusMeters="5">
+				<StunEffect chancePercent="50" innerRangeTimeMSec="500" outerRangeTimeMSec="300"/>
+				<ScatterEffect chancePercent="100"/>
+				<SuppressEffect amount="30"/>
+			</EffectRange>
+		</Projectile>
+
+		<Sounds> <!-- max 4 variants for each action -->
+			<Equip name="rifle_eqp"/>
+			<!-- <Reload name="rifle_reld"/> -->
+			<!-- <ReloadEmpty name="rifle_reldempt"/> -->
+			<!-- <Fire name="type56_fire"/> -->
+			<!-- <ShellDrop name="rifle_shell_drop"/> -->
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+	<Firearm name="NWS AT4 Rocket Launcher" inventoryBinding="SupportGear1" category="rpg" unlockCost="2"
+			tooltip="@firearm_AT4_name"
+			description="@firearm_AT4_desc"
+			img="data/models/weapons/at4_ui.dds"
+			animationSet="rpg26"
+			movie="data/movies/rocket_launcher.ogv"
+			discardWithEntityWhenEmpty="DiscardedAT4"
+			soundUseVoice="VOX_GEAR_ROCKET"
+		>
+
+		<RenderObject3D model="data/models/weapons/at4.khm" attachSlot="prop_back_rpg" skipGOSSAO="true" diffuseTex="data/models/weapons/at4.dds">
+			<Specular shininess="32" intensity="4.0"/>
+		</RenderObject3D>
+		<MobilityModifiers moveSpeedModifierPercent="-10" turnSpeedModifierPercent="-8"/>
+		<ConcealmentModifier add="-6"/>
+		<ModifiableParams
+			projectilesPerMagazine="1"
+
+			reloadTime="3000"
+			reloadEmptyTime="3000"
+			changeInTime="2200"
+			changeOutTime="600"
+			readyTime="800"
+			guardTime="400"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_84mmHEAT_name"
+			operationInfoText="@firearm_operation_singleshotthrow_name"
+			ai_rangeMin="10.0"
+			ai_rangeOptimal="30.0"
+			ai_rangeMax="100.0"
+			ai_stopWhenShooting="true"
+		/>
+
+		<AttackTypesProjectile>
+			<AttackType name="CIA_RPG_QuickAimClose" rangeMeters="20"/>
+			<AttackType name="CIA_RPG_QuickAim" rangeMeters="9999"/>
+		</AttackTypesProjectile>
+
+		<MuzzleFlash lightTemplate="ShotLightLarge">
+			<Flare particles="RpgLaunch_01" />
+		</MuzzleFlash>
+
+		<Projectile
+			bodyTemplate="Rpg26RocketBody"
+			trailParticles="RpgTrail2"
+			lightTemplate="Rocket Red"
+
+			soundExplosion="rpg26_expl"
+			soundOnSpawn="rpg26_fire"
+			soundFollow="rpg_fly_travel"
+
+			ai_aimForCover="false"
+			ai_launchBlastRadius="3.0"
+
+			minVelocity="5.0"
+			maxVelocity="35.0"
+			acceleration="4.0"
+			mass="0.0"
+			friendlyFire="true"
+			triggerOnImpact="true"
+
+			roundsPerSecond="2.0"
+			accuracyPercent="95"
+			physicsDetonationForce="100"
+			audibleLaunchSoundRadius="15"
+			audibleDetonationSoundRadius="100"
+			>
+
+			<FX
+				particles="RpgExplosion"
+				entity1="ExplosionLight"
+				entity2="Explosion Scorch Mark"
+				entity3="FX_dust_large"
+				deleteAfterMS3="35000"
+				anim2D="">
+			</FX>
+
+			<EffectRange radiusMeters="3">
+				<DamageEffect chancePercent="100" damage="999" damageType="2"/>
+				<SuppressEffect amount="50"/>
+				<SmokeEffect durationMSec="1900" />
+			</EffectRange>
+
+			<EffectRange radiusMeters="5.5">
+				<StunEffect chancePercent="50" innerRangeTimeMSec="1000" outerRangeTimeMSec="400"/>
+				<DamageEffect chancePercent="50" damage="35" damageType="1"/>
+				<ScatterEffect chancePercent="100"/>
+				<SuppressEffect amount="40"/>
+			</EffectRange>
+		</Projectile>
+
+		<Sounds> <!-- max 4 variants for each action -->
+			<Equip name="rifle_eqp"/>
+			<!-- <Reload name="rifle_reld"/> -->
+			<!-- <ReloadEmpty name="rifle_reldempt"/> -->
+			<!-- <Fire name="type56_fire"/> -->
+			<!-- <ShellDrop name="rifle_shell_drop"/> -->
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+
+
+
+</Equipment>

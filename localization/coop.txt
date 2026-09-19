@@ -1,0 +1,35 @@
+@menu_m_coop=ONLINE COOP
+@menu_m_coop_quickmission=QUICK MISSION
+@menu_m_coop_host=HOST GAME
+@menu_m_coop_search=SEARCHING FOR PLAYERS...
+@menu_m_coop_search_in_background=SEARCH IN BACKGROUND
+@menu_m_coop_search_background=SEARCHING COOP
+@menu_m_coop_host_wait=WAITING FOR PLAYERS %d/%d
+@menu_m_coop_waiting_host=WAITING FOR HOST...
+@menu_m_coop_friendsonly=Friends-only
+@menu_m_coop_players=Players
+@menu_m_coop_pausetype=Pause type
+@menu_m_coop_pause_full=Sync
+@menu_m_coop_pause_full_ttip=Any player can pause the game at will, but, to resume, all players need to un-pause
+@menu_m_coop_pause_realtime=Real-time
+@menu_m_coop_pause_realtime_ttip=When pausing, your troops wait in place, but time doesn't stop
+@menu_m_coop_invite=INVITE FRIENDS
+@menu_m_coop_invite_disabled=This option needs Steam Overlay. You can still invite friends by right-clicking on them in the desktop Steam app, or you can re-enable the overlay.
+@menu_m_coop_join=JOIN
+
+@menu_coop_peer_disconnected='%s'\n has left the game!
+@menu_coop_server_timedout=The host has timed out :(
+@menu_coop_lobby_join_failed=Failed to join the lobby
+@menu_coop_lobby_create_failed=Failed to create the lobby
+@menu_coop_map_not_found=We don't have that map,\n or it's a different version from ours.
+
+@menu_coop_mods_detected=You have mods enabled!\nYou will only get matched with others having the SAME mods.\nHint: disable all mods to find games more easily.
+@menu_coop_mods_detected_warning=You have gameplay-altering mods enabled!\n Unless the other players have the same mods,\n the game will not function correctly.
+@menu_coop_mods_enabled_title=ENABLED MODS:
+@menu_coop_commands_ttip=Hold Q for the quick-commands menu
+@coop_quickmsg0=NEED ASSISTANCE
+@coop_quickmsg1=OK
+@coop_quickmsg2=SYNC UP
+@coop_quickmsg3=WATCH OUT!
+@coop_quickmsg4=NO
+@coop_quickmsg5=I GOT THIS

@@ -1,0 +1,211 @@
+﻿
+#
+# Single Player Mission Packs
+#
+
+@single_mispack_1_name=FNGs WELCOME
+@single_mispack_2_name=LEAD THE WAY
+@single_mispack_3_name=DO IT LIKE DELTA
+@single_mispack_4_name=NEVER SEE NEVER BE
+@single_mispack_5_name=TINY TROUBLES
+@single_mispack_5x_name=TINY TROUBLES 2
+@single_mispack_5xx_name=TINY TROUBLES 3
+@single_mispack_5xxx_name=TINY TROUBLES 4
+@single_mispack_6_name=EXTREME RESCUES
+@single_mispack_6x_name=EXTREME RESCUES 2
+@single_mispack_6xx_name=EXTREME RESCUES 3
+@single_mispack_7_name=INDIAN COUNTRY
+@single_mispack_8_name=RED EARTH
+@single_mispack_9_name=OPERATION SUBJUGATOR
+@single_mispack_10_name=BLAST FROM THE PAST
+@single_mispack_11_name=DECK OF CARDS
+@single_mispack_12_name=ALL THE WAY
+@single_mispack_13_name=GIVE NO QUARTER
+@single_mispack_14_name=THE WHAT-IFS
+@single_mispack_undisclosed_name=<STILL CLASSIFIED>
+
+#
+# Maps from Mission Packs
+#
+
+# FNGs Welcome
+@map_pathtosuckless=PATH TO SUCK LESS
+@map_wooddoorsareeasy=WOOD DOORS ARE EASY
+@map_practicemakesperfect=ALL TOGETHER NOW
+@map_doorkickers=WHY WE FIGHT
+@map_rescueatdawn=RESCUE AT DAWN
+@map_thejihadiliveshow=THE JIHADI LIVE SHOW
+@map_killingtime=KILLING TIME
+
+
+# Lead the Way
+@map_gatecrashers=GATE CRASHERS
+@map_vbiedsareus=VBIED's ARE US
+@map_aquaintlittleman=A QUAINT LITTLE MAN
+@map_fireandmaneuver=FIRE AND MANEUVER
+@map_safehousestrike=SAFE HOUSE STRIKE
+@map_alhasanhasitall=AL-HASAN HAS IT ALL
+@map_vipersnest=VIPERS NEST
+@map_exterior05=CROSSFIRE ALLEY
+@map_opbase=TUFF NUT CRACKERS
+
+
+# Do it like Delta
+
+
+# Never See Never Be
+@map_cia1=TRAINING WHEELS
+@map_breakin=BREAK AND DESTROY
+@map_compound01=SNATCH AND GRAB
+@map_marketday=MARKET DAY
+@map_thedealer=DEATH DEALERS
+@map_abandoned=ENTER THE SPECTRES
+@map_inthesouk=IN THE SOUK
+@map_drunkparty=OATHBREAKERS
+
+# Tiny Troubles 1/2/3/?
+@map_noisyneighborsnuisance=NOISY NEIGHBORS NUISANCE
+@map_theview=THE VIEW
+@map_ratwork=RAT WORK
+@map_uninvitedguests=UNINVITED GUESTS
+@map_doortodoor=DOOR TO DOOR
+@map_roomservice=ROOM SERVICE
+@map_pincerspower=PINCERS POWER
+@map_lonelyabode=LONELY ABODE
+@map_extratrouble=BIG BOOM IN LITTLE CONDO
+
+@map_hotroom=HOT ROOM
+@map_knivesinthedark=KNIVES IN THE DARK
+@map_techsupport=TECH SUPPORT
+@map_traphouse=TRAP HOUSE
+@map_scratchedcarpets=UNFAIR ODDS
+@map_flatmates=FLAT MATES
+@map_islandcafe=ISLAND STRIKE
+@map_fuelstop=FUEL STOP
+@map_theritual=THE RITUAL
+
+@map_covereddebris=AMATEUR HOUR
+@map_nightbird=NIGHT BIRD
+@map_intervention=THE INTERVENTION
+@map_factory=DUSK DELIVERY
+@map_avtt6=HARD CHOICES
+@map_tiny_modern_trouble=MODERN TROUBLE
+@map_tt10=THE TROUBLE WITH DOORS
+@map_traitors=TRAITOR'S TOWER
+@map_against=AGAINST DEATH
+
+#  Deck of Cards
+@map_living_large=JACK OF HEARTS
+@map_large_penthouse=QUEEN OF DIAMONDS
+@map_kingofspades=KING OF SPADES
+@map_tenofclubs=TEN OF CLUBS
+@map_twoofspades=A PAIR OF EIGHTS
+@map_offlimits=KING OF HEARTS
+@map_privatemuseum=NINE OF DIAMONDS
+@map_coolpalace=THE JOKER
+@map_magician=JACK OF CLUBS
+
+
+# Extreme Rescues 1/2
+@map_crisisonroutekilo=CRISIS ON ROUTE KILO
+@map_againsttheodds=AGAINST THE ODDS
+@map_embassysiege=EMBASSY SIEGE
+@map_maniacsmansion=MANIACS MANSION
+@map_countrysidejackpot=COUNTRYSIDE JACKPOT
+@map_supermarket=OUR MAN IN ACCOUNTING
+@map_exchange=THE HANDOVER
+@map_fancyrestaurant=FERGIE'S PARTY SURPRISE
+@map_largeapartment=VANTAGE POINT
+
+@map_cardealership=FIRE SALE
+@map_mazerunners=MAZE RUNNERS
+@map_speedislife=SPEED IS LIFE
+@map_nightcall=NIGHT CALL
+@map_doublerush=DOUBLE RUSH
+@map_hallwayhell=HALLWAY HELL
+@map_unaware=UNAWARE
+@map_forestspirits=FOREST SPIRITS
+@map_interior_courtyard_house=FOREIGN FOLLIES
+
+# Indian Country
+@map_kamilpashamarket=KAMIL PASHA MARKET
+@map_kingoftheslums=KING OF THE SLUMS
+@map_busdepot=BOMB THREAT
+@map_blockade=BLOCKADE
+@map_urbanarea=FRIENDS IN DIRE PLACES
+
+
+# Red Earth
+@map_isolatedcompound=ISOLATED COMPOUND
+
+
+# Give No Quarter
+@map_foreigninfluencers=FOREIGN INFLUENCERS
+@map_universityassault=UNIVERSITY ASSAULT
+@map_canyonambush=AMBUSHED
+@map_tinyswat=PRECIOUS CARGO
+@map_surrounded=SURROUNDED
+@map_ghostcity=GHOST CITY
+@map_policestation=CRITICAL RESPONSE
+
+# Still Classified
+
+# Blast from the Past
+@map_beachhouse=RASHID'S POOL PARTY
+@map_question=A QUESTION OF DEATH OR LIFE 
+@map_isolatedcabin=OWL SPOT CABIN
+@map_venicehill=STORMY AFTERNOON
+@map_grandavenuebank=BANK BUSTERS
+@map_withyourshield=TO SHIELD OR NOT TO SHIELD
+@map_docks=DOCKS AND GUNS
+@map_skypub=RACE TO THE SKY
+@map_firebasenorth=FIREBASE NORTH
+
+
+# All the Way
+@map_bridget=BRIDGE ASSAULT
+@map_tolltakers=TOLL TAKERS
+@map_raptordown=RAPTOR DOWN
+@map_airportraid=AIRPORT RAID
+
+
+# OPERATION Subjugator
+@map_phaseisurprise=PHASE I: SURPRISE
+@map_phaseiisafeguard=PHASE II: SAFEGUARD
+@map_phaseiiaggression=PHASE II: STAKEOUT
+@map_phaseiiisecure=PHASE III: SECURE
+@map_phaseivsmash=PHASE IV: SMASH
+
+
+# OPERATION Krak
+@map_kerakIopt=THE KRAK: OUTPOST CONSTANCE 
+@map_kerakI=THE KRAK: CRUSADERS' GATE
+@map_kerakIIa=THE KRAK: OLD KEEP   
+@map_kerakIIb=THE KRAK: UPPER WARD
+
+
+# OPERATION Rajul
+@map_rajul1=INSERTION: GHOST WORK
+@map_rajul2=INSERTION: INTERMEZZO
+@map_rajul3opt=TARGET BONFIRE
+@map_rajul3=TARGET KABIR
+@map_rajul4opt=EXFIL: INSURANCE
+@map_rajul4=EXFIL: PARTING GIFTS
+
+
+# OPERATION Chess
+@map_chessqueen=QUEEN'S GAMBIT
+@map_chessking=KING'S GAMBIT
+@map_chesscastling=CASTLING
+@map_chessstalemate=STALEMATE
+@map_chesscheck=EN PRISE
+@map_chesscheckmate=CHECKMATE
+
+
+# DEVMAPS / CURRENTLY UNUSED
+@map_itreallystinks=THE BUTCHERY
+@map_rockyterrain=UP THE HILL
+@map_diamondyard=DIAMOND YARD
+@map_deadlystage=DEADLY STAGE
+
+

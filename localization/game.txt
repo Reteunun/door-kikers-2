@@ -1,0 +1,1148 @@
+#
+# IMPORTANT
+# - Do not modify/remove: %s, %d, %u, %1, %2 or similar. They are replaced by the game with custom strings and numbers.
+# - Do not modify/remove: \n (it moves the text following it to the next line).
+# - Lines starting with '#' are comments and do not need to be translated.
+# - Lines starting with '@' define a '@token=localized text', and must end on the same line. Some have custom line splits added by using the \n characters, keep those when translating to avoid breaking the formatting.
+# - Lines starting with '@@' define a multi-line localized text. They need to be terminated with a '@' character, eg @@token=text@
+# - Lines starting with '@#' define multiple texts for one single token name. The game will randomly pick one of the texts for a token.
+
+#
+# Units
+#
+@unit_rangers_name=RANGERS
+@unit_rangers_assault=ASSAULT
+@unit_rangers_marksman=MARKSMAN
+@unit_rangers_support=SUPPORT
+@unit_rangers_grenadier=GRENADIER
+@unit_rangers_medic=MEDIC
+@unit_rangers_description=Rangers are a well rounded direct action unit capable of deploying large number of troops for overwhelming show of force.
+
+@unit_cia_name=CIA
+@unit_cia_undercover=UNDERCOVER
+@unit_cia_blackops=BLACK OPS
+@unit_cia_description=The Special Activities Division of the CIA deploys Paramilitary Operations officers for clandestine missions behind enemy lines.
+
+@unit_nowheraki_name=NOWHERAKI SWAT
+@unit_nowheraki_assault=ASSAULT
+@unit_nowheraki_leader=LEADER
+@unit_nowheraki_sapper=SAPPER
+@unit_nowheraki_militia=MILITIA
+@unit_nowheraki_description=Though lacking in modern equipment and tactics, the local SWAT will fight to the death for their people and their future.
+
+@class_rangers_assault=The bulk of Ranger squads. Armed with rifles and carbines,\n they handle anything from room clearing to all-out firefights. \n\nUse them to maneuver, dominate and gain vital ground.
+@class_rangers_marksman= Marksmen eliminate the enemy with precise hits at medium \nand long range, particularly when stabilized behind cover.\n\nPlace in vantage position and lock down targets with them.
+@class_rangers_support= Your support gunners can suppress or kill the enemy with sustained \nautomatic fire, and are extra-effective when placed behind cover.\n\nUse to fix the enemy in place or cut down enemy assaults. 
+@class_rangers_grenadier= Your instant High-Explosive force multiplier. Grenadiers are \nriflemen that can also lob deadly 40mm grenades at range.\n\nUse to engage groups of enemies, or pesky cover peekers.
+@class_rangers_medic=Ranger Medics can stabilize casualties and keep trooper wounds under control, but are armed and trained to fight with the squad when that's needed.\n\nCritical in keeping people from dying.  
+
+@class_cia_undercover= Masters of disguise and concealment, Undercovers blend \nwith the locals but also rock'n'roll if needed.\n\nInfiltrate, bypass, strike decisively, blend out.
+@class_cia_blackops=Clandestine Kill Team or deadly QRF in support of \nUndercovers, Black Ops can infil as locals but exfil in guns-out mode.\n\nUse Black Ops when your surgical ops turns up a big tumor.
+
+@class_nowheraki_leader=Brain of your assault. Boosts nearby Militia and applies\nspecialized firepower - grenade launchers and precision rifles.\n\nProtect but use as force multiplier. 
+@class_nowheraki_assaulter=Jack-of-all-trades, can handle rifles, LMGs, SMGs,\neven ballistic shields and breaching tools.\n\nUse as deadly tip of your force.
+@class_nowheraki_sapper=Explosive and demolition charge Specialist, can blow \nup walls, obstacles, and bad guys alike.\n\nOpens up new avenues of assault, explosively. 
+@class_nowheraki_militia=Volunteer fighters with minimal training and max enthusiasm.\nThey don't get most SWAT doctrine bonuses, but do get buffed by Leader's influence.\n\nBoost your numbers as they only cost half a Deploy Point.
+
+
+#
+# Trooper Ranks
+#
+
+@trooper_rank_0=Private
+@trooper_rank_1=Private First Class
+@trooper_rank_2=Specialist
+@trooper_rank_3=Corporal
+@trooper_rank_4=Sergeant
+@trooper_rank_5=Staff Sergeant
+@trooper_rank_6=Sergeant First Class
+@trooper_rank_7=Master Sergeant
+@trooper_rank_8=First Sergeant
+@trooper_rank_9=Sergeant Major
+@agent_rank_0=Field Officer I
+@agent_rank_1=Field Officer II
+@agent_rank_2=Field Officer III
+@agent_rank_3=Senior Officer I
+@agent_rank_4=Senior Officer II
+@agent_rank_5=Senior Officer III
+@agent_rank_6=Specialist I
+@agent_rank_7=Specialist II
+@agent_rank_8=Specialist III
+@agent_rank_9=Head Officer
+@nowheraki_rank_0=Recruit
+@nowheraki_rank_1=Constable
+@nowheraki_rank_2=Corporal
+@nowheraki_rank_3=Sergeant
+@nowheraki_rank_4=First Sergeant
+@nowheraki_rank_5=Master Sergeant
+@nowheraki_rank_6=Sergeant Major
+@nowheraki_rank_7=Warrant Officer
+
+
+#
+# Equipment (data/equipment/*.xml)
+#
+
+@grenade_smokesingle_name=1x Smoke Grenade
+@grenade_smoke_name=2x Smoke Grenade
+@grenade_smoke_desc=The standard Army smoke grenade, creates a 5m wide smoke cloud, blocking view and creating confusion - while alerting enemies that something is amiss. Probably toxic in indoor spaces, but we don't model that in the game TBH.\n\nUse smoke to conceal your approach and get in a position of advantage. Note that smoke does NOT actually block gunfire.\n\nFuse time: Instant\nBurn time: 14s
+@grenade_flashbangsingle_name=1x Flashbang
+@grenade_flashbang_name=2x Flashbang
+@grenade_flashbang_kit_name=3x Flashbang
+@grenade_flashbang_desc=The non-lethal flashbang grenade will stun, blind and deafen anyone within 3m of its detonation point, gaining you a few seconds of safety. It won't affect your troops, 'cause, well, we train them hard enough.\n\nUse Flashbangs to distract hostage guards and bad guys in vantage positions.\n\nFuse time: Instant\nEffective Range: 2m\nMax Range: 3.5m
+@grenade_stingersingle_name=1x Stinger
+@grenade_stinger_name=2x Stinger
+@grenade_stinger_desc=A not-really-lethal grenade that explodes into a swarm of "harmless" rubber balls, stinging people and causing them to flee and take cover - if they can still walk, that is.\n\nUse Stingers to scare off civilians and troublemakers and clear your line of fire, but don't drop them on top of people you care about.\n\nFuse time: 1s\nEffective Range: 4m\nInjury Range: 1m
+@grenade_fragsingle_name=1x Frag Grenade
+@grenade_frag_name=2x Frag Grenade
+@grenade_frag_desc=The standard grenade you throw to blow people up. Will fill anyone caught within killing range with deadly metal FRAGments. Does not forgive, does not care. What could go wrong?\n\nUse Frags to take out enemies hidden in cover, but mind the non-combatants.\n\nFuse time: 1s\nKill Range: 2m\nInjury Range: 4m
+@grenade_molotov_name=1x Molotov Bottle
+@grenade_molotovimp_name=3x Spicy Molotov
+@grenade_molotov_desc=A cocktail for peace. Something needs to be on fire but you don't want to have to walk to it.\n\nUse these to flush enemies out of cover.\n\nFuse time: 1.5s\nInjury Range: 3m
+@slap_charge_name=1x Slap Charge
+@slap_charge_desc=A small self-adhesive explosive charge you slap on the door to blow the lock off. Will only create minimal splatter, so its safe for most situations.\n\nUse it to gain quick entry to locked rooms while keeping the element of surprise. Can also be used to clear windows for entry.\n\nPlacement time: 2.5s
+@nws_doorcharge_name=1x Door Charge
+@nws_doorcharge_kit_name=4x Door Charge
+@nws_doorcharge_desc=A medium size explosive charge balanced against the door to blow it off completely. Projects debris and splinter and creates overpressure in the area directly behind the door, so it is not safe to use near friendlies or non-combatants.\n\nPlacement time: 5s\nKill Range: 3.5m\nInjury Range: 7m
+@gear_torch_name=1x Thermal Torch
+@gear_torch_desc=A self-contained, disposable torch that literally burns through padlocks, metal doors and chainlink fences alike.\n\nWill create a light-and-sound show for the benefit of the enemy, so use only when stealth is not important.\n\nUse time: 3s\n\n*not a lightsaber!
+@slap_charge_kit_name=3x Slap Charge
+@grenade_smoke_kit_name=3x Smoke Grenade
+@grenade_frag_kit_name=3x Frag Grenade
+@bombvest_name=Suicide Vest
+@breaching_charge_name=1x Wall Breach Charge
+@breaching_charge_desc=Grab the initiative and the element of surprise in one go by blowing up a wall and hopping in through the hole.\n\nUse it to remove pieces of walls and obstacles together with the guards behind them. Watch out for potential danger to hostages and civilians.\n\nPlacement time: 6s\nKill Range: 4m\nInjury Range: 6m
+@nws_demo_charge_name=3x Demolition Charge
+@nws_demo_charge_desc=Sappers love to blow up stuff, and walls are your specialty. This kit includes 3 carefully prepared demo charges, each powerful enough to crumble a wall portion. The blast is well localized, but overpressure can still endanger bystanders.\n\nPlacement time: 3s\nKill Range: 2m\nInjury Range: 5m
+@helmet_rangers_ach_name=Low-Cut Helmet
+@helmet_rangers_ach_desc=The Army's standard helmet for the Nowheraki Campaign, the LCH covers the vital parts of the head with level IIIA protection, without interfering with your combat vision and rifle cheek-weld.\n\nHas a 15% chance to stop critical shots from pistols and submachineguns.
+@helmet_nws_ach_desc=Surplus helmet from the US Army, conveniently assigned to you on the Sappers course.\n\nA bit on the heavy side, but your SWAT buddies still wish they could get one of their own.\n\nHas a 14% chance to stop critical shots from pistols and submachineguns.
+@helmet_nws_achlow_desc=With great effort not limited to bribes and string pulling of the highest level, you've got surplus helmets for the entire team.\n\nThey are a bit heavy and they were not kept in the best conditions, but still have a 12% chance to stop critical shots from pistols and submachineguns.
+@helmet_rangers_ihps_name=Next-Gen Helmet
+@helmet_rangers_ihps_desc=Available for testing in limited quantity, the Next Gen Helmet takes advantage of very modern tech to provide an enlarged protected area and level III protection with minimal weight increase.\n\nHas a 20% chance to stop critical shots from non-AP OpFor weapons, including AKs and similar.
+@helmet_rangers_fast_name=High-Cut Helmet
+@helmet_rangers_fast_desc=The new helmet coming into service with the Ranger Regiment, the High-Cut trades a bit of protection for mobility.\n\nThe ballistic protection is just level II, but it can still stop most pistol and SMG rounds.\n\n10% chance to block critical shots.
+@helmet_rangers_fastrf_name=Rifle Grade High-Cut
+@helmet_rangers_fastrf_desc=An upgraded version of the proven High-Cut design, the RGHC gains a bit in weight to provide level III ballistic protection.\n\n10% chance to block critical shots from all pistols, submachineguns and most OpFor Assault Weapons.
+@helmet_rangers_fastmandible_name=High-Cut+Mandible
+@helmet_rangers_fastmandible_desc=Take advantage of the modular High-Cut helmet design to add an optional mandible area protection.\n\nThe flexible surface does not affect your weapon aiming or Field of View but it lowers your high-speed factor slightly.\n\nMost importantly, it increases your level II protected area - for a total of 14% chance to stop incoming critical shots.
+@helmet_CIA_fast_name=Ballistic Helmet
+@helmet_CIA_fast_desc=A Special Forces-grade helmet for protection against ballistic and explosive threats, at the expense of a little mobility.\n\nThe level IIIA shell has a chance to stop critical shots from pistols and submachineguns.\n\nAlso gives you the ability to mount Night Vision Goggles.
+@helmet_CIA_bump_name=Bump Helmet
+@helmet_CIA_bump_desc=When the bump in the night is your head hitting something, a sports helmet is a great way to prevent injury.\n\nLight and comfortable, the helmet gives you confidence in movement and also conveniently lets you mount Night Vision Goggles.\n\nProvides NO ballistic protection.
+@helmet_CIA_localhat_name=Traditional Hat
+@helmet_CIA_localhat_desc=A hat style popular within the local shepherd and warrior cultures, will totally help you blend in at your next cosplay event.
+@helmet_CIA_basiccap_name=Baseball Cap
+@helmet_CIA_basiccap_desc=Perfectly blend in with the locals by looking just like an average, athletic, military-age American sports-fan.
+@helmet_CIA_headband_name=Jungle Sweat Band
+@helmet_CIA_headband_desc=Not entirely useful in this climate nor helpful to blend in, but at least every kid will know your Ops are Blacker than their Ops.
+@helmet_NWS_basiccap_name=Baseball Cap
+@helmet_NWS_basiccap_desc=Keep sun, debris and flying brass out of your eyes with this trendy, official issue SWAT cap.\n\nProvides no ballistic resistance but doesn't slow you down either.
+@helmet_NWS_beret_name=Officer Beret
+@helmet_NWS_beret_desc=Your prized Red Beret, earned - not given - after completing the year long Nowheraki Federal Police Officers Course.
+@helmet_NWS_headband_name=Blood Band
+@helmet_NWS_headband_desc=Show your loyality to Land and People by wearing the blood-marked headband of the Nowheraki Militia.
+@hat_santa_name=Santa Hat
+@helmet_NWS_bandana_name=Bandana
+@helmet_NWS_bandana_desc=Up the coolness and protect your head from the unforgiving Nowheraki Sun with this stylish, organic, recycled piece of fabric.
+@hat_santa_desc=Ho, ho, ho?
+@helmet_NWS_sc_name=Head Rig / PVS-7 NVG
+@helmet_NWS_sc_desc=Become a dark-seeing cyclops with this older Night Vision device. Covers both eyes but sees through a single, central tube, so it kinda messes with your depth perception and slows you down, but its better than bumbling through the night.\n\nAllows you to spot enemies in the dark while remaining hidden - until you open fire and reveal yourself.\n\nThis device is worn directly on the head, preventing you from wearing helmets or other headgear. 
+
+
+@nvg_rangers_pvs14_name=PVS-14 Single-Tube NVG
+@nvg_rangers_pvs14_desc=The basic single-tube helmet mounted Night Vision device takes advantage of 3rd generation technology to deliver a crisp and clear image in the dark, but reduces movement speed due to the limited Field Of View and lack of depth perception.\n\nAllows you to engage enemies in the dark while remaining hidden yourself - until you open fire.
+@nvg_rangers_pvs31_name=PVS-31 Dual-Tube NVG
+@nvg_rangers_pvs31_desc=An advanced dual-tube helmet mounted Night Vision device offers a larger field of view and decent depth perception, so can be used with almost no movement penalties.\n\nAllows you to engage enemies in the dark while remaining hidden yourself - until you open fire.
+@nvg_pvs7_name=PVS-7 NVG
+@nvg_pvs7_desc=The PVS-7 covers both eyes but sees through a single, central tube, so it kinda messes with your depth perception so it slows you down, but its better than carrot powered night-vision any day or night.\n\nAllows you to engage enemies in the dark while remaining hidden - until you open fire and reveal yourself.
+@nvg_nightcappvs14_name=Cap / PVS-14 NVG
+@nvg_nightcappvs14_desc=The basic but dependable single-tube helmet mounted Night Vision device mounted to a soft cap you wear on your head. Will blow your undercover status when spotted but can be equipped just when needed.
+
+
+
+@armor_rangers_basicvest_name=Rangers Vest / SAPI
+@armor_rangers_basicvest_desc=Just the Modular Plate Carrier you were issued by the Regiment, what did you really expect? Flannel Daddy's gear closet?\n\nYou do get a pair of Level III plates to the front and back, and a bit of pistol caliber protection elsewhere.\n\nRemember -  trusting Armor is a game of chance, its your tactics that keep you alive!
+@armor_rangers_levelIVaddon_name=Rangers Vest / ESAPI
+@armor_rangers_levelIVaddon_desc=Replace the Hard Armor plates in your vest with the slightly heavier ESAPIs and thus gain Level IV protection - good versus Armor Piercing and Sniper threats.\n\nThe plates only cover your front and rear vital zones, and there's plenty of 'you' that stays uncovered by anything except good old ripstop fabric.
+@armor_rangers_levelIVsides_name=All-around ESAPI
+@armor_rangers_levelIVsides_desc=Mount ESAPI plates in all standard pockets of your Regiment-issued vest, including front, rear and the large side inserts.\n\nYou'll lose some comfort and tactical mobility, but when the Armor Piercing threat is significant, you better buckle up.
+@armor_rangers_extended_name=Extended Vest / SAPI
+@armor_rangers_extended_desc=When the MRAP drops you at Tango's door, there's not much point in going light, but there's plenty of reasons to armor up as each door could lead to an enemy ambush!\n\nAdd side plates, groin, deltoids and collar protection to your vest, and leave mobility and fast flanking moves to your buddies.\n\nThe vest excels at stopping rifle shots from the front, but won't stop enemy sniper rounds or Armor Piercing ammo.
+@armor_rangers_jumpable_name=Raid Vest / Level III
+@armor_rangers_jumpable_desc=When you got to move faster than the enemy reacts but you still want some rifle threat protection, a minimalistic Plate Carrier can be the way to go.\n\nA pair of standalone Level III plates protect your vitals from incoming Kalash fire but your flanks are completely unprotected.\n\nJust repeat 'keep in cover, move fast, shoot first, die last' till it becomes second nature, and hopefully you won't die at all.
+@armor_rangers_jump_swimmeriv_name=Raid Vest / Level IV
+@armor_rangers_jump_swimmeriv_desc=For discerning users, the Swimmer-cut multi-curve Level IV plates provide protection from Sniper-grade and Armor Piercing projectiles - without sacrificing much mobility, as they literally have their corners cut for improved weapons manipulation and overall comfort.\n\nThe Fast Raid platform still provides no side protection and only keeps your vitals covered, so if you have to get shot, better hope the enemy aims true and does not miss!
+@armor_rangers_noplates_name=Soft Armor Only
+@armor_rangers_noplates_desc=Take out the Hard Armor Plates in your vest,hoping that if you keep the level IIIA soft armor backers the Sarge won't notice how much of an idiot you truly are.\n\nYou'll gain some mobility for sure but, remember, Nowheraki Insurgents shop at AKs-r-rUs and their rounds punch right through this vest.\n\nOld soldiers tell you the best armor is not being shot at all, so move fast and get off  the X and inside the enemy's OODA loop.
+@armor_cia_tacvestIII_name=Tac Vest / Level III
+@armor_cia_tacvestIII_desc=A high-end plate carrier with all-around level III protection, including front, back and underarm side plates.\n\nWill reliably stop incoming fire from your run-of-the-mill AK, but keep in mind the focus is on mobility, not invulnerability - even if your vitals are covered, you're still made of flesh.\n\nDon't even think about special threats, though - if sniper fire is coming, use suppression and mobility to stay alive.
+@armor_cia_tacvestIV_name=Tac Vest / Level IV
+@armor_cia_tacvestIV_desc=When the going gets really tough but the mission still needs doing, all-around level IV protection might save the day.\n\nWill stop most special threats including the dreaded 7.62 Rimmed from the SVD sniper rifles and PK family machineguns, but don't let that fool you into a false sense of security. The vest stops under your neck, and the head is 'out there, in harm's way'.
+@armor_cia_concealableII_name=Level II Soft Armor
+@armor_cia_concealableII_desc=A thin concealable armor vest that should go unnoticed under most clothing styles, and let you get close to the enemy without raising suspicions too soon.\n\nIn this line of work, its best to not get shot at by anyone, but the vest does stop your average pistol and SMG round even point blank.\n\nRifles and full size SMGs like the MP5A will pierce right through, however.
+@armor_cia_concealableIIIAlimited_name=Level IIIA Soft Panels
+@armor_cia_concealableIIIAlimited_desc=When going undercover, the distance between a successful infiltration and a deadly gunfight is sometimes measured in seconds. Gunfighter skills help to stay alive, but so does good planning and a bit of armor.\n\nThis undershirt maximizes concealment while keeping a pair of level IIIA panels to the front and back of your torso, covering your vitals from pistol and SMG threats.
+@armor_cia_concealableIIIA_name=Level IIIA Soft Armor
+@armor_cia_concealableIIIA_desc=The thickest soft armor vest you can conceal and get away with it, it offers all-around protection against pistol caliber threats and keeps you too warm during those hot days out in the sunny Nowheraki countryside.
+@armor_nws_frontplate_name=Single SAPI Plate
+@armor_nws_frontplate_desc=Drop a single armor plate of unknown origin into your equally no-name load bearing vest - and always keep front-towards-enemy.\n\nThe plate was SAPI certified some ages ago - so it has a reasonable chance to stop hits from AKs and other rifles.\n\nIt won't do much good against Armor Piercing threats, but in Urban Warfare, a little armor is always better than none.
+@armor_nws_basicvest_name=SAPI Front / Back
+@armor_nws_basicvest_desc=You're in luck and have scavanged two SAPI-style plates of reasonable quality.\n\nThis will stop rifle fire from the front and back, but it won't protect your sides nor will it stop sniper and Armor Piercing threats.
+@armor_nws_extended_name=Sappers Combat Vest
+@armor_nws_extended_desc=The Combat Sapper Course Patch came permanently attached to this Extended Vest, and you get to wear it due to the dangerous nature of your job.\n\nThe vest offers reasonable rifle-grade protection from the front and back, but also covers the sides to some extent.\n\nThe downside is the weight loses you a lot of mobility, but Sappers are too valuable to be rabbits anyway.
+@armor_nws_lvl4front_name=ESAPI / SAPI Combo
+@armor_nws_lvl4front_desc=Sniper-grade protection is hard to come by, but your American advisors have slipped you some plates for the team.\n\nThis will stop Armor Piercing fire from the front quarter, but the backside remains covered with only rifle-grade protection.
+@armor_enemy_softarmor_name=Concealable Soft Armor
+@armor_enemy_heavyarmor_name=Minimalistic Plate Carrier
+
+@shield_nws_lvl3_name=Level III Shield
+@shield_nws_lvl3_desc=A simple, rectangular shield that blocks most incoming rifle fire from the front, but doesn't stop Armor Piercing threats.\n\nBallistic Shields are not common in Middle East urban warfare, but can help against barricaded shooters or when crossing specific danger areas.
+@shield_nws_lvl4_name=Level IV Shield
+@shield_nws_lvl4_desc=Special delivery from our Coalition instructors, the level IV shield can stop even the dreaded Armor Piercing SVDs.\n\nSuch protection comes with a big weight penalty, so the actual shield surface is smaller and you need to be more careful to not expose your flanks to enemy fire.\n\nShields can help you cross danger areas or approach single threats, but never forget to support your shield guy with additional troops, and watch your flanks.
+
+@support_gear_spy_camera_name=Spy Camera
+@support_gear_spy_camera_desc=An inconspicuous camera head that fits under most doors (and, guess what, around corners!), allowing you to see into the unknown.\n\nYour soldiers will automatically turn to check "red ghosts" - the last known positions of bad guys, so intel helps clear rooms faster, safer, and with less collateral.\n\nUse it to recon rooms and danger zones - when you have time to spare.
+@support_gear_lockpic_name=Lockpick
+@utility_pouch_lockpick_machine_name=Lockpick Machine
+@utility_pouch_lockpick_machine_desc=CIA Officers are trained to pick locks in almost complete silence, but this takes time - so take this automated pick with you and cut to the chase.\n\nGuaranteed to unlock most doors in 4 seconds or less!
+@utility_dynamic_hammer_name=Dynamic Hammer
+@utility_dynamic_hammer_desc=\n       "He held up his hammer high\n       And called to Odin for a sign"\n\nYour old Pa might have seemed a bit lame when fistpumping to heroic heavy metal on his commute, but there's something to be said about going into battle wielding a large hammer - even a space age one.\n\nUse it to smash open locked doors in one hit. No, you can't melee people with it.
+@utility_bolt_cutter_name=Bolt Cutter
+@utility_bolt_cutter_desc=An old school, muscle-powered Bolt Cutter gets you through bars and chain without much commotion or collateral damage, and it never runs out of fuel!\n\nA good friend for stealthy adventures, particularly in the countryside.\n\nUse it to cut through chainlink fences, padlocked doors and even jail bars.
+@utility_breaching_kit_name=<UNUSED>Breaching Kit
+@utility_breaching_kit_desc=<UNUSED>Sure, why not give both the Dynamic Hammer and the Bolt Cutter to the same guy.\n\nYou know which guy, right? We all know him, and he surely deserves it.
+
+@disguise_poncho_name=Poncho
+@disguise_poncho_desc=Become The Man with No Name, or better, No Guns - by draping a blanket over your shoulders. It's warm and stylish, and it supports the local economy - as maybe you won't need to drop bombs all over the place.\n\nHides your weapons so you can move unseen and adds 5 to Concealment, but once you reveal yourself, you can't go back.
+
+@support_gear_housekeys=House Keys
+
+# Pistols
+@firearm_tt_33_name=TT-33 (7.62mmP / 8 rds)
+
+@firearm_mps45sup_name=M&P 45C Suppressed
+
+
+@firearm_ppk_name=PPK Pistol
+@firearm_ppk_desc=The classic Bond pistol, the PPK is often carried by agents as it conceals very well. The short front makes it very easy to draw from a holster, but practical accuracy at medium range is sub-optimal.\n\nThe mag packs just 6 rounds of the not-so-hot .380 ACP, and slide-lock reloads are slow, so John-Wick this not.
+@firearm_ppksup_name=PPK Suppressed
+@firearm_ppksup_desc=Internal threading helps the PPK remain short even with a suppressor attached, and the .380 round is naturally silent. A good choice for stealth missions, but use suprise to maximize your Kill Probability, as the rounds you pack are not that deadly.\n\nSound Travel Range: 3.5m
+
+
+@firearm_g19_name=G19 Pistol
+@firearm_g19_desc=The compact G19 was designed to be light and concealable, but still works well as a combat pistol.\n\nIt's fast on the draw and keeps the best bits of its larger brothers: points quickly at the target, shoots fast and controlable; Medium and long range accuracy suffer from trigger and sight radius issues, though.
+@firearm_g19sup_name=G19 Suppressed
+@firearm_g19hp_desc=The compact G19 is light and concealable, but works as a combat pistol too. It keeps the best bits of its larger brothers: points quickly at the target and delivers rapid fire.\n\nThe CIA adds suppressor ready sights and barrel threading, losing just a tiny bit of draw speed. Bonus - increased long range accuracy.
+@firearm_g19hpsup_desc=Mount a short suppressor to your G19. Its not the quietest 9mm out there, but it makes up for it by great maneuverability, and it works well enough to keep the enemy confused, if not oblivious.\n\nUse subsonic rounds for extra stealth effect.\n\nSound Travel Range: 7.5m
+@firearm_mk27m2_name=Mk27 Mod 2 Pistol
+@firearm_mk27m2sup_name=Mk27 Suppressed
+@firearm_mk27m2_desc=Just the small and handy G19 repackaged to SOCOM's no-nonsense specs: taller sights, red dot sights, threaded barrel for suppressor and enlarged slide release for faster reloads. It's just your secondary, but it works well as a combat pistol, backup gun or Hush Puppy sentinel remover.
+@firearm_mk27m2sup_desc=The Mk27 was issued with a suppressor, might as well put it to good use. It works well enough to hide the sound and flash signature of your pistol, as well as help mitigate recoil due to increased weight.\n\nUse subsonic rounds for sound suppression.\n\nSound Travel Range: 7m
+
+@firearm_g19cust_name=G19 Customized
+@firearm_g19cust_desc=Take the simple, compact and popular G19, add +5 mag extensions, better sights and trigger, a match barrel with recoil compensator and mill the slide for optics.\n\nIt's a gunfighter's pistol, for sure, with good accuracy, minimal recoil, modern sighting options and no crap that you don't need.
+@firearm_g19x_name=G19X Pistol
+@firearm_g19x_desc=An inventory leftover from Army's service pistol trials, this is the original Austrian crossover: a fullsize 9mm frame mated with the slide and barrel of its compact brother.\n\nQuick on the draw and light on the hip, the G19X doesn't sacrifice on magazine capacity and shootability, but the average trigger hinders long range accuracy.
+@firearm_g17_name=G17 Pistol
+@firearm_g17_desc=The original, trend-setter polymer handgun, still keeping up and winning fights.\n\nThe pistol sits very low in the hand and points naturally, which means it gets fast on the target and stays there as you multi-tap it - provided you can master the heavy factory trigger.
+@firearm_g2240_name=G22 Pistol
+@firearm_g2240_desc=Somewhere, somehow, some pistol-toting secret squirrel decided that 9mm ammo lacks stopping power but .45 kicks too hard.\n\nThe G22 finds a happy middle-ground in the .40 S&W cartridge - without losing too much in mag capacity. A great close and mid-range pistol, but long range accuracy is a bit wonky.
+@firearm_m17_name=M17 Pistol
+@firearm_m17_desc=The Army's newest service pistol, this fullsize nine mil shoots accurately and sports great controls, which make coming up on target, mag reloads and general operation very quick and precise.\n\nIt suffers, however, from a bit of slowness when aiming at long range, due to its fat iron sights.
+@firearm_m18_name=M18 Pistol
+@firearm_m18_desc=The compact-ish version of the M17, it carries the same amount ammo and shoots about the same, just trades a bit of medium range accuracy for drawing speed and pointing speed.\n\nIf you're only looking for a backup for when the primary goes click instead of bang, this is your huckleberry.
+@firearm_m9_name=M9 Pistol
+@firearm_m9_desc=One of the original Wonder Nine that pushed 9mm Autos into world dominance, the M9 soldiers on doggedly - and you surely can't go wrong with John McClane's trusty pistol, right?\n\nThe M9 will serve well as backup and close range weapon, and even has the accuracy to pull off decent long range shots.
+@firearm_m9sup_name=M9 Suppressed
+@firearm_m9sup_desc=Sure, heavy firepower is great, but have you tried silent takedowns with your 7.62 beltfed? A suppressed secondary goes a long way in keeping insertion discrete.\n\nYour M9 can take a can with little work, but the sights are too low so you lose aimed fire.\n\nSound Travel Range: 7m
+@firearm_1911_pistol_name=1911 Pistol
+@firearm_1911_pistol_desc=Looking for a backup gun that ends fights on the spot? Pull the right strings at regiment level and smuggle in some forgotten crates of Browning's finest.\n\nThe sights may be crap and magazine size is small, but there's nothing like the fat .45 ACP slug to floor Tangos when your life depends on it.
+@firearm_1911modern_pistol_desc=This is not your daddy's heirloom nor Army contraband, but a custom 1911 lovingly handfitted by ex-Unit armorers.\n\nThe high level of precision and the great single-action trigger make it a tack-driver - a large and heavy one though. Factor in the fat slugs it slings out at baddies and you kinda keep coming back to it.
+@firearm_hk45ct_pistol_name=Mk24 Mod 0 Pistol
+@firearm_hk45ctsup_pistol_name=Mk24 Suppressed
+@firearm_hk45ct_pistol_desc=The latest .45 the Frogmen adopted but don't carry around, the Mk24 gives you great accuracy and stopping power.\n\nThe high bore-axis makes rapid fire suboptimal, and 1st shot accuracy is hampered by the long Double Action trigger pull. But put a can on it and the gun truly shines, and clears the way for you.
+@firearm_hk45ctSup_pistol_desc=Fat and slow .45 slugs are ideal to suppress, as there's no supersonic crack to alert the enemy, and the first shot often does the job.\n\nSuppressor's weight helps with muzzle flip, so practical rate of fire at short and medium ranges is improved.\n\nSound Travel Range: 5.5m
+@firearm_hs45_pistol_name=HS-45 Pistol
+@firearm_hs45_pistol_desc=One of the less logical acquisitions on Nowheraki Forces supply chain, the HS-45 is accurate and gives you 13 fat .45 slugs to nail bad guys with.\n\nTrouble is, the ammo is very scarce, so your training level and practical rate of fire suffer as a result.
+
+
+@firearm_tss4_pistol_name=Mk IV Hush Puppy
+@firearm_tss4_pistol_desc=A .22LR target pistol is not much for combat purposes, but properly suppress it and you get a mouse-quiet elimination device.\n\nAgainst unaware targets, at close range, it can be deadly. But move away and it's only useful for varmint and ... <sigh> guard dogs.\n\nSound Travel Range: 2m
+
+# Rifles
+@firearm_mk18_name=Mk18 Carbine
+@firearm_mk18Sup_name=Mk18 Suppressed
+@firearm_mkl8_desc=The shorty Mk18 started out as a Navy SEALs custom carbine for pure CQB and vehicle work, but it quickly found its way into the lockers of cool Army teams.\n\nHandles doorways and short rooms very well, but the low muzzle velocity means it will not reliably drop targets past 15m.
+@firearm_mk18Sup_desc=Suppressors reduce muzzle flash and sound report of firearms, and confuse unalerted enemies that do hear something.\n\nThere's no subsonic 5.56 ammo that can cycle the action, so this isn't that silent - but the added weight helps with recoil.\n\nSound Travel Range: 45m
+@firearm_m4_carabine_name=M4 Carbine
+@firearm_m4Sup_carabine_name=M4 Suppressed
+@firearm_m4urgi_name=M4 URG-I Carbine
+@firearm_m4urgiSup_name=M4 URG-I Suppressed
+@firearm_m4_m203_name=M4/M203 GL
+@firearm_m4_m203Sup_name=M4/M203 Suppressed
+@firearm_mk18_m203_name=Mk18/M203 GL
+@firearm_mk18_m203Sup_name=Mk18/M203 Suppressed
+@firearm_m16a4_m203_name=M16/M203 GL
+@firearm_xm7_name=XM7 NGSW-R
+@firearm_xm7Sup_name=XM7 Suppressed
+@firearm_m4_carabine_desc=Taking over front line duty from the larger M16, the M4 trades some muzzle velocity and accuracy to gain maneuverability.\n\nIts 14.5" barrel will suffer a drop in lethality past 30m, but can benefit from switching out the default ammo.\n\nAn all-around capable workhorse.
+@firearm_m4urgi_desc=The latest 556 carbine to be issued in quantity, the URG-I sports a full length, slim and light rail that improves recoil control, maneuverability and engagement speed.\n\nThe cyclic rate of fire is lower than the old M4s and reload speed is marginally worse, but for fast fire at medium range, this is competition level performance. 
+@firearm_m4nws_desc=Taking over front line duty from the larger M16, the M4 trades some muzzle velocity and accuracy to gain maneuverability.\n\nIts 14.5" barrel will suffer a drop in lethality past 30m, but gives you an edge when the fight goes indoors and rooms need to be cleared with precision.
+@firearm_m4Sup_carabine_desc=Suppressors reduce muzzle flash and sound report of firearms, and confuse unalerted enemies that do hear something.\n\nThere's no subsonic 5.56 ammo that can cycle the action, so this isn't that silent - but the added weight helps with recoil.\n\nSound Travel Range: 40m
+@firearm_m4urgiSup_desc=Suppressors reduce muzzle flash and sound report of firearms, and confuse unalerted enemies that do hear something.\n\nThere's no subsonic 5.56 ammo that can cycle the action, so this isn't that silent - but the added weight helps with recoil.\n\nSound Travel Range: 40m
+@firearm_m16a4_name=M16A4 Rifle
+@firearm_m16a4_desc=The Vietnam-era "Mattel Gun" - now in the modernized, all-railed version for the 21st century warfighter.\n\nAccurate and deadly at all ranges, but ill-suited for CQB work - as the barrel tends to bump into doorframes and fellow Rangers.\n\nJust don't give it to your pointman.
+@firearm_m16a4nws_desc=Surplus dumps from the US DoD bring you guns they no longer use, but they're really not bad.\n\nMore accurate than your AKs and quite deadly at most ranges, the full size M16 is a bit long for serious CQB work - but allows you to mount superior Western-built optics and gain engagement speed and accuracy.
+@firearm_m16a4mil_desc=Surplus dumps from the US Army, black market purchase or just a trade in to look cool in the neighborhood, who knows where you got this?\n\nIt's more accurate than your AKs, but Militia men don't have the training to fully take advantage of it, nor can they source optics for their rifles.
+@firearm_m16a2_name=M16A2 Rifle
+@firearm_m16a2_desc=
+@firearm_m1a_scout_name=M1A Scout Rifle
+@firearm_m1a_scout_desc=A shorter but accurized version of the classic M14, the M1A is a good general purpose rifle. It handles long distance well enough and hits hard with the 308 slugs, but doesn't bog you down like a true DMR. \n\nBonus - it looks just classic enough to pass for some repurposed hunting rifle. 
+@firearm_xm7_desc=The Next Gen Rifle in testing with select units, the XM7 fires a heavier round than your 556, looking for better long range ballistics and improved armor penetration.\n\nThis will help when facing near-peer enemies, but the rifle is heavier than your old carbine, less wieldy, recoils harder and cuts your ammo load. Worth it? You decide.    
+@firearm_xm7Sup_desc=Suppressors reduce muzzle flash and sound report of firearms, and confuse unalerted enemies that do hear something.\n\nThey also help hide your muzzle flash at night, if not directly observed.\n\nSound Travel Range: 50m
+
+
+
+@firearm_xm250_name=XM250 NGSW-AR
+@firearm_xm250Sup_name=XM250 Suppressed
+@firearm_xm250_desc=The Automatic Rifle counterpart to the XM7, the XM250 shoots the same new-age 6.8x51mm round, improving your base of fire's armor penetration and long range performance.\n\nThe gun is almost as light as your M249 SPW but heavy enough to keep recoil in check. Its still not as handy as an AR, so place it in cover to improve performance.
+@firearm_xm250Sup_desc=Suppressors reduce muzzle flash and sound report of firearms, and confuse unalerted enemies that do hear something.\n\nThey also help hide your muzzle flash at night, if not directly observed.\n\nSound Travel Range: 50m
+@firearm_m249_name=M249 LMG
+@firearm_m249spw_name=M249 SPW
+@firearm_m249spwSup_name=M249 Suppressed
+@firearm_m249spw_desc=Rangers depend on their machineguns to provide overwhelming fire support while the squad maneuvers.\n\nThe M249 SPW is particularly engineered light enough to handle even room clearing ops, but will also work better when firing from a cover position.
+@firearm_m249spwSup_desc=Suppressors reduce muzzle flash and sound report of firearms, and confuse unalerted enemies that do hear something.\n\nThere's no subsonic 5.56 ammo that can cycle the action, so this isn't that silent - but the added weight helps with recoil.\n\nSound Travel Range: 55m
+@firearm_m249nws_desc=Your US advisors insist on establishing a base of fire with the LMGs and maneuvering for the kill with the rifles. The surplus M249s are adequate for that, with high rate of fire and high capacity.\n\nLike all LMGs, they work better when firing from a cover position, and they give you access to the Suppress Area ability.
+@firearm_hk21e_name=HK21E MG
+@firearm_hk21e_desc=The proverbial German Over-engineering in Machine Gun form, the HK21 is surprisingly accurate and hits hard at all ranges.\n\nUnfortunately, your supply chain can barely provide even basic ammo for it, so your practical fire rate is diminished. And don't try to use it unsupported, its very heavy, cumbersome, and recoils a lot.
+@firearm_lamg_name=LAMG
+@firearm_lamgSup_name=LAMG Suppressed
+@firearm_lamg_desc=The LAMG is extremely light, allowing you to keep up with the rifles. It also dampens recoil and keeps rate-of-fire low, so its very controllable even when not supported.\n\nThe low weight comes with less heat absortion capacity, so your bursts should be shorter when suppressing Tangos downrange. 
+@firearm_lamgSup_desc=Suppressors reduce muzzle flash and sound report of firearms, and confuse unalerted enemies that do hear something.\n\nThere's no subsonic 5.56 ammo that can cycle the action, so this isn't that silent - but the added weight helps with recoil.\n\nSound Travel Range: 50m
+@firearm_m240l_name=M240L GPMG
+@firearm_m240l_desc=The large and heavy M240 shines when sustained firepower is needed and its heavy ammo will take down bad guys reliably.\n\nJust don't expect to sprint around and hip-fire this baby - it really needs to be stabilized on a cover point to be effective.
+@firearm_mg338_name=XM338 LMMG
+@firearm_mg338Sup_name=XM338 Suppressed
+@firearm_mg338_desc=A light-ish Medium Machine Gun that can score effective hits on the enemy at extreme ranges, the XMG338 comes in use where a fifty-cal MG would be needed.\n\nThe Magnum ammo kicks heavily and the ammo weights a lot, so this baby shoots short bursts only.
+@firearm_mg338Sup_desc=There's no subsonic .338 ammo that you can use in this weapon and this isn't silent in any shape or form. The enemy will know what he's hearing, but the suppressor will help with muzzle flash at night.\n\nSound Travel Range: 75m
+@firearm_m14ebr_name=M14 EBR
+@firearm_m14ebr_desc=The venerable M14 of Vietnam era lives on as a Marksman rifle, and keeps its deadly reputation.\n\nHighly customizable via its adjustable stock, the rifle delivers 7.62mm holes in all the right places once the shooter is comfy in a stationary cover position.
+@firearm_m110a1_name=M110A1 SDMR
+@firearm_m110a1Sup_name=M110A1 Suppressed
+@firearm_m110a1_desc=The German answer to the semi-auto sniper problem, the M110A1 is plenty accurate but doesn't forget its assault rifle heritage.\n\nWill handle everything from sniping to room clearing, though the weight and length say you shouldn't make this your go-to Close Quarters gun.
+@firearm_m110a1Sup_desc=Suppressors reduce the muzzle flash and sound report of firearms, and confuse unalerted enemies that do hear something.\n\nThere's no reliable subsonic 7.62x51 ammo, so this won't make you magically silent but the added weight helps with recoil.\n\nSound Travel Range: 47m
+@firearm_m16a4dmr_name=Squad DM Rifle
+@firearm_m16a4dmr_desc=The SDM-R is totally not your buddy's M16, but its high accuracy cousin. It's got match trigger, fluted free floating barrel, a bipod and - most importantly - better stats from the game developers.\n\nIt won't shoot as fast and as often as vanilla M16s, but has better Kill Probability, and less recoil than the 7.62mm rifles.
+@firearm_mk48_name=Mk48 Mod 1 LMG
+@firearm_mk48Sup_name=Mk48 Suppressed
+@firearm_mk48_desc=What do you get when you scale up the old reliable M249 SAW? A portable 7.62mm Light MachineGun for your squad!\n\nLight is not always good - more weight helps to control recoil, so better place it in a cover position to stabilize it on its bipod and get those long bursts on target.
+@firearm_mk48Sup_desc=Suppressors reduce the muzzle flash and sound report of firearms, and confuse unalerted enemies that do hear something.\n\nThere's no reliable subsonic 7.62x51 ammo, so this won't make you magically silent.\n\nSound Travel Range: 60m
+@firearm_mk20ssr_name=Mk20 SSR
+@firearm_mk20ssrSup_name=Mk20 Suppressed
+@firearm_mk20ssr_desc=What the Mk17 LB can't, the Mk20 will do.\n\nThe proper Marksman member of the Mk16/17 family, the Sniper Support Rifle will give you all the accuracy you'd need from it, as long as you don't forget to properly deploy it as support, not frontline troop.
+@firearm_mk20ssrSup_desc=Suppressors reduce the muzzle flash and sound report of firearms, and confuse unalerted enemies that do hear something.\n\nThere's no reliable subsonic 7.62x51 ammo, so this won't make you magically silent - but the SSR keeps noise (relatively) low.\n\nSound Travel Range: 37m
+
+
+@firearm_mcxspearlt_name=MCX S-LT
+@firearm_mcxspearltSup_name=MCX S-LT Suppressed
+
+@firearm_rattler_name=MCX RSAR
+@firearm_rattlerSup_name=MCX RSAR Suppressed
+@firearm_rattler_desc=The newly adopted Reduced Signature Assault Rifle offers maximum firepower in a PDW-size carbine.\n\nBuilt for concealment and close quarters missions, the RSAR has the right controls in the right places and shoots a caliber that gives you great performance for the combat ranges you actually need.
+@firearm_rattlerSup_desc=The short length of the RSAR make it handy even with a suppressor attached, and the .300 Blackout caliber was designed around sound suppression and subsonic performance.\n\nSound Travel Range: 5m
+
+@firearm_mk17_cqc_name=Mk17 CQC
+@firearm_mk17_cqcSup_name=Mk17 CQC Suppressed
+@firearm_mk17_cqc_desc=The Close Quarters Combat version of the Mk17 sports a shortie barrel, but can't shed much of the weight needed to handle the powerful 7.62x51 cartridge.\n\nStill, in close quarters, there's sometimes no room for second thoughts - or second shots. And they are rarely needed.
+@firearm_mk17_cqcSup_desc=Suppressors reduce the muzzle flash and sound report of firearms, and confuse unalerted enemies that do hear something.\n\nThere's no reliable subsonic 7.62x51 ammo, so this won't make magically turn the loud CQC silent - but it helps with recoil.\n\nSound Travel Range: 50m
+@firearm_mk17_std_name=Mk17 Carbine
+@firearm_mk17_stdSup_name=Mk17 Suppressed
+@firearm_mk17_std_desc=Out with the old, in with the new, right? The Mk17 mates M16-ish controls with reliable internals and battle-rifle grade ammo.\n\nWhat's not to like?\n\nThe heavier recoil? The reduced mag capacity? The increased weight?
+@firearm_mk17_stdSup_desc=Suppressors reduce the muzzle flash and sound report of firearms, and confuse unalerted enemies that do hear something.\n\nThere's no reliable subsonic 7.62x51 ammo, so this is still pretty loud, but the added weight should help with recoil.\n\nSound Travel Range: 48m
+@firearm_mk17_lb_name=Mk17 Long Barrel
+@firearm_mk17_lbSup_name=Mk17 LB Suppressed
+@firearm_mk17_lb_desc=The LB version of the Mk17 is not a pure Designated Marksman Rifle, but can mimic one well enough to fool insurgents and Sergeants Major alike.\n\nThe 7.62 ammo hits them hard and puts them down, while AR-like controls and size give this enough maneuverability to handle a bit of room clearing too.
+@firearm_mk17_lbSup_desc=Suppressors reduce the muzzle flash and sound report of firearms, and confuse unalerted enemies that do hear something.\n\nThere's no reliable subsonic 7.62x51 ammo, so this won't make you magically silent but the added weight helps with recoil.\n\nSound Travel Range: 40m
+@firearm_m4_m203_desc=Take your dependable workhorse - the good for all M4 - and hang a freakin' handcannon underneath its barrel.\n\nYou do lose some maneuverability and aiming speed, but gain the ability to insta-blast some poor guy hiding in cover, and splash his friends too as a bonus.
+@firearm_mk18_m203_desc=The Mk18 is light and handy enough to take the extra weight of the M203 and still keep a bit of close quarters aiming performance.\n\nWhen the range opens up though, 40mm frags are a hard to beat argument and supplement the poor performance of 556 ammo out this short barrel.
+@firearm_m16_m203_desc=Two long and heavy barrels are better than one, the Sarge said, and who needs to sprint anyway?\n\nDominate the battlefield with precise medium range fire from your 556 for single targets and all-encompassing 40mm grenades for larger parties.
+@firearm_mk17_cqc_eglm_name=Mk17 CQC/Mk13 EGLM
+@firearm_mk17_cqc_eglmSup_name=Mk17 CQC/GL Suppressed
+@firearm_mk17_cqc_eglm_desc=The grenade-launcher equipped Mk17 is heavier and a pain to maneuver in Close Quarters, but at least the CQC version keeps the length shorter and balances better.\n\nOnce you're in combat, though, you can't argue with the lethality of 7.62x51 rounds backed by 40mm HE for those special pests. 
+@firearm_mk17_std_eglm_name=Mk17/Mk13 EGLM
+@firearm_mk17_std_eglmSup_name=Mk17/Mk13 Suppressed
+@firearm_mk17_std_eglm_desc=A solid 7.62 rifle and a faster firing 40mm launcher. Gives you great medium range performance and the ability to quickly thump gaggles of bad guys or those annoying pests that stay low in cover.\n\nThis combo is the opposite of light and maneuverable. Not for Door Kicking!   
+
+@firearm_AT4_name=M136 AT4 Launcher
+@firearm_AT4enemy_name=M136 AT4 (84mm HEAT)
+@firearm_AT4_desc=A one-shot, disposable rocket launcher that can blow up anything from groups of baddies to doors and wall sections.\n\nNot the greatest tool when collateral damage is to be minimized, and takes a while to setup and fire.\n\nBut if the devs ever actually add functional enemy vehicles, you've got this bad boy ready for them!\n\nDeploy time: 4 seconds\nLethal Blast Range: 3m
+@firearm_MK14_name=MK14 Mod 0 GL
+@firearm_MK14enemy_name=MK14 GL (40mm / 6 rds)
+@firearm_MK14_desc=no desc yet, wip weapon
+@firearm_M320cia_name=M320 High-Explosive
+@firearm_M320cia_desc=Underbarrels are not kosher for High Speed Low Drag action and raise too many eyebrows, but sometimes you just gotta thump some dude in distant cover without bringing the house down on him.\n\nWhatever primary you're carrying, you can always use the launcher slung on your back to lob deadly 40mm frags as needed. 
+@firearm_M79lttawr_name=M79 High-Explosive
+@firearm_M79lttawrdual_name=M79 Buckshot / HE
+@firearm_M79_name=M79 GL (40mm / 1 rd)
+
+
+# SMGs
+@firearm_mp5k_name=MP5K
+@firearm_mp5kSup_name=MP5K Suppressed
+@firearm_mp5k_desc=Cut or remove everything from the MP5 and you get the Kurz, the Clandestine Ops specialist.\n\nAs easy to hide as a pistol, the K offers good accuracy at short range, but the complete lack of stock makes it lose on recoil control during rapid and automatic fire.
+@firearm_mp5kSup_desc=The MP5s are short and handy even with a suppressor mounted, and the added weight improves recoil control.\n\nRegular 9mm is supersonic though, so switch to subsonic ammo to lower the sound range even more.\n\nSound Travel Range: 9m
+@firearm_mp5kpdw_name=MP5K PDW
+@firearm_mp5kpdwSup_name=MP5K PDW Suppressed
+@firearm_mp5kpdw_desc=The short, folding stock variant of the MP5 has everything cut down for concealment, which also makes it very handy for CQB.\n\nOnce you get it into battle, it still puts holes right in the bad guys A-Zone, just not from so far away, and not if they're wearing soft armor vests.
+@firearm_mp5kpdwSup_desc=The MP5s are short and handy even with a suppressor mounted, and the added weight improves recoil control.\n\nRegular 9mm is supersonic though, so switch to subsonic ammo to lower the sound range even more.\n\nSound Travel Range: 8m
+@firearm_mp5a_name=MP5A5 SMG
+@firearm_mp5aSup_name=MP5A5 Suppressed
+@firearm_mp5a_desc=The quintessential Counter-Terrorist weapon of the 80s, the MP5 has now lost its throne to carbines and modern PDWs with better medium range ballistics.\n\nShort, very fast and accurate at CQB ranges,the MP5 is a superb tool for delicate Hostage Rescue work, but reloads are oh so-last century - and slow!
+@firearm_mp5aSup_desc=The MP5s are short and handy even with a suppressor mounted, and the added weight improves recoil control.\n\nRegular 9mm is supersonic though, so switch to subsonic ammo to lower the sound range even more.\n\nSound Travel Range: 8m
+@firearm_mp5sd_name=MP5SD6 SMG
+@firearm_mp5sd_desc=Take the very accurate MP5 and drop muzzle velocity to subsonic by porting the barrel, add a suppressor - what do you get?\n\nA death machine so quiet you can hear the bullet impact, and a tool to save lives when being detected gets people killed.\n\nSound Travel Range: 2.5m
+@firearm_mp7_name=MP7A1 PDW
+@firearm_mp7Sup_name=MP7A1 Suppressed
+@firearm_mp7holo_name=MP7A1 / Holo (4.6mm / 40 rds)
+@firearm_mp7_desc=The MP7 is short and concealable and shoots a tiny rifle-like bullet, which means recoil is minimal and it can group quick and accurate bursts even at medium range.\n\nDepending on the ammo used this gun handles Soft Armor targets quite well, but per-shot Stopping Power and Kill Probability are a bit lacking.
+@firearm_apc9k_name=APC9 K
+@firearm_apc9kSup_name=APC9 K Suppressed
+@firearm_apc9k_desc=The Swiss-designed APC-K is short, handy and maneuverable - more of a PDW than a weapon for frontline combat, but adequate for CQB work.\n\nIt's also accurate enough at short and medium ranges and can take optics to handle more distant targets.
+@firearm_P320raider_name=Raider PDW
+@firearm_P320raider_desc=The M17 pistol turned into a very concealable Personal Defense Weapon, the Raider is great for CQB work and very quick to reload in combat.\n\nThe folding brace on the Raider helps with recoil and taking aim at short to medium range, but don't count on this for shots farther than 20m. 
+
+# Shotguns
+@firearm_m500pp_name=M500-MEK Shotgun
+@firearm_m500pp_desc=Nowherakis don't normally use shotguns in combat operations, but they got some from the Marine units rotating out of the theatre.\n\nThe M500 is handy and packs a punch at point blank range, but you lack the ammo supply for door breaching and long range slug shooting.
+@firearm_m1014_name=M1014 Shotgun
+@firearm_m1014_desc=Combat shotguns are not regular Rangers weaponry these days, but there are some left in the Armory.\n\nThe M1014 is a reliable semi-auto death machine when firing buckshot, but won't cycle properly with breaching rounds and is too long for room clearing operations.
+@firearm_breacher_name=Breacher Shotgun
+@firearm_breacher_desc=A short and handy pistol-gripped shottie, loaded exclusively with breaching rounds.\n\nThese are specially designed to maximize effect on the locks while minimizing chances of ricochets and collateral damage.\n\nNo bad guy tapping with this one, sadly.
+@firearm_shotguntango_name=Cruiser Shotgun (12GA / 5 rds)
+@firearm_huntingshotgun_name=Side-by-side (12GA / 2 rds)
+@firearm_sawnoff_name=Sawed-off Shotgun
+@firearm_sawnoff_desc=A market-bought side-by-side shotgun that you cut down for concealment.\n\nYou point, not aim, with this boomstick and the spread gets a bit wild with distance, so don't count on it for anything else than close range work.\n\nAnd remember - two shots and you're out.
+@firearm_cruisershottie_name=Cruiser Shotgun
+
+
+# Enemy weapons
+@weapon_melee_name=Melee Weapon
+
+
+@firearm_rpk74lmg_name=RPK-74 LMG (5.45mm / 45 rds)
+@firearm_rpk16slmg_name=RPK-16 LMG (5.45mm / 95 rds)
+@firearm_rpklmg_name=RPK LMG (7.62mm / 75 rds)
+@firearm_rpknws_name=RPK LMG
+@firearm_rpknws_desc=The long-barreled LMG version of the AKM, gives you accuracy at range and the ability to put suppressing fire on the enemy - all without much weight penalty.\n\nLight as it is, the RPK is too long for CQB, so keep it in the back and place it in cover to get stabilization bonus. And do remember the reduced mag size!
+@firearm_rp46mg_name=RP46 MG (7.62mmR / 200 rds)
+@firearm_pkpmg_name=<UNUSED>PKP LMG (7.62mmR / 100 rds)
+@firearm_pkmmg_name=PKM MG (7.62mmR / 100 rds)
+@firearm_pkmmgnws_name=PKM LMG
+@firearm_pkmmgnws_desc=The classic, dependable frontline Machine Gun of the Russian Army, the PKM hits hard and far with old school 7.62x54 rounds. It deals suppression efficiently and cuts down any who stand their ground.\n\nIt's also long and heavy enough that it helps with recoil, but its not easy to shoot standing - so place it in cover for aiming bonuses. 
+@firearm_m249wm_name=M249 SAW (5.56mm / 200 rds)
+@firearm_m240wm_name=M240B LMG (7.62mm / 100 rds)
+
+@firearm_pkpmgcia_name=PKP Pecheneg LMG
+@firearm_pkpmg_desc=The Spetsnaz-spec version of russian PKM, the Pecheneg is light for what it does and shoots an old school, full power 7.62 round.\n\nThe rounds hit hard and far, and easily suppress an area when needed.\n\nJust remember to use cover as support to increase stability.
+
+
+@firearm_m18security_name=M18 (9mm / 17 rds)
+@firearm_pm63_name=PM-63 (9mm / 25 rds)
+@firearm_pm63cia_name=PM-63 RAK PDW
+@firearm_pm63cia_desc=An old Personal Defense Weapon for Warsaw Pact crews and drivers, the PM-63 is readily available on the black market and looks mostly like an ordinary pistol.\n\nThe gun is strictly a close range tool as accuracy is bad and the sights recoil with the slide as you shoot, but for pocketable full auto mayhem, its rather unique.
+@firearm_mp40_name=MP 40 (9mm / 32 rds)
+@firearm_miniuzi_name=Mini Uzi (9mm / 32 rds)
+@firearm_miniuzitango_name=Mini Uzi Supp. (9mm / 32 rds)
+@firearm_apc9Ksupp_name=APC9K Supp. / Dot (9mm / 20 rds)
+@firearm_miniuzicia_name=Mini Uzi SMG
+@firearm_miniuzicia_desc=Popular with types that need both discretion and automatic firepower, the Mini Uzi is a bit outdated now in its heavy, all-steel construction and the open-bolt design limits single shot accuracy.\n\nIt shines in CQB work though, as the weight balances on top of the user's hand, reloads are fast and full-auto is very manageable.
+@firearm_miniuzinws_desc=The stockless Mini Uzi sacrifices instant Kill Probability and recoil control to gain maneuverability and allow for one handed operation - with a shield.\n\nIt won't win any Limited Ammo Cups for sure, but as a pistol alternative that can literally spray and pray, it does have some merit.
+@firearm_m16wm_name=M16A2 (5.56mm / 30 rds)
+@firearm_m16lrwm_name=M16A2 / 4x (5.56mm / 30 rds)
+@firearm_m14wm_name=M14 (7.62mm / 20 rds)
+@firearm_mk17wm_name=SCAR-H / 1-4x (7.62mm / 20 rds)
+@firearm_mk17glwm_name=SCAR-H / GL (7.62mm / 20 rds)
+@firearm_augssi_name=AUG SD / 1.5x (.300BLK / 42 rds)
+@firearm_auglrssi_name=AUG SD / 3x (.300BLK / 30 rds)
+@firearm_mp5kwm_name=MP5K (9mm / 30 rds)
+@firearm_p90ssi_name=P90 SD / Holo (5.7mm / 50 rds)
+@firearm_fs57ssi_name=FS57 / Dot (5.7mm / 20 rds)
+@firearm_fs57sdssi_name=FS57 SD / Dot (5.7mm / 20 rds)
+@firearm_SVUssi_name=SVU-A / 4x (7.62mmR / 20 rds)
+@firearm_m4tango_name=M4 / 4x (5.56mm / 30 rds)
+@firearm_type56_name=AK-47S (7.62mm / 30 rds)
+@firearm_type56dot_name=AK-47S / Dot (7.62mm / 30 rds)
+@firearm_akm_name=AKM (7.62mm / 30 rds)
+@firearm_akmkobra_name=AKM / Red Dot (7.62mm / 30 rds)
+@firearm_bren2FAS_name=B2S / Red Dot (7.62mm / 30 rds)
+@firearm_type56cia_name=AK-47 Underfolder
+@firearm_type56cia_desc=The underfolding stock version of the AK47 is easier to conceal, but its accuracy potential is hampered by the poor cheekweld.\n\nThe stock prevents the mounting of optics, but for surprise close range automatic firepower, this one is hard to beat.
+@firearm_type56nws_desc=The underfolding stock version of the AK47 is slightly lighter, but its accuracy potential is hampered by the poor cheekweld.\n\nThe stock prevents the mounting of optics, but when close combat to the death is concerned, it won't make much of a difference.
+@firearm_akmcia_name=AKM Rifle
+@firearm_akmcia_desc=<UNUSED>The standard insurgent combat rifle all around the world, it keeps working no matter what you do to it.\n\nIt's not particulary accurate nor fast at long range and reloads are relatively slow, but it does the most important thing - looks like it belongs in the busy streets of Nowheraki.
+@firearm_akmnws_desc=Your combat rifle for a couple of years now, the AKM is what you know and trust best.\n\nThe fixed stock provides a decent cheekweld and allows precise fire out to medium range, but the sights are not very fast and reloads are slow.\n\nAlso, it's a bit on the heavy side.
+@firearm_akm_gl_name=AKM/GP34 GL
+@firearm_akm_gl_desc=The tried and true AKM but with an underbarrel grenade launcher, this is your main tool to lead the team and apply heavy firepower where needed.\n\nThe 40mm grenades are good to flush people out of cover, and the Soviet-designed grenades carry a bit more charge than the US-supplied ones.
+@firearm_aks74u_name=AKS-74U (5.45mm / 30 rds)
+@firearm_aks74uemir_name=AKS-74U / 4x (5.45mm / 45 rds)
+@firearm_aks74ucia_name=AKS-74U Carbine
+@firearm_aks74uciaSup_name=AKS-74U Suppressed
+@firearm_aks74ucia_desc=Designed as a PDW for too-cool Soviet forces and used as status symbol all through the Middle East, the AKSU is a handy little beast of an Assault Rifle.\n\nIt's balanced perfectly for close range and CQB work, but the short barrel and sight radius sacrifice long range accuracy and stopping power.
+@firearm_aks74uciaSup_desc=You can't really silence a 5.45mm carbine unless you source unobtanium subsonic ammo, but the suppressor helps to confuse the enemy, hide your flash signature and control recoil in rapid fire situations.
+@firearm_arm14_name=AK-47M SF Carbine
+@firearm_arm14_desc=An AKS-U copy built to accomodate your 7.62x39 supply chain, the Special Forces carbine is well suited for fast movement and Close Quarters Battle.\n\nThe short barrel and sight radius sacrifice long range accuracy, so equip combat optics to mix it up at distance.
+@firearm_vulcan_name=Vulcan Rifle
+@firearm_vulcanSup_name=Vulcan Suppressed
+@firearm_vulcan_desc=Eastern European AK built in bullpup format, the Vulcan gives you ammo and magazine commonality with the rest of the force but shortens the length of the rifle to make it very handy for CQB work. As a bonus, you get to mount US-made optics!\n\nReloads are still messy and slow, so don't get caught with an empty mag.
+@firearm_vulcanSup_desc=The Vulcan is still an AK, so you don't have any subsonic ammo available.\n\nThe good news is, even with the suppressor on, the Vulcan is short, handy, and great for Close Quarters Combat.
+@firearm_ak105alpha_name=AK-105 Alpha (5.45mm / 30 rds)
+@firearm_ak105tango_name=AK-105 / 1-6x (5.45mm / 30 rds)
+@firearm_ak105alphacia_desc=Styled after the latest trends of RusSOF operators but upgraded in the good old USA, the Alpha keeps the AK internals and adds a collapsible stock and full rails to mount your capitalist optics.\n\nThe gun will anger purists and is heavy for a mid-length AK but shoots straight and provides deadly mid-range rapid fire.
+@firearm_ak105alphaciaSup_desc=You can't really silence a 5.45mm carbine unless you source very rare subsonic ammo,but the suppressor helps to confuse the enemy and hide your flash signature. As for recoil control, the Alpha was front heavy to begin with, so this doesn't really help.
+@firearm_ak105alphacia_name=AK-105 Alpha
+@firearm_ak105alphaciaSup_name=AK-105 Suppressed
+@firearm_sr3m_name=SR3-M (9mm AP / 20 rds)
+@firearm_fal_name=FAL (7.62mm / 20 rds)
+@firearm_falnws_name=FAL Rifle
+@firearm_falmil_desc=Dubbed The Right Arm of the Free World, the Belgian FAL is widespread as a black market weapon but takes skill to use properly.\n\nThe rifle hits hard and far and serves as a wannabe DMR for Militia types, but you lack the ammo or optics to make it truly effective at range.
+@firearm_smlemk3_name=SMLE Mk.III (.303 British / 10 rds)
+@firearm_smlemk3hwk_name=SMLE Mk.III Sniper
+@firearm_ak104lttawr_name=AK-104 Tawr Special
+
+@firearm_RPG7_name=RPG-7 (93mm HEAT)
+@firearm_RPG7nws_name=RPG-7 Launcher
+@firearm_RPG7nws_desc=RPG-7 Launcher
+@firearm_RPG26_name=RPG-26 (72.5mm HEAT)
+@firearm_RPG26cia_name=RPG-26 Launcher
+@firearm_RPG26cia_desc=The one-shot RPG26 is lighter, smaller and less conspicious than your AT4 option, but also shoots a smaller and slower warhead.\n\nShould still do a good job as hole puncher in walls, doors and any unlucky enemy.\n\nAnd it does fit nicely with your local garb outfit.\n\nDeploy time: 3 seconds\nLethal Blast Range: 2m
+@firearm_RPG26nws_desc=The one-shot RPG26 is your light and disposable rocket launcher, familiar to everyone since army days.\n\nShould do a good job as hole puncher in walls, doors and any unlucky enemy, and maybe the occasional mission objective.\n\nDeploy time: 2.5 seconds\nLethal Blast Range: 2m
+@firearm_SVD_name=SVD-63 (7.62mmR / 10 rds)
+@firearm_SVDcia_name=SVD-63 Dragunov
+@firearm_SVDcia_desc=The Russian Army marksman rifle is not uncommon in these streets, so it should raise less eyebrows when you play local.\n\nIt's long, heavy but not unwieldy, and just accurate enough to score good hits at practical ranges - but the bullets hit hard and pierce through level III armor.
+@firearm_SVDnws_desc=The Russian Army marksman rifle is your go-to precision tool, but most troopers don't have the knowhow to use it effectively.\n\nIt's long and shoots a powerful cartridge, so put in cover to stabilize it properly and your special training kicks in, extending its effective range to almost 50m.
+@firearm_SVUnws_name=SVU-A Bullpup
+@firearm_SVUnws_desc=A bullpup redesign of the SVD marksman rifle, the SVU is shorter and better suited for urban combat - but loses some long range accuracy due to shorter barrel.\n\nThis variant also adds automatic fire and sports a muzzle brake to help with recoil, but the limited magazine capacity makes it impractical for anything but emergency use.
+@firearm_VSS_name=VSS (9mm AP Silent / 10 rds)
+@firearm_VSScia_name=VSS Vintorez
+@firearm_VSScia_desc=Built by the Soviets for clandestine ops, the VSS uses very heavy subsonic rifle ammo and an integral suppressor to provide silent marksman fire at medium range.\n\nAnd if there's unexpected trouble, it can rock-n-roll on Full Auto, too!\n\nSound Travel Range: 3.5m
+
+@mountedweap_dshk_name=DShK (12.7mm AP / 50 rds)
+@mountedweap_m2_name=<UNUSED>M2 MG (.50 CAL / 100 rds)
+
+
+@firearm_ak47_rifle_name=AK-47 Rifle (Semi / 7.62mm)
+@firearm_ak47_drum_name=AK-47 Drum (Auto / 7.62mm)
+
+@firearm_sniper_rifle_name=SniperRifle
+
+@firearm_caliber_22lr_name=.22 Long Rifle
+@firearm_caliber_38special_name=.38 Special
+@firearm_caliber_380_name=.380 ACP
+@firearm_caliber_9x18_name=9x18mm PM
+@firearm_caliber_9x19_name=9x19mm
+@firearm_caliber_9x39_name=9x39mm
+@firearm_caliber_9x39AP_name=9x39mm AP
+@firearm_caliber_9x19subsonic_name=9x19mm Subsonic
+@firearm_caliber_9x39subsonic_name=9x39mm Subsonic
+@firearm_caliber_357mag_name=.357 Magnum
+@firearm_caliber_40sw_name=.40 S&W
+@firearm_caliber_40swsubsonic_name=.40 S&W Subsonic
+@firearm_caliber_44mag_name=.44 Magnum
+@firearm_caliber_45acp_name=.45 ACP
+@firearm_caliber_46x30_name=4.6x30mm
+@firearm_caliber_545x39_name=5.45x39mm
+@firearm_caliber_57x28_name=5.7x28mm
+@firearm_caliber_556x45_name=5.56x45mm
+@firearm_caliber_556GL40_name=5.56x45mm/40mm HE
+@firearm_caliber_556GL40_shortname=5.56x45mm/40mm
+@firearm_caliber_76239GL40_name=7.62x39mm/40mm HE
+@firearm_caliber_762GL40_name=7.62x51mm/40mm HE
+@firearm_caliber_762GL40_shortname=7.62x51mm/40mm
+@firearm_caliber_6x35_name=6x35mm
+@firearm_caliber_6x25_name=6.5x25mm
+@firearm_caliber_68x51_name=6.8x51mm
+@firearm_caliber_762x25_name=7.62x25mm
+@firearm_caliber_762x39_name=7.62x39mm
+@firearm_caliber_762x51_name=7.62x51mm
+@firearm_caliber_762x54_name=7.62x54mmR
+@firearm_caliber_338NM_name=.338 NorMag
+@firearm_caliber_300BLK_name=.300 BLK
+@firearm_caliber_300BLKsubsonic_name=.300 BLK Subsonic
+@firearm_caliber_303_name=.303 British
+@firearm_caliber_127x108_name=12.7x108mm
+@firearm_caliber_12gauge_name=12 Gauge
+@firearm_caliber_40mm_name=40mm Low Velocity
+@firearm_caliber_72mmHEAT_name=72.5mm HEAT
+@firearm_caliber_84mmHEAT_name=84mm HEAT
+@firearm_caliber_93mmHEAT_name=93mm HEAT
+@firearm_caliber_bzzzt_name=bzzzt
+@firearm_operation_doubleactionrev_name=Double Action Revolver
+@firearm_operation_doubleactiononly_name=Double Action Only
+@firearm_operation_semiauto_name=Semi-Auto
+@firearm_operation_semi3rdburst_name=Semi-Auto, 3rds Burst
+@firearm_operation_mp5navy_name=Semi, Burst, Full Auto
+@firearm_operation_semifull_name=Semi-Auto, Full Auto
+@firearm_operation_fullauto_name=Full Auto
+@firearm_operation_fullauto2burst_name=Full Auto, 2rd Burst
+@firearm_operation_fullauto3burst_name=Full Auto, 3rd Burst
+@firearm_operation_boltaction_name=Bolt Action
+@firearm_operation_pumpaction_name=Pump Action
+@firearm_operation_breakopen_name=Break Open
+@firearm_operation_singleshot_name=Single Shot
+@firearm_operation_singleshotthrow_name=Single Shot, Disposable
+
+#Ammo
+@ammo_918FMJ_name=57-N-181S Steel Core
+@ammo_918FMJ_desc=Standard 9x18 round, decent performanace up to a range of 50m.
+@ammo_545FMJ7N10_name=7N10 56gr FMJ
+@ammo_545FMJ7N10_desc=Standard AK74 round in service, good mix of armor penetration and terminal effect.
+@ammo_545FMJ7N10Sup_desc=Standard AK74 round in service, good mix of armor penetration and terminal effect.\n\nSound Travel Range: 46m
+@ammo_545FMJ7N10AlphaSup_desc=Standard AK74 round in service, good mix of armor penetration and terminal effect.\n\nSound Travel Range: 43m
+@ammo_545FMJ7N24_name=7N24 57gr Super-AP
+@ammo_545FMJ7N24_desc=
+@ammo_545FMJ7N39_name=7N39 53gr Black Ring
+@ammo_545FMJ7N39_desc=
+@ammo_545HP_name=55gr Hollow Point
+@ammo_545HP_desc=Non-standard Hollow Points sacrifice armor penetration for stopping power. Once you open up the range, the round loses its unique mushrooming effect - and associated advantages.
+@ammo_545HPSup_desc=Non-standard Hollow Points sacrifice armor penetration for stopping power. Once you open up the range, the round loses its unique mushrooming effect - and associated advantages.\n\nSound Travel Range: 44m
+@ammo_545HPAlphaSup_desc=Non-standard Hollow Points sacrifice armor penetration for stopping power. Once you open up the range, the round loses its unique mushrooming effect - and associated advantages.\n\nSound Travel Range: 42m
+@ammo_545FMJ7U1_name=7U1 80gr Subsonic
+@ammo_545FMJ7U1Sup_desc=Ultra-Heavy, ultra-quiet Soviet-era Subsonic rounds that can only cycle the action if used with a suppressor mounted.\n\nDecent stopping power at close range, but weak at medium and long range.\n\nSound Travel Range: 6m
+@ammo_545FMJ7U1AlphaSup_desc=Ultra-Heavy, ultra-quiet Soviet-era Subsonic rounds that can only cycle the action if used with a suppressor mounted.\n\nDecent stopping power at close range, but weak at medium and long range.\n\nSound Travel Range: 4m
+@ammo_939FMJSP5_name=SP-5 259gr FMJ
+@ammo_939FMJSP5_desc=Standard round for precision subsonic sniping at medium range.\n\nSound Travel Range: 3.5m
+@ammo_939APSP6_name=SP-6 241gr AP
+@ammo_939APSP6_desc=Increased Armor Penetration to handle Soft Armor and Level III vests.\n\nSound Travel Range: 5m
+@ammo_762FMJM43_name=M43 123gr FMJ
+@ammo_762FMJM43_desc=Soviet surplus ammo, does mediocre but reliable damage in random hits.
+@ammo_762FMJM43Sup_desc=Soviet surplus ammo, does mediocre but reliable damage in random hits.\n\nSound Travel Range: 40m
+@ammo_762397N23AP_name=7N23 Armor Piercing
+@ammo_762397N23AP_desc=Russian Armor Piercing ammo, will go through level III vests at distances up to 30m.
+@ammo_762397N23APSup_desc=Russian Armor Piercing ammo, will go through level III vests at distances up to 30m.\n\nSound Travel Range: 40m
+@ammo_762R7N1_name=7N1 152gr FMJ
+@ammo_762R7N1_desc=The old Soviet Era sniper round. Precise and deadly but does poorly against any sort of body armor.
+@ammo_762RAP7N13_name=7N13 145gr AP
+@ammo_762RAP7N13_desc=Armor Piercing specialized round, will go through level III vests.
+@ammo_762R7N14_name=7N14 151gr FMJ
+@ammo_762R7N14_desc=The new Russian round is plenty precise but can also handle level III armor at close range.
+@ammo_762R57N323_name=57N323 148gr FMJ
+@ammo_762R57N323_desc=Standard Russian Army MG round. Hits them hard and keeps their heads down.
+@ammo_762R203_name=203gr Soft Point
+@ammo_762R203_desc=A big game hunting round appropriated from sporting stores, it hits hard but doesn't deal well with body armor.
+
+
+@ammo_46HPLE_name=LE 31gr Hollow Point
+@ammo_46HPLE_desc=A Hollow Point round for use when body armor is not a factor, it expands reliably and boosts stopping power at ranges under 15m.
+@ammo_46HPLESup_desc=A Hollow Point round for use when body armor is not a factor, it expands reliably and boosts stopping power at ranges under 15m.\n\nSound Travel Range: 35m
+@ammo_46DM11AP_name=DM11 31gr AP
+@ammo_46DM11AP_desc=The standard round in service for the MP7, optimized for velocity and armor penetration. Will go through level III armor at point blank range, and Soft Armor is a non-factor.
+@ammo_46DM11APSup_desc=The standard round in service for the MP7, optimized for velocity and armor penetration. Will go through level III armor at point blank range, and Soft Armor is a non-factor.\n\nSound Travel Range: 35m
+@ammo_46SUBS77_name=77gr Subsonic
+@ammo_46SUBS77_desc=Heavy subsonic rounds to maximize sound suppression.
+@ammo_46SUBS77Sup_desc=Heavy subsonic rounds to maximize sound suppression.\n\nSound Travel Range: 3m
+@ammo_46HE40FMJ_name=High-E 40gr FMJ
+@ammo_46HE40FMJ_desc=Heavier FMJ rounds transfer more energy into the target at close range, giving you a boost in stopping power. Will also penetrate Soft Armor vests.
+@ammo_46HE40FMJSup_desc=Heavier FMJ rounds transfer more energy into the target at close range, giving you a boost in stopping power. Will also penetrate Soft Armor vests.\n\nSound Travel Range: 30m
+
+@ammo_22LR40GR_name=SG 40gr FMJ
+@ammo_22LR40GR_desc=Standard .22LR small game round, 40 grain FMJ
+@ammo_556FMJM855_name=M855 62gr Green Tip
+@ammo_556FMJM855_desc=The basic Steel Core round the army uses. Reliable fragmentation out of rifle barrels.
+@ammo_556FMJM855A1_name=M855A1 62gr EPR
+@ammo_556FMJM855A1_desc=The new Army round, optimized for reliable damage out of M4-length carbines.
+@ammo_556FMJMk318_name=Mk318 62gr SOST Ball
+@ammo_556FMJMk318_desc=This Open Tip Rear Penetrator Round works great out of short CQB barrels.
+@ammo_556FMJMk262_name=Mk262 77gr Match
+@ammo_556FMJMk262_desc=Open Tip Match round designed for accuracy and long range performance.
+
+@ammo_68x51XM1186_name=XM1186 GP
+@ammo_68x51XM1186_desc=The new 6.8x51 General Purpose round in testing with the XM7 and XM250 NGSW family of weapons, it will reliably penetrate Level III / SAPI vests out to 50m. 
+
+@ammo_300BLK220GRSUBS_name=220gr Subsonic
+@ammo_300BLK220GRSUBS_desc=Subsonic rounds are the 'raison d'etre' of the 300 Blackout and the RSAR, and hit hard at short range but lose performance at medium range.\n\nBest used suppressed, as designed. 
+@ammo_300BLK220GRSUBSsup_desc=Subsonic rounds are the 'raison d'etre' of the 300 Blackout and the RSAR, and hit hard at short range but lose performance at medium range.\n\nSound Travel Range: 5m
+@ammo_300BLK125GROTM_name=125gr Open Tip Match
+@ammo_300BLK125GROTM_desc=Supersonic Open Tip Match round designed for accuracy and medium range performance, allows you to score critical hits farther than with subsonics.
+@ammo_300BLK125GROTMsup_desc=Supersonic Open Tip Match round designed for accuracy and medium range performance, allows you to score critical hits farther than with subsonics but doesn't suppress so well.\n\nSound Travel Range: 40m
+
+@ammo_338FMJXM338_name=XM338 300gr FMJ
+@ammo_338FMJXM338_desc=In testing with SOCOM's new MG, offers reliable extreme range performance.
+
+@ammo_762FMJM80_name=M80 147gr FMJ
+@ammo_762FMJM80_desc=The standard Full Metal Jacket Army round in use with line 7.62mm weapons.
+@ammo_762FMJM80A1_name=M80A1 130gr Steel Tip
+@ammo_762FMJM80A1_desc=The Enhanced Performance Round brings 7.62 weapons to the 21st century, increasing overall damage and Kill Probability at all ranges compared to the older M80 round. 
+@ammo_762FMJM118LR_name=M118LR 175gr Match
+@ammo_762FMJM118LR_desc=Specifically designed for Match-like performance in your Marksman rifles, the M118 Long Range improves your accuracy but loses a bit of Kill Probability. 
+@ammo_762APM993_name=M993 128gr AP
+@ammo_762APM993_desc=Hard to source Armor Piercing ammo for your 7.62 weapons, it trades some damage to reliably pierce level III vests at all practical ranges. 
+@ammo_762APXM1158_name=XM1158 ADVAP
+@ammo_762APXM1158_desc=The Army's new and shiny Advanced Armor Penetration ammo, lets your 7.62mm weapons penetrate level IV plates.
+@ammo_12GAM1030_name=Breaching Rounds
+@ammo_12GAM1030_desc=
+@ammo_45FMJM1911_name=M1911 230gr FMJ
+@ammo_45FMJM1911_desc=The same heavy slugs your grandpa used to stop charging Japanese on Mount Austen. Low-tech but effective.
+@ammo_45FMJM1911_nwsdesc=The only ammo you could reliably source to feed the shiny HS45 is forgotten US Army Inventory. Old tech, but some of your advisors swear these hammer down targets like nothing else.\n\nJust don't drop a full mag on your toes.
+@ammo_45FMJM1911Sup_desc=The same heavy slugs your grandpa used to stop charging Japanese on Mount Austen. Low-tech but effective, and very slow hence perfect for suppressing.\n\nSound Travel Range: 5.5m
+@ammo_45JHP230GR_name=230gr JHP
+@ammo_45JHP230GR_desc=
+@ammo_45JHP185GR_name=185gr JHP
+@ammo_45JHP185GR_desc=A modern .45 load, the 185 grain Jacketed Hollow Point gets you an extra bit of Stopping Power at close range but loses its effect at medium range, due to the lower bullet weight.
+@ammo_45JHP185GRSup_desc=A modern .45 load, the 185 grain Jacketed Hollow Point gets you an extra bit of Stopping Power at close range but loses its effect at medium range, due to the lower bullet weight.\n\nSound Travel Range: 6.5m
+@ammo_45JHP160GR_name=+P 160gr HP
+@ammo_45JHP160GR_desc=High muzzle velocity Hollow Points hit like a hammer and take down bad guys easily at close range, and might handle some soft armor too.\n\nThe recoil is greatly increased though so you do lose some practical rate of fire.
+@ammo_45JHP160GRSup_desc=High muzzle velocity Hollow Points hit like a hammer and take down bad guys easily at close range, and might handle some soft armor too, but they go supersonic and wake up the neighbors.\n\nThe recoil is greatly increased though so you do lose some practical rate of fire. \n\nSound Travel Range: 14m
+
+@ammo_380JHP90GR_name=LE 90gr JHP
+@ammo_380JHP90GR_desc=A round popular with Law Enforcement officers, the 90 grains Jacketed Hollow Point offers decent stopping power at close range, but is anemic against any sort of armor. 
+@ammo_380JHP90GRsup_desc=A round popular with Law Enforcement officers, the 90 grains Jacketed Hollow Point offers decent stopping power at close range, but is anemic against any sort of armor. The round is also subsonic, so quite silent when suppressed.\n\nSound Travel Range: 3.5m
+@ammo_380EHP70GR_name=HV 70gr EHP
+@ammo_380EHP70GR_desc=High Velocity, External-Hollow Point rounds have lower recoil and better Kill Probability, but lose a bit of the permanent damage as they don't truly expand to shred tissue. 
+@ammo_380EHP70GRsup_desc=High Velocity, External-Hollow Point rounds have lower recoil and better Kill Probability, but lose a bit of the permanent damage as they don't truly expand to shred tissue. The bullets border supersonic velocity though so suppression is worse.\n\nSound Travel Range: 10m
+
+
+
+@ammo_919FMJM882_name=M882 124gr FMJ
+@ammo_919FMJM882_desc=The tried-and-true Army-issue rounds - average but reliable stopping power.
+@ammo_919FMJM882_NWSdesc=The standard 9mm rounds available everywhere, mostly as they're being phased out by your American allies. Make standard holes in crazed Jihadis.
+@ammo_919FMJM882shortsup_desc=The tried-and-true Army-issue rounds - average but reliable stopping power.\n\nSound Travel Range: 7.5m
+@ammo_919FMJM882sup_desc=The tried-and-true Army-issue rounds - average but reliable stopping power.\n\nSound Travel Range: 7m
+@ammo_919FMJM882sup_NWSdesc=The standard 9mm rounds available everywhere, mostly as they're being phased out by your American allies. Make standard holes in crazed Jihadis.\n\nSound Travel Range: 7m
+@ammo_919FMJM882Sup1_desc=The tried-and-true Army-issue rounds - average but reliable stopping power.\n\nSound Travel Range: 8m
+@ammo_919FMJM882Sup2_desc=The tried-and-true Army-issue rounds - average but reliable stopping power.\n\nSound Travel Range: 9m
+@ammo_919FMJM882Sup2_NWSdesc=The standard 9mm rounds available everywhere, mostly as they're being phased out by your American allies. Make standard holes in crazed Jihadis.\n\nSound Travel Range: 9m
+@ammo_919FMJM882SupSD_desc=The tried-and-true Army-issue rounds - average but reliable stopping power.\n\nSound Travel Range: 2.5m
+@ammo_919FMJM1152_name=M1152 115gr FMJ
+@ammo_919FMJM1152_desc=The new flat-nosed FMJ rounds shoot flatter due to increased muzzle velocity but slightly increase recoil.
+@ammo_919FMJM1152shortsup_desc=The new flat-nosed FMJ rounds shoot flatter but slightly increase recoil. The high muzzle velocity doesn't make for very efficient suppression.\n\nSound Travel Range: 10m
+@ammo_919FMJM1152sup_desc=The new flat-nosed FMJ rounds shoot flatter but slightly increase recoil. The high muzzle velocity doesn't make for very efficient suppression.\n\nSound Travel Range: 8.5m
+@ammo_919FMJM1152Sup1_desc=The new flat-nosed FMJ rounds shoot flatter but slightly increase recoil and sound signature.\n\nSound Travel Range: 11m
+@ammo_919FMJM1152Sup2_desc=The new flat-nosed FMJ rounds shoot flatter but slightly increase recoil and sound signature.\n\nSound Travel Range: 12m
+@ammo_919FMJM1152SupSD_desc=The new flat-nosed FMJ rounds shoot flatter but slightly increase recoil and sound signature.\n\nSound Travel Range: 5.5m
+@ammo_919JHPM1153_name=M1153 147gr JHP
+@ammo_919JHPM1153_desc=Heavy, subsonic Hollow Points increase damage but lose long range accuracy.
+@ammo_919JHPM1153_NWSdesc=Subsonic Hollow Points obtained with great effort from your coalition partners. These increase damage but lose long range accuracy.
+@ammo_919JHPM1153shortsup_desc=Heavy, subsonic Hollow Points increase damage and lower sound signature as they eliminate the supersonic bullet crack.\n\nSound Travel Range: 4.5m
+@ammo_919JHPM1153Sup1_desc=Heavy, subsonic Hollow Points increase damage and lower sound signature as they eliminate the supersonic bullet crack.\n\nSound Travel Range: 4.5m
+@ammo_919JHPM1153Sup2_desc=Heavy, subsonic Hollow Points increase damage and lower sound signature as they eliminate the supersonic bullet crack.\n\nSound Travel Range: 5.5m
+@ammo_919JHPM1153_suphgdesc=Subsonic Hollow Points increase damage and drop the shot sound range even further.\n\nSound Travel Range: 3.5m
+@ammo_919JHPM1153_suphgNWSdesc=Subsonic Hollow Points increase damage and drop the shot sound range even further.\n\nSound Travel Range: 3.5m
+@ammo_919JHPM1153SupSD_desc=Subsonic Hollow Points increase damage and drop the shot sound range even further.\n\nSound Travel Range: 2.5m
+@ammo_919FMJ108GRHP_name=108gr FMJ HP
+@ammo_919FMJ108GRHP_desc=High Performance round trades a bit of stopping power for velocity and penetrates all Soft Armor at close range.
+@ammo_919FMJ108GRHPshortsup_desc=High Performance round trades a bit of stopping power for velocity and penetrates all Soft Armor at close range, but is not that quiet even when suppressed.\n\nSound Travel Range: 12m
+@ammo_919FMJ108GRHPSup1_desc=High Performance round trades a bit of stopping power for velocity and penetrates all Soft Armor at close range, but is not that quiet even when suppressed.\n\nSound Travel Range: 14m
+@ammo_919FMJ108GRHPSupSD_desc=High Performance round trades a bit of stopping power for velocity. The MP5SD bleeds that velocity down to make it subsonic, so the ammo kinda misses the point.\n\nSound Travel Range: 8m
+@ammo_40FMJ180GR_name=180gr FMJ
+@ammo_40FMJ180GR_desc=A standard, no frills Full Metal Jacket round that gives you a nice boost in firepower compared to the 9 mil handguns and handles some soft armor. 
+@ammo_40JHP180GR_name=180gr JHP
+@ammo_40JHP180GR_desc=Heavy Hollow Point round for your .40 handgun, it hits hard at close range but loses a bit of wound potential and kill probability as you go past close combat range. 
+@ammo_40JHP165GR_name=165gr JHP
+@ammo_40JHP165GR_desc=A lighter and faster Hollow point round that can handle some soft armor on targets and handles distance degradation a little bit. Will lead to a little increase in rate of fire. 
+@ammo_12GA00BUCK_name=M162 9 PEL 00 Buckshot
+@ammo_12GA00BUCK_desc=The standard army-issue 9-pellet Double Ought buckshot, good for two-legged game up to 15m.
+@ammo_12GA00BUCK8_name=8 PEL 00 Buckshot
+@ammo_12GA00BUCK8_desc=US Police issue 8-pellet Double Ought buckshot received as aid from the Coalition Authority, it gets you higher stopping power at range, at the expense of recoil control and rate of fire.
+@ammo_12GANO4BUCK_name=M257 No.4 Buck
+@ammo_12GANO4BUCK_desc=A deer hunting round adapted for jungle warfare back in Vietnam times, the M257 puts 24 pellets on target to great effect - as long as the target is point blank.\n\nNot recommended for ranges longer than room distance.
+
+
+#Scopes
+@scope_ironsights_name=Iron sights
+@scope_ironsights_desc=The iron sights that came with the weapon are good enough to score hits, but lose speed and crit chance as range opens up.
+@scope_ironsightspistol_desc=Just use the iron sights that came with the pistol. Keep it Simple - and draw speed fast!
+@scope_ironsightspistolmk27_desc=Just use the iron sights that came with the pistol - as it happens, these are quite tall and precise, better than the average. 
+@scope_ironsightspistolnochoice_desc=You're stuck with the iron sights that came with the pistol, but this should be just your backup gun, anyway.
+@scope_ironsightspistol1911_desc=You're stuck with the iron sights that came with the pistol, and they're too low profile to be much use.
+@scope_ironsightspistolm17_desc=This pistol is drilled for fancy Red Dot sights, but the unit armorer keeps all the actual devices locked, not approved for use.
+@scope_ironsightsAK_desc=The notch-and-post AK sights are a bit slow but if you want to look local...
+@scope_ironsightsAKAlpha_desc=Seriously, if you think "rifle is fine" with just irons, why not get an AKM instead?
+@scope_ironsightsso_name=No sights
+@scope_ironsightsso_desc=There was once a bead sight on this shotgun, but now it's gone with most of the barrels. 
+@scope_rangersholo_name=Holo-sight 1x
+@scope_rangersholo_desc=Magically projects a reticle over the target, with drop marks for medium-range shooting.
+@scope_pistolreddot_name=Micro Red Dot 1x
+@scope_pistolreddot_desc=Improve your first shot aim time with a red dot sight so small it can even fit on pistol slides.
+@scope_pistolreddotMk27_desc=The red dot that came pre-packaged with your Mk27 pistol, it should help improve your first shot aim time and accuracy at range, at the expense of slight draw speed.
+@scope_pistolreddotM17_desc=Improve your first shot aim time with a red dot sight so small it can even fit on pistol slides.\n\nIf you can pull some clout to get the optics approved for mission use, that is.
+@scope_CIAT2reddot_name=T2 Red Dot 1x
+@scope_rangersM68reddot_name=M68 Red Dot 1x
+@scope_rangersM68reddot_desc=Minimalistic sight that simply puts a red dot over the target. Quick and accurate at short and medium ranges.
+@scope_rangersspecterdr_name=Dual Role Optic 1/4x
+@scope_rangersspecterdr_desc=Excellent optic suited for close-in AND medium range work, though a little heavy.
+@scope_rangersM150acog_name=Combat Optic 4x
+@scope_rangersM150acog_desc=Simple magnified optic for shooting at medium ranges, with little weight penalty.
+@scope_rangerslpvo6x_name=LPVO 1-6x
+@scope_rangerslpvo6x_desc=A Low Power Variable Optic that works great at ranges up to 25m and even more.
+@scope_rangerslpvo8x_name=LPVO 1-8x
+@scope_rangerslpvo8x_desc=A good all-around assaulter optic that truly shines at ranges farther than 25m.
+@scope_lromk6_3_18_name=LR Optic 3-18x
+@scope_lromk6_3_18_desc=A marksman optic specialized in the 25 to 50m range zone, and adequate elsewhere.
+@scope_lromk4_name=LR Optic 3.5-10x
+@scope_lromk4_desc=Your entry level Long Range Optic is light and works decent enough at all ranges.
+@scope_lropm5_25_name=LR Optic 5-25x
+@scope_lropm5_25_desc=A heavy and kinda cumbersome optic that brings maximum precision from 25m out.
+
+@scope_pkas_name=PK AS 1x
+@scope_pkas_desc=Russian built Red Dot for AKs, increases accuracy and aiming speed at short and medium range. At longer range, precision is increased but the speed is compromised by poor cheekweld.
+@scope_pkav_name=PK AV 1x
+@scope_pkav_desc=
+@scope_kobra_name=Kobra Multi-Reticle 1x
+@scope_kobra_desc=
+@scope_po35_name=PO 3.5x
+@scope_po35_desc=Very heavy medium range optic for the AK family, it greatly improves rapid-fire capability due to the uncommonly large Field of View. The Rangefinding Reticle also increases accuracy at Long Range.
+@scope_nspum2_name=NSPU-2 3.5x Night Vision
+@scope_nspum2_desc=A late Soviet-era Night Vision Scope for the AK family of weapons, the NSPU-2 is made out of Unobtanium and kept to Squad Leaders only.\n\nThe scope is heavy, much too large, and its field of view is only conductive to engaging distant targets, not searching and definitely not room clearing.  
+@scope_pso1_name=PSO-1 4x
+@scope_pso1m2_name=PSO-1M2 4x
+@scope_pso1_desc=The standard Russian marksman scope increases accuracy at medium and long ranges via its simple but effective rangefinder, but lacks the magnification to deliver solid Killing Shots at Long Range.\n\nThis version is designed for the mounting system and ballistics of the SVD rifle.
+@scope_pso1m2_desc=The standard Russian marksman scope increases accuracy at medium and long ranges via its simple but effective rangefinder, but lacks the magnification to deliver solid Killing Shots at Long Range.\n\nThis version mounts on AKs and VSS rifles.
+@scope_pso39_name=PSO 3-9x
+@scope_pso39_desc=Russian-made Long Range Optic with an integrated rangefinder reticle, its a bit heavy and cumbersome but gets you right on target everytime, just not very fast.
+
+@scope_rangersMGO240_name=MG Optic 6x
+@scope_rangersMGO240_desc=Dominate the 25-to-50m battlespace with this rugged but heavy Machinegun optic.
+@scope_rangersMGOM145_name=M145 MG Optic 3.4x
+@scope_rangersMGOM145_desc=Gain a little precision at medium range while keeping target transition very fast.
+
+
+
+#
+# Entities
+#
+
+@entity_door_tooltip=Door
+@entity_door_strong_tooltip=Reinforced Door
+@entity_door_strong_locked_tooltip=Reinforced Door (Locked)
+@entity_door_flimsy_tooltip=Flimsy Door
+@entity_door_glass_tooltip=Glass Door
+@entity_door_flimsy_locked_tooltip=Flimsy Door (Locked)
+@entity_door_gate_tooltip=Sheet Metal Gate
+@entity_door_gate_locked_tooltip=Sheet Metal Gate (Locked)
+@entity_door_metal_tooltip=Sheet Metal Door
+@entity_door_metal_locked_tooltip=Sheet Metal Door (Locked)
+@entity_door_gate_large_tooltip=Large Gate
+@entity_door_shortgate_tooltip=Low Gate
+@entity_door_grating_tooltip=Grating Door
+@entity_door_grating_locked_tooltip=Grating Door (Padlocked)
+@entity_door_elevator_tooltip=Elevator Door
+@entity_door_sliding_tooltip=Sliding Doors
+@entity_door_sliding_tooltip2=Sliding Door
+@entity_door_secret=Secret Door
+@entity_window=Window
+@entity_drapes=Drapes
+@entity_glass_wall=Glass Wall
+@entity_window_blocker=Window Blocker
+@entity_window_grating=Window Grating
+@entity_chainlink_fence=Chainlink Fence
+@entity_fence=Fence
+@entity_rescuezone_tooltip=Rescue Zone: bring hostages, VIPs and HVTs here.
+@entity_evaczone_tooltip=Evac Zone: Bring troops here after completing objectives.
+@entity_hvtescape=HVT Escape: You will fail the mission if the HVT reaches this.
+@entity_timebomb_tooltip=Time Bomb
+@entity_timebombinactive_tooltip=Time Bomb (Inactive)
+@entity_ied_tooltip=Improvised Explosive Device
+@entity_detonator_tooltip=IED Detonator
+@entity_fusebox=Fusebox
+@entity_destroyed_fusebox=Destroyed Fusebox
+@entity_generator=Generator
+
+#
+# Mounted Weapons
+#
+
+
+@entity_mountedweaps_dshk=DShK Heavy Machinegun (Usable)
+
+
+
+#
+# Humans
+#
+
+@entity_human_vip=Enemy High-Value Target
+@entity_human_vip2=HVT "Butcher"
+@entity_human_vip3=HVT "Trinkets"
+@entity_human_vip4=HVT "Gaucho"
+@entity_human_vip_bonfire=HVT "Bonfire"
+@entity_human_vip_kabir=HVT "Kabir"
+@entity_human_hostage=Hostage
+@entity_human_fakehostage=Faker
+@entity_human_hostagemayor=The Mayor (Hostage)
+@entity_human_civilian=Civilian
+@entity_human_civilian_vis_1=Civilian who called it in
+@entity_human_suicidebomber=Suicide Bomber
+@entity_human_suicideexecutioner=Suicide Executioner
+@entity_human_executioner=Executioner
+@entity_human_tuffnutsdude=Agitated Jihadi
+@entity_human_traitormilitia=Turncoat Militia
+@entity_human_rabblefighter=Recruit Insurgent
+@entity_human_gruntbasic=Grunt Insurgent
+@entity_human_rocketinsurgent=Rocket Insurgent
+@entity_human_gruntblackhead=Blackhead Militant
+@entity_human_veteran=Veteran Insurgent
+@entity_human_sniperinsurgent=Sniper Insurgent
+@entity_human_machinegunner=Insurgent Machinegunner
+@entity_human_foreignadvisor=Foreign Advisor
+@entity_human_advisorfanatical=True Believer
+@entity_human_advisorstormtroop=F-Tree Stormtroop
+@entity_human_emir=Emir
+@entity_human_ritualist=The Ritualist
+@entity_human_privatesecurity=Private Security
+@entity_human_securityqrf=Security QRF
+@entity_human_securityheavy=Security Heavy Troop
+
+@entity_human_warlordmilitia=Irregulars Trooper
+@entity_human_warlordsergeant=Irregulars Sergeant
+@entity_human_warlordmachinegunner=Irregulars Machinegunner
+@entity_human_warlordgrenadier=Irregulars Grenadier
+@entity_human_warlordguard=Valkyries Guard
+@entity_human_warlordelite=House Guard Corps
+
+@entity_human_ssimarksman=SSI Sharpshooter
+@entity_human_ssiassassin=SSI Covert Ops
+@entity_human_ssipointman=SSI Spec Ops
+@entity_human_ssiasssaulter=SSI Spec Ops
+@entity_human_ssileader=SSI Spec Ops
+
+@entity_human_enemyPMC=Foreign PMC
+@entity_human_enemysmuggler=Smaug The Smuggler
+@entity_human_enemyfacilitator=Enemy Facilitator
+
+
+@entity_human_tango=Tango
+@entity_human_tangogrunt=Tango Grunt
+@entity_human_tangoelite=Tango Elite
+
+
+@entity_human_ONUexpert=Codename 'Underhill'
+@entity_human_unaware=Codename 'Satipo'
+@entity_human_friendly_vip=Allied VIP
+@entity_human_friendly_vip_2=Enemy Defector
+@entity_human_agent01="Just call me Fergie"
+@entity_human_friendly_vipfem=Family Member
+@entity_human_friendly_vipfem2=VIP's Wife
+@entity_human_ogamarksman=Allied Marksman
+@entity_human_ogaassaulter=Allied Assaulter
+@entity_human_ogabreacher=Allied Breacher
+@entity_human_ogagrenadier=Allied Grenadier
+@entity_human_ogamachinegunner=Allied Machinegunner
+
+@entity_human_cosmin=Cosmin
+
+@entity_human_jtacdracon=JTAC Dracon
+@entity_human_lttawr=Lieutenant Tawr
+@entity_human_militiamanpyro=Pyro
+@entity_human_militiamanhawkeye=Hawkeye
+@entity_human_nwsbaba=Baba
+@entity_human_randy01=Asset Clarice
+@entity_human_randy02=Asset Tanto
+@entity_human_randy03=Old Man Billy
+@entity_human_randy04=Chic Ric
+@entity_human_carrie=Carrie
+@entity_human_police=Allied Police
+@entity_human_militia=Allied Militia
+@entity_human_commando=Allied Commando
+@entity_human_militiaheavy=Allied Heavy Militia
+@entity_human_nwsleader=Nowheraki SWAT
+@entity_human_nwsassaulter=Nowheraki SWAT
+@entity_human_nwssapper=Nowheraki Sapper
+@entity_human_ciaundercover=CIA Undercover Officer
+@entity_human_ciablackops=CIA Paramilitary Operator
+@entity_human_rangersassaulter=Rangers Assaulter
+@entity_human_rangersmarksman=Rangers Marksman
+@entity_human_rangerssupport=Rangers Support Gunner
+@entity_human_rangersgrenadier=Rangers Grenadier
+@entity_human_rangersmedic=Rangers Medic
+
+@tooltip_enemy_leading=Your ticket to the Underworld. Stay nearby and follow into the Lion's Den.
+@tooltip_enemy_follow=Is here to meet the HVT.\nFollow covertly.
+@tooltip_enemy_vip=Mission Objective. Detain and bring to the Rescue Zone.
+@tooltip_civilian=People live here. Good guys don't get them killed.
+@tooltip_civilian_visible_1="Discovered the bomb while hiding from insurgents."
+@tooltip_friendly_vip=Mission Objective. Make contact to gain direct control.
+@tooltip_friendly_militia=Make contact to gain direct control.
+@tooltip_friendly_vip_phone=Mission Objective.\nUnder Direct control now.
+@tooltip_hostage=Recover and escort safely to the Rescue Zone.
+@tooltip_hostage_civ=Ordinary people taken hostage. Their life is your priority.
+@tooltip_hostage_mayor=Recover and escort safely to the Rescue Zone.
+@tooltip_hostage_visible=Priority. This hostage will be executed soon.
+@tooltip_hostage_visible_known=Intel sources place a hostage at this location.
+@tooltip_hostage_lttawr=Looks like our friend Tawr got himself into a bind...
+
+@tooltip_cosmin=Giving a phenomenal performance. Do not interrupt.
+
+#
+# Non-Human Objectives and Assets
+#
+
+@tooltip_destroyableasset=Mission Objective. Destroy or disable.
+@tooltip_destroyableintel=Mission Objective. Destroy or take.
+@tooltip_bombsite=Mission Objective. Plant an explosive charge.
+@tooltip_fusebox=Electricity Switchboard. Turn off the lights.
+@tooltip_cameraroom=Security Camera Control. Hack to gain access.
+@tooltip_cameraroom_disabled=Security Camera Control (No Power)
+@tooltip_survcamera=Security Camera
+@tooltip_survcamera_disabled=Security Camera (No Power)
+@tooltip_livefeed=Live Feed. Interact to gain access.
+@tooltip_friendlybomb=Mission Objective. Leave the area before the charge explodes.
+@tooltip_trainarrival=Train will arrive soon. Arrest the HVT before he escapes.
+
+@tooltip_wiredgate=Remote-controlled Gate
+@tooltip_gatecontrol=Gate Control
+@tooltip_detectorgate=Security Gate\nUnauthorised entry triggers alarm. 
+@tooltip_metaldetector=Metal Detector
+@tooltip_detectorgatecontrol=Security System. Hack to disable Security Gates.
+@tooltip_alarmsystem=Alarm System. Hack to disable the alarm.
+@tooltip_generatorsus=Generator. Destroy to bring attention.
+@tooltip_searchlights=Search Light Control. Hack to disable search lights.
+@tooltip_atgm=ATGM (Targeting)
+@tooltip_strike="Intrusion Protocol activated. Strike inbound."\nComplete the objective and evacuate.
+
+#
+# Hardcoded texts
+#
+
+# scenario
+@scenario_type_none=NONE
+@scenario_type_clear=CLEAR HOSTILES
+@scenario_type_hostage=HOSTAGE RESCUE
+@scenario_type_bomb=BOMB DEFUSAL
+@scenario_type_abduction=ABDUCTION
+@scenario_type_execution=STOP EXECUTION
+@scenario_type_vip_escort=ESCORT THE VIP
+@scenario_type_vip_extract=EXTRACT THE VIP
+@scenario_type_stronghold_raid=RAID ON STRONGHOLD
+@scenario_type_kc=KILL / CAPTURE
+
+#Note: these may look identical, but there is a different number of empty spaces left at the end of their names. This is for editor purposes, where they need to be unique strings
+@scenario_type_qrf_survivors=QUICK REACTION FORCE
+@scenario_type_qrf_sabotage=QUICK REACTION FORCE
+@scenario_type_qrf_survivors_sabotage=QUICK REACTION FORCE
+
+@scenario_conditions_clear=Eliminate all terrorists
+@scenario_conditions_hostage=Hostages must survive (or be rescued)\nEliminate all terrorists (optional)
+@scenario_conditions_bomb=Disarm all bombs\nEliminate all terrorists
+@scenario_conditions_abduction=Secure and extract the enemy HVT, alive\nEliminate all terrorists (optional)
+@scenario_conditions_execution=Stop executioners from killing the hostages\nEliminate all terrorists
+@scenario_conditions_vip_escort=Escort VIP to the safe zone\nEliminate all terrorists (optional)
+@scenario_conditions_vip_extract=Find and extract the VIP\nEliminate all terrorists (optional)
+@scenario_conditions_stronghold_raid=Sabotage enemy equipment\nRetreat to Evac Zone
+@scenario_conditions_qrf_survivors=Rescue survivors\nRetreat to Evac Zone
+@scenario_conditions_qrf_sabotage=Sabotage equipment\nRetreat to Evac Zone
+@scenario_conditions_qrf_survivors_sabotage=Rescue survivors and sabotage equipment\nRetreat to Evac Zone
+@scenario_conditions_kc=Kill or Capture and extract enemy HVT
+
+# scenario win/lose texts
+@scenario_clear_win=All hostiles eliminated
+@scenario_hostage_win=Hostages rescued
+@scenario_hostage_win_all=All hostages were rescued
+@scenario_abduction_win=Target in custody
+@scenario_rescue_win=Asset successfully extracted
+@scenario_hostage_lose=A hostage was killed
+@scenario_hostage_lose_all=All hostages were killed
+@scenario_team_killed=Assault team eliminated
+@scenario_target_killed=Target was killed
+@scenario_target_fled=Target has escaped
+@scenario_bomb_win=Location secured
+@scenario_bomb_lose=The bomb went kaboom
+@scenario_raid_win=Target destroyed
+@scenario_raid_lose=Raid team eliminated
+@scenario_kc_win=Target eliminated
+
+@scenario_qrf_survivors_win=Survivors retrieved
+@scenario_qrf_survivors_sabotage_win=Objectives completed
+@scenario_qrf_survivors_lose=Failed to retrieve survivors
+@scenario_qrf_survivors_lose2=Rescue team eliminated
+
+@scenario_qrf_sabotage_win=Target destroyed
+@scenario_qrf_sabotage_lose=Team eliminated
+
+@scenario_force_quit=Sheepish retreat, mission lost
+
+@effect_suppressed=SUPPRESSED
+@effect_pinned=PINNED
+
+# game
+@game_reset_progress_line=Are you sure you want to reset all progress?\n(squad, unlocked items, map progress etc.)
+@game_endscreen_stats_killed=KIA
+@game_fatigued=FATIGUED
+@game_injured=INJURED
+@game_incapacitated=INCAPACITATED
+@game_incapacitated_short=INCAP.
+@game_healthy=DGAF
+@game_unarmed=Currently unarmed
+@game_loadingscreen_loading=LOADING...
+@game_loadingscreen_generating=GENERATING
+@game_loadingscreen_longtime=This could take a while
+@game_loadingscreen_downloading=DOWNLOADING DATA...
+@game_net_waiting_for_host_restart=Waiting for host to restart...
+@game_net_waiting_for_host_mission=Waiting for host to choose next mission...
+@game_powersaving_enabled=Your PC is in power saving mode or it's unplugged,\n the game will run poorly.\n\n Plug it in, disable power saving, and make sure the game uses the dedicated GPU (if it exists).
+@game_look=Look
+@game_look_pie=Pie
+@game_look_strafe=Strafe
+@game_look_focus_target=Focus target
+
+#
+# Texts used in textures. Texture must be manually localized by artist, using the .psd sources.
+#
+
+@game_title=DOOR KICKERS 2
+@game_texture_blowup=BLOW UP
+@game_texture_loading=LOADING...
+@game_texture_loading_workshop=UPDATING WORKSHOP...
+
+
+#
+# months in short form (ie Jan/Feb/Mar etc)
+#
+@game_date_month1=Jan
+@game_date_month2=Feb
+@game_date_month3=Mar
+@game_date_month4=Apr
+@game_date_month5=May
+@game_date_month6=Jun
+@game_date_month7=Jul
+@game_date_month8=Aug
+@game_date_month9=Sep
+@game_date_month10=Oct
+@game_date_month11=Nov
+@game_date_month12=Dec
+
+#
+# Trooper upgrades
+#
+@trooper_upgrade_offence=Offensive upgrade: +10% crit chance, +15% suppression applied
+@trooper_upgrade_defence=Defensive upgrade: +50% suppression recovery, +5% aim speed
+
+# Private Museum
+#
+@tooltip_privatemuseum_plane="Nowheraki Air Force Tucano"\n"Effective little devils these are, glad they're on our side!"
+@tooltip_privatemuseum_plane2="Visible damage from insurgent MANPAD near miss."\n"Wonder if its been shot at by our guy here."
+@tooltip_privatemuseum_tank1="100mm rifled gun."\n"Cut our Chieftains to pieces with HEAT shots."
+@tooltip_privatemuseum_tank2="T-55 Medium Tank"\n"Must be a War Trophy from the N-N War of 1965"
+@tooltip_privatemuseum_tank3="V-12 water-cooled Diesel engine (800HP)."\n"Not enough to save this one, though."
+@tooltip_privatemuseum_paintbrush="Paintbrush used for the portrait of Glorious Leader!"
+@tooltip_privatemuseum_toilet="Toilet from the potrait of Glorious Leader!"\n"I now have many questions."
+@tooltip_privatemuseum_magiclamp="Actual Magic Lamp that granted the G.L.'s forefather domain over the Nowheriver basin."\n"Doesn't sound like a basis for a system of government." 
+@tooltip_privatemuseum_endbook="This is the End"\n"Okay, I guess..."
+@tooltip_privatemuseum_present="The Present."
+@tooltip_privatemuseum_vase="Gibberish-era vase."
+@tooltip_privatemuseum_vase2="A nicer Gibberish-era vase."
+@tooltip_privatemuseum_lamp="1953 Americana Lamp."
+@tooltip_privatemuseum_mask="No description."\n"Maybe one of the workers left it here?"
+@tooltip_privatemuseum_gloves="Rough Riders Gloves."\n"+15 Suppression Recovery"
+@tooltip_privatemuseum_head="Gibberish-someone sacrified to save Glorious Leader."
+@tooltip_privatemuseum_fridge="Kids, do not hide inside this fridge!"
+@tooltip_privatemuseum_usflag="Old Glory"
+@tooltip_privatemuseum_natoflag="Hey, look who showed up!"
+@tooltip_privatemuseum_bottle="To be opened on V-N Day."
+@tooltip_privatemuseum_canonball="Actual Cannonball from the Constantinopole Basilica."
+@tooltip_privatemuseum_grenadelauncher="Hey, where's my pick-up weapon button?!"
+@tooltip_privatemuseum_crowbar="Crowbar used by G. Freeman in Half-Life 3."\n"On loan from the authors."
+@tooltip_privatemuseum_vacuum="Machine-gun Vaccuum Cleaner."
+@tooltip_privatemuseum_outside="This is a great sniping place, ain't it?"
+@tooltip_privatemuseum_outflowers="It's in Latin."
+@tooltip_privatemuseum_modeltrain="Model of train that Glorious Leader arrived in, on return from exile."

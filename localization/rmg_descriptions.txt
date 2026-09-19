@@ -1,0 +1,256 @@
+
+
+//For @#desc_opposition
+// %1 is the name of the enemy group (see @group_*** below)
+// %2 is min enemy count estimate
+// %3 is max enemy count estimate
+// %4 is the exact enemy count
+@#desc_opposition=Enemy forces: %2 to %3 %1.
+@#desc_opposition=Enemy forces: %4 %1.
+@#desc_opposition=Enemy strength is thought to be between %2 and %3 %1.
+@#desc_opposition=Expect %2 to %3 %1 on location.
+@#desc_opposition=Opposition strength %2 to %3 %1.
+@#desc_opposition=Opposition strength reported somewhere between %2 and %3. Enemies are mostly %1.
+@#desc_opposition=We have not been able to positively identify who the enemies are, but their strength is at least %2 hostiles.
+@#desc_opposition=Proceed cautiously, enemy strength is unknown. 
+@#desc_opposition=Enemy strength and identity is not known at this time.
+@#desc_opposition=This is an area presumably under %1 control, but we don't have precise intel on the strength level.
+@#desc_opposition=This is a known %1 dominated area, and you can expect up to %3 enemies on location.
+
+@#desc_have_civs=\nCaution - There are civilians in the area.
+@#desc_have_civs=\nBe advised, there are possible non-combatants on location.
+@#desc_have_civs=\nCaution - Civilians ARE present. 
+@#desc_have_civs=\nBe aware - there may be civilians on the premises. 
+
+@group_defaultmix=mixed enemy troops
+@group_rabble=ad-hoc organized locals
+@group_lowlevel=poorly-organized insurgents
+@group_insurgency=well organized insurgents
+@group_privsec=Private Security
+@group_forbiddentree=Forbidden Tree Militants
+@group_blackheads=Blackheads and their minions
+@group_warmilitia=Shadhavar's Irregulars
+
+//For desc_mission texts:
+// %1 - Description text in rmg seed map, usually one of @#desc_map_* or @#desc_map_default if empty
+// %2 - Campaign <location> description="" attribute or @#desc_location_default if empty. Text should work with "the " in front of it
+// %3 - enemy group name (@group_***)
+// %4 - Hostage Rescue approx hostage count
+// %5 - Hostage Rescue exact hostage count
+// After this, we add a random @#desc_opposition and @#desc_have_civs
+
+@#desc_mission_clear=We're hitting %1 %2, looking to clear opposition and help pacify the region.
+@#desc_mission_clear=Another mission %2, enemy forces need clearing out.
+@#desc_mission_clear=We're going out to remove enemy forces from their own backyard %2.
+@#desc_mission_clear=Gear up! Some %3 are making trouble %2 and we've been tapped to go out and mop the floor with them.
+
+@#desc_mission_hostage=We got Hostage Rescue duty, so bring clean clothes as the Press is sure to take an interest.\nAt least %4 hostages being held at %1, if intel is accurate.
+@#desc_mission_hostage=Another Hostage Rescue mission, I don't need to tell you how important these are.\nIntel suggests they have at least %4 hostages, maybe more.
+@#desc_mission_hostage=Another Hostage Rescue mission.\nThis time, it's %1 %2.\nStrong intel says they have %5 hostages.
+@#desc_mission_hostage=Some %3 are holding %5 hostages at %1 %2.
+
+@#desc_mission_hvt=We're going in to grab a High Value Target %2. Location is %1.
+@#desc_mission_hvt=Gear up! We're hitting %1 %2, looking to get ourselves an HVT.
+@#desc_mission_hvt=There's an HVT hiding out somewhere %2, guarded by %3.
+
+//TODO
+@#desc_mission_clear_urgent_night=Urgent Night mission today, we're hitting  an enemy base %2. 
+@#desc_mission_clear_urgent_night=Grab your torches and goggles boys, we're hitting the enemy at home as soon as the sun's down. 
+@#desc_mission_hostage_urgent_night=Time Sensitive Mission, we're going out on Hostage Rescue as soon as the sun's down.   
+@#desc_mission_hostage_urgent_night=Night duty! We're on Hostage Rescue and based on available intel we think this cannot wait and going in the dark may catch the enemy with its pants down. 
+@#desc_mission_hvt_urgent_night=This is a Time-Sensitive mission, we need to move into %2 and hit %1. We have reliable intel we'll bag a HVT, but the window of opportunity is closing soon.  
+
+// these below would be %1 
+@#desc_map_default=a known enemy location
+@#desc_map_default=an enemy location
+@#desc_map_default=a location
+
+
+@#desc_map_apartments=an apartment
+@#desc_map_apartments=some apartments
+
+@#desc_map_apartmentcomplex=a high rise building
+@#desc_map_apartmentcomplex=an apartment complex
+
+@#desc_map_industrial=a factory
+@#desc_map_industrial=a vehicle workshop
+@#desc_map_industrial=an industrial platform
+
+@#desc_map_industrialsmall=a factory
+@#desc_map_industrialsmall=a small workshop
+
+@#desc_map_docks=the riverside docks
+@#desc_map_docks=a dock section
+
+
+@#desc_map_rails=a railway facility
+@#desc_map_rails=some railway facilities
+
+@#desc_map_walledhouse=a farm
+@#desc_map_walledhouse=a walled house
+@#desc_map_walledhouse=a single-family dwelling
+@#desc_map_walledhouse=a medium-size structure with walls all around
+
+@#desc_map_house=a house
+@#desc_map_house=a small house
+@#desc_map_house=a small-size house
+
+@#desc_map_farms=a farm
+@#desc_map_farms=a small compound
+@#desc_map_farms=a rural dwelling
+@#desc_map_farms=an isolated dwelling
+@#desc_map_farms=a mud house
+@#desc_map_farms=a rural home
+@#desc_map_farms=a small homestead 
+@#desc_map_farms=a farmstead 
+@#desc_map_farms=a remote house 
+@#desc_map_farms=a remote compound
+@#desc_map_farms=a rural commune 
+@#desc_map_farms=a remote homestead 
+@#desc_map_farms=a small mudbrick house
+@#desc_map_farms=a remote mudbrick house 
+@#desc_map_farms=a remote domicile 
+@#desc_map_farms=a rural concrete house 
+@#desc_map_farms=a remote farmstead 
+@#desc_map_farms=a rural freehold 
+@#desc_map_farms=a remote holding
+@#desc_map_farms=an opium farmer’s home 
+@#desc_map_farms=a remote camp 
+
+
+@#desc_map_isolatedhouse=an isolated house
+@#desc_map_isolatedhouse=an isolated dwelling
+@#desc_map_isolatedhouse=a single building
+@#desc_map_isolatedhouse=a single, suspicious building
+
+@#desc_map_compound=a large compound
+@#desc_map_compound=a compound
+
+@#desc_map_compound2=a compound
+@#desc_map_compound2=a walled compound
+@#desc_map_compound2=a twin-building compound surrounded by walls
+
+
+
+@#desc_map_compoundmulti=a large compound
+@#desc_map_compoundmulti=a multi-building compound
+@#desc_map_compoundmulti=a compound spread over a couple of hundred square meters and comprising multiple buildings
+
+
+@#desc_map_walledcompound=a walled compound
+@#desc_map_walledcompound=a fortified compound
+@#desc_map_walledcompound=a large compound
+@#desc_map_walledcompound=a large, walled compound
+
+
+@#desc_map_streetspoor=a part of the slums
+@#desc_map_streetspoor=a poor area of the town
+@#desc_map_streetspoor=a forgotten part of the Capital
+
+@#desc_map_street=the city streets
+@#desc_map_street=a city section
+@#desc_map_street=a section of the city
+
+@#desc_map_streetwar=a barricaded section of the city
+@#desc_map_streetwar=a city zone under siege
+@#desc_map_streetwar=a battle-torn crossroad
+
+@#desc_map_market=a small neighborhood market
+@#desc_map_market=a small market
+@#desc_map_market=a market area
+
+@#desc_map_streetcorner=a street corner house in a fortified area of the city
+@#desc_map_streetcorner=an enemy-held building in a contested area 
+@#desc_map_streetcorner=a corner-side building
+
+@#desc_map_checkpoint=an enemy-held checkpoint
+
+@#desc_map_rocky=an enemy-held checkpoint
+@#desc_map_rocky=a roadside building
+@#desc_map_rocky=an isolated construction in the mountains
+
+@#desc_map_rockycomplex=a enemy-built complex
+@#desc_map_rockycomplex=a complex of buildings
+@#desc_map_rockycomplex=a rock-hidden complex of buildings
+
+@#desc_map_cave=a cave
+@#desc_map_cave=a dugout
+@#desc_map_cave=a hidden construction
+@#desc_map_cave=a cave complex
+
+
+
+
+// these below would be %2 
+
+@#desc_location_default=in the region
+
+@#desc_location_northbelt_northwestfields=in the North-West
+
+@#desc_location_northbelt_westfields=in the western badlands
+
+@#desc_location_northbelt_farms=in the farmlands to the West
+
+@#desc_location_northbelt_northmountains=in the Northern cragland
+
+@#desc_location_northbelt_easternmountains=on the slopes of the Zoroman mountains
+
+@#desc_location_northbelt_centralfarms=near some rich farmlands
+
+@#desc_location_center_industrial=in the industrial heartland
+
+@#desc_location_industrial_north=in the upper east side
+
+@#desc_location_northbelt_docks=on the riverside industrial zone
+
+@#desc_location_northbelt_riversouth=on the South river bank
+
+@#desc_location_northbelt_compoundssouth=in the Southern farmlands
+
+@#desc_location_northbelt_housefarm2=in the city of Almushajara
+
+@#desc_location_northbelt_compounds1=in the city of Almushajara
+
+@#desc_location_northbelt_compounds2=in Northern Almushajara
+
+@#desc_location_northbelt_rockycave2=in the mountains shadowing Route Athena
+
+@#desc_location_northbelt_swmountains=on Mount Pigmy
+
+@#desc_location_shrine_NorthA1=in Steel Worker's Quartier
+@#desc_location_shrine_NorthA3=in Smuggler's Quartier
+@#desc_location_shrine_NorthA2=near Sundown Market
+@#desc_location_shrine_NorthB1=near Vizir's Quay
+@#desc_location_shrine_NorthC1=in Bin Jadid
+@#desc_location_shrine_NorthC2=in Beggars' Quartier 
+@#desc_location_shrine_NorthD1=around Pilgrim's Trail
+@#desc_location_shrine_NorthE1=in Crusader's Bane
+@#desc_location_shrine_NorthE2=in Merchant's Quartier
+@#desc_location_shrine_NorthF1=in Djin's Cauldron
+@#desc_location_shrine_NorthF2=in the English Landing
+@#desc_location_shrine_NorthEast=in the N-E quartiers
+@#desc_location_shrine_bridge=on Pilgrim's Bridge
+@#desc_location_shrine_SouthA1=near Old City Park
+@#desc_location_shrine_SouthB1=in the Old City
+@#desc_location_shrine_SouthC1=in the Big Brother Area
+@#desc_location_shrine_SouthD1=in the Little Brother Area
+@#desc_location_shrine_SouthE1=in Craftmen's Quartier
+@#desc_location_shrine_SouthE2=in North Mansour
+@#desc_location_shrine_SouthF1=in Riverside Quartier
+@#desc_location_shrine_SouthF2=in South Mansour
+@#desc_location_shrine_SouthEast=East of Pilgrim's Rest
+
+//UNUSED
+// for @#desc_hostage_count, %1 is the approximate hostage count, %2 is the exact count
+@#desc_hostage_count=Intel suggests they have at least %1 hostages, maybe more.
+@#desc_hostage_count=At least %1 hostages, if intel is accurate.
+@#desc_hostage_count=Strong intel says they have %2 hostages.
+@#desc_hostage_count=Intel is not precise on the number of hostages on location.
+
+//UNUSED
+@#desc_hvt=\n\nCapture the HVT and eliminate all hostiles.
+@#desc_hvt=\n\nDetain the High-Value Target and escort him to the Evac zone.
+@#desc_hvt=\n\nCapture the enemy HVT.
+@#desc_hvt=\n\nBring out the enemy leader, alive.
+@#desc_hvt=\n\nCapture and evacuate the enemy HVT.
+@#desc_hvt=\n\nLocate, detain and evacuate the enemy HVT.

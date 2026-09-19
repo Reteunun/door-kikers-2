@@ -1,0 +1,17 @@
+
+#
+#keep in format @#daytext_NAMEOFUNIT=text, where NAMEOFUNIT = the unique unit name specified in units.xml
+#
+
+@#daytext_Rangers=Give them hell, boys!
+@#daytext_Rangers=Lead the way!
+@#daytext_Rangers=Hooah!
+@#daytext_Rangers=Rangers lead the way!
+
+@#daytext_CIA=Remember, you're on your own out there. 
+@#daytext_CIA=Keep to the shadows, but hit decisively. 
+
+@#daytext_Nowheraki=Today they die. 
+@#daytext_Nowheraki=Another day in the trenches. 
+
+@#squadnamedelta=Have a good one!

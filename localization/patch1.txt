@@ -1,0 +1,111 @@
+# 
+# These are texts that were added after the full-release translation.
+#   They need to be kept in a separate file, at least until translated. If they are put in the already-translated files they will not show up (at all) in non-English languages: the localized files will overwrite the English ones and the new texts will be entirely missing.
+#
+
+# from menus.txt
+
+  # in the below texts, %s will be replaced with the class name, eg. unit_rangers_assault / unit_rangers_grenadier etc.
+@menu_cust_paste_to_all=Paste to all in %s
+
+  # shorthand for OBJECTIVE and it's always prefixed for randomly generated missions (the ones in rmg_opname_pool.txt). Example: OBJ. WILD FURY
+@rmg_objective_prefix=OBJ.
+
+@menu_mods_disable_all=DISABLE ALL
+
+@menu_m_map_thumbsdown_ttip=Save others from the pain
+
+  # these are used in coop, alongside each player's name, to show the game state they're currently in. Example: Pintea (playing) / UserName (paused) etc.
+@menu_m_coop_playerstate_deploy=deploy
+@menu_m_coop_playerstate_planning=planning
+@menu_m_coop_playerstate_paused=paused
+@menu_m_coop_playerstate_ready=ready
+@menu_m_coop_playerstate_playing=playing
+@menu_m_coop_player_is_host=host
+
+
+# from game.txt
+@firearm_1911_enemy_name=1911 (.45ACP / 7 rds)
+@firearm_sawnoff_enemy_name=Sawed-off (12GA / 2 rds)
+@firearm_m4urgi_m320_name=URG-I/M320 GL
+@firearm_m4urgi_m320_Sup_name=URG-I/M320 Suppressed
+@firearm_m4urgi_m320_desc=Hang a modern Grenade Launcher under your fancy URG-I and you forfeit the sportscar performance of the carbine.\n\nStill, thumping bad guys in cover while looking as High-Speed as your team must be worth premium pricing, right?\n\nThe M320 is not bad, though, should reload a bit faster than your old 2-0-3s.
+@armor_nws_extended_leader_desc=Sapper Vests are good insurance in the chaos of Urban warfare and hard to come by, but you manage to score one of your own via rank privilege.\n\nThe vest offers reasonable rifle-grade protection from the front and back, but also covers the sides to some extent.\n\nThe downside is the great weight and loss of mobility, but perhaps you didn't want to rush around yourself anyway.
+@firearm_g3nws_name=G3 Rifle
+@firearm_g3nws_desc=The Teutonic G3 - as localized by Neighbouristan's arms industry.\n\nThe rifle is plenty precise for its barrel length and hits hard at all ranges, but being quite heavy and antiquated in controls, it's not as fast in operation and maneuvering to befit the modern warfighter.\n\nStill, for most urban warfare situations, it certainly does a good job. Remember, though - 20 rounds per mag - and very slow reloads. 
+@armor_nws_godsarmor_name=Martyr's Armor
+@armor_nws_godsarmor_desc=     'We will wear nothing but our coffins!’ \n\nShow the Jihadis they don't have a monopoly on crazy and you're just as ready to give it all, with God on your side.\n\nWear no armor and move with impunity into battle, ignoring most suppression and common sense. You'll probably move faster, too!
+
+@firearm_mp5_enemy_name=Mp5 Loco (9mm / 28 rds)
+@firearm_g3_enemy_name=G3 (7.62mm / 20 rds)
+@firearm_g3sdrum_enemy_name=G3S Drum (7.62mm / 50 rds)
+@firearm_hk21_enemy_name=HK21 MG (7.62mm / 100 rds)
+@firearm_RPG-7_thermobaric_enemy_name=TBG-7 (105mm Thermobaric)
+@firearm_tmp_name=MP9 / Red Dot (9mm / 30 rds)
+@firearm_m16lrnvgwm_name=M16A2 / NVG (5.56mm / 30 rds)
+
+@entity_human_bluebandrifle=Bluebands Rifle-boy
+@entity_human_bluebandassault=Bluebands Assault-boy
+@entity_human_bluebandrocket=Bluebands Heavy-boy
+@entity_human_bluebandmachinegunner=Bluebands MG-boy
+@entity_human_bluebandsapper=Bluebands Boom-boy
+
+@entity_human_bandit=Bandit Security
+
+@scope_holomag3x_name=Holo / Magnifier 3x
+
+@tooltip_possiblevip=Possible contact.
+
+  # used multiple times in 'The butchery'
+@entity_human_enemy_butcher=Butcher
+
+  # scenario lose texts for custom objectives (done with triggers), currently used in Op. Chaturanga: Stalemate
+@scenario_trigger_lose_time=Time's up
+
+# from maps.txt
+@map_levelcrossing=LEVEL CROSSING
+@map_gasdepot=DOSE OF PROPANE
+
+
+# from campaigns.xml
+@campaign_battle_block=BATTLE FOR DJIN'S CAULDRON
+@campaign_battle_block_desc=A historically violent section of Shrine District, the Cauldron was heavily rocked by the Bluebands Boyz in their ill-fated power-move. The sector is mainly old, decrepit, buildings, cheap apartments and single family dwellings - and it was all boiling hot for some long summer months.  
+@campaign_slum_city=SLUM CITY
+@campaign_slum_city_desc=Homebase of the Warlord's Militia, Slum City is a quagmire of tight alleys, privacy walls and rusting hulks that box your armor in. Sectarian violence rarely bleeds in here but the resident Irregulars fight the Coalition if their Warlord wills it, and boy can they put up a fight.   
+
+@group_bluebands=Bluebands Boyz
+
+
+
+# from various.xml
+@entity_rescuezone_tooltip_unavailable=Rescue Zone (unavailable)
+@entity_evaczone_tooltip_unavailable=Evac Zone (unavailable)
+@entity_hvtescape_unavailable=HVT Escape (inactive)
+
+# from briefings.txt
+@briefing_levelcrossing=We're dropping unannounced to a party of the worst kind, deep in the Badlands. Insurgents have one of our friends bound to the train tracks, and the Evening Express drops in 40 seconds. A 2nd hostage is nearby, surely to follow.\n\nRecover the two hostages, alive.\n\nThis is a great happening for the locals, so expect a good turnout - they want to deter rescues after all.\n\nThere's surely too much opposition for your small squad, but fortune favors the bold. Use available cover and superior firepower, but keep an eye on that watch.
+@briefing_policestation=A sudden Tet-style surge in the Insurgency took a big bite of the Shrine and Jaʽfar districts, with Police Precinct 118 falling early to enemy assaulters supported by insiders in the Force. Now they are using this as anchor point for further attacks, so we must regain control over it.\n\nEliminate all opposition inside the building.\n\nThe Insurgents have likely captured weapons and intel with the Precinct, but also liberated friends and lowlifes happy to join them in helter-skelter.\n\nThe building is large and maze-like, and there's plenty of vermin defending it. Take your time and be methodical about it - these guys don't plan to leave here alive and you must oblige - but watch out for S-vests and nasty Veterans.   
+@briefing_bftp_1_rashid=The Insurgents are having a gathering of some sort in the Belt Area. They're having fun at the pool, catching tan, also planning attacks and what not. A prime occasion to go in and snatch a few small and medium fishes, for sure.\n\nClear the area of all hostiles.\n\nJust like in the good old days of hunting Cartel henchmen, we have eyes on the meeting and count exactly 27 goons. There are three structures on the property, but the main force is surely in the large building.\n\nThe enemy is not expecting you, but don't assume they are unarmed. You may also want to use the alternate deploy points, if your force can bring those capabilities to the table.  
+@briefing_bftp_2_question=A Blackheads cell in the Badlands are keeping hostages at an inconspicuous building, and one of our deep-cover assets has managed to pin the location and is waiting for us to hit it.\n\nRescue all 4 hostages.\n\nBlackheads don't kid around, expect them to off the hostages at first sign of trouble. Our asset will be blown if the alarm is raised, so make sure to plan his exit strategy ahead of time.\n\nThis mission takes place deep in enemy territory, so we can only come in force through the backdoor - or sneak our way through the front. 
+@briefing_bftp_3_isolatedcabin=We're raiding a posh cabin in the mountains, rumored to be used for Warlord's Militia more nefarious activities.\n\nWe're supposed to climb all the way up there and rescue some poor bloke before he expires in their care.\n\nLocate and rescue the hostage.\n\nThe long infil route up the mountain means heavy gear must be left behind - we travel light tonight - but bring your Night Vision.\n\nMilitia-Men fight hard and aim well, so use the night to your advantage, but beware of possible NVG use by sentries.
+@briefing_bftp_4_venicehill=A small squad is out hitting a Western style family retreat in the Southern belt, with Intel of a high value hostage.\n\nIt is understood the package was just dropped by Insurgents and is due to be interrogated - not expected to survive the night. We must intervene now with what we have at hand.\n\nLocate and extract the hostage.\n\nThis is not your run-of-the-mill Hostage Running association; these are rich folks playing the high stakes game. The guards have armor, the guns and the skills to be a threat, and the numbers are not on your side. Fast in and out is your best bet!   
+@briefing_bftp_5_grandavenuebank=Bank Robberies are not usual in Nowheraki, guess Insurgencies don't pay for themselves anymore.\n\nA cleaning lady spotted gunmen coming in the Revolution Bank, followed by screaming and gunfire. She later reported large devices being wheeled in, so we think bombs are now present, either as booby traps or just to blow up the lot.\n\nDisarm all explosives and eliminate all hostiles.\n\nThe lady mentioned beige shirts and short guns, so there's probably a few Foreign Advisors. Hopefully it's not the Fanatical kind, as S-vests and IEDs don't mix well.\n\nGood luck, you'll need it.  
+@briefing_bftp_6_withyourshield=The dreaded Blackheads are at it again, strong-arming locals that support the New Nowheraki Government.\n\nThey have descended in force on a business and are looking to set an example by gruesome execution. We need to go in and prevent that.\n\nLocate and rescue the 4 hostages.\n\nOur intel and site recon places hostages in two separate rooms on the North side, but some are unaccounted for. You need to clear the building methodically to find them, and watch for Executioners.\n\nThe enemy has fortified the main hallway and will be hard to displace. You may need to find or create alternate paths to your target, or bruteforce by shield. An Agency asset is in position to lead a small squad on the East side, if that is useful.  
+@briefing_bftp_7_docks=We've recently seen a surge in effective ambushes on Coalition armor, due to hi-tech MANPATs being smuggled in by foreign actors. We've tracked down a new shipment into the harbor - where we will strike it down tonight.\n\nRaid the docks and destroy all missiles.\n\nThis is a Night Op against superior enemy numbers. They are not expecting you but will not shy from a fight. You should capitalize on your advantages: Night Vision, marksmanship and the initiative. 
+@briefing_bftp_8_skypub=Our man "Underhill" is at it again - another Warlord is paying to have his head removed. We need to rescue him and preferably ship him out for good.\n\nMake contact with the VIP and escort him to the Rescue Zone.\n\nThe location is the famous Skybar in central City, though security is still notoriously absent. Insurgents and Bandit types are always present and will pose a threat, but expect a Hit Squad to drop in too.\n\nOnce you're on the bar level, we'll cut off the power to the elevators. You'll need to use the stairs to get out, but so will the enemies. 
+@briefing_bftp_9_firebasenorth=The Forbidden Tree Brigades surprise offensive has rolled over a number of the New Nowheraki Army bases. Now they have their hands on the big guns we paid for and are ready to pummel our own outposts.\n\n And we can't have that, can we?\n\nRaid the base and sabotage all artillery.\n\nWe can't wait for a proper counter-offensive to roll back the threat, so it's up to your small squad to go in, blow up all the Arty and get the hell out. This offensive isn't over yet. 
+@briefing_itreallystinks=Tracking an unexpected ping from a missing informant landed one of our in-country teams on an underground meat plant. Or should we say - cover-up for a body disposal service? In any case, we need to go in, clear the structure and grab whoever is running this joint.\n\nCapture the enemy HVT.\n\nThis place is not your run-of-the-mill insurgent nest, but a den for ruthless banditry. They are heavily armed, armored and hateful. Expect few enemies but a tough fight.   
+@briefing_gasdepot=Some crazed Blackheads have rigged a Gas Depot to blow, and they brought hostages to make sure we stay away. But if that setup goes up, it will take the whole block with it, so there's no choice but to go in and save the day.\n\nDisarm all explosives and eliminate all armed opposition.\n\nRescue missions against Blackheads are never a walk in the park, but if you factor in Suicide Executioners, IEDs, and gas tanks, the park turns into a blazing inferno. Be on the lookout for a detonator, and make sure the enemy never gets near it. 
+
+# from editor.txt
+@ed_sound_category_voice=Voice
+@ed_sound_category_enemy=Voice (enemy)
+@ed_sound_category_voice_commander=Voice (commander)
+@ed_trait_startsAlerted=Start Alerted
+@ed_trait_startsAlerted_ttip=Makes them raise their weapon and look around even before combat starts.
+@ed_roof_power=Building Power is On
+
+# from coop.txt
+   # these will look like: "USERNAME requests a mission restart", or "USERNAME requests a different mission"
+@coop_request_restart=requests a mission restart
+@coop_request_new_mission=requests a different mission

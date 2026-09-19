@@ -1,0 +1,126 @@
+#
+# Campaign Descriptions / Briefings
+#
+
+@campaign_shrine=SHRINE DISTRICT
+@campaign_shrinedist_desc=A riverside working class district in Nowheraki City, it is regularly shaken by sectarian violence, small-time uprisings and attacks meant to stir trouble. Most locals lack the skills and funding to be a strategic threat, but the more dangerous Blackheads are also present, even if despised by many.
+
+@campaign_northern=NORTHERN BELT
+@campaign_northernbelt_desc=The belt surrounding the Capital City is a mix of small cities, farmland and industrial areas. Insurgent groups hide here to build up and feed fighters and weapons into the City. The Northern area is a known Blackheads base, but regular Insurgents are also well trained and organized. 
+
+@campaign_op_subjugator=SUBJUGATOR
+@campaign_op_subjugator_desc=ELINT eavesdropping warns of a major Insurgency/Blackheads operation targeting the Oil Industry in the Lower Pard basin. They might be looking to take things over or just blow things up. In any case we're deploying advance teams on select facilities, and standing up QRF teams to respond. 
+
+@campaign_op_rajul=RAJUL KABIR
+@campaign_op_rajul_desc=Our not-so-friendly neighborhood Warlord got tied with Neighbouristan's SSI and earned a takedown operation. He's left Slum City and took refuge at his summer palace, across the border - but we're greenlit to go after him. Go in, clear a route, grab our man, and get out.  
+
+@campaign_op_kerak=THE KRAK
+@campaign_op_kerak_desc=This Crusades-age citadel has been taken over by deadly Forbidden Tree brigades. They are fortified inside and holding hostages - while using the castle as base for power projection in the region. We must go in and eliminate all threats - while preserving innocent life and ancient relics. 
+
+@campaign_op_chess=CHATURANGA
+@campaign_op_chess_desc=Rumors abound of a highly placed Coalition official playing both sides of the conflict, selling intel and weapons to our enemies. We're deploying a small squad in support of Covert Operators, looking to infiltrate the enemy, track down smuggled equipment and discover the source.    
+
+
+
+#
+# Various campaign-related texts that are hardcoded
+#
+
+@campaign_optional_map_invalidation= By taking up this mission you will no longer be able to play the available optional missions. \n Continue?
+
+
+#
+# UI from data/gui/campaign.xml
+#
+@menu_campaign_campaigns=CAMPAIGNS
+@menu_campaign_tod=TOUR OF DUTY
+@menu_campaign_op=OPERATION
+@menu_campaign_squad_locked_header=THIS SQUAD IS LOCKED IN ANOTHER CAMPAIGN
+@menu_campaign_squad_locked_paragraph=(pick or create a different one)
+@menu_campaign_newload=NEW/LOAD
+@menu_campaign_settings=CAMPAIGN SETTINGS
+@menu_campaign_history=HISTORY
+@menu_campaign_history_title=CAMPAIGN HISTORY
+@menu_campaign_history_playagain=PLAY AGAIN
+@menu_campaign_choosesquad=CHOOSE SQUAD
+@menu_campaign_delete_save_title=DELETE CAMPAIGN PROGRESS
+@menu_campaign_load_save=LOAD CAMPAIGN
+@menu_campaign_ironman_quit_confirmation=Quitting will count as a loss and the squad will be preserved as is in the current mission.\n\nAre you sure?
+@menu_campaign_history_stats_days=Duty days
+@menu_campaign_history_stats_reinf=Reinforcements
+
+@menu_campaign_ironman_mode=IRON MAN MODE
+@menu_campaign_ironman=IRON MAN
+@menu_campaign_ironman_mode_on=IRON MAN ON
+@menu_campaign_normal_mode=IRON MAN OFF
+
+@menu_campaign_ironman_no_line1=UNLIMITED RESTART
+@menu_campaign_ironman_no_line1_ttip=Missions can be restarted.
+@menu_campaign_ironman_no_line2=NO PERMADEATH
+@menu_campaign_ironman_no_line2_ttip=Troopers killed in action will be revived upon campaign completion.
+@menu_campaign_ironman_no_line3=NORMAL REWARDS
+@menu_campaign_ironman_no_line3_ttip=Receive standard amount of stars, battle honors and XP upon campaign completion.
+
+@menu_campaign_ironman_yes_line1=NO RESTART
+@menu_campaign_ironman_yes_line1_ttip=Missions cannot be restarted.
+@menu_campaign_ironman_yes_line2=PERMADEATH
+@menu_campaign_ironman_yes_line2_ttip=Troopers killed in action will be replaced with new recruits upon campaign completion.
+@menu_campaign_ironman_yes_line3=DOUBLE REWARDS
+@menu_campaign_ironman_yes_line3_ttip=Double the stars, battle honors and XP upon campaign completion.
+
+@menu_campaign_ironman_ttip=Stay the course! Ironman or what?
+
+@menu_campaign_ironman_delete_confirmation=Stopping an Iron Man campaign will not save all your dead troops from perma-death.\n\nAre you sure?
+@menu_campaign_lastplayed_time=LAST PLAYED
+@menu_campaign_missionbriefing=Mission Briefing
+ # this is currently the max length allowed
+@#menu_campaign_newday_title=NEW DAY, TRY NOT TO DIE.
+@#menu_campaign_newday_title=NEW DAY, WELCOME TO HELL.
+@menu_campaign_newday_newmissions=NEW MISSIONS AVAILABLE
+@menu_campaign_newday_txt1=* %d troops available for deployment
+@menu_campaign_newday_txt2=* %d troops out of action due to wounds
+@menu_campaign_newday_txt3=* %d returned to active duty: 
+@menu_campaign_newday_txt4=* %d troops were killed in action
+@menu_campaign_newday_txt5=%s has been promoted to %s
+@menu_campaign_newday_txt6=Squad promoted to level %d, you have %d new doctrine points available.
+@menu_campaign_newday_txt7=Promotions:
+@menu_campaign_newday_reinforcements_arrived=* %d reinforcements have arrived
+@menu_campaign_newday_reinforcements_singular=* reinforcements ETA: %d day
+@menu_campaign_newday_reinforcements_plural=* reinforcements ETA: %d days
+@menu_campaign_reinforcements_deploy_status_singular=REINFORCEMENTS IN %d DAY
+@menu_campaign_reinforcements_deploy_status_plural=REINFORCEMENTS IN %d DAYS
+@menu_campaign_status_report=STATUS REPORT
+@menu_campaign_day=DAY
+@menu_campaign_days_remaining=%d DAYS REMAINING
+@menu_campaign_intel_requires=REQUIRES
+@menu_campaign_intel_required=MORE INTEL IS REQUIRED FOR THIS MISSION
+@menu_campaign_intel_amount=Available Intel \n Some missions require Intel to access 
+@menu_campaign_mission_available=Available
+@menu_campaign_mission_available_on_day=Available on day %d
+@menu_campaign_days_expired=No longer available
+@menu_campaign_dayreport_ttip=Current day's report
+@menu_campaign_brief_difficulty=DIFFICULTY
+@menu_campaign_brief_difficulty1=EASY
+@menu_campaign_brief_difficulty2=NORMAL
+@menu_campaign_brief_difficulty3=PRO
+@menu_campaign_finished=COMPLETED
+@menu_campaign_failed=FAILED
+@menu_campaign_playagain_err=That campaign no longer exists :(
+@menu_campaign_new_troops_title=REINFORCEMENTS HAVE ARRIVED
+@menu_campaign_battlehonors_ttip=You receive one Battle Honor for every 7 stars won in a campaign (for this squad alone)
+@menu_campaign_stars_ironman=Ironman: number of stars have been doubled!
+@menu_campaign_show_map=SHOW MAP
+
+@menu_campaign_bonusrewards=BONUS REWARDS
+@menu_campaign_reward_xp_amount=%d XP for each surviving team member
+
+@menu_campaign_eow=END OF WEEK
+@menu_campaign_orders=WHAT ARE YOUR ORDERS?
+@menu_campaign_current_intel=CURRENT INTEL  %d
+@menu_campaign_eow_extend_tour=CONTINUE
+@menu_campaign_eow_extend_expl=FIGHT 7 MORE DAYS
+@menu_campaign_eow_rest=R & R
+@menu_campaign_eow_rest_expl=HEAL FOR 1 WEEK, LOSE  %d
+@menu_campaign_eow_retire=RETIRE
+@menu_campaign_eow_retire_expl=END TOUR, RECEIVE  %d
+@menu_campaign_eow_intel_req=Not enough Intel

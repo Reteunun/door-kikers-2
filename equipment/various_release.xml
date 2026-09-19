@@ -1,0 +1,2151 @@
+<Equipment>
+
+<!-- M320 Grenade Launcher Standalone -->
+
+	<Bind eqp="M320 CIA BOps">
+		<to name="BlackOps"/>
+
+		<to name="338_SniperRifle"/>
+
+		<to name="IronSights"/>
+	</Bind>
+	<Firearm name="M320 CIA BOps" inventoryBinding="SupportGear1" category="rifle" unlockCost="10"
+			tooltip="@firearm_M320cia_name"
+			description="@firearm_M320cia_desc"
+			img="data/models/weapons/m320_ui.dds"
+			animationSet="rifle"
+			soundUseVoice="VOX_GEAR_LAUNCHER"
+		>
+
+		<RenderObject3D model="data/models/weapons/m320.khm" attachSlot="prop_back_rifle" skipGOSSAO="true" diffuseTex="data/models/weapons/m320.dds">
+			<Specular shininess="32" intensity="4.0"/>
+		</RenderObject3D>
+		<MobilityModifiers moveSpeedModifierPercent="-6" turnSpeedModifierPercent="-2"/>
+		<ConcealmentModifier add="-2" />
+		<ModifiableParams
+			projectilesPerMagazine="6"
+
+			reloadTime="3000"
+			reloadEmptyTime="3000"
+			changeInTime="1400"
+			changeOutTime="500"
+			readyTime="600"
+			guardTime="350"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_40mm_name"
+			operationInfoText="@firearm_operation_singleshot_name"
+			ai_rangeMin="12.0"
+			ai_rangeOptimal="20.0"
+			ai_rangeMax="80.0"
+			ai_stopWhenShooting="true"
+		/>
+
+
+		<AttackTypesProjectile>
+			<AttackType name="RPG_QuickAimClose" rangeMeters="15"/>
+			<AttackType name="M203_QuickAim" rangeMeters="9999"/>
+		</AttackTypesProjectile>
+
+		<MuzzleFlash lightTemplate="ShotLightSmall">
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_05" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_06" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_07" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_08" />
+		</MuzzleFlash>
+
+
+		<Projectile
+			bodyTemplate="M203GrenadeBody"
+			trailParticles=""
+			lightTemplate=""
+
+			soundExplosion="grenade_launcher_expl"
+			soundOnSpawn="m203_fire"
+			soundFollow=""
+
+			minVelocity="50000.0"
+			maxVelocity="50000.0"
+			acceleration="0.0"
+			mass="0.0"
+			friendlyFire="true"
+			triggerOnImpact="true"
+
+			roundsPerSecond="2.5"
+			accuracyPercent="85"
+			physicsDetonationForce="100"
+			audibleLaunchSoundRadius="2"
+			audibleDetonationSoundRadius="20"
+			>
+
+			<FX
+				particles="FragGrenade"
+				entity1="ExplosionLight"
+				entity2="explosion_mark"
+				randRotation2="true"
+				entity3="FX_dust_large"
+				deleteAfterMS3="35000"
+				anim2D="">
+			</FX>
+
+			<EffectRange radiusMeters="1.7">
+				<StunEffect chancePercent="100" innerRangeTimeMSec="1500" outerRangeTimeMSec="1500"/>
+				<DamageEffect chancePercent="100" damage="999" damageType="1"/>
+				<ScatterEffect chancePercent="100" armorPenetration="30"/>
+				<SuppressEffect amount="30"/>
+				<SmokeEffect durationMSec="1030" />
+			</EffectRange>
+
+			<EffectRange radiusMeters="2">
+				<StunEffect chancePercent="100" innerRangeTimeMSec="1500" outerRangeTimeMSec="1500"/>
+				<DamageEffect chancePercent="100" damage="999" damageType="1"/>
+				<ScatterEffect chancePercent="100" armorPenetration="30"/>
+				<SuppressEffect amount="30"/>
+			</EffectRange>
+
+			<EffectRange radiusMeters="5">
+				<StunEffect chancePercent="100" innerRangeTimeMSec="1000" outerRangeTimeMSec="300"/>
+				<ScatterEffect chancePercent="100"/>
+			</EffectRange>
+
+		</Projectile>
+
+		<Sounds> <!-- max 4 variants for each action -->
+			<Equip name="rifle_eqp"/>
+			<!-- <Reload name="rifle_reld"/> -->
+			<!-- <ReloadEmpty name="rifle_reldempt"/> -->
+			<!-- <Fire name="type56_fire"/> -->
+			<!-- <ShellDrop name="rifle_shell_drop"/> -->
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+<!-- Breacher Shotgun made Cruiser -->
+
+	<Bind eqp="Cruiser Shotgun CIA">
+		<to name="12GA00BUCK_M500"/>
+
+		<to name="IronSights"/>
+	</Bind>
+	<Firearm name="Cruiser Shotgun CIA" inventoryBinding="SecondaryWeapon" category="shotgun" unlockCost="5"
+			tooltip="@firearm_cruisershottie_name"
+			description="@firearm_cruisershottie_name"
+			img="data/models/equipment/breacher_shotgun_ui.dds"
+			animationSet="shotgun_pump"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-6" turnSpeedModifierPercent="-2"/>
+		<ConcealmentModifier add="-2"/>
+		<RenderObject3D model="data/models/weapons/breacher_shotgun.khm" attachSlot="prop_back_rifle" skipGOSSAO="true" diffuseTex="data/models/weapons/breacher_shotgun.dds"/>
+		<ModifiableParams
+			numPellets="9"
+			roundsPerMagazine="4"
+			closedBolt="1"
+
+			cyclicReload="1"
+			reloadTime="800"
+			reloadEmptyTime="1000"
+			changeInTime="704"
+			changeOutTime="480"
+			readyTime="550"
+			guardTime="250"
+
+			accuracyStart="70"
+			accuracyEnd="60"
+			accuracyStartDist="0"
+			accuracyEndDist="100"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_12gauge_name"
+			operationInfoText="@firearm_operation_pumpaction_name"
+			ejectingShellEntity="BulletCasingShotgun"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="5.0"
+			ai_rangeMax="10.0"
+			ai_stopWhenShooting="false"
+		/>
+
+		<AttackTypes>
+			<!-- breaching is done without an attack type, we use the default params found in weapon/ammo -->
+			<AttackType name="Rangers_PumpAimedFire" rangeMeters="9999"/>
+		</AttackTypes>
+
+		<MuzzleFlash lightTemplate="ShotLightLarge" tracerTemplate="Tracer_LMG">
+			<Flare particles="FX_MUZZLE_FLASH_SHOTGUN_01" />
+			<Flare particles="FX_MUZZLE_FLASH_SHOTGUN_02" />
+			<Flare particles="FX_MUZZLE_FLASH_SHOTGUN_03" />
+			<Flare particles="FX_MUZZLE_FLASH_SHOTGUN_04" />
+		</MuzzleFlash>
+
+		<Sounds> <!-- max 4 variants for each action -->
+			<Equip name="870br_eqp"/>
+			<Unequip name="870br_neqp"/>
+			<Reload name="870br_reld"/>
+			<ReloadEmpty name="870br_reld"/>
+			<Fire name="870br_fire"/>
+			<ShellDrop name="shotgun_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+
+<!-- Helmet for JTAC Dracon -->
+
+	<Helmet name="HelmetFASTDracon" inventoryBinding="Helmet"
+			tooltip="@helmet_rangers_fast_name"
+			description="@helmet_rangers_fast_desc"
+			img="data/models/humans/attachments/ranger_helmet_ui.dds"
+		>
+
+		<ConcealmentModifier add="-2" />
+		<RenderObject3D model="data/models/humans/attachments/cia_ballistic_helmet.khm" diffuseTex="data/models/humans/attachments/ranger_assaulter_helmet_ro.dds" attachSlot="Bip001 Head">
+			<Specular shininess="8" intensity="1.3"/>
+		</RenderObject3D>
+		<MobilityModifiers moveSpeedModifierPercent="0" turnSpeedModifierPercent="0"/>
+
+		<Params>
+			<ProtectionArc degrees="360" coveragePercent="10" piercingProtectionLevel="30"/>
+		</Params>
+	</Helmet>
+
+<!-- Improved Molotovs for Pyro -->
+
+	<Grenade name="Molotov Pyro" inventoryBinding="UtilityPouch"
+			quantity="3"
+
+			tooltip="@grenade_molotovimp_name"
+			description="@grenade_molotov_desc"
+			img="data/models/equipment/molotov_ui.dds"
+			movie="data/movies/molotov.ogv"
+
+			soundUse="molotov_use"
+
+			animationSet="grenade"
+		>
+		<RenderObject3D model="data/models/equipment/mol_bottle.khm" skipGOSSAO="true" diffuseTex="data/models/equipment/mol_bottle.dds"/>
+		<ConcealmentModifier add="-2"/>
+		<MobilityModifiers moveSpeedModifierPercent="-4" turnSpeedModifierPercent="-4"/>
+
+		<ModifiableParams
+			changeInTime="0"
+			changeOutTime="0"
+			throwTime="1100"
+			throwTimeCorner="1600"
+			
+			brightLight="1"
+		/>
+
+		<!-- soundExplosion="glass_break" -->
+		<!-- soundOnSpawn="molotov_use" -->
+
+		<Projectile
+			bodyTemplate="MolotovThrownBottle"
+			pathIconTexture="data/textures/gui/contextual/pathicon_stinger_active.tga"
+
+			trailParticles="Molotov_Trail"
+			lightTemplate="Light_FireLarge"
+
+			soundFollow="fire"
+			soundHitFloor="glass_break"
+
+			friendlyFire="true"
+			triggerOnImpact="true"
+			triggerTimeAfterTargetHitMsec="0"
+
+			physicsDetonationForce="5"
+			audibleLaunchSoundRadius="2"
+			audibleDetonationSoundRadius="15"
+			>
+
+			<!-- spawn these when exploding -->
+			<FX
+				particles="Molotov_Explosion"
+				entity1="scorch_mark_molotov_central"
+				randRotation1="true"
+				entity2="fire_molotov"
+				deleteAfterMS2="15000"
+				entity3="Light_FireLarge"
+				deleteAfterMS3="15000"
+			/>
+
+			<Shrapnel projectileSource="Extra_MolotovShrapnel" min="4" max="6" spreadRadius="2.0" />
+
+			<EffectRange radiusMeters="1.5">
+				<DamageEffect chancePercent="100" damage="55" damageType="0"  armorPenetration="0"/>
+				<FireEffect durationMSec="9000"/>
+				<DOTEffect durationMSec="15000" dps="15.0"/>
+			</EffectRange>
+
+			<EffectRange radiusMeters="2.0">
+				<!-- <StunEffect chancePercent="100" innerRangeTimeMSec="1500" outerRangeTimeMSec="1500"/> -->
+				<ScatterEffect chancePercent="100"/>
+				<SuppressEffect amount="30"/>
+				<!-- <SmokeEffect durationMSec="1030" /> -->
+			</EffectRange>
+			
+			<EffectRange radiusMeters="3">
+				<ScatterEffect chancePercent="85" armorPenetration="0" innerRangeTimeMSec="8000" outerRangeTimeMSec="5000"/>
+				<SuppressEffect amount="15"/>
+			</EffectRange>			
+			
+		</Projectile>
+	</Grenade>
+
+<!-- Extra throwables instead of Pistol for Rangers. Will probably remove this since I'm not happy with it -->
+
+
+	<Bind eqp="Frag Grenade Extra">
+		
+		<!--
+		<to name="Rangers"/>
+		
+		<to name="Assault"/>
+		<to name="Support"/>
+		<to name="Marksman"/>
+		<to name="Medic"/>
+		<to name="Grenadier"/>
+		-->
+	</Bind>
+	<Grenade name="Frag Grenade Extra" inventoryBinding="SecondaryWeapon"
+			quantity="10"
+
+			tooltip="@grenade_frag_name"
+			description="@grenade_frag_desc"
+			img="data/models/equipment/frag_grenade_ui.dds"
+			movie="data/movies/frag.ogv"
+
+			animationSet="grenade"
+			soundUse="grenade_use"
+			soundUseVoice="VOX_GEAR_FRAG"
+		>
+		<RenderObject3D model="data/models/equipment/frag_grenade.khm" skipGOSSAO="true" diffuseTex="data/models/equipment/frag_grenade.dds"/>
+		<ConcealmentModifier add="-1"/>
+		<MobilityModifiers moveSpeedModifierPercent="-0.5" turnSpeedModifierPercent="0"/>
+
+		<ModifiableParams
+			changeInTime="0"
+			changeOutTime="0"
+			throwTime="1000"
+			throwTimeCorner="1400"
+		/>
+
+		<Projectile
+			bodyTemplate="FragGrenade"
+			pathIconTexture="data/textures/gui/contextual/pathicon_stinger_active.tga"
+
+			soundExplosion="frag_expl"
+			soundHitFloor="grenade_hit_floor"
+
+			friendlyFire="true"
+			triggerOnImpact="false"
+			triggerTimeAfterTargetHitMsec="1000"
+
+			physicsDetonationForce="60"
+			audibleLaunchSoundRadius="0"
+			audibleDetonationSoundRadius="30">
+
+			<!-- spawn these when exploding -->
+			<FX
+				particles="FragGrenade"
+				entity1="ExplosionLight"
+				entity2="explosion_mark"
+				randRotation2="true"
+				entity3="FX_dust_small"
+				deleteAfterMS3="20000"
+				anim2D="">
+			</FX>
+
+			<EffectRange radiusMeters="7.0">
+				<StunEffect chancePercent="100" innerRangeTimeMSec="1500" outerRangeTimeMSec="1500"/>
+				<DamageEffect chancePercent="100" damage="100" damageType="1"  armorPenetration="0"/>
+				<ScatterEffect chancePercent="100" armorPenetration="30"/>
+				<SuppressEffect amount="20"/>
+				<SmokeEffect durationMSec="700" />
+			</EffectRange>
+			<EffectRange radiusMeters="8.0">
+				<StunEffect chancePercent="100" innerRangeTimeMSec="1500" outerRangeTimeMSec="1500"/>
+				<DamageEffect chancePercent="100" damage="100" damageType="1"/>
+				<ScatterEffect chancePercent="100" armorPenetration="30"/>
+				<SuppressEffect amount="20"/>
+			</EffectRange>
+			<EffectRange radiusMeters="10.0">
+				<StunEffect chancePercent="100" innerRangeTimeMSec="800" outerRangeTimeMSec="500"/>
+				<DamageEffect chancePercent="50" damage="20" damageType="1"/>
+				<ScatterEffect chancePercent="100" armorPenetration="0"/>
+				<SuppressEffect amount="20"/>
+			</EffectRange>
+		</Projectile>
+	</Grenade>
+
+
+<!-- SMLE for Hawkeye -->
+
+	<Bind eqp="SMLEMK3 HWK">
+		<to name="303BRITFMJ_SMLENWS"/>
+	</Bind>
+	<Firearm name="SMLEMK3 HWK" inventoryBinding="PrimaryWeapon" category="rifle" 
+			tooltip="@firearm_smlemk3hwk_name"
+			img="data/models/weapons/smle_1mk3_ui.dds"
+			animationSet="rifle"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-8" turnSpeedModifierPercent="-1"/>
+		<RenderObject3D model="data/models/weapons/smle_1mk3.khm" attachSlot="prop_back_rifle" skipGOSSAO="true" diffuseTex="data/models/weapons/smle_1mk3.dds"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="10"
+			closedBolt="0"
+
+			cyclicReload="0"
+			reloadTime="2500"
+			reloadEmptyTime="2500"
+			changeInTime="1300"
+			changeOutTime="1300"
+			readyTime="400"
+			guardTime="200"
+
+			accuracyStart="250"
+			accuracyEnd="100"
+			accuracyStartDist="5"
+			accuracyEndDist="100"
+			suppressionScale="1.5"
+	
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_303_name"
+			operationInfoText="@firearm_operation_boltaction_name"
+			ejectingShellEntity="BulletCasingLarge"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="20.0"
+			ai_rangeMax="100.0"
+			ai_stopWhenShooting="true"
+		/>
+
+		<AttackTypes>
+			<AttackType name="HWK_RifleAimedFireShort" rangeMeters="7"/>
+			<AttackType name="HWK_RifleAimedFire"  inCoverOverride="HWK_RifleAimedFireMounted" rangeMeters="45"/>
+			<AttackType name="HWK_RifleAimedFireXX"  inCoverOverride="HWK_RifleAimedFireXXMounted" rangeMeters="9999"/>
+		</AttackTypes>
+
+		<MuzzleFlash lightTemplate="ShotLightLarge" tracerTemplate="Tracer_Rifle">
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_01" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_02" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_03" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_04" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="rifle_eqp"/>
+			<Unequip name="rifle_neqp"/>
+			<Reload name="rifle_reld"/>
+			<ReloadEmpty name="rifle_reldempt"/>
+			<Fire name="smle_fire"/>
+			<ShellDrop name="rifle_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+<!-- M9sup Pistol for Hawkeye -->
+
+	<Bind eqp="M9Sup Pistol HWK">
+	
+		<to name="919FMJM882_SupHandgun"/>
+
+		<to name="IronSights_Pistol"/>
+	</Bind>
+	<Firearm name="M9Sup Pistol HWK" inventoryBinding="SecondaryWeaponMuzzle" category="pistol"
+			tooltip="@firearm_m9sup_name"
+			description="@firearm_m9sup_desc"
+			img="data/models/weapons/m9sup_ui.dds"
+
+			animationSet="pistol"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-3" turnSpeedModifierPercent="-1"/>
+		<RenderObject3D model="data/models/weapons/m9_02.khm" attachSlot="prop_sidearm" diffuseTex="data/models/weapons/m9.dds" skipGOSSAO="true"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="15"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="1600"
+			reloadEmptyTime="2200"
+			changeInTime="1100"
+			changeOutTime="1300"
+			readyTime="140"
+			guardTime="50"
+
+			accuracyStart="80"
+			accuracyEnd="70"
+			accuracyStartDist="0"
+			accuracyEndDist="100"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_9x19_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingSmall"
+			magazineEntity="pm63_mag"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="4.0"
+			ai_rangeMax="15.0"
+			ai_stopWhenShooting="false"
+		/>
+
+		<AttackTypes>
+			<AttackType name="HWK_ControlledPair9mil" rangeMeters="6"/>
+			<AttackType name="HWK_PistolAimedFire" rangeMeters="12"/>
+			<AttackType name="HWK_PistolAimedFireLongM9Sup" rangeMeters="20"/>
+			<AttackType name="HWK_PistolAimedFireLong9milXX" rangeMeters="9999"/>
+		</AttackTypes>
+
+		<MuzzleFlash lightTemplate="ShotLightSmall" tracerTemplate="Tracer_Pistol">
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_05" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_06" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_07" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_08" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="pistol_eqp"/>
+			<Unequip name="pistol_neqp"/>
+			<Reload name="pistol_reld"/>
+			<ReloadEmpty name="pistol_reldempt"/>
+			<Fire name="m9sup_fire"/>
+			<ShellDrop name="pistol_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+<!-- Stuff for Lt Tawr -->
+
+	<FeetOfSteel name="FeetOfSteelTawr" inventoryBinding="SupportGear3">
+		<!--
+			The total time it takes to destroy a door is taken from the door's "breachTimeMsec" param (the same one used for crowbars)
+			   It is then multiplied by the efficiency percent.
+			   Then it's slightly adjusted in order to make the door break on precisely the last kick event.
+			Note that efficiency is modified by fieldSkills innate ability, which currently starts at -25% (a -25,+25 range is a bit too much?)
+			The number of kicks = breachTimeMsec / timePerKickMsec
+
+			'damagePerKick' is not used for doors! But it will be used when kicking any other entity type (if we bind this equipment to other entity types)
+			  For those, the total destroy time = (entityHealth / damagePerKick) * timePerKick
+		      'damageType' is here just for fun.
+		-->
+		<ModifiableParams
+			efficiencyPercent="100"
+			audibleSoundRadius="15.0"
+			timePerKickMsec="1350"
+			damagePerKick="100"
+			damageType="1"
+		/>
+		<MobilityModifiers moveSpeedModifierPercent="0" turnSpeedModifierPercent="0"/>
+	</FeetOfSteel>
+
+	<Bind eqp="AK 104 Lt Tawr">
+		<to name="762x39FMJM43_Type56NWS"/>
+	</Bind>
+	<Firearm name="AK 104 Lt Tawr" inventoryBinding="PrimaryWeapon" category="rifle" unlockCostBH="10"
+			tooltip="@firearm_ak104lttawr_name"
+			description="@firearm_ak105alphacia_desc"
+			img="data/models/weapons/alpha_ak_ui.dds"
+			animationSet="rifle"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-4" turnSpeedModifierPercent="-2"/>
+		<ConcealmentModifier add="-3"/>
+		<RenderObject3D model="data/models/weapons/alpha_ak.khm" attachSlot="prop_front_rifle" skipGOSSAO="true" diffuseTex="data/models/weapons/alpha_ak.dds"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="30"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="1800"
+			reloadEmptyTime="2200"
+			changeInTime="0"
+			changeOutTime="0"
+			readyTime="400"
+			guardTime="200"
+
+			accuracyStart="150"
+			accuracyEnd="80"
+			accuracyStartDist="5"
+			accuracyEndDist="70"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_545x39_name"
+			operationInfoText="@firearm_operation_semifull_name"
+			ejectingShellEntity="BulletCasingLarge"
+			magazineEntity="aks_mag"
+			suppressedSwitch="AK 105 Alpha Sup CIA BOps"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="20.0"
+			ai_rangeMax="40.0"
+			hasLaser="false"
+		/>
+
+		<AttackTypes>
+			<AttackType name="Rangers_RapidFireMed" rangeMeters="12"/>
+			<AttackType name="Rangers_CarbineAimedFire" rangeMeters="35"/>
+			<AttackType name="Rangers_CarbineAimedFireXX" rangeMeters="9999"/>
+		</AttackTypes>
+
+		<MuzzleFlash lightTemplate="ShotLightLarge" tracerTemplate="Tracer_Rifle">
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_01" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_02" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_03" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_04" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="rifle_eqp"/>
+			<Unequip name="rifle_neqp"/>
+			<Reload name="rifle_reld"/>
+			<ReloadEmpty name="rifle_reldempt"/>
+			<Fire name="akm_fire"/>
+			<ShellDrop name="rifle_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+	<Bind eqp="M79 Lt Tawr">
+		<to name="338_SniperRifle"/>
+
+		<to name="IronSights"/>
+	</Bind>
+	<Firearm name="M79 Lt Tawr" inventoryBinding="SupportGear1" category="rifle" unlockCostBH="6" discountedBy="M79 Lt Tawr Dual Ammo"
+			tooltip="@firearm_M79lttawr_name"
+			description="@firearm_M320cia_desc"
+			img="data/models/weapons/m79_ui.dds"
+			animationSet="rifle"
+		>
+
+		<RenderObject3D model="data/models/weapons/m79.khm" attachSlot="prop_back_rifle" skipGOSSAO="true" diffuseTex="data/models/weapons/m79.dds">
+			<Specular shininess="32" intensity="4.0"/>
+		</RenderObject3D>
+		<MobilityModifiers moveSpeedModifierPercent="-6" turnSpeedModifierPercent="-2"/>
+		<ConcealmentModifier add="-2" />
+		<ModifiableParams
+			projectilesPerMagazine="4"
+
+			reloadTime="3000"
+			reloadEmptyTime="3000"
+			changeInTime="1400"
+			changeOutTime="500"
+			readyTime="600"
+			guardTime="350"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_40mm_name"
+			operationInfoText="@firearm_operation_singleshot_name"
+			ai_rangeMin="12.0"
+			ai_rangeOptimal="20.0"
+			ai_rangeMax="80.0"
+			ai_stopWhenShooting="true"
+		/>
+
+
+		<AttackTypesProjectile>
+			<AttackType name="RPG_QuickAimClose" rangeMeters="15"/>
+			<AttackType name="RPG_QuickAim" rangeMeters="9999"/>
+		</AttackTypesProjectile>
+
+		<MuzzleFlash lightTemplate="ShotLightSmall">
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_05" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_06" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_07" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_08" />
+		</MuzzleFlash>
+
+
+		<Projectile
+			bodyTemplate="M203GrenadeBody"
+			trailParticles=""
+			lightTemplate=""
+
+			soundExplosion="grenade_launcher_expl"
+			soundOnSpawn="m203_fire"
+			soundFollow=""
+
+			minVelocity="50000.0"
+			maxVelocity="50000.0"
+			acceleration="0.0"
+			mass="0.0"
+			friendlyFire="true"
+			triggerOnImpact="true"
+
+			roundsPerSecond="2"
+			accuracyPercent="60"
+			physicsDetonationForce="100"
+			audibleLaunchSoundRadius="2"
+			audibleDetonationSoundRadius="20"
+			>
+
+			<FX
+				particles="FragGrenade"
+				entity1="ExplosionLight"
+				entity2="explosion_mark"
+				randRotation2="true"
+				entity3="FX_dust_large"
+				deleteAfterMS3="35000"
+				anim2D="">
+			</FX>
+
+			<EffectRange radiusMeters="1.7">
+				<StunEffect chancePercent="100" innerRangeTimeMSec="1500" outerRangeTimeMSec="1500"/>
+				<DamageEffect chancePercent="100" damage="999" damageType="1"/>
+				<ScatterEffect chancePercent="100" armorPenetration="30"/>
+				<SuppressEffect amount="30"/>
+				<SmokeEffect durationMSec="1030" />
+			</EffectRange>
+
+			<EffectRange radiusMeters="2">
+				<StunEffect chancePercent="100" innerRangeTimeMSec="1500" outerRangeTimeMSec="1500"/>
+				<DamageEffect chancePercent="100" damage="999" damageType="1"/>
+				<ScatterEffect chancePercent="100" armorPenetration="30"/>
+				<SuppressEffect amount="30"/>
+			</EffectRange>
+
+			<EffectRange radiusMeters="5">
+				<StunEffect chancePercent="100" innerRangeTimeMSec="1000" outerRangeTimeMSec="300"/>
+				<ScatterEffect chancePercent="100"/>
+			</EffectRange>
+
+		</Projectile>
+
+		<Sounds> <!-- max 4 variants for each action -->
+			<Equip name="rifle_eqp"/>
+			<!-- <Reload name="rifle_reld"/> -->
+			<!-- <ReloadEmpty name="rifle_reldempt"/> -->
+			<!-- <Fire name="type56_fire"/> -->
+			<!-- <ShellDrop name="rifle_shell_drop"/> -->
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+	<Bind eqp="M79 Lt Tawr Dual Ammo">
+		<to name="40MMBUCKSHOT_M79"/>
+
+		<to name="IronSights"/>
+	</Bind>
+	<Firearm name="M79 Lt Tawr Dual Ammo" inventoryBinding="SecondaryWeapon" category="rifle" unlockCostBH="6" discountedBy="M79 Lt Tawr"
+			tooltip="@firearm_M79lttawrdual_name"
+			description="@firearm_M320cia_desc"
+			img="data/models/weapons/m79_ui.dds"
+			animationSet="rifle"
+			soundUseVoice="VOX_GEAR_LAUNCHER"
+		>
+		<RenderObject3D model="data/models/weapons/m79.khm" attachSlot="prop_back_rifle" skipGOSSAO="true" diffuseTex="data/models/weapons/m79.dds">
+			<Specular shininess="32" intensity="4.0"/>
+		</RenderObject3D>
+		<MobilityModifiers moveSpeedModifierPercent="-6" turnSpeedModifierPercent="-2"/>
+		<ConcealmentModifier add="-2" />
+		<ModifiableParams
+			numPellets="20"
+			roundsPerMagazine="1"
+			closedBolt="0"
+
+			projectilesPerMagazine="4"
+
+			reloadTime="1900"
+			reloadEmptyTime="1900"
+			changeInTime="1250"
+			changeOutTime="500"
+			readyTime="600"
+			guardTime="350"
+
+			accuracyStart="70"
+			accuracyEnd="30"
+			accuracyStartDist="5"
+			accuracyEndDist="30"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_556GL40_name"
+			operationInfoText="@firearm_operation_semifull_name"
+			ejectingShellEntity="BulletCasingLarge"
+			magazineEntity="m4_mag"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="40.0"
+			ai_rangeMax="100.0"
+			ai_stopWhenShooting="true"
+		/>
+
+		<AttackTypes>
+			<AttackType name="NWS_M79Buckshot" rangeMeters="15"/>
+			<AttackType name="RPG_QuickAimClose" rangeMeters="9999"/>
+		</AttackTypes>
+
+		<AttackTypesProjectile>
+			<AttackType name="RPG_QuickAimClose" rangeMeters="15"/>
+			<AttackType name="RPG_QuickAim" rangeMeters="9999"/>
+		</AttackTypesProjectile>
+
+		<MuzzleFlash lightTemplate="ShotLightLarge" tracerTemplate="Tracer_Rifle">
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_01" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_02" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_03" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_04" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="rifle_eqp"/>
+			<Unequip name="rifle_neqp"/>
+			<Reload name="rifle_reld"/>
+			<ReloadEmpty name="rifle_reldempt"/>
+			<Fire name="m500_fire"/>
+			<ShellDrop name="rifle_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+
+		<Projectile
+			bodyTemplate="M203GrenadeBody"
+			trailParticles=""
+			lightTemplate=""
+
+			soundExplosion="grenade_launcher_expl"
+			soundOnSpawn="m203_fire"
+			soundFollow=""
+
+			minVelocity="50000.0"
+			maxVelocity="50000.0"
+			acceleration="0.0"
+			mass="0.0"
+			friendlyFire="true"
+			triggerOnImpact="true"
+
+			roundsPerSecond="2.0"
+			accuracyPercent="75"
+			physicsDetonationForce="100"
+			audibleLaunchSoundRadius="2"
+			audibleDetonationSoundRadius="20"
+			>
+
+			<FX
+				particles="FragGrenade"
+				entity1="ExplosionLight"
+				entity2="explosion_mark"
+				randRotation2="true"
+				entity3="FX_dust_large"
+				deleteAfterMS3="35000"
+				anim2D="">
+			</FX>
+			<EffectRange radiusMeters="1.7">
+				<StunEffect chancePercent="100" innerRangeTimeMSec="1500" outerRangeTimeMSec="1500"/>
+				<DamageEffect chancePercent="100" damage="999" damageType="1"/>
+				<ScatterEffect chancePercent="100" armorPenetration="30"/>
+				<SuppressEffect amount="30"/>
+				<SmokeEffect durationMSec="1030" />
+			</EffectRange>
+
+			<EffectRange radiusMeters="2">
+				<StunEffect chancePercent="100" innerRangeTimeMSec="1500" outerRangeTimeMSec="1500"/>
+				<DamageEffect chancePercent="100" damage="999" damageType="1"/>
+				<ScatterEffect chancePercent="100" armorPenetration="30"/>
+				<SuppressEffect amount="30"/>
+			</EffectRange>
+
+			<EffectRange radiusMeters="5">
+				<StunEffect chancePercent="100" innerRangeTimeMSec="1000" outerRangeTimeMSec="300"/>
+				<ScatterEffect chancePercent="100"/>
+			</EffectRange>
+
+		</Projectile>
+	</Firearm>
+
+	<Bind eqp="M79 GL Basic">
+		<to name="338_SniperRifle"/>
+
+		<to name="IronSights"/>
+	</Bind>
+	<Firearm name="M79 GL Basic" inventoryBinding="PrimaryWeapon" category="rpg"
+			tooltip="@firearm_M79_name"
+			description="@firearm_M320cia_desc"
+			img="data/models/weapons/m79_ui.dds"
+			animationSet="rifle"
+			soundUseVoice="VOX_GEAR_LAUNCHER"
+		>
+
+		<RenderObject3D model="data/models/weapons/m79.khm" attachSlot="prop_back_rifle" skipGOSSAO="true" diffuseTex="data/models/weapons/m79.dds">
+			<Specular shininess="32" intensity="4.0"/>
+		</RenderObject3D>
+		<MobilityModifiers moveSpeedModifierPercent="-6" turnSpeedModifierPercent="-2"/>
+		<ConcealmentModifier add="-2" />
+		<ModifiableParams
+			projectilesPerMagazine="5"
+
+			reloadTime="3000"
+			reloadEmptyTime="3000"
+			changeInTime="1400"
+			changeOutTime="500"
+			readyTime="600"
+			guardTime="350"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_40mm_name"
+			operationInfoText="@firearm_operation_singleshot_name"
+			ai_rangeMin="10.0"
+			ai_rangeOptimal="20.0"
+			ai_rangeMax="80.0"
+			ai_stopWhenShooting="true"
+		/>
+
+
+		<AttackTypesProjectile>
+			<AttackType name="RPG_QuickAimClose" rangeMeters="10"/>
+			<AttackType name="RPG_QuickAim" rangeMeters="9999"/>
+		</AttackTypesProjectile>
+
+		<MuzzleFlash lightTemplate="ShotLightSmall">
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_05" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_06" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_07" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_08" />
+		</MuzzleFlash>
+
+
+		<Projectile
+			bodyTemplate="M203GrenadeBody"
+			trailParticles=""
+			lightTemplate=""
+
+			soundExplosion="grenade_launcher_expl"
+			soundOnSpawn="m203_fire"
+			soundFollow=""
+
+			minVelocity="50000.0"
+			maxVelocity="50000.0"
+			acceleration="0.0"
+			mass="0.0"
+			friendlyFire="true"
+			triggerOnImpact="true"
+
+			roundsPerSecond="1"
+			accuracyPercent="50"
+			physicsDetonationForce="100"
+			audibleLaunchSoundRadius="2"
+			audibleDetonationSoundRadius="20"
+			>
+
+			<FX
+				particles="FragGrenade"
+				entity1="ExplosionLight"
+				entity2="explosion_mark"
+				randRotation2="true"
+				entity3="FX_dust_large"
+				deleteAfterMS3="35000"
+				anim2D="">
+			</FX>
+
+			<EffectRange radiusMeters="1.7">
+				<StunEffect chancePercent="100" innerRangeTimeMSec="1500" outerRangeTimeMSec="1500"/>
+				<DamageEffect chancePercent="100" damage="999" damageType="1"/>
+				<ScatterEffect chancePercent="100" armorPenetration="30"/>
+				<SuppressEffect amount="30"/>
+				<SmokeEffect durationMSec="1030" />
+			</EffectRange>
+
+			<EffectRange radiusMeters="2">
+				<StunEffect chancePercent="100" innerRangeTimeMSec="1500" outerRangeTimeMSec="1500"/>
+				<DamageEffect chancePercent="100" damage="999" damageType="1"/>
+				<ScatterEffect chancePercent="100" armorPenetration="30"/>
+				<SuppressEffect amount="30"/>
+			</EffectRange>
+
+			<EffectRange radiusMeters="5">
+				<StunEffect chancePercent="100" innerRangeTimeMSec="1000" outerRangeTimeMSec="300"/>
+				<ScatterEffect chancePercent="100"/>
+			</EffectRange>
+
+		</Projectile>
+
+		<Sounds> <!-- max 4 variants for each action -->
+			<Equip name="rifle_eqp"/>
+			<!-- <Reload name="rifle_reld"/> -->
+			<!-- <ReloadEmpty name="rifle_reldempt"/> -->
+			<!-- <Fire name="type56_fire"/> -->
+			<!-- <ShellDrop name="rifle_shell_drop"/> -->
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+
+<!-- Stuff for Billy & Ric the Undercover Random Assets -->
+
+	<Bind eqp="MP5K Sup Billy">
+		<to name="919JHPM1153_Mp5PDWSup"/>
+		<to name="IronSights"/>
+	</Bind>
+	<Firearm name="MP5K Sup Billy" inventoryBinding="PrimaryWeaponMuzzle" category="rifle" 
+			tooltip="@firearm_mp5kSup_name"
+			description="@firearm_mp5kSup_desc"
+			img="data/models/weapons/mp5k_ui.dds"
+
+			animationSet="rifle"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-1" turnSpeedModifierPercent="0"/>
+		<ConcealmentModifier add="-1" />
+		<RenderObject3D model="data/models/weapons/mp5k.khm" attachSlot="prop_front_rifle" skipGOSSAO="true" diffuseTex="data/models/weapons/mp5k_pdw.dds"/>
+		<RenderObject3D model="data/models/weapons/attachments/silencer_01.khm" attachSlot="silencer_socket" skipGOSSAO="true" diffuseTex="data/models/weapons/attachments/silencer_01a.dds"/>
+
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="15"
+			closedBolt="0"
+
+			cyclicReload="0"
+			reloadTime="2500"
+			reloadEmptyTime="2600"
+			changeInTime="1100"
+			changeOutTime="1100"
+			readyTime="340"
+			guardTime="160"
+
+			accuracyStart="110"
+			accuracyEnd="50"
+			accuracyStartDist="10"
+			accuracyEndDist="60"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_9x19_name"
+			operationInfoText="@firearm_operation_semifull_name"
+			ejectingShellEntity="BulletCasingSmall"
+			magazineEntity="mp5_mag"
+			suppressedImg="data/models/weapons/attachments/basic_silencer_ui.dds"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="5.0"
+			ai_rangeMax="12.0"
+			ai_stopWhenShooting="false"
+		/>
+
+		<AttackTypes>
+			<AttackType name="CIA_UziAutoFire" rangeMeters="5"/>
+			<AttackType name="Rangers_RapidFireMed" rangeMeters="11"/>
+			<AttackType name="Rangers_PistolAimedFireLong9mil" rangeMeters="20"/>
+			<AttackType name="Rangers_PistolAimedFireLong9milXX" rangeMeters="9999"/>
+		</AttackTypes>
+
+	<MuzzleFlash lightTemplate="ShotLightSmall" tracerTemplate="Tracer_Pistol">
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_05" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_06" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_07" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_08" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="smg_eqp"/>
+			<Unequip name="smg_neqp"/>
+			<Reload name="smg_reld"/>
+			<ReloadEmpty name="smg_reldempt"/>
+			<Fire name="m9sup_fire"/>
+			<ShellDrop name="smg_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+	<ExplosiveCharge name="Demo Charge Ric" inventoryBinding="UtilityPouch"
+			quantity="1"
+
+			tooltip="@nws_demo_charge_name"
+			description="@nws_demo_charge_desc"
+			img="data/models/equipment/demo_charge_ui.dds"
+			movie="data/movies/breaching_charge.ogv"
+
+			animationSet="generic_device"
+			soundUse="equip_charge"
+			crouchOnUse="true"
+		>
+		<RenderObject3D model="data/models/humans/attachments/backpack_breaching_charge.khm" attachSlot="vest_back_left" skipGOSSAO="true" diffuseTex="data/models/humans/attachments/backpack_breaching_charge.dds"/>
+		<MobilityModifiers moveSpeedModifierPercent="-10" turnSpeedModifierPercent="-1"/>
+		<!-- this makes the item show on the back of the human, but we need a different model
+		<RenderObject3D model="data/models/equipment/breaching_charge.khm" attachSlot="prop_back_rifle" skipGOSSAO="true" diffuseTex="data/models/equipment/breaching_charge.dds"/>
+		-->
+
+		<!-- Area2 contains Area1 (should be larger than..). The effects don't stack though. -->
+		<!-- efficiencyPercent is changed by abilities and will apply onto deployTime. E.g. efficiencyPercent=200 means it will deploy 2x faster, meaning deployTime/2 -->
+		<ModifiableParams
+			changeInTime="800"
+			changeOutTime="600"
+			efficiencyPercent="100"
+			deployTime="3000"
+
+			area1WidthMeters="2"
+			area1LengthMeters="2"
+			area1Damage="999"
+			area1StunTime="3000"
+
+			area2WidthMeters="3"
+			area2LengthMeters="5"
+			area2Damage="30"
+			area2StunTime="1800"
+
+			audibleSoundRadius="40"
+			audibleSoundRadiusForPlacing="1.5"
+			physicsDetonationForce="150"
+			damageType="2"
+		/>
+
+		<Params
+			bodyTemplate="DemoChargeBody"
+			explosionSound="expl_breach_charge">
+
+			<FX
+				particles="BreachingCharge"
+				entity1="ExplosionLight"
+				entity2="scorch_mark_breach"
+				entity3="FX_dust_large"
+				deleteAfterMS3="35000">
+			</FX>
+
+		</Params>
+	</ExplosiveCharge>
+
+<!-- New CIA Weapons -->
+
+	<Bind eqp="M1A Scout CIA">
+		<to name="BlackOps"/>
+
+		<to name="762FMJM80A1_M110A1"/>
+
+		<to name="IronSights"/>
+		<to name="M68CCO"/>
+		<to name="Holosight"/>
+		<to name="LPVO_6X"/>
+		<to name="LPVO_8X"/>
+		<to name="LROMK4_3_10X"/>
+	</Bind>
+	<Firearm name="M1A Scout CIA" inventoryBinding="PrimaryWeapon" category="rifle" unlockCost="5" sortId="399"
+			tooltip="@firearm_m1a_scout_name"
+			description="@firearm_m1a_scout_desc"
+			img="data/models/weapons/m1a_ui.dds"
+
+			animationSet="rifle"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-8" turnSpeedModifierPercent="-2"/>
+		<ConcealmentModifier add="-2.5"/>
+		<RenderObject3D model="data/models/weapons/m1a.khm" attachSlot="prop_front_rifle" skipGOSSAO="true" diffuseTex="data/models/weapons/m1a.dds"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="20"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="2500"
+			reloadEmptyTime="3200"
+			changeInTime="0"
+			changeOutTime="0"
+			readyTime="400"
+			guardTime="220"
+
+			accuracyStart="150"
+			accuracyEnd="100"
+			accuracyStartDist="6"
+			accuracyEndDist="50"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_762x51_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingLarge"
+			magazineEntity="mk17_mag"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="18.0"
+			ai_rangeMax="30.0"
+			ai_stopWhenShooting="true"
+			hasLaser="true"
+		/>
+
+		<AttackTypes>
+			<AttackType name="CIA_RifleAimedFireClose" rangeMeters="7"/>			
+			<AttackType name="CIA_FastFireHeavyClose" rangeMeters="7" disabled="true"/>				
+			<AttackType name="CIA_RifleAimedFire" rangeMeters="15"/>	
+			<AttackType name="CIA_FastFireHeavyMed" rangeMeters="15" disabled="true"/>		
+			<AttackType name="Rangers_DMRAimedFire"  inCoverOverride="Rangers_DMRAimedFireMounted" rangeMeters="40"/>
+			<AttackType name="Rangers_DMRAimedFireXX"  inCoverOverride="Rangers_DMRAimedFireXXMounted" rangeMeters="9999"/>
+		</AttackTypes>
+
+		<MuzzleFlash lightTemplate="ShotLightLarge" tracerTemplate="Tracer_Rifle">
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_01" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_02" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_03" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_04" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="rifle_eqp"/>
+			<Unequip name="rifle_neqp"/>
+			<Reload name="rifle_reld"/>
+			<ReloadEmpty name="rifle_reldempt"/>
+			<Fire name="mk17_fire"/>
+			<ShellDrop name="rifle_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+<!-- New Weapon for Wife in Unaware -->
+
+	<Bind eqp="MP40 Asset">
+		<to name="9x19FMJ_MP40"/>
+	</Bind>
+	<Firearm name="MP40 Asset" inventoryBinding="PrimaryWeapon" category="rifle"
+			tooltip="@firearm_mp40_name"
+			img="data/models/weapons/mp40_ui.dds"
+			animationSet="rifle"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-3" turnSpeedModifierPercent="-1"/>
+		<RenderObject3D model="data/models/weapons/mp40.khm" attachSlot="prop_front_rifle" skipGOSSAO="true" diffuseTex="data/models/weapons/mp40.dds"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="32"
+			closedBolt="0"
+
+			cyclicReload="0"
+			reloadTime="3500"
+			reloadEmptyTime="5000"
+			changeInTime="600"
+			changeOutTime="600"
+			readyTime="300"
+			guardTime="200"
+
+			accuracyStart="65"
+			accuracyEnd="45"
+			accuracyStartDist="0"
+			accuracyEndDist="40"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_9x19_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingSmall"
+			magazineEntity="pm63_mag"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="8.0"
+			ai_rangeMax="30.0"
+		/>
+
+		<AttackTypes>
+			<AttackType name="AKWildFirePro" rangeMeters="15"/>
+			<AttackType name="AKWildBurstLong" rangeMeters="25"/>
+			<AttackType name="AKWildBurstLongXX" rangeMeters="9999"/>
+		</AttackTypes>
+
+		<MuzzleFlash lightTemplate="ShotLightLarge" tracerTemplate="Tracer_Rifle">
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_01" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_02" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_03" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_04" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="rifle_eqp"/>
+			<Unequip name="rifle_neqp"/>
+			<Reload name="rifle_reld"/>
+			<ReloadEmpty name="rifle_reldempt"/>
+			<Fire name="uzi_fire"/>
+			<ShellDrop name="rifle_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+<!-- New NWS Weapons -->
+
+	<!-- HK21E -->
+	<Bind eqp="HK21E NWS">
+		<to name="SwatAssaulter"/>
+
+		<to name="762FMJM80_HK21E"/>
+
+		<to name="IronSights"/>
+	</Bind>
+	<Firearm name="HK21E NWS" inventoryBinding="PrimaryWeapon" category="lmg" unlockCostBH="4" sortId="404"
+			tooltip="@firearm_hk21e_name"
+			description="@firearm_hk21e_desc"
+			img="data/models/weapons/hk21e_ui.dds"
+
+			animationSet="rifle"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-16" turnSpeedModifierPercent="-9"/>
+		<ConcealmentModifier add="-6" />
+		<RenderObject3D model="data/models/weapons/hk21e.khm" attachSlot="prop_back_rifle" skipGOSSAO="true" diffuseTex="data/models/weapons/hk21e.dds"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="100"
+			closedBolt="0"
+			suppressArea="1"
+
+			cyclicReload="0"
+			reloadTime="5500"
+			reloadEmptyTime="5500"
+			changeInTime="1250"
+			changeOutTime="1250"
+			readyTime="600"
+			guardTime="350"
+
+			accuracyStart="150"
+			accuracyEnd="90"
+			accuracyStartDist="20"
+			accuracyEndDist="70"
+
+			suppressionScale="1.3"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_762x51_name"
+			operationInfoText="@firearm_operation_fullauto_name"
+			ejectingShellEntity="BulletCasingLarge"
+			magazineEntity="m240l_mag"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="30.0"
+			ai_rangeMax="60.0"
+			ai_stopWhenShooting="true"
+			hasLaser="true"
+		/>
+
+		<AttackTypes>
+			<AttackType name="NWS_GPMGStrafe" inCoverOverride="NWS_LMGStrafeMedMounted" rangeMeters="10"/>
+			<AttackType name="NWS_GPMGStrafeMed" inCoverOverride="NWS_LMGStrafeMedMounted" rangeMeters="20"/>
+			<AttackType name="NWS_GPMGStrafeLong" inCoverOverride="NWS_LMGStrafeLongMounted" rangeMeters="55"/>
+			<AttackType name="Rangers_GPMGStrafeLongXX" inCoverOverride="NWS_LMGStrafeLongXXMounted" rangeMeters="9999"/>
+		</AttackTypes>
+
+		 <AttackTypesSuppressiveFire>
+			<AttackType name="AreaSuppression_HK21E_NWS" rangeMeters="9999"/>
+		 </AttackTypesSuppressiveFire>
+
+
+
+		<MuzzleFlash lightTemplate="ShotLightLarge" tracerTemplate="Tracer_LMG">
+			<Flare particles="FX_MUZZLE_FLASH_LMG_01" />
+			<Flare particles="FX_MUZZLE_FLASH_LMG_02" />
+			<Flare particles="FX_MUZZLE_FLASH_LMG_03" />
+			<Flare particles="FX_MUZZLE_FLASH_LMG_04" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="rifle_eqp"/>
+			<Unequip name="rifle_neqp"/>
+			<Reload name="rifle_reld"/>
+			<ReloadEmpty name="rifle_reldempt"/>
+			<Fire name="M240DK_fire"/>
+			<ShellDrop name="rifle_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+	
+	
+	<!-- Mk27 Mod 2 G19 Pistol for Rangers -->
+
+	<Bind eqp="Mk27M2 Pistol">
+		<to name="Rangers"/>
+
+		<to name="919FMJM882_G19X Pistol"/>
+		<to name="919FMJM1152_Handgun"/>
+		<to name="919JHPM1153_Handgun"/>
+
+		<to name="RedDot_PistolMk27"/>
+		<to name="IronSights_PistolCustomizableMk27"/>
+	</Bind>
+	<Firearm name="Mk27M2 Pistol" inventoryBinding="SecondaryWeapon" category="pistol" unlockCostBH="3"
+			tooltip="@firearm_mk27m2_name"
+			description="@firearm_mk27m2_desc"
+			img="data/models/weapons/g19_sup_ui.dds"
+
+			animationSet="pistol"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-0.8" turnSpeedModifierPercent="0"/>
+		<ConcealmentModifier add="-0.8"/>
+		<RenderObject3D model="data/models/weapons/g19.khm" attachSlot="prop_sidearm" diffuseTex="data/models/weapons/g19.dds" skipGOSSAO="true"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="15"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="1100"
+			reloadEmptyTime="1300"
+			changeInTime="750"
+			changeOutTime="865"
+			readyTime="85"
+			guardTime="50"
+
+			accuracyStart="120"
+			accuracyEnd="51"
+			accuracyStartDist="7"
+			accuracyEndDist="100"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_9x19_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingSmall"
+			magazineEntity="pm63_mag"
+			suppressedSwitch="Mk27M2Sup Pistol"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="3.0"
+			ai_rangeMax="15.0"
+			ai_stopWhenShooting="false"
+		/>
+
+		<AttackTypes>
+			<AttackType name="Rangers_EmergencyFire9mil" rangeMeters="1.5"/>
+			<AttackType name="Rangers_PistolAimedFireShort9mil" rangeMeters="9"/>
+			<AttackType name="Rangers_ControlledPair9mil" rangeMeters="9" disabled="true"/>
+			<AttackType name="Rangers_PistolAimedFire9mil" rangeMeters="15"/>
+			<AttackType name="Rangers_PistolAimedFireLong9mil" rangeMeters="22"/>
+			<AttackType name="Rangers_PistolAimedFireLong9milXX" rangeMeters="9999"/>
+		</AttackTypes>
+
+		<MuzzleFlash lightTemplate="ShotLightSmall" tracerTemplate="Tracer_Pistol">
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_01" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_02" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_03" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_04" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="pistol_eqp"/>
+			<Unequip name="pistol_neqp"/>
+			<Reload name="pistol_reld"/>
+			<ReloadEmpty name="pistol_reldempt"/>
+			<Fire name="g19_fire"/>
+			<ShellDrop name="pistol_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+	<Bind eqp="Mk27M2Sup Pistol">
+		<to name="Rangers"/>
+
+		<to name="919FMJM882_SupHandgun"/>
+		<to name="919FMJM1152_SupHandgun"/>
+		<to name="919JHPM1153_SupHandgun"/>
+
+		<to name="RedDot_PistolMk27"/>
+		<to name="IronSights_PistolCustomizableMk27"/>
+	
+	</Bind>
+	<Firearm name="Mk27M2Sup Pistol" inventoryBinding="SecondaryWeaponMuzzle" category="pistol" 
+			tooltip="@firearm_mk27m2sup_name"
+			description="@firearm_mk27m2sup_desc"
+			img="data/models/weapons/g19_sup_ui.dds"
+
+			animationSet="pistol"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-0.8" turnSpeedModifierPercent="0"/>
+		<ConcealmentModifier add="-1"/>
+		<RenderObject3D model="data/models/weapons/g19.khm" attachSlot="prop_sidearm" diffuseTex="data/models/weapons/g19.dds" skipGOSSAO="true"/>
+		<RenderObject3D model="data/models/weapons/attachments/silencer_01.khm" attachSlot="silencer_socket" skipGOSSAO="true" diffuseTex="data/models/weapons/attachments/silencer_01a.dds"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="15"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="1180"
+			reloadEmptyTime="1450"
+			changeInTime="800"
+			changeOutTime="930"
+			readyTime="93"
+			guardTime="50"
+
+			accuracyStart="120"
+			accuracyEnd="51"
+			accuracyStartDist="7"
+			accuracyEndDist="100"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_9x19_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingSmall"
+			magazineEntity="pm63_mag"
+			suppressedSwitch="Mk27M2 Pistol"
+			suppressedImg="data/models/weapons/attachments/basic_silencer_ui.dds"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="3.0"
+			ai_rangeMax="15.0"
+			ai_stopWhenShooting="false"
+		/>
+
+		<AttackTypes>	
+			<AttackType name="Rangers_EmergencyFire9mil" rangeMeters="1.5"/>
+			<AttackType name="Rangers_PistolAimedFireShort9mil" rangeMeters="9"/>
+			<AttackType name="Rangers_ControlledPair9mil" rangeMeters="9" disabled="true"/>
+			<AttackType name="Rangers_ControlledPair9mil" rangeMeters="11" disabled="true"/>
+			<AttackType name="Rangers_PistolAimedFire9mil" rangeMeters="16"/>
+			<AttackType name="Rangers_PistolAimedFireLong9mil" rangeMeters="22"/>
+			<AttackType name="Rangers_PistolAimedFireLong9milXX" rangeMeters="9999"/>			
+		</AttackTypes>
+
+		<MuzzleFlash lightTemplate="ShotLightSmall" tracerTemplate="Tracer_Pistol">
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_05" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_06" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_07" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_08" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="pistol_eqp"/>
+			<Unequip name="pistol_neqp"/>
+			<Reload name="pistol_reld"/>
+			<ReloadEmpty name="pistol_reldempt"/>
+			<Fire name="m9sup_fire"/>
+			<ShellDrop name="pistol_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+	
+<!-- XM7 and XM250 -->
+
+	<Bind eqp="XM7">
+		<to name="Assault"/>
+		<to name="Medic"/>
+
+		<to name="68X51GP_XM7"/>
+
+		<to name="IronSights"/>
+		<to name="M68CCO"/>
+		<to name="Holosight"/>
+		<to name="M150RCO"/>
+		<to name="SpecterDR"/>
+		<to name="LPVO_6X"/>
+		<to name="LPVO_8X"/>
+	</Bind>
+	<Firearm name="XM7" inventoryBinding="PrimaryWeapon" category="rifle" unlockCostBH="8"
+			tooltip="@firearm_xm7_name"
+			description="@firearm_xm7_desc"
+			img="data/models/weapons/xm7_ui.dds"
+
+			animationSet="rifle"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-4" turnSpeedModifierPercent="-2"/>
+		<RenderObject3D model="data/models/weapons/xm7.khm" attachSlot="prop_front_rifle" skipGOSSAO="true" diffuseTex="data/models/weapons/xm7.dds"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="20"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="2500"
+			reloadEmptyTime="3200"
+			changeInTime="0"
+			changeOutTime="0"
+			readyTime="320"
+			guardTime="210"
+
+			accuracyStart="210"
+			accuracyEnd="180"
+			accuracyStartDist="0"
+			accuracyEndDist="100"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_68x51_name"
+			operationInfoText="@firearm_operation_semifull_name"
+			ejectingShellEntity="BulletCasingLarge"
+			magazineEntity="mk17_mag"
+			suppressedSwitch="XM7Sup"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="40.0"
+			ai_rangeMax="100.0"
+			ai_stopWhenShooting="false"
+			hasLaser="true"
+		/>
+
+		<AttackTypes>
+			<AttackType name="Rangers_CarbineAutoFireHeavy" rangeMeters="4" disabled="true"/> 
+			<AttackType name="Rangers_RapidFire" rangeMeters="6"/>
+			<AttackType name="Rangers_UnregBurstHeavy" rangeMeters="6" disabled="true"/>
+			<AttackType name="Rangers_UnregBurstHeavyMed" rangeMeters="12" disabled="true"/>
+			<AttackType name="Rangers_RapidFireMedHeavy" rangeMeters="14"/>
+			<AttackType name="Rangers_CarbineAimedFire" rangeMeters="44"/>
+			<AttackType name="Rangers_CarbineAimedFireXX" rangeMeters="9999"/>
+		</AttackTypes>
+
+		<MuzzleFlash lightTemplate="ShotLightLarge" tracerTemplate="Tracer_Rifle">
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_01" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_02" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_03" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_04" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="rifle_eqp"/>
+			<Unequip name="rifle_neqp"/>
+			<Reload name="rifle_reld"/>
+			<ReloadEmpty name="rifle_reldempt"/>
+			<Fire name="m110csass_fire"/>
+			<ShellDrop name="rifle_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+	<Bind eqp="XM7Sup">
+		<to name="Assault"/>
+		<to name="Medic"/>
+
+		<to name="68X51GP_XM7Sup"/>
+
+		<to name="IronSights"/>
+		<to name="M68CCO"/>
+		<to name="Holosight"/>
+		<to name="M150RCO"/>
+		<to name="SpecterDR"/>
+		<to name="LPVO_6X"/>
+		<to name="LPVO_8X"/>
+	</Bind>
+	<Firearm name="XM7Sup" inventoryBinding="PrimaryWeaponMuzzle" category="rifle" unlockCost="0"
+			tooltip="@firearm_xm7Sup_name"
+			description="@firearm_xm7Sup_desc"
+			img="data/models/weapons/xm7_ui.dds"
+
+			animationSet="rifle"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-5" turnSpeedModifierPercent="-2"/>
+		<RenderObject3D model="data/models/weapons/xm7.khm" attachSlot="prop_front_rifle" skipGOSSAO="true" diffuseTex="data/models/weapons/xm7.dds"/>
+		<RenderObject3D model="data/models/weapons/attachments/silencer_01.khm" attachSlot="silencer_socket" skipGOSSAO="true" diffuseTex="data/models/weapons/attachments/silencer_01c.dds"/>
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="20"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="2750"
+			reloadEmptyTime="3350"
+			changeInTime="0"
+			changeOutTime="0"
+			readyTime="350"
+			guardTime="220"
+
+			accuracyStart="210"
+			accuracyEnd="180"
+			accuracyStartDist="0"
+			accuracyEndDist="100"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_68x51_name"
+			operationInfoText="@firearm_operation_semifull_name"
+			ejectingShellEntity="BulletCasingLarge"
+			magazineEntity="mk17_mag"
+			suppressedSwitch="XM7"
+			suppressedImg="data/models/weapons/attachments/basic_silencer_ui.dds"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="40.0"
+			ai_rangeMax="100.0"
+			ai_stopWhenShooting="false"
+			hasLaser="true"
+		/>
+
+		<AttackTypes>
+			<AttackType name="Rangers_CarbineAutoFireHeavy" rangeMeters="4.5" disabled="true"/> 
+			<AttackType name="Rangers_RapidFire" rangeMeters="7"/>
+			<AttackType name="Rangers_UnregBurstHeavy" rangeMeters="7" disabled="true"/>
+			<AttackType name="Rangers_UnregBurstHeavyMed" rangeMeters="12.5" disabled="true"/>
+			<AttackType name="Rangers_RapidFireMedHeavy" rangeMeters="15"/>
+			<AttackType name="Rangers_CarbineAimedFire" rangeMeters="44"/>
+			<AttackType name="Rangers_CarbineAimedFireXX" rangeMeters="9999"/>
+		</AttackTypes>
+		
+
+
+		<MuzzleFlash lightTemplate="ShotLightSmall" tracerTemplate="Tracer_Rifle">
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_05" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_06" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_07" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_08" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="rifle_eqp"/>
+			<Unequip name="rifle_neqp"/>
+			<Reload name="rifle_reld"/>
+			<ReloadEmpty name="rifle_reldempt"/>
+			<Fire name="m110sup_fire"/>
+			<ShellDrop name="rifle_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>		
+	
+	<Bind eqp="XM250">
+		<to name="Support"/>
+
+		<to name="68X51GP_XM250"/>
+
+		<to name="IronSights"/>
+		<to name="M68CCO"/>
+		<to name="Holosight"/>
+		<to name="SpecterDR"/>
+		<to name="MGOM145"/>
+		<to name="MGO240"/>
+	</Bind>
+	<Firearm name="XM250" inventoryBinding="PrimaryWeapon" category="lmg" unlockCostBH="8"
+			tooltip="@firearm_xm250_name"
+			description="@firearm_xm250_desc"
+			img="data/models/weapons/xm250_ui.dds"
+
+			animationSet="rifle"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-10" turnSpeedModifierPercent="-7"/>
+		<RenderObject3D model="data/models/weapons/xm250.khm" attachSlot="prop_back_rifle" skipGOSSAO="true" diffuseTex="data/models/weapons/xm250.dds"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="100"
+			closedBolt="0"
+			suppressArea="1"
+
+			cyclicReload="0"
+			reloadTime="4000"
+			reloadEmptyTime="4000"
+			changeInTime="950"
+			changeOutTime="900"
+			readyTime="570"
+			guardTime="260"
+
+			accuracyStart="120"
+			accuracyEnd="70"
+			accuracyStartDist="0"
+			accuracyEndDist="60"
+
+			suppressionScale="1.3"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_68x51_name"
+			operationInfoText="@firearm_operation_semifull_name"
+			ejectingShellEntity="BulletCasingLarge"
+			magazineEntity="m240l_mag"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="14.0"
+			ai_rangeMax="25.0"
+			ai_stopWhenShooting="true"
+			hasLaser="true"
+			suppressedSwitch="XM250Sup"
+		/>
+
+		<AttackTypes>
+			<AttackType name="Rangers_LMGStrafeShort" inCoverOverride="Rangers_LMGStrafeShortMounted" rangeMeters="3"/>
+			<AttackType name="Rangers_LMGStrafeMounted" inCoverOverride="Rangers_LMGStrafeMounted" rangeMeters="8"/>
+			<AttackType name="Rangers_LMGStrafeMed" inCoverOverride="Rangers_LMGStrafeMedMounted" rangeMeters="35"/>
+			<AttackType name="Rangers_LMGStrafeLong" inCoverOverride="Rangers_LMGStrafeLongMounted" rangeMeters="50"/>
+			<AttackType name="Rangers_LMGStrafeLongXX" inCoverOverride="Rangers_LMGStrafeLongMounted" rangeMeters="65"/>
+			<AttackType name="Rangers_LMGStrafeLongXX" inCoverOverride="Rangers_LMGStrafeLongXXMounted" rangeMeters="9999"/>
+		</AttackTypes>
+						
+
+		<MuzzleFlash lightTemplate="ShotLightLarge" tracerTemplate="Tracer_LMG">
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_01" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_02" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_03" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_04" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="rifle_eqp"/>
+			<Unequip name="rifle_neqp"/>
+			<Reload name="rifle_reld"/>
+			<ReloadEmpty name="rifle_reldempt"/>
+			<Fire name="mk48_fire"/>
+			<ShellDrop name="rifle_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+	<Bind eqp="XM250Sup">
+		<to name="Support"/>
+
+		<to name="68X51GP_XM250Sup"/>
+
+		<to name="IronSights"/>
+		<to name="M68CCO"/>
+		<to name="Holosight"/>
+		<to name="SpecterDR"/>
+		<to name="MGOM145"/>
+		<to name="MGO240"/>
+	</Bind>
+	<Firearm name="XM250Sup" inventoryBinding="PrimaryWeaponMuzzle" category="lmg"
+			tooltip="@firearm_xm250Sup_name"
+			description="@firearm_xm250Sup_desc"
+			img="data/models/weapons/xm250_ui.dds"
+
+			animationSet="rifle"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-10" turnSpeedModifierPercent="-7"/>
+		<RenderObject3D model="data/models/weapons/xm250.khm" attachSlot="prop_back_rifle" skipGOSSAO="true" diffuseTex="data/models/weapons/xm250.dds"/>
+		<RenderObject3D model="data/models/weapons/attachments/silencer_01.khm" attachSlot="silencer_socket" skipGOSSAO="true" diffuseTex="data/models/weapons/attachments/silencer_01c.dds"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="100"
+			closedBolt="0"
+			suppressArea="1"
+
+			cyclicReload="0"
+			reloadTime="4000"
+			reloadEmptyTime="4000"
+			changeInTime="950"
+			changeOutTime="900"
+			readyTime="570"
+			guardTime="260"
+
+			accuracyStart="120"
+			accuracyEnd="70"
+			accuracyStartDist="0"
+			accuracyEndDist="60"
+
+			suppressionScale="1.3"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_68x51_name"
+			operationInfoText="@firearm_operation_semifull_name"
+			ejectingShellEntity="BulletCasingLarge"
+			magazineEntity="m240l_mag"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="14.0"
+			ai_rangeMax="25.0"
+			ai_stopWhenShooting="true"
+			hasLaser="true"
+			suppressedSwitch="XM250"
+			suppressedImg="data/models/weapons/attachments/basic_silencer_ui.dds"
+		/>
+
+		<AttackTypes>
+			<AttackType name="Rangers_LMGStrafeShort" inCoverOverride="Rangers_LMGStrafeShortMounted" rangeMeters="3"/>
+			<AttackType name="Rangers_LMGStrafeMounted" inCoverOverride="Rangers_LMGStrafeMounted" rangeMeters="8"/>
+			<AttackType name="Rangers_LMGStrafeMed" inCoverOverride="Rangers_LMGStrafeMedMounted" rangeMeters="35"/>
+			<AttackType name="Rangers_LMGStrafeLong" inCoverOverride="Rangers_LMGStrafeLongMounted" rangeMeters="50"/>
+			<AttackType name="Rangers_LMGStrafeLongXX" inCoverOverride="Rangers_LMGStrafeLongMounted" rangeMeters="65"/>
+			<AttackType name="Rangers_LMGStrafeLongXX" inCoverOverride="Rangers_LMGStrafeLongXXMounted" rangeMeters="9999"/>
+		</AttackTypes>
+
+		<MuzzleFlash lightTemplate="ShotLightSmall" tracerTemplate="Tracer_LMG">
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_05" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_06" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_07" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_08" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="rifle_eqp"/>
+			<Unequip name="rifle_neqp"/>
+			<Reload name="rifle_reld"/>
+			<ReloadEmpty name="rifle_reldempt"/>
+			<Fire name="mk48sup_fire"/>
+			<ShellDrop name="rifle_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+	
+	
+	<Bind eqp="P320 Raider CIA">
+		<to name="Undercover"/>
+
+		<to name="919FMJM882_M17 Pistol"/>
+		<to name="919FMJM1152_Handgun"/>
+		<to name="919JHPM1153_Handgun"/>
+		<to name="919FMJ108GRHP_Handgun"/>
+
+		<to name="IronSights_ConcealedSMG"/>
+		<to name="RedDot_Pistol"/>
+	</Bind>
+	<Firearm name="P320 Raider CIA" inventoryBinding="SecondaryWeapon" category="rifle" unlockCostBH="5" sortId="103"
+			tooltip="@firearm_P320raider_name"
+			description="@firearm_P320raider_desc"
+			img="data/models/weapons/p320_ui.dds"
+
+			animationSet="rifle"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-1" turnSpeedModifierPercent="0"/>
+		<ConcealmentModifier add="-1"/>
+		<RenderObject3D model="data/models/weapons/p320.khm" attachSlot="prop_front_rifle" skipGOSSAO="true" diffuseTex="data/models/weapons/p320.dds"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="21"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="1200"
+			reloadEmptyTime="1000"
+			changeInTime="1100"
+			changeOutTime="900"
+			readyTime="250"
+			guardTime="130"
+
+			accuracyStart="120"
+			accuracyEnd="55"
+			accuracyStartDist="7"
+			accuracyEndDist="60"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_9x19_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingSmall"
+			magazineEntity="pm63_mag"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="7.0"
+			ai_rangeMax="15.0"
+			ai_stopWhenShooting="false"
+		/>
+
+		<AttackTypes>
+			<AttackType name="Rangers_RapidFire" rangeMeters="5"/>
+			<AttackType name="Rangers_RapidFireMed" rangeMeters="10"/>
+			<AttackType name="Rangers_CarbineAimedFire" rangeMeters="17"/>
+			<AttackType name="Rangers_CarbineAimedFireXX" rangeMeters="9999"/>
+		</AttackTypes>
+
+		<MuzzleFlash lightTemplate="ShotLightLarge" tracerTemplate="Tracer_Rifle">
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_01" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_02" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_03" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_04" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="smg_eqp"/>
+			<Unequip name="smg_neqp"/>
+		<Reload name="pistol_reld"/>
+			<ReloadEmpty name="pistol_reldempt"/>
+			<Fire name="m17_fire"/>
+			<ShellDrop name="pistol_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+	
+<!-- Various Enemy Pickups -->
+
+	<Bind eqp="1911 Pistol Enemy">
+
+		<to name="45FMJM1911_1911 Pistol"/>
+
+		<to name="IronSights_Pistol1911"/>
+	</Bind>
+	<Firearm name="1911 Pistol Enemy" inventoryBinding="SecondaryWeapon" category="pistol"
+			tooltip="@firearm_1911_enemy_name"
+			description=""
+			img="data/models/weapons/1911_ui.dds"
+
+			animationSet="pistol"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-2" turnSpeedModifierPercent="0"/>
+		<RenderObject3D model="data/models/weapons/1911.khm" attachSlot="prop_sidearm" diffuseTex="data/models/weapons/1911_02.dds" skipGOSSAO="true"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="7"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="1800"
+			reloadEmptyTime="2800"
+			changeInTime="800"
+			changeOutTime="1000"
+			readyTime="140"
+			guardTime="100"
+
+			accuracyStart="75"
+			accuracyEnd="20"
+			accuracyStartDist="5"
+			accuracyEndDist="50"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_45acp_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingSmall"
+			magazineEntity="pm63_mag"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="3.0"
+			ai_rangeMax="15.0"
+			ai_stopWhenShooting="false"
+		/>
+
+		<AttackTypes>
+			<AttackType name="Enemy_GruntPistolHeavyClose" rangeMeters="3"/>
+			<AttackType name="Enemy_GruntPistolHeavyMed" rangeMeters="6"/>
+			<AttackType name="Enemy_GruntPistolLong" rangeMeters="12"/>
+			<AttackType name="Enemy_GruntPistolLongXX" rangeMeters="9999"/>			
+		</AttackTypes>
+
+		<MuzzleFlash lightTemplate="ShotLightSmall" tracerTemplate="Tracer_Pistol">
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_01" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_02" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_03" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_04" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="pistol_eqp"/>
+			<Unequip name="pistol_neqp"/>
+			<Reload name="pistol_reld"/>
+			<ReloadEmpty name="pistol_reldempt"/>
+			<Fire name="1911_fire"/>
+			<ShellDrop name="pistol_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+	
+	<Bind eqp="Sawnoff Enemy">
+		<to name="12GA00BUCK_SO"/>
+
+		<to name="IronSightsSawedOff"/>
+	</Bind>
+ 	<Firearm name="Sawnoff Enemy" inventoryBinding="SecondaryWeapon" category="shotgun"
+			tooltip="@firearm_sawnoff_enemy_name"
+			description=""
+			img="data/models/weapons/db_shotgun_ui.dds"
+
+			animationSet="shotgun_m1014"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-2" turnSpeedModifierPercent="-0"/>
+		<ConcealmentModifier add="-2"/>
+		<RenderObject3D model="data/models/weapons/db_shotgun_02.khm" attachSlot="prop_front_rifle" skipGOSSAO="true" diffuseTex="data/models/weapons/db_shotgun.dds"/>
+		<ModifiableParams
+			numPellets="9"
+			roundsPerMagazine="2"
+			closedBolt="0"
+
+			cyclicReload="0"
+			reloadTime="1200"
+			reloadEmptyTime="1200"
+			changeInTime="800"
+			changeOutTime="800"
+			readyTime="300"
+			guardTime="200"
+
+			accuracyStart="85"
+			accuracyEnd="10"
+			accuracyStartDist="5"
+			accuracyEndDist="100"
+
+			suppressionScale="0.8"
+		/>
+
+		<Params
+		caliberInfoText="@firearm_caliber_12gauge_name"
+			operationInfoText="@firearm_operation_breakopen_name"
+			ejectingShellEntity="BulletCasingShotgun"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="3.0"
+			ai_rangeMax="7.0"
+			ai_stopWhenShooting="false"
+		/>
+
+		<AttackTypes>
+			<AttackType name="CIA_SawnoffBothBarrels" rangeMeters="2"/>
+			<AttackType name="CIA_SawnoffOneBarrel" rangeMeters="15"/>
+			<AttackType name="CIA_SawnoffOneBarrelXX" rangeMeters="9999"/>
+		</AttackTypes>
+
+		<MuzzleFlash lightTemplate="ShotLightLarge" tracerTemplate="Tracer_Pistol">
+			<Flare particles="FX_MUZZLE_FLASH_SHOTGUN_01" />
+			<Flare particles="FX_MUZZLE_FLASH_SHOTGUN_02" />
+			<Flare particles="FX_MUZZLE_FLASH_SHOTGUN_03" />
+			<Flare particles="FX_MUZZLE_FLASH_SHOTGUN_04" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="870br_eqp"/>
+			<Unequip name="870br_neqp"/>
+			<Reload name="870br_reld"/>
+			<ReloadEmpty name="870br_reld"/>
+			<Fire name="shotgun_nopump_fire"/>
+			<ShellDrop name="shotgun_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+	<Scope name="HoloMag3X" 
+			inventoryBinding="PrimaryWeaponScope"
+			tooltip="@scope_holomag3x_name"
+			description=""
+			img="data/models/weapons/attachments/holo_magnifier_combo_ui.dds"
+		>
+		<RenderObject3D model="data/models/weapons/attachments/holo_magnifier_combo.khm" attachSlot="optics_socket" skipGOSSAO="true" diffuseTex="data/models/weapons/attachments/holo_magnifier_combo.dds"/>
+		<MobilityModifiers moveSpeedModifierPercent="-1" turnSpeedModifierPercent="-2"/>
+		<ConcealmentModifier add="-1"/>
+		<Params>
+			<EquipmentModifier>
+				<AddTo
+					reloadTime="+140"
+					reloadEmptyTime="+150"
+					readyTime="+30"
+					guardTime="+20"
+					changeInTime="+100"
+					changeOutTime="+100"
+				/>
+			</EquipmentModifier>
+
+			<AttackTypeModifier minRange="0" maxRange="7">
+				<AddTo
+					minAimTime2="-50"
+					maxAimTime2="-50"
+					resetTime="-50"
+					accuracyAdd="+50"
+					critChanceAdd="+2"
+				/>
+			</AttackTypeModifier>
+
+			<AttackTypeModifier minRange="7" maxRange="15">
+				<AddTo
+					minAimTime2="-50"
+					maxAimTime2="-150"
+					resetTime="-100"
+					accuracyAdd="+10"
+					critChanceAdd="+10"
+				/>
+			</AttackTypeModifier>
+
+			<AttackTypeModifier minRange="15" maxRange="25">
+				<AddTo
+					minAimTime2="-150"
+					maxAimTime2="-100"
+					resetTime="-30"
+					accuracyAdd="+35"
+					critChanceAdd="+10"
+				/>
+			</AttackTypeModifier>
+
+			<AttackTypeModifier minRange="25" maxRange="50">
+				<AddTo
+					minAimTime2="-100"
+					maxAimTime2="-40"
+					resetTime="-30"
+					accuracyAdd="+20"
+					critChanceAdd="+3"
+				/>
+			</AttackTypeModifier>
+
+			<AttackTypeModifier minRange="50" maxRange="100">
+				<AddTo
+					minAimTime2="-40"
+					maxAimTime2="-10"
+					resetTime="+0"
+					accuracyAdd="+5"
+					critChanceAdd="+0"
+				/>
+			</AttackTypeModifier>
+
+		</Params>
+	</Scope>
+
+
+</Equipment>

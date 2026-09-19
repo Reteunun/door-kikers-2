@@ -1,0 +1,545 @@
+<Equipment>
+
+	<!-- M9 Pistol -->
+
+	<Bind eqp="M9 Pistol NWS">
+		<to name="SwatLeader"/>
+		<to name="SwatAssaulter"/>
+		<to name="SwatSapper"/>
+
+
+		<!-- ammo, the first one is the default
+			Note: instead of binding ammo to pistols (which would be the logical way), we do it the other way, to be able to keep track of the defaults and have a 1-to-many equivalence which is easier to use in code
+		-->
+		<to name="919FMJM882_NWSHandgun"/>
+		<to name="919JHPM1153_NWSHandgun"/>
+
+		<!-- scopes, the first one is the default -->
+		<to name="IronSights_Pistol"/>
+	</Bind>
+	<Firearm name="M9 Pistol NWS" inventoryBinding="SecondaryWeapon" category="pistol" unlockCost="0"
+			tooltip="@firearm_m9_name"
+			description="@firearm_m9_desc"
+			img="data/models/weapons/m9_ui.dds"
+
+			animationSet="pistol"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-2" turnSpeedModifierPercent="0"/>
+		<RenderObject3D model="data/models/weapons/m9.khm" attachSlot="prop_sidearm" diffuseTex="data/models/weapons/m9.dds" skipGOSSAO="true"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="15"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="1400"
+			reloadEmptyTime="1800"
+			changeInTime="1000"
+			changeOutTime="1000"
+			readyTime="100"
+			guardTime="50"
+
+			accuracyStart="85"
+			accuracyEnd="60"
+			accuracyStartDist="0"
+			accuracyEndDist="40"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_9x19_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingSmall"
+			magazineEntity="pm63_mag"
+			suppressedSwitch="M9Sup Pistol NWS"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="3.0"
+			ai_rangeMax="15.0"
+			ai_stopWhenShooting="false"
+		/>
+
+		<AttackTypes>
+			<AttackType name="Rangers_EmergencyFire9mil" rangeMeters="2.5"/>
+			<AttackType name="NWS_PistolAimedClose9mil" rangeMeters="6"/>
+			<AttackType name="NWS_PistolAimedFire9mil" rangeMeters="15"/>
+			<AttackType name="Rangers_PistolAimedFireLong9mil" rangeMeters="22"/>
+			<AttackType name="Rangers_PistolAimedFireLong9milXX" rangeMeters="9999"/>
+		</AttackTypes>
+
+		<MuzzleFlash lightTemplate="ShotLightSmall" tracerTemplate="Tracer_Pistol">
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_01" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_02" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_03" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_04" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="pistol_eqp"/>
+			<Unequip name="pistol_neqp"/>
+			<Reload name="pistol_reld"/>
+			<ReloadEmpty name="pistol_reldempt"/>
+			<Fire name="m9_fire"/>
+			<ShellDrop name="pistol_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+	<!-- M9sup Pistol -->
+	<Bind eqp="M9Sup Pistol NWS">
+		<to name="SwatLeader"/>
+		<to name="SwatAssaulter"/>
+		<to name="SwatSapper"/>
+
+		<to name="919FMJM882_NWSSupHandgun"/>
+		<to name="919JHPM1153_NWSSupHandgun"/>
+
+		<to name="IronSights_Pistol"/>
+	</Bind>
+	<Firearm name="M9Sup Pistol NWS" inventoryBinding="SecondaryWeaponMuzzle" category="pistol" unlockCost="6"
+			tooltip="@firearm_m9sup_name"
+			description="@firearm_m9sup_desc"
+			img="data/models/weapons/m9_ui.dds"
+
+			animationSet="pistol"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-3" turnSpeedModifierPercent="-1"/>
+		<RenderObject3D model="data/models/weapons/m9_02.khm" attachSlot="prop_sidearm" diffuseTex="data/models/weapons/m9.dds" skipGOSSAO="true"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="15"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="1600"
+			reloadEmptyTime="2200"
+			changeInTime="1300"
+			changeOutTime="1300"
+			readyTime="140"
+			guardTime="50"
+
+			accuracyStart="80"
+			accuracyEnd="50"
+			accuracyStartDist="0"
+			accuracyEndDist="30"
+
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_9x19_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingSmall"
+			magazineEntity="pm63_mag"
+			suppressedSwitch="M9 Pistol NWS"
+			suppressedImg="data/models/weapons/attachments/basic_silencer_ui.dds"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="3.0"
+			ai_rangeMax="15.0"
+			ai_stopWhenShooting="false"
+		/>
+
+		<AttackTypes>
+			<AttackType name="Rangers_EmergencyFire9mil" rangeMeters="2.5"/>
+			<AttackType name="NWS_PistolAimedClose9mil" rangeMeters="6"/>
+			<AttackType name="NWS_PistolAimedFire9mil" rangeMeters="10"/>
+			<AttackType name="Rangers_PistolAimedFireLong9mil" rangeMeters="17"/>
+			<AttackType name="Rangers_PistolAimedFireLong9milXX" rangeMeters="9999"/>
+		</AttackTypes>
+
+		<MuzzleFlash lightTemplate="ShotLightSmall" tracerTemplate="Tracer_Pistol">
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_05" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_06" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_07" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_08" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="pistol_eqp"/>
+			<Unequip name="pistol_neqp"/>
+			<Reload name="pistol_reld"/>
+			<ReloadEmpty name="pistol_reldempt"/>
+			<Fire name="m9sup_fire"/>
+			<ShellDrop name="pistol_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+	<!-- G17 Pistol -->
+
+	<Bind eqp="G17 Pistol NWS">
+		<to name="SwatLeader"/>
+		<to name="SwatAssaulter"/>
+		<to name="SwatSapper"/>
+
+
+		<to name="919FMJM882_G19XNWSPistol"/>
+		<to name="919JHPM1153_NWSHandgun"/>
+
+		<to name="IronSights_Pistol"/>
+	</Bind>
+	<Firearm name="G17 Pistol NWS" inventoryBinding="SecondaryWeapon" category="pistol" unlockCost="4"
+			tooltip="@firearm_g17_name"
+			description="@firearm_g17_desc"
+			img="data/models/weapons/g22_ui.dds"
+
+			animationSet="pistol"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-1.2" turnSpeedModifierPercent="0"/>
+		<ConcealmentModifier add="-1"/>
+		<RenderObject3D model="data/models/weapons/g2240.khm" attachSlot="prop_sidearm" diffuseTex="data/models/weapons/g2240.dds" skipGOSSAO="true"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="17"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="1200"
+			reloadEmptyTime="1600"
+			changeInTime="900"
+			changeOutTime="900"
+			readyTime="100"
+			guardTime="50"
+
+			accuracyStart="90"
+			accuracyEnd="45"
+			accuracyStartDist="0"
+			accuracyEndDist="40"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_9x19_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingSmall"
+			magazineEntity="pm63_mag"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="3.0"
+			ai_rangeMax="15.0"
+			ai_stopWhenShooting="false"
+		/>
+
+		<AttackTypes>
+			<AttackType name="Rangers_EmergencyFire9mil" rangeMeters="2.5"/>
+			<AttackType name="NWS_PistolAimedClose9mil" rangeMeters="6"/>
+			<AttackType name="NWS_PistolAimedFire9mil" rangeMeters="10"/>
+			<AttackType name="Rangers_PistolAimedFireLong9mil" rangeMeters="17"/>
+			<AttackType name="Rangers_PistolAimedFireLong9milXX" rangeMeters="9999"/>
+		</AttackTypes>
+
+		<MuzzleFlash lightTemplate="ShotLightSmall" tracerTemplate="Tracer_Pistol">
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_01" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_02" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_03" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_04" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="pistol_eqp"/>
+			<Unequip name="pistol_neqp"/>
+			<Reload name="pistol_reld"/>
+			<ReloadEmpty name="pistol_reldempt"/>
+			<Fire name="g17_fire"/>
+			<ShellDrop name="pistol_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+	<!-- HS45 Pistol -->
+
+	<Bind eqp="HS45 Pistol NWS">
+		<to name="SwatLeader"/>
+		<to name="SwatAssaulter"/>
+		<to name="SwatSapper"/>
+
+		<to name="45FMJM1911_NWSHS45"/>
+
+		<to name="IronSights_Pistol1911"/>
+	</Bind>
+	<Firearm name="HS45 Pistol NWS" inventoryBinding="SecondaryWeapon" category="pistol" unlockCostBH="4"
+			tooltip="@firearm_hs45_pistol_name"
+			description="@firearm_hs45_pistol_desc"
+			img="data/models/weapons/hs45_ui.dds"
+
+			animationSet="pistol"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-2" turnSpeedModifierPercent="0"/>
+		<RenderObject3D model="data/models/weapons/hs45.khm" attachSlot="prop_sidearm" diffuseTex="data/models/weapons/hs45.dds" skipGOSSAO="true"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="13"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="1300"
+			reloadEmptyTime="1700"
+			changeInTime="950"
+			changeOutTime="1000"
+			readyTime="110"
+			guardTime="50"
+
+			accuracyStart="90"
+			accuracyEnd="60"
+			accuracyStartDist="0"
+			accuracyEndDist="45"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_45acp_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingSmall"
+			magazineEntity="pm63_mag"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="3.0"
+			ai_rangeMax="15.0"
+			ai_stopWhenShooting="false"
+		/>
+
+		<AttackTypes>
+			<AttackType name="Rangers_EmergencyFire45" rangeMeters="2.5"/>
+			<AttackType name="NWS_PistolAimedClose45" rangeMeters="6"/>
+			<AttackType name="NWS_PistolAimedFire45" rangeMeters="12"/>
+			<AttackType name="Rangers_PistolAimedFireLong45" rangeMeters="20"/>
+			<AttackType name="Rangers_PistolAimedFireLong45XX" rangeMeters="9999"/>
+		</AttackTypes>
+
+		<MuzzleFlash lightTemplate="ShotLightSmall" tracerTemplate="Tracer_Pistol">
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_01" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_02" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_03" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_04" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="pistol_eqp"/>
+			<Unequip name="pistol_neqp"/>
+			<Reload name="pistol_reld"/>
+			<ReloadEmpty name="pistol_reldempt"/>
+			<Fire name="hs45_fire"/>
+			<ShellDrop name="pistol_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+	<Bind eqp="HS45 Pistol Asset">
+		<to name="45FMJM1911_1911 Pistol"/>
+
+		<to name="IronSights_Pistol1911"/>
+	</Bind>
+	<Firearm name="HS45 Pistol Asset" inventoryBinding="SecondaryWeapon" category="pistol"
+			tooltip="@firearm_hs45_pistol_name"
+			description="@firearm_hs45_pistol_desc"
+			img="data/models/weapons/hs45_ui.dds"
+
+			animationSet="pistol"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-2" turnSpeedModifierPercent="0"/>
+		<RenderObject3D model="data/models/weapons/hs45.khm" attachSlot="prop_sidearm" diffuseTex="data/models/weapons/hs45.dds" skipGOSSAO="true"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="13"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="2000"
+			reloadEmptyTime="2900"
+			changeInTime="1300"
+			changeOutTime="1600"
+			readyTime="200"
+			guardTime="100"
+
+			accuracyStart="50"
+			accuracyEnd="30"
+			accuracyStartDist="2"
+			accuracyEndDist="20"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_45acp_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingSmall"
+			magazineEntity="pm63_mag"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="3.0"
+			ai_rangeMax="15.0"
+			ai_stopWhenShooting="false"
+		/>
+
+		<AttackTypes>
+			<AttackType name="Enemy_GruntPistolClose" rangeMeters="6"/>
+			<AttackType name="Enemy_GruntPistolMed" rangeMeters="20"/>
+			<AttackType name="Enemy_GruntPistolLong" rangeMeters="9999"/>
+		</AttackTypes>
+
+		<MuzzleFlash lightTemplate="ShotLightSmall" tracerTemplate="Tracer_Pistol">
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_01" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_02" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_03" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_04" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="pistol_eqp"/>
+			<Unequip name="pistol_neqp"/>
+			<Reload name="pistol_reld"/>
+			<ReloadEmpty name="pistol_reldempt"/>
+			<Fire name="hs45_fire"/>
+			<ShellDrop name="pistol_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+	<Bind eqp="M9 Pistol NWS Militia">
+		<to name="SwatMilitia"/>
+
+		<!-- ammo, the first one is the default
+			Note: instead of binding ammo to pistols (which would be the logical way), we do it the other way, to be able to keep track of the defaults and have a 1-to-many equivalence which is easier to use in code
+		-->
+		<to name="919FMJM882_NWSHandgun"/>
+
+		<!-- scopes, the first one is the default -->
+		<to name="IronSights_Pistol"/>
+	</Bind>
+	<Firearm name="M9 Pistol NWS Militia" inventoryBinding="SecondaryWeapon" category="militiapistol" unlockCost="0"
+			tooltip="@firearm_m9_name"
+			description="@firearm_m9_desc"
+			img="data/models/weapons/m9_ui.dds"
+
+			animationSet="pistol"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-2" turnSpeedModifierPercent="0"/>
+		<RenderObject3D model="data/models/weapons/m9.khm" attachSlot="prop_sidearm" diffuseTex="data/models/weapons/m9.dds" skipGOSSAO="true"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="15"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="1400"
+			reloadEmptyTime="1800"
+			changeInTime="1000"
+			changeOutTime="1000"
+			readyTime="100"
+			guardTime="50"
+
+			accuracyStart="85"
+			accuracyEnd="60"
+			accuracyStartDist="0"
+			accuracyEndDist="40"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_9x19_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingSmall"
+			magazineEntity="pm63_mag"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="3.0"
+			ai_rangeMax="15.0"
+			ai_stopWhenShooting="false"
+		/>
+
+		<AttackTypes>
+			<AttackType name="Rangers_EmergencyFire9mil" rangeMeters="2.5"/>
+			<AttackType name="NWS_PistolAimedClose9mil" rangeMeters="6"/>
+			<AttackType name="NWS_PistolAimedFire9mil" rangeMeters="15"/>
+			<AttackType name="Rangers_PistolAimedFireLong9mil" rangeMeters="22"/>
+			<AttackType name="Rangers_PistolAimedFireLong9milXX" rangeMeters="9999"/>
+		</AttackTypes>
+
+		<MuzzleFlash lightTemplate="ShotLightSmall" tracerTemplate="Tracer_Pistol">
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_01" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_02" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_03" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_04" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="pistol_eqp"/>
+			<Unequip name="pistol_neqp"/>
+			<Reload name="pistol_reld"/>
+			<ReloadEmpty name="pistol_reldempt"/>
+			<Fire name="m9_fire"/>
+			<ShellDrop name="pistol_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+	<Bind eqp="G17 Pistol NWS Militia">
+		<to name="SwatMilitia"/>
+
+		<to name="919FMJM882_G19XNWSPistol"/>
+
+		<to name="IronSights_Pistol"/>
+	</Bind>
+	<Firearm name="G17 Pistol NWS Militia" inventoryBinding="SecondaryWeapon" category="militiapistol" unlockCost="4"
+			tooltip="@firearm_g17_name"
+			description="@firearm_g17_desc"
+			img="data/models/weapons/g22_ui.dds"
+
+			animationSet="pistol"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-1.2" turnSpeedModifierPercent="0"/>
+		<ConcealmentModifier add="-1"/>
+		<RenderObject3D model="data/models/weapons/g2240.khm" attachSlot="prop_sidearm" diffuseTex="data/models/weapons/g2240.dds" skipGOSSAO="true"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="17"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="1200"
+			reloadEmptyTime="1600"
+			changeInTime="900"
+			changeOutTime="900"
+			readyTime="100"
+			guardTime="50"
+
+			accuracyStart="90"
+			accuracyEnd="45"
+			accuracyStartDist="0"
+			accuracyEndDist="40"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_9x19_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingSmall"
+			magazineEntity="pm63_mag"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="3.0"
+			ai_rangeMax="15.0"
+			ai_stopWhenShooting="false"
+		/>
+
+		<AttackTypes>
+			<AttackType name="Rangers_EmergencyFire9mil" rangeMeters="2.5"/>
+			<AttackType name="NWS_PistolAimedClose9mil" rangeMeters="6"/>
+			<AttackType name="NWS_PistolAimedFire9mil" rangeMeters="10"/>
+			<AttackType name="Rangers_PistolAimedFireLong9mil" rangeMeters="17"/>
+			<AttackType name="Rangers_PistolAimedFireLong9milXX" rangeMeters="9999"/>
+		</AttackTypes>
+
+		<MuzzleFlash lightTemplate="ShotLightSmall" tracerTemplate="Tracer_Pistol">
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_01" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_02" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_03" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_04" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="pistol_eqp"/>
+			<Unequip name="pistol_neqp"/>
+			<Reload name="pistol_reld"/>
+			<ReloadEmpty name="pistol_reldempt"/>
+			<Fire name="g17_fire"/>
+			<ShellDrop name="pistol_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+
+</Equipment>

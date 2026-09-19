@@ -1,0 +1,2999 @@
+<!-- all time settings are in milliseconds -->
+<FirearmAttackTypes>
+	<!--
+	<ModifiableParams> - all of these can be modified by abilities
+		min/maxAimTime = This is the time it takes from when the weapon is ready&aimed at the enemy and until we shoot. The final aim time is interpolated between min/max distance to the target (minDistance = minAimTime, maxDistance = maxAimTime).
+		roundsPerSecondOverride = if defined (!= 0), it will overwrite the weapon's "roundsPerSecond" parameter
+		roundsPerSecondAdd - added to base RPS value (either the `roundsPerSecondOverride` or the default ammo/firearm value)
+		minShots = greater or equal to 1. if greater, then the min number of shots will be fired, even if the target is dead.
+		maxShots = number of shots before waiting "aimTime" again. A value is chosen randomly between min/maxShots, -1 to shoot continuously
+		resetTime = once a shot sequence has finished, we wait for this amount of time before the next shot sequence begins
+		accuracyAdd = modifier for the base accuracy of the weapon. 0 = exactly the weapon's base accuracy
+		followupShotAccuracyAdd = simulates recoil by adding to accuracyModiferPercent for each subsequent shot after the first one
+		critChanceAdd = percent to add to the base critical chance of the ammo
+	-->
+	<!--
+		SHOTGUN ATTACK TYPES
+	-->
+
+	<AttackType name="Rabble_ShotgunFire">
+		<ModifiableParams
+			minAimTime="500"
+			maxAimTime="800"
+			minShots="1"
+			maxShots="2"
+			resetTime="800"
+			accuracyAdd="-10"
+			followupShotAccuracyAdd="-10"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="Rabble_ShotgunFireLong">
+		<ModifiableParams
+			minAimTime="800"
+			maxAimTime="1300"
+			minShots="1"
+			maxShots="1"
+			resetTime="800"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="-10"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="Tango_PumpFire">
+		<ModifiableParams
+			minAimTime="400"
+			maxAimTime="400"
+			minShots="1"
+			maxShots="1"
+			resetTime="100"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="0"
+	
+		/>
+	</AttackType>
+
+	<AttackType name="Tango_PumpFireLong">
+		<ModifiableParams
+			minAimTime="400"
+			maxAimTime="900"
+			minShots="1"
+			maxShots="1"
+			resetTime="600"
+			accuracyAdd="-10"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="-1"
+		/>
+	</AttackType>
+
+	<AttackType name="Tango_PumpFireLongXX">
+		<ModifiableParams
+			minAimTime="900"
+			maxAimTime="1100"
+			roundsPerSecondOverride="1"
+			minShots="1"
+			maxShots="1"
+			resetTime="1100"
+			accuracyAdd="-50"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="-10"
+		/>
+	</AttackType>
+
+
+	<AttackType name="Rangers_PumpAimedFire">
+		<ModifiableParams
+			minAimTime="300"
+			maxAimTime="400"
+			minShots="1"
+			maxShots="1"
+			resetTime="100"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="0"
+	
+		/>
+	</AttackType>
+
+	<AttackType name="Rangers_PumpAimedFireLong">
+		<ModifiableParams
+			minAimTime="400"
+			maxAimTime="900"
+			minShots="1"
+			maxShots="1"
+			resetTime="500"
+			accuracyAdd="-10"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="-1"
+		/>
+	</AttackType>
+
+	<AttackType name="Rangers_PumpAimedFireLongXX">
+		<ModifiableParams
+			minAimTime="900"
+			maxAimTime="1100"
+			roundsPerSecondOverride="1"
+			minShots="1"
+			maxShots="1"
+			resetTime="1100"
+			accuracyAdd="-50"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="-10"
+		/>
+	</AttackType>
+
+	<AttackType name="Rangers_SAShotAimedFire">
+		<ModifiableParams
+			minAimTime="300"
+			maxAimTime="400"
+			minShots="1"
+			maxShots="1"
+			resetTime="100"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="0"
+	
+		/>
+	</AttackType>
+
+	<AttackType name="Rangers_SAShotAimedFireLong">
+		<ModifiableParams
+			minAimTime="400"
+			maxAimTime="900"
+			minShots="1"
+			maxShots="1"
+			resetTime="500"
+			accuracyAdd="-10"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="-1"
+		/>
+	</AttackType>
+
+	<AttackType name="Rangers_SAShotAimedFireLongXX">
+		<ModifiableParams
+			minAimTime="900"
+			maxAimTime="1100"
+			roundsPerSecondOverride="1"
+			minShots="1"
+			maxShots="1"
+			resetTime="1100"
+			accuracyAdd="-50"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="-10"
+		/>
+	</AttackType>
+
+	<AttackType name="NWS_PumpAimedFire">
+		<ModifiableParams
+			minAimTime="300"
+			maxAimTime="400"
+			minShots="1"
+			maxShots="1"
+			resetTime="150"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="0"
+	
+		/>
+	</AttackType>
+
+	<AttackType name="NWS_PumpAimedFireLong">
+		<ModifiableParams
+			minAimTime="400"
+			maxAimTime="800"
+			minShots="1"
+			maxShots="1"
+			resetTime="500"
+			accuracyAdd="-10"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="-1"
+		/>
+	</AttackType>
+
+	<AttackType name="NWS_PumpAimedFireLongXX">
+		<ModifiableParams
+			minAimTime="800"
+			maxAimTime="1200"
+			roundsPerSecondOverride="1"
+			minShots="1"
+			maxShots="1"
+			resetTime="1000"
+			accuracyAdd="-40"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="-10"
+		/>
+	</AttackType>
+
+
+	<AttackType name="CIA_SawnoffBothBarrels">
+		<ModifiableParams
+			minAimTime="200"
+			maxAimTime="250"
+			roundsPerSecondOverride="100"
+			minShots="1"
+			maxShots="1"
+			resetTime="15"
+			accuracyAdd="-20"
+			followupShotAccuracyAdd="-20"
+			critChanceAdd="10"
+	
+		/>
+	</AttackType>
+
+	<AttackType name="CIA_SawnoffOneBarrel">
+		<ModifiableParams
+			minAimTime="250"
+			maxAimTime="350"
+			roundsPerSecondOverride="1.2"
+			minShots="1"
+			maxShots="1"
+			resetTime="350"
+			accuracyAdd="25"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="CIA_SawnoffOneBarrelXX">
+		<ModifiableParams
+			minAimTime="350"
+			maxAimTime="700"
+			roundsPerSecondOverride="1"
+			minShots="1"
+			maxShots="1"
+			resetTime="600"
+			accuracyAdd="-50"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="-10"
+		/>
+	</AttackType>
+
+
+	<!--
+		SMG ATTACK TYPES
+	-->
+
+
+	<AttackType name="CIA_UziAutoFire">
+		<ModifiableParams
+			minAimTime="350"
+			maxAimTime="400"
+			minShots="5"
+			maxShots="8"
+			resetTime="350"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="-5"
+			critChanceAdd="-15"
+		/>
+	</AttackType>
+
+	<AttackType name="CIA_UziBurst">
+		<ModifiableParams
+			minAimTime="400"
+			maxAimTime="550"
+			minShots="3"
+			maxShots="6"
+			resetTime="450"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="-8"
+			critChanceAdd="-10"
+		/>
+	</AttackType>
+
+	<AttackType name="CIA_UziBurstLong">
+		<ModifiableParams
+			minAimTime="550"
+			maxAimTime="800"
+			minShots="2"
+			maxShots="6"
+			resetTime="450"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="-7"
+			critChanceAdd="-10"
+		/>
+	</AttackType>
+
+	<AttackType name="CIA_UziAimedFire">
+		<ModifiableParams
+			minAimTime="550"
+			maxAimTime="800"
+			roundsPerSecondOverride="3"
+			minShots="1"
+			maxShots="2"
+			resetTime="500"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="1"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="CIA_UziAimedFireXX">
+		<ModifiableParams
+			minAimTime="800"
+			maxAimTime="800"
+			roundsPerSecondOverride="1"
+			minShots="1"
+			maxShots="1"
+			resetTime="700"
+			accuracyAdd="-10"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="-20"
+		/>
+	</AttackType>
+
+	<AttackType name="NWS_UziAutoFire">
+		<ModifiableParams
+			minAimTime="400"
+			maxAimTime="400"
+			minShots="10"
+			maxShots="16"
+			resetTime="400"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="-4"
+			critChanceAdd="-20"
+		/>
+	</AttackType>
+
+	<AttackType name="NWS_UziBurst">
+		<ModifiableParams
+			minAimTime="400"
+			maxAimTime="450"
+			minShots="6"
+			maxShots="12"
+			resetTime="450"
+			accuracyAdd="-5"
+			followupShotAccuracyAdd="-5"
+			critChanceAdd="-20"
+		/>
+	</AttackType>
+
+	<AttackType name="NWS_UziBurstLong">
+		<ModifiableParams
+			minAimTime="450"
+			maxAimTime="550"
+			minShots="4"
+			maxShots="8"
+			resetTime="450"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="-2"
+			critChanceAdd="-20"
+		/>
+	</AttackType>
+
+
+	<AttackType name="Rangers_SMGBurstFireLong">
+		<ModifiableParams
+			minAimTime="350"
+			maxAimTime="600"
+			minShots="3"
+			maxShots="3"
+			resetTime="200"
+			accuracyAdd="-150"
+			followupShotAccuracyAdd="-2"
+			critChanceAdd="-10"
+		/>
+	</AttackType>
+
+	<AttackType name="Rangers_SMGBurstFire">
+		<ModifiableParams
+			minAimTime="350"
+			maxAimTime="350"
+			minShots="3"
+			maxShots="3"
+			resetTime="200"
+			accuracyAdd="-100"
+			followupShotAccuracyAdd="-2"
+			critChanceAdd="-5"
+		/>
+	</AttackType>
+
+
+	<AttackType name="Rangers_SMGAutoFire">
+		<ModifiableParams
+			minAimTime="350"
+			maxAimTime="350"
+			minShots="3"
+			maxShots="9"
+			resetTime="200"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="-2"
+			critChanceAdd="-8"
+		/>
+	</AttackType>
+
+
+
+
+
+	<!--
+		RIFLE ATTACK TYPES
+	-->
+
+	<AttackType name="CIA_RifleAimedFireClose">
+		<ModifiableParams
+			minAimTime="530"
+			maxAimTime="550"
+			minShots="1"
+			maxShots="2"
+			roundsPerSecondOverride="4.2"			
+			resetTime="300"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="6"
+		/>
+	</AttackType>	
+	
+	<AttackType name="CIA_BurstFireClose">
+		<ModifiableParams
+			minAimTime="480"
+			maxAimTime="530"
+			minShots="2"
+			maxShots="4"
+			resetTime="500"
+			accuracyAdd="-40"
+			followupShotAccuracyAdd="-15"
+			critChanceAdd="-10"
+		/>
+	</AttackType>	
+	
+	<AttackType name="CIA_BurstFireHeavyClose">
+		<ModifiableParams
+			minAimTime="480"
+			maxAimTime="530"
+			minShots="2"
+			maxShots="3"
+			resetTime="520"
+			accuracyAdd="-40"
+			followupShotAccuracyAdd="-20"
+			critChanceAdd="-10"
+		/>
+	</AttackType>		
+	
+	<AttackType name="CIA_VSSBurstFire">
+		<ModifiableParams
+			minAimTime="480"
+			maxAimTime="480"
+			minShots="2"
+			maxShots="3"
+			resetTime="350"
+			accuracyAdd="-20"
+			followupShotAccuracyAdd="-10"
+			critChanceAdd="-5"
+		/>
+	</AttackType>	
+	
+	<AttackType name="CIA_FastFireClose">
+		<ModifiableParams
+			minAimTime="510"
+			maxAimTime="530"
+			roundsPerSecondOverride="6"
+			minShots="1"
+			maxShots="-1"
+			resetTime="370"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="5"
+			critChanceAdd="4"
+		/>
+	</AttackType>		
+	
+	<AttackType name="CIA_FastFireHeavyClose">
+		<ModifiableParams
+			minAimTime="510"
+			maxAimTime="530"
+			roundsPerSecondOverride="5"
+			minShots="1"
+			maxShots="-1"
+			resetTime="400"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="4"
+			critChanceAdd="4"
+		/>
+	</AttackType>			
+	
+	<AttackType name="CIA_AKRapidFire">
+		<ModifiableParams
+			minAimTime="550"
+			maxAimTime="550"
+			roundsPerSecondOverride="6"
+			minShots="1"
+			maxShots="-1"
+			resetTime="390"
+			accuracyAdd="-10"
+			followupShotAccuracyAdd="2"
+			critChanceAdd="2"
+		/>
+	</AttackType>		
+	
+	<AttackType name="CIA_RifleAimedFire">	
+		<ModifiableParams
+			minAimTime="550"
+			maxAimTime="750"
+			minShots="1"
+			maxShots="2"
+			roundsPerSecondOverride="4"			
+			resetTime="375"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="5"
+			critChanceAdd="5"
+		/>
+	</AttackType>	
+	
+	<AttackType name="CIA_FastFire">
+		<ModifiableParams
+			minAimTime="550"
+			maxAimTime="500"
+			roundsPerSecondOverride="6"
+			minShots="1"
+			maxShots="1"
+			resetTime="420"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="5"
+			critChanceAdd="+6"
+		/>
+	</AttackType>			
+	
+
+	
+	<AttackType name="CIA_FastFireMed">
+		<ModifiableParams
+			minAimTime="530"
+			maxAimTime="750"
+			roundsPerSecondOverride="5"
+			minShots="1"
+			maxShots="-1"
+			resetTime="420"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="2"
+			critChanceAdd="+2"
+		/>
+	</AttackType>			
+	
+	<AttackType name="CIA_FastFireHeavyMed">
+		<ModifiableParams
+			minAimTime="530"
+			maxAimTime="750"
+			roundsPerSecondOverride="4.5"
+			minShots="1"
+			maxShots="-1"
+			resetTime="450"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="1.5"
+			critChanceAdd="+2"
+		/>
+	</AttackType>				
+	
+	<AttackType name="CIA_AKRapidFireMed">
+		<ModifiableParams
+			minAimTime="550"
+			maxAimTime="750"
+			roundsPerSecondOverride="5"
+			minShots="1"
+			maxShots="-1"
+			resetTime="480"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="1"
+			critChanceAdd="+1"
+		/>
+	</AttackType>
+	
+	<AttackType name="CIA_RifleAimedFireLong">
+		<ModifiableParams
+			minAimTime="750"
+			maxAimTime="1100"
+			roundsPerSecondOverride="2.5"
+			minShots="1"
+			maxShots="1"
+			resetTime="1300"
+			accuracyAdd="-20"	
+			followupShotAccuracyAdd="25"
+			critChanceAdd="0"
+		/>
+	</AttackType>	
+	
+	<AttackType name="CIA_AKAimedFire">
+		<ModifiableParams
+			minAimTime="750"
+			maxAimTime="1200"
+			roundsPerSecondOverride="2.1"
+			minShots="1"
+			maxShots="1"
+			resetTime="1300"
+			accuracyAdd="-20"
+			followupShotAccuracyAdd="15"
+			critChanceAdd="0"
+		/>
+	</AttackType>	
+
+	<AttackType name="Rangers_RapidFire">
+		<ModifiableParams
+			minAimTime="350"
+			maxAimTime="350"
+			roundsPerSecondOverride="7"
+			minShots="2"
+			maxShots="-1"
+			resetTime="300"
+			accuracyAdd="-100"
+			followupShotAccuracyAdd="20"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+	
+	<AttackType name="NWS_SMGUntrainedAutoFire">
+		<ModifiableParams
+			minAimTime="400"
+			maxAimTime="600"
+			minShots="5"
+			maxShots="8"
+			resetTime="0"
+			accuracyAdd="-20"
+			followupShotAccuracyAdd="-21"
+			critChanceAdd="-10"
+		/>
+	</AttackType>	
+	
+	
+	<AttackType name="NWS_RifleUntrainedAutoFire">
+		<ModifiableParams
+			minAimTime="400"
+			maxAimTime="600"
+			minShots="4"
+			maxShots="6"
+			resetTime="0"
+			accuracyAdd="-20"
+			followupShotAccuracyAdd="-21"
+			critChanceAdd="-10"
+		/>
+	</AttackType>
+	
+	<AttackType name="NWS_Rifle556UntrainedAutoFire">
+		<ModifiableParams
+			minAimTime="400"
+			maxAimTime="600"
+			minShots="4"
+			maxShots="6"
+			resetTime="0"
+			accuracyAdd="-20"
+			followupShotAccuracyAdd="-18"
+			critChanceAdd="-10"
+		/>
+	</AttackType>	
+	
+	<AttackType name="NWS_Rifle762UntrainedAutoFire">
+		<ModifiableParams
+			minAimTime="400"
+			maxAimTime="600"
+			minShots="4"
+			maxShots="6"
+			resetTime="0"
+			accuracyAdd="-20"
+			followupShotAccuracyAdd="-24"
+			critChanceAdd="-10"
+		/>
+	</AttackType>	
+	
+	<AttackType name="NWS_RifleUntrainedAutoFireLong">
+		<ModifiableParams
+			minAimTime="600"
+			maxAimTime="700"
+			minShots="3"
+			maxShots="6"
+			resetTime="600"
+			accuracyAdd="-33"
+			followupShotAccuracyAdd="-10"
+			critChanceAdd="-18"
+		/>
+	</AttackType>
+	
+	<AttackType name="NWS_Rifle762UntrainedAutoFireLong">
+		<ModifiableParams
+			minAimTime="600"
+			maxAimTime="700"
+			minShots="3"
+			maxShots="6"
+			resetTime="650"
+			accuracyAdd="-33"
+			followupShotAccuracyAdd="-12"
+			critChanceAdd="-18"
+		/>
+	</AttackType>	
+	
+	<AttackType name="NWS_SMGControlledBurst">
+		<ModifiableParams
+			minAimTime="390"
+			maxAimTime="600"
+			minShots="5"
+			maxShots="7"
+			resetTime="400"
+			accuracyAdd="-20"
+			followupShotAccuracyAdd="-15"
+			critChanceAdd="-10"
+		/>
+	</AttackType>	
+	
+	
+	<AttackType name="NWS_RifleControlledBurst">
+		<ModifiableParams
+			minAimTime="390"
+			maxAimTime="600"
+			minShots="5"
+			maxShots="7"
+			resetTime="450"
+			accuracyAdd="-20"
+			followupShotAccuracyAdd="-15"
+			critChanceAdd="-10"
+		/>
+	</AttackType>
+	
+	<AttackType name="NWS_Rifle762ControlledBurst">
+		<ModifiableParams
+			minAimTime="390"
+			maxAimTime="600"
+			minShots="4"
+			maxShots="6"
+			resetTime="475"
+			accuracyAdd="-20"
+			followupShotAccuracyAdd="-17"
+			critChanceAdd="-10"
+		/>
+	</AttackType>	
+	
+	<AttackType name="NWS_Rifle556ControlledBurst">
+		<ModifiableParams
+			minAimTime="390"
+			maxAimTime="600"
+			minShots="5"
+			maxShots="7"
+			resetTime="425"
+			accuracyAdd="-20"
+			followupShotAccuracyAdd="-13"
+			critChanceAdd="-10"
+		/>
+	</AttackType>	
+	
+	<AttackType name="NWS_3rdRifleBurst">
+		<ModifiableParams
+			minAimTime="390"
+			maxAimTime="600"
+			minShots="3"
+			maxShots="3"
+			resetTime="400"
+			accuracyAdd="-25"
+			followupShotAccuracyAdd="-30"
+			critChanceAdd="-10"
+		/>
+	</AttackType>	
+	
+	<AttackType name="NWS_RifleFastFire">
+		<ModifiableParams
+			minAimTime="390"
+			maxAimTime="500"
+			roundsPerSecondOverride="6"
+			minShots="1"
+			maxShots="-1"
+			resetTime="450"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="-5"
+			critChanceAdd="+1"
+		/>
+	</AttackType>
+	
+	<AttackType name="NWS_Rifle762FastFire">
+		<ModifiableParams
+			minAimTime="390"
+			maxAimTime="500"
+			roundsPerSecondOverride="5"
+			minShots="1"
+			maxShots="-1"
+			resetTime="480"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="-6"
+			critChanceAdd="+1"
+		/>
+	</AttackType>	
+	
+	<AttackType name="NWS_Rifle556FastFire">
+		<ModifiableParams
+			minAimTime="390"
+			maxAimTime="500"
+			roundsPerSecondOverride="6"
+			minShots="1"
+			maxShots="-1"
+			resetTime="420"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="-4"
+			critChanceAdd="+1"
+		/>
+	</AttackType>	
+	
+	<AttackType name="NWS_VulcanFastFire">
+		<ModifiableParams
+			minAimTime="380"
+			maxAimTime="450"
+			roundsPerSecondOverride="6"
+			minShots="1"
+			maxShots="-1"
+			resetTime="400"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="-3"
+			critChanceAdd="+1"
+		/>
+	</AttackType>		
+
+	<AttackType name="NWS_SMGAimedFire">
+		<ModifiableParams
+			minAimTime="500"
+			maxAimTime="700"
+			roundsPerSecondOverride="1.6"
+			minShots="1"
+			maxShots="2"
+			resetTime="500"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="2"
+			critChanceAdd="+1"
+		/>
+	</AttackType>
+
+	
+	<AttackType name="NWS_RifleFastFireMedium">
+		<ModifiableParams
+			minAimTime="500"
+			maxAimTime="700"
+			roundsPerSecondOverride="5"
+			minShots="1"
+			maxShots="-1"
+			resetTime="450"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="5"
+			critChanceAdd="-10"
+		/>
+	</AttackType>
+	
+	<AttackType name="NWS_Rifle762FastFireMedium">
+		<ModifiableParams
+			minAimTime="500"
+			maxAimTime="700"
+			roundsPerSecondOverride="4.5"
+			minShots="1"
+			maxShots="-1"
+			resetTime="475"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="4.5"
+			critChanceAdd="-10"
+		/>
+	</AttackType>	
+	
+	<AttackType name="NWS_VulcanFastFireMedium">
+		<ModifiableParams
+			minAimTime="450"
+			maxAimTime="700"
+			roundsPerSecondOverride="5.5"
+			minShots="1"
+			maxShots="-1"
+			resetTime="430"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="5"
+			critChanceAdd="-9"
+		/>
+	</AttackType>	
+
+	<AttackType name="NWS_RapidFire">
+		<ModifiableParams
+			minAimTime="400"
+			maxAimTime="400"
+			roundsPerSecondOverride="6"
+			minShots="1"
+			maxShots="-1"
+			resetTime="300"
+			accuracyAdd=""
+			followupShotAccuracyAdd="10"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="Rangers_BurstFire">
+		<ModifiableParams
+			minAimTime="350"
+			maxAimTime="350"
+			minShots="3"
+			maxShots="3"
+			resetTime="300"
+			accuracyAdd="-100"
+			followupShotAccuracyAdd="-45"
+			critChanceAdd="-10"
+		/>
+	</AttackType>
+	
+	<AttackType name="Rangers_UnregBurstFire">
+		<ModifiableParams
+			minAimTime="350"
+			maxAimTime="350"
+			minShots="2"
+			maxShots="4"
+			resetTime="300"
+			accuracyAdd="-100"
+			followupShotAccuracyAdd="-45"
+			critChanceAdd="-10"
+		/>
+	</AttackType>
+
+	<AttackType name="Rangers_BurstFireMed">
+		<ModifiableParams
+			minAimTime="350"
+			maxAimTime="600"
+			minShots="3"
+			maxShots="3"
+			resetTime="450"
+			accuracyAdd="-100"
+			followupShotAccuracyAdd="-5"
+			critChanceAdd="-10"
+		/>
+	</AttackType>
+	
+		<AttackType name="Rangers_UnregBurstFireMed">
+		<ModifiableParams
+			minAimTime="350"
+			maxAimTime="600"
+			minShots="2"
+			maxShots="3"
+			resetTime="450"
+			accuracyAdd="-100"
+			followupShotAccuracyAdd="-5"
+			critChanceAdd="-10"
+		/>
+	</AttackType>
+	
+		<AttackType name="Rangers_RapidFireMed">
+		<ModifiableParams
+			minAimTime="350"
+			maxAimTime="600"
+			roundsPerSecondOverride="6"
+			minShots="2"
+			maxShots="4"
+			resetTime="150"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="20"
+			critChanceAdd="20"
+		/>
+	</AttackType>
+
+	<AttackType name="NWS_MilitiaAutoFire">
+		<ModifiableParams
+			minAimTime="450"
+			maxAimTime="750"
+			minShots="5"
+			maxShots="13"
+			resetTime="450"
+			accuracyAdd="-38"
+			followupShotAccuracyAdd="-6"
+			critChanceAdd="-10"
+		/>
+	</AttackType>
+
+	<AttackType name="NWS_MilitiaBurstFire">
+		<ModifiableParams
+			minAimTime="450"
+			maxAimTime="750"
+			minShots="3"
+			maxShots="3"
+			resetTime="450"
+			accuracyAdd="-38"
+			followupShotAccuracyAdd="-8"
+			critChanceAdd="-25"
+		/>
+	</AttackType>
+
+	<AttackType name="Rangers_CarbineAutoFire">
+		<ModifiableParams
+			minAimTime="350"
+			maxAimTime="350"
+			minShots="2"
+			maxShots="6"
+			resetTime="300"
+			accuracyAdd="-100"
+			followupShotAccuracyAdd="-5"
+			critChanceAdd="-5"
+		/>
+	</AttackType>
+
+	<AttackType name="Rangers_URGICarbineAutoFire">
+		<ModifiableParams
+			minAimTime="350"
+			maxAimTime="350"
+			minShots="2"
+			maxShots="6"
+			resetTime="250"
+			accuracyAdd="-100"
+			followupShotAccuracyAdd="-4"
+			critChanceAdd="-5"
+		/>
+	</AttackType>
+
+
+	<AttackType name="Rangers_CarbineAutoFireHeavy">
+		<ModifiableParams
+			minAimTime="350"
+			maxAimTime="350"
+			minShots="1"
+			maxShots="4"
+			resetTime="350"
+			accuracyAdd="-100"
+			followupShotAccuracyAdd="-10"
+			critChanceAdd="-5"
+		/>
+	</AttackType>
+	
+	<AttackType name="Rangers_UnregBurstHeavy">
+		<ModifiableParams
+			minAimTime="350"
+			maxAimTime="350"
+			minShots="2"
+			maxShots="3"
+			resetTime="450"
+			accuracyAdd="-100"
+			followupShotAccuracyAdd="-10"
+			critChanceAdd="-5"
+		/>
+	</AttackType>
+	
+		<AttackType name="Rangers_UnregBurstHeavyMed">
+		<ModifiableParams
+			minAimTime="350"
+			maxAimTime="600"
+			minShots="1"
+			maxShots="3"
+			resetTime="550"
+			accuracyAdd="-100"
+			followupShotAccuracyAdd="-10"
+			critChanceAdd="-10"
+		/>
+	</AttackType>
+	
+
+	<AttackType name="NWS_DMRAutoFireHeavy">
+		<ModifiableParams
+			minAimTime="350"
+			maxAimTime="350"
+			minShots="2"
+			maxShots="5"
+			resetTime="350"
+			accuracyAdd="-60"
+			followupShotAccuracyAdd="-25"
+			critChanceAdd="-15"
+		/>
+	</AttackType>
+
+
+	<AttackType name="Rangers_URGIRapidFireMed">
+		<ModifiableParams
+			minAimTime="350"
+			maxAimTime="600"
+			roundsPerSecondOverride="6.5"
+			minShots="2"
+			maxShots="4"
+			resetTime="120"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="22"
+			critChanceAdd="20"
+		/>
+	</AttackType>
+
+
+	<AttackType name="Rangers_RapidFireMedHeavy">
+		<ModifiableParams
+			minAimTime="350"
+			maxAimTime="600"
+			roundsPerSecondOverride="5"
+			minShots="1"
+			maxShots="4"
+			resetTime="150"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="20"
+			critChanceAdd="20"
+		/>
+	</AttackType>
+
+	<AttackType name="NWS_RapidFireMed">
+		<ModifiableParams
+			minAimTime="400"
+			maxAimTime="650"
+			roundsPerSecondOverride="5.4"
+			minShots="1"
+			maxShots="3"
+			resetTime="400"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="5"
+			critChanceAdd="10"
+		/>
+	</AttackType>
+
+
+
+	<AttackType name="Rangers_CarbineAimedFire">
+		<ModifiableParams
+			minAimTime="600"
+			maxAimTime="900"
+			roundsPerSecondOverride="2"
+			minShots="1"
+			maxShots="2"
+			resetTime="200"
+			accuracyAdd="-120"
+			followupShotAccuracyAdd="10"
+			critChanceAdd="10"
+		/>
+	</AttackType>
+
+	<AttackType name="Rangers_URGICarbineAimedFire">
+		<ModifiableParams
+			minAimTime="600"
+			maxAimTime="900"
+			roundsPerSecondOverride="2.3"
+			minShots="1"
+			maxShots="2"
+			resetTime="150"
+			accuracyAdd="-120"
+			followupShotAccuracyAdd="10"
+			critChanceAdd="10"
+		/>
+	</AttackType>
+
+	<AttackType name="CIA_AKAimedFireXX">
+		<ModifiableParams
+			minAimTime="900"
+			maxAimTime="900"
+			roundsPerSecondOverride="1"
+			minShots="1"
+			maxShots="1"
+			resetTime="200"
+			accuracyAdd="-60"
+			followupShotAccuracyAdd="8"
+			critChanceAdd="-25"
+		/>
+	</AttackType>
+
+	<AttackType name="NWS_CarbineAimedFire">
+		<ModifiableParams
+			minAimTime="650"
+			maxAimTime="900"
+			roundsPerSecondOverride="2.3"
+			minShots="1"
+			maxShots="2"
+			resetTime="500"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="4"
+			critChanceAdd="10"
+		/>
+	</AttackType>
+
+	<AttackType name="NWS_AKAimedFire">
+		<ModifiableParams
+			minAimTime="650"
+			maxAimTime="900"
+			roundsPerSecondOverride="1.9"
+			minShots="1"
+			maxShots="2"
+			resetTime="550"
+			accuracyAdd="5"
+			followupShotAccuracyAdd="4"
+			critChanceAdd="7"
+		/>
+	</AttackType>
+
+	<AttackType name="NWS_VulcanAimedFire">
+		<ModifiableParams
+			minAimTime="550"
+			maxAimTime="900"
+			roundsPerSecondOverride="2.0"
+			minShots="1"
+			maxShots="2"
+			resetTime="520"
+			accuracyAdd="4"
+			followupShotAccuracyAdd="4"
+			critChanceAdd="7"
+		/>
+	</AttackType>
+
+	<AttackType name="NWS_CarbineAimedFireLong">
+		<ModifiableParams
+			minAimTime="900"
+			maxAimTime="900"
+			roundsPerSecondOverride="1.6"
+			minShots="1"
+			maxShots="1"
+			resetTime="700"
+			accuracyAdd="3"
+			followupShotAccuracyAdd="3"
+			critChanceAdd="4"
+		/>
+	</AttackType>
+	
+	<AttackType name="NWS_RifleAimedFireLong">
+		<ModifiableParams
+			minAimTime="900"
+			maxAimTime="900"
+			roundsPerSecondOverride="1.5"
+			minShots="1"
+			maxShots="1"
+			resetTime="700"
+			accuracyAdd="3"
+			followupShotAccuracyAdd="3"
+			critChanceAdd="4"
+		/>
+	</AttackType>
+
+	<AttackType name="NWS_MilitiaBurstLong">
+		<ModifiableParams
+			minAimTime="900"
+			maxAimTime="900"
+			minShots="2"
+			maxShots="5"
+			resetTime="700"
+			accuracyAdd="-30"
+			followupShotAccuracyAdd="-10"
+			critChanceAdd="-10"
+		/>
+	</AttackType>
+
+	<AttackType name="NWS_MilitiaM16BurstLong">
+		<ModifiableParams
+			minAimTime="900"
+			maxAimTime="900"
+			minShots="2"
+			maxShots="3"
+			resetTime="700"
+			accuracyAdd="-30"
+			followupShotAccuracyAdd="-8"
+			critChanceAdd="-15"
+		/>
+	</AttackType>
+
+
+
+	<AttackType name="Rangers_CarbineAimedFireXX">
+		<ModifiableParams
+			minAimTime="900"
+			maxAimTime="900"
+			roundsPerSecondOverride="1"
+			minShots="1"
+			maxShots="1"
+			resetTime="200"
+			accuracyAdd="-150"
+			followupShotAccuracyAdd="20"
+			critChanceAdd="-20"
+		/>
+	</AttackType>
+
+	<AttackType name="NWS_CarbineAimedFireXX">
+		<ModifiableParams
+			minAimTime="900"
+			maxAimTime="1500"
+			roundsPerSecondOverride="1"
+			minShots="1"
+			maxShots="1"
+			resetTime="300"
+			accuracyAdd="-10"
+			followupShotAccuracyAdd="4"
+			critChanceAdd="-20"
+		/>
+	</AttackType>
+
+
+
+	<AttackType name="Rangers_LMGStrafeShort">
+		<ModifiableParams
+			minAimTime="450"
+			maxAimTime="450"
+			minShots="4"
+			maxShots="12"
+			resetTime="300"
+			accuracyAdd="-40"
+			followupShotAccuracyAdd="-2"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="Rangers_LMGStrafe">
+		<ModifiableParams
+			minAimTime="450"
+			maxAimTime="700"
+			minShots="3"
+			maxShots="10"
+			resetTime="300"
+			accuracyAdd="-30"
+			followupShotAccuracyAdd="-2.5"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="Rangers_LMGStrafeMed">
+		<ModifiableParams
+			minAimTime="700"
+			maxAimTime="1000"
+			minShots="3"
+			maxShots="7"
+			resetTime="500"
+			accuracyAdd="-10"
+			followupShotAccuracyAdd="1"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="Rangers_LMGStrafeLong">
+		<ModifiableParams
+			minAimTime="1000"
+			maxAimTime="1000"
+			minShots="2"
+			maxShots="4"
+			resetTime="500"
+			accuracyAdd="-15"
+			followupShotAccuracyAdd="2"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="Rangers_LMGStrafeLongXX">
+		<ModifiableParams
+			minAimTime="1000"
+			maxAimTime="1200"
+			minShots="1"
+			maxShots="3"
+			resetTime="500"
+			accuracyAdd="-30"
+			followupShotAccuracyAdd="-2"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+
+	<AttackType name="Rangers_LMGStrafeShortMounted">
+		<ModifiableParams
+			minAimTime="400"
+			maxAimTime="400"
+			minShots="7"
+			maxShots="25"
+			resetTime="100"
+			accuracyAdd="-30"
+			followupShotAccuracyAdd="-0.5"
+			critChanceAdd="1"
+		/>
+	</AttackType>
+
+	<AttackType name="Rangers_LMGStrafeMounted">
+		<ModifiableParams
+			minAimTime="400"
+			maxAimTime="450"
+			minShots="5"
+			maxShots="25"
+			resetTime="120"
+			accuracyAdd="-15"
+			followupShotAccuracyAdd="-0.5"
+			critChanceAdd="3"
+		/>
+	</AttackType>
+
+
+	<AttackType name="Rangers_LMGStrafeMedMounted">
+		<ModifiableParams
+			minAimTime="450"
+			maxAimTime="600"
+			minShots="4"
+			maxShots="14"
+			resetTime="120"
+			accuracyAdd="-7"
+			followupShotAccuracyAdd="1"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="Rangers_LMGStrafeLongMounted">
+		<ModifiableParams
+			minAimTime="600"
+			maxAimTime="1000"
+			minShots="4"
+			maxShots="8"
+			resetTime="150"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="2"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="Rangers_LMGStrafeLongXXMounted">
+		<ModifiableParams
+			minAimTime="1000"
+			maxAimTime="1200"
+			minShots="1"
+			maxShots="3"
+			resetTime="250"
+			accuracyAdd="-20"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="Rangers_GPMGStrafeShort">
+		<ModifiableParams
+			minAimTime="550"
+			maxAimTime="550"
+			minShots="3"
+			maxShots="5"
+			resetTime="300"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="-3"
+			critChanceAdd="-5"
+		/>
+	</AttackType>
+
+	<AttackType name="Rangers_GPMGStrafe">
+		<ModifiableParams
+			minAimTime="550"
+			maxAimTime="800"
+			minShots="2"
+			maxShots="4"
+			resetTime="300"
+			accuracyAdd="-20"
+			followupShotAccuracyAdd="-3"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="Rangers_GPMGStrafeMed">
+		<ModifiableParams
+			minAimTime="800"
+			maxAimTime="1200"
+			minShots="1"
+			maxShots="4"
+			resetTime="500"
+			followupShotAccuracyAdd="0"
+			accuracyAdd="-20"
+			critChanceAdd="5"
+		/>
+	</AttackType>
+
+	<AttackType name="Rangers_GPMGStrafeLong">
+		<ModifiableParams
+			minAimTime="1200"
+			maxAimTime="1200"
+			minShots="1"
+			maxShots="3"
+			resetTime="500"
+			accuracyAdd="-20"
+			followupShotAccuracyAdd="1"
+			critChanceAdd="5"
+		/>
+	</AttackType>
+
+	<AttackType name="Rangers_GPMGStrafeLongXX">
+		<ModifiableParams
+			minAimTime="1200"
+			maxAimTime="1200"
+			minShots="1"
+			maxShots="2"
+			resetTime="500"
+			accuracyAdd="-30"
+			followupShotAccuracyAdd="-1"
+			critChanceAdd="-5"
+		/>
+	</AttackType>
+
+	<AttackType name="Rangers_DMRRapidFire">
+		<ModifiableParams
+			minAimTime="500"
+			maxAimTime="500"
+			roundsPerSecondOverride="5"
+			minShots="1"
+			maxShots="-1"
+			resetTime="400"
+
+			accuracyAdd="-20"
+			followupShotAccuracyAdd="20"
+
+			critChanceAdd="-30"
+		/>
+	</AttackType>
+
+	<AttackType name="Rangers_DMRHeavyRapidFire">
+		<ModifiableParams
+			minAimTime="500"
+			maxAimTime="500"
+			minShots="1"
+			maxShots="3"
+			resetTime="400"
+
+			accuracyAdd="-20"
+			followupShotAccuracyAdd="10"
+
+			critChanceAdd="-30"
+		/>
+	</AttackType>
+
+
+	<AttackType name="Rangers_DMRRapidFireMed">
+		<ModifiableParams
+			minAimTime="500"
+			maxAimTime="650"
+			roundsPerSecondOverride="5"
+			minShots="1"
+			maxShots="4"
+			resetTime="400"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="10"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="Rangers_DMRHeavyRapidFireMed">
+		<ModifiableParams
+			minAimTime="500"
+			maxAimTime="650"
+			minShots="1"
+			maxShots="2"
+			resetTime="400"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="5"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="NWS_DMRAimedFireShort">
+		<ModifiableParams
+			minAimTime="550"
+			maxAimTime="650"
+			roundsPerSecondOverride="1"
+			minShots="1"
+			maxShots="1"
+			resetTime="450"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="10"
+			critChanceAdd="40"
+		/>
+	</AttackType>
+
+
+
+	<AttackType name="Rangers_DMRAimedFire">
+		<ModifiableParams
+			minAimTime="650"
+			maxAimTime="750"
+			roundsPerSecondOverride="1"
+			minShots="1"
+			maxShots="1"
+			resetTime="200"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="20"
+			critChanceAdd="30"
+		/>
+	</AttackType>
+
+	<AttackType name="Rangers_DMRAimedFireXX">
+		<ModifiableParams
+			minAimTime="750"
+			maxAimTime="750"
+			roundsPerSecondOverride="1"
+			minShots="1"
+			maxShots="1"
+			resetTime="200"
+			accuracyAdd="-50"
+			followupShotAccuracyAdd="10"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="Rangers_DMRRapidFireMedMounted">
+		<ModifiableParams
+			minAimTime="500"
+			maxAimTime="400"
+			roundsPerSecondOverride="5"
+			minShots="1"
+			maxShots="4"
+			resetTime="100"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="10"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="Rangers_DMRAimedFireMounted">
+		<ModifiableParams
+			minAimTime="400"
+			maxAimTime="550"
+			roundsPerSecondOverride="1"
+			minShots="1"
+			maxShots="1"
+			resetTime="0"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="20"
+			critChanceAdd="35"
+		/>
+	</AttackType>
+
+	<AttackType name="Rangers_DMRAimedFireXXMounted">
+		<ModifiableParams
+			minAimTime="550"
+			maxAimTime="650"
+			roundsPerSecondOverride="1"
+			minShots="1"
+			maxShots="1"
+			resetTime="100"
+			accuracyAdd="-40"
+			followupShotAccuracyAdd="10"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="SWAT_RapidFire">
+		<ModifiableParams
+			minAimTime="450"
+			maxAimTime="450"
+
+			minShots="2"
+			maxShots="-1"
+			resetTime="300"
+
+			accuracyAdd="-65"
+			followupShotAccuracyAdd="20"
+
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="SWAT_RapidFireMed">
+		<ModifiableParams
+			minAimTime="450"
+			maxAimTime="700"
+			roundsPerSecondOverride="9"
+			minShots="2"
+			maxShots="5"
+			resetTime="300"
+			accuracyAdd="-60"
+			followupShotAccuracyAdd="20"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="SWAT_CarbineAimedFire">
+		<ModifiableParams
+			minAimTime="700"
+			maxAimTime="900"
+			roundsPerSecondOverride="2.5"
+			minShots="1"
+			maxShots="2"
+			resetTime="200"
+			accuracyAdd="-10"
+			followupShotAccuracyAdd="20"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="SWAT_CarbineAimedFireXX">
+		<ModifiableParams
+			minAimTime="900"
+			maxAimTime="900"
+			roundsPerSecondOverride="2.5"
+			minShots="1"
+			maxShots="1"
+			resetTime="200"
+			accuracyAdd="-20"
+			followupShotAccuracyAdd="20"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="RPKStrafe">
+		<ModifiableParams
+			minAimTime="600"
+			maxAimTime="700"
+			minShots="3"
+			maxShots="10"
+			resetTime="1200"
+			accuracyAdd="-10"
+			followupShotAccuracyAdd="-2.5"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="RPKStrafeMed">
+		<ModifiableParams
+			minAimTime="700"
+			maxAimTime="700"
+			minShots="3"
+			maxShots="7"
+			resetTime="1200"
+			followupShotAccuracyAdd="-2"
+			accuracyAdd="-15"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="RPKStrafeLong">
+		<ModifiableParams
+			minAimTime="700"
+			maxAimTime="1000"
+			minShots="1"
+			maxShots="3"
+			resetTime="1200"
+			accuracyAdd="-20"
+			followupShotAccuracyAdd="-1"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="RPKStrafeMounted">
+		<ModifiableParams
+			minAimTime="400"
+			maxAimTime="450"
+			minShots="5"
+			maxShots="25"
+			resetTime="400"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="1"
+		/>
+	</AttackType>
+
+	<AttackType name="RPKStrafeMedMounted">
+		<ModifiableParams
+			minAimTime="450"
+			maxAimTime="600"
+			minShots="8"
+			maxShots="25"
+			resetTime="400"
+			followupShotAccuracyAdd="0"
+			accuracyAdd="0"
+			critChanceAdd="2"
+		/>
+	</AttackType>
+
+	<AttackType name="RPKStrafeLongMounted">
+		<ModifiableParams
+			minAimTime="600"
+			maxAimTime="600"
+			minShots="6"
+			maxShots="20"
+			resetTime="500"
+			accuracyAdd="-20"
+			followupShotAccuracyAdd="-1"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="UziWildFireClose">
+		<ModifiableParams
+			minAimTime="350"
+			maxAimTime="350"
+			minShots="5"
+			maxShots="12"
+			resetTime="400"
+			accuracyAdd="35"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="UziWildFire">
+		<ModifiableParams
+			minAimTime="350"
+			maxAimTime="350"
+			minShots="5"
+			maxShots="12"
+			resetTime="400"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="-1"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="AKWildFire">
+		<ModifiableParams
+			minAimTime="400"
+			maxAimTime="600"
+			minShots="3"
+			maxShots="10"
+			resetTime="500"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="2"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="AKWildFirePro">
+		<ModifiableParams
+			minAimTime="400"
+			maxAimTime="450"
+			minShots="3"
+			maxShots="7"
+			resetTime="500"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="3"
+			critChanceAdd="1"
+		/>
+	</AttackType>
+
+	<AttackType name="AKWildFireShort">
+		<ModifiableParams
+			minAimTime="400"
+			maxAimTime="400"
+			minShots="7"
+			maxShots="10"
+			resetTime="200"
+			accuracyAdd="-16"
+			followupShotAccuracyAdd="1"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="AKWildBurst">
+		<ModifiableParams
+			minAimTime="600"
+			maxAimTime="800"
+			minShots="4"
+			maxShots="8"
+			resetTime="500"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="-4"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="AKWildBurstPro">
+		<ModifiableParams
+			minAimTime="450"
+			maxAimTime="800"
+			minShots="3"
+			maxShots="7"
+			resetTime="500"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="1"
+			critChanceAdd="1"
+		/>
+	</AttackType>
+
+	<AttackType name="AKWildBurstLong">
+		<ModifiableParams
+			minAimTime="800"
+			maxAimTime="1000"
+			minShots="3"
+			maxShots="6"
+			resetTime="800"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="-3"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="AKWildBurstLongXX">
+		<ModifiableParams
+			minAimTime="1000"
+			maxAimTime="1000"
+			minShots="3"
+			maxShots="6"
+			resetTime="800"
+			accuracyAdd="-30"
+			followupShotAccuracyAdd="-2"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="PM63WildBurst">
+		<ModifiableParams
+			minAimTime="600"
+			maxAimTime="700"
+			minShots="4"
+			maxShots="8"
+			resetTime="500"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="-4"
+			critChanceAdd="-5"
+		/>
+	</AttackType>
+
+	<AttackType name="PM63WildBurstPro">
+		<ModifiableParams
+			minAimTime="450"
+			maxAimTime="700"
+			minShots="3"
+			maxShots="7"
+			resetTime="500"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="-5"
+		/>
+	</AttackType>
+
+
+	<AttackType name="PM63WildBurstLong">
+		<ModifiableParams
+			minAimTime="700"
+			maxAimTime="900"
+			minShots="3"
+			maxShots="6"
+			resetTime="800"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="-3"
+			critChanceAdd="-16"
+		/>
+	</AttackType>
+
+	<AttackType name="PM63WildBurstLongXX">
+		<ModifiableParams
+			minAimTime="1000"
+			maxAimTime="1000"
+			minShots="3"
+			maxShots="6"
+			resetTime="800"
+			accuracyAdd="-30"
+			followupShotAccuracyAdd="-2"
+			critChanceAdd="-30"
+		/>
+	</AttackType>
+
+	<AttackType name="Enemy_GruntRifleLong">
+
+		<ModifiableParams
+			minAimTime="800"
+			maxAimTime="1200"
+			minShots="1"
+			maxShots="2"
+			resetTime="900"
+			accuracyAdd="0"
+			followupShotAccuracyAdd=""
+			critChanceAdd="-50"
+		/>
+	</AttackType>
+
+
+	<AttackType name="FAL_RapidFireMed">
+		<ModifiableParams
+			minAimTime="350"
+			maxAimTime="600"
+			roundsPerSecondOverride="5.0"
+			minShots="1"
+			maxShots="4"
+			resetTime="400"
+			accuracyAdd="-60"
+			followupShotAccuracyAdd="4"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="FAL_AimedFire">
+		<ModifiableParams
+			minAimTime="600"
+			maxAimTime="1100"
+			roundsPerSecondOverride="1.9"
+			minShots="1"
+			maxShots="2"
+			resetTime="500"
+			accuracyAdd="-70"
+			followupShotAccuracyAdd="20"
+			critChanceAdd="10"
+		/>
+	</AttackType>
+
+	<AttackType name="FAL_AimedFireXX">
+		<ModifiableParams
+			minAimTime="1100"
+			maxAimTime="1500"
+			roundsPerSecondOverride="1"
+			minShots="1"
+			maxShots="1"
+			resetTime="600"
+			accuracyAdd="-50"
+			followupShotAccuracyAdd="10"
+			critChanceAdd="-5"
+		/>
+	</AttackType>
+
+	<AttackType name="SVD_TooClose">
+		<ModifiableParams
+			minAimTime="450"
+			maxAimTime="450"
+			minShots="1"
+			maxShots="2"
+			resetTime="500"
+			accuracyAdd="-60"
+			followupShotAccuracyAdd="-10"
+			critChanceAdd="-50"
+		/>
+	</AttackType>
+
+	<AttackType name="SVD_QuickFire">
+		<ModifiableParams
+			minAimTime="450"
+			maxAimTime="600"
+			minShots="1"
+			maxShots="3"
+			resetTime="500"
+			accuracyAdd="-50"
+			followupShotAccuracyAdd="5"
+			critChanceAdd="-10"
+		/>
+	</AttackType>
+
+	<AttackType name="SVD_AimedFire">
+		<ModifiableParams
+			minAimTime="600"
+			maxAimTime="1000"
+			minShots="1"
+			maxShots="1"
+			resetTime="1000"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="10"
+			critChanceAdd="10"
+		/>
+	</AttackType>
+
+	<AttackType name="SVD_AimedFireXX">
+		<ModifiableParams
+			minAimTime="1000"
+			maxAimTime="1500"
+			roundsPerSecondOverride="1"
+			minShots="1"
+			maxShots="1"
+			resetTime="400"
+			accuracyAdd="-50"
+			followupShotAccuracyAdd="10"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+
+	<AttackType name="EnemyExpert_Burst">
+		<ModifiableParams
+			minAimTime="350"
+			maxAimTime="350"
+			minShots="3"
+			maxShots="-1"
+			resetTime="300"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="-2"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="EnemyExpert_BurstMed">
+		<ModifiableParams
+			minAimTime="350"
+			maxAimTime="500"
+			minShots="3"
+			maxShots="7"
+			resetTime="250"
+			accuracyAdd="5"
+			followupShotAccuracyAdd="-3"
+			critChanceAdd="3"
+		/>
+	</AttackType>
+	
+	<AttackType name="EnemyExpert_SuppBurst">
+		<ModifiableParams
+			minAimTime="500"
+			maxAimTime="500"
+			minShots="2"
+			maxShots="6"
+			resetTime="350"
+			accuracyAdd="-25"
+			followupShotAccuracyAdd="-5"
+			critChanceAdd="-15"
+			suppressionScale="+1.3"
+		/>
+	</AttackType>
+	
+	<AttackType name="EnemyExpert_SuppBurstLong">
+		<ModifiableParams
+			minAimTime="500"
+			maxAimTime="900"
+			minShots="2"
+			maxShots="4"
+			resetTime="550"
+			accuracyAdd="-25"
+			followupShotAccuracyAdd="-5"
+			critChanceAdd="-20"
+			suppressionScale="+1.3"
+		/>
+	</AttackType>
+
+	<AttackType name="EnemyExpert_MedFire">
+		<ModifiableParams
+			minAimTime="350"
+			maxAimTime="500"
+			roundsPerSecondOverride="5"
+			minShots="2"
+			maxShots="4"
+			resetTime="150"
+			accuracyAdd="10"
+			followupShotAccuracyAdd="2"
+			critChanceAdd="5"
+		/>
+	</AttackType>
+
+	<AttackType name="EnemyExpert_AimedFire">
+		<ModifiableParams
+			minAimTime="500"
+			maxAimTime="900"
+			roundsPerSecondOverride="3.5"
+			minShots="1"
+			maxShots="2"
+			resetTime="700"
+			accuracyAdd="20"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="1"
+		/>
+	</AttackType>
+
+	<AttackType name="EnemyExpert_AimedFireXX">
+		<ModifiableParams
+			minAimTime="900"
+			maxAimTime="1300"
+			roundsPerSecondOverride="1"
+			minShots="1"
+			maxShots="2"
+			resetTime="900"
+			accuracyAdd="-30"
+			followupShotAccuracyAdd="-8"
+			critChanceAdd="-10"
+		/>
+	</AttackType>
+
+
+	<AttackType name="SniperShot">
+		<ModifiableParams
+			minAimTime="500"
+			maxAimTime="2000"
+		/>
+	</AttackType>
+
+	<AttackType name="RPG_Aimed">
+		<ModifiableParams
+			minAimTime="1600"
+			maxAimTime="2400"
+			minShots="1"
+			maxShots="1"
+			resetTime="1000"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="RPG_QuickAimClose">
+		<ModifiableParams
+			minAimTime="1000"
+			maxAimTime="1200"
+			minShots="1"
+			maxShots="1"
+			resetTime="1000"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="RPG_QuickAim">
+		<ModifiableParams
+			minAimTime="1200"
+			maxAimTime="2000"
+			minShots="1"
+			maxShots="1"
+			resetTime="1000"
+			accuracyAdd="-5"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+	
+	<AttackType name="M203_QuickAim">
+		<ModifiableParams
+			minAimTime="1200"
+			maxAimTime="1300"
+			minShots="1"
+			maxShots="1"
+			resetTime="1000"
+			accuracyAdd="-10"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+	
+
+	<AttackType name="CIA_RPG_QuickAimClose">
+		<ModifiableParams
+			minAimTime="1000"
+			maxAimTime="1400"
+			minShots="1"
+			maxShots="1"
+			resetTime="1000"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="CIA_RPG_QuickAim">
+		<ModifiableParams
+			minAimTime="1400"
+			maxAimTime="2000"
+			minShots="1"
+			maxShots="1"
+			resetTime="1000"
+			accuracyAdd="-5"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+	<!--
+		PISTOL ATTACK TYPES
+	-->
+
+	<AttackType name="Rangers_EmergencyFire45">
+		<ModifiableParams
+			minAimTime="200"
+			maxAimTime="200"
+			minShots="1"
+			maxShots="-1"
+			resetTime="200"
+			accuracyAdd="-20"
+			followupShotAccuracyAdd="2"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="Rangers_EmergencyFire9mil">
+		<ModifiableParams
+			minAimTime="200"
+			maxAimTime="200"
+			roundsPerSecondOverride="4"
+			minShots="1"
+			maxShots="-1"
+			resetTime="150"
+			accuracyAdd="-20"
+			followupShotAccuracyAdd="3"
+			critChanceAdd="-10"
+		/>
+	</AttackType>
+	
+	<AttackType name="CIA_EmergencyFire9mil">
+		<ModifiableParams
+			minAimTime="200"
+			maxAimTime="200"
+			roundsPerSecondOverride="4.6"
+			minShots="1"
+			maxShots="-1"
+			resetTime="150"
+			accuracyAdd="-20"
+			followupShotAccuracyAdd="3"
+			critChanceAdd="-9"
+		/>
+	</AttackType>	
+	
+	<AttackType name="CIA_EmergencyFire45">
+		<ModifiableParams
+			minAimTime="200"
+			maxAimTime="200"
+			minShots="1"
+			maxShots="-1"
+			resetTime="200"
+			accuracyAdd="-20"
+			followupShotAccuracyAdd="-1"
+			critChanceAdd="-5"
+		/>
+	</AttackType>	
+
+	<AttackType name="Rangers_DoubleTap45">
+		<ModifiableParams
+			minAimTime="200"
+			maxAimTime="200"
+			minShots="2"
+			maxShots="2"
+			resetTime="300"
+			accuracyAdd="20"
+			followupShotAccuracyAdd="-5"
+			critChanceAdd="27"
+		/>
+	</AttackType>
+
+	<AttackType name="NWS_PistolAimedClose9mil">
+		<ModifiableParams
+			minAimTime="300"
+			maxAimTime="500"
+			roundsPerSecondOverride="2.2"
+			minShots="1"
+			maxShots="2"
+			resetTime="450"
+			accuracyAdd="20"
+			followupShotAccuracyAdd="5"
+			critChanceAdd="10"
+		/>
+	</AttackType>
+
+	<AttackType name="NWS_PistolAimedFire9mil">
+		<ModifiableParams
+			minAimTime="500"
+			maxAimTime="800"
+			roundsPerSecondOverride="2.1"
+			minShots="1"
+			maxShots="1"
+			resetTime="300"
+			accuracyAdd="5"
+			followupShotAccuracyAdd="4"
+			critChanceAdd="7"
+		/>
+	</AttackType>
+
+	<AttackType name="NWS_PistolAimedClose45">
+		<ModifiableParams
+			minAimTime="300"
+			maxAimTime="500"
+			roundsPerSecondOverride="1.9"
+			minShots="1"
+			maxShots="1"
+			resetTime="550"
+			accuracyAdd="20"
+			followupShotAccuracyAdd="4"
+			critChanceAdd="10"
+		/>
+	</AttackType>
+
+	<AttackType name="NWS_PistolAimedFire45">
+		<ModifiableParams
+			minAimTime="500"
+			maxAimTime="800"
+			roundsPerSecondOverride="1.7"
+			minShots="1"
+			maxShots="1"
+			resetTime="550"
+			accuracyAdd="5"
+			followupShotAccuracyAdd="4"
+			critChanceAdd="7"
+		/>
+	</AttackType>
+
+	<AttackType name="CIA_CloseRangeDispatch">
+		<ModifiableParams
+			minAimTime="500"
+			maxAimTime="500"
+			minShots="1"
+			maxShots="2"
+			resetTime="500"
+			accuracyAdd="100"
+			followupShotAccuracyAdd="5"
+			critChanceAdd="35"
+		/>
+	</AttackType>
+
+	<AttackType name="CIA_HKDoubleTap45">
+		<ModifiableParams
+			minAimTime="400"
+			maxAimTime="500"
+			roundsPerSecondOverride="4"			
+			minShots="2"
+			maxShots="2"
+			resetTime="600"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="-6"
+			critChanceAdd="13"
+		/>
+	</AttackType>
+	
+	<AttackType name="CIA_DoubleTap45">
+		<ModifiableParams
+			minAimTime="380"
+			maxAimTime="480"
+			roundsPerSecondOverride="4.2"			
+			minShots="2"
+			maxShots="2"
+			resetTime="550"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="-5"
+			critChanceAdd="13"
+		/>
+	</AttackType>	
+
+	<AttackType name="Rangers_DoubleTap9mil">
+		<ModifiableParams
+			minAimTime="300"
+			maxAimTime="400"
+			roundsPerSecondOverride="5.5"	
+			minShots="2"
+			maxShots="2"
+			resetTime="550"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="-3"
+			critChanceAdd="17"
+		/>
+	</AttackType>
+	
+	<AttackType name="CIA_DoubleTap9mil">
+		<ModifiableParams
+			minAimTime="400"
+			maxAimTime="500"
+			roundsPerSecondOverride="5.5"	
+			minShots="2"
+			maxShots="2"
+			resetTime="550"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="-3"
+			critChanceAdd="10"
+		/>
+	</AttackType>	
+
+	<AttackType name="Rangers_ControlledPair45">
+		<ModifiableParams
+			minAimTime="200"
+			maxAimTime="400"
+			roundsPerSecondOverride="3"
+			minShots="2"
+			maxShots="2"
+			resetTime="300"
+			accuracyAdd="10"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="17"
+		/>
+	</AttackType>
+
+	<AttackType name="CIA_HKControlledPair45">
+		<ModifiableParams
+			minAimTime="500"
+			maxAimTime="530"
+			roundsPerSecondOverride="3"
+			minShots="2"
+			maxShots="2"
+			resetTime="550"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="-5"
+			critChanceAdd="10"
+		/>
+	</AttackType>
+	
+	<AttackType name="CIA_ControlledPair45">
+		<ModifiableParams
+			minAimTime="480"
+			maxAimTime="520"
+			roundsPerSecondOverride="3.1"
+			minShots="2"
+			maxShots="2"
+			resetTime="500"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="10"
+		/>
+	</AttackType>	
+
+	<AttackType name="Rangers_ControlledPair9mil">
+		<ModifiableParams
+			minAimTime="200"
+			maxAimTime="400"
+			roundsPerSecondOverride="3.5"
+			minShots="2"
+			maxShots="2"
+			resetTime="500"
+			accuracyAdd="10"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="7"
+		/>
+	</AttackType>
+	
+	<AttackType name="CIA_ControlledPair9mil">
+		<ModifiableParams
+			minAimTime="500"
+			maxAimTime="500"
+			roundsPerSecondOverride="3.5"
+			minShots="2"
+			maxShots="2"
+			resetTime="500"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="7"
+		/>
+	</AttackType>	
+
+
+	<AttackType name="Rangers_PistolAimedFireShort9mil">
+		<ModifiableParams
+			minAimTime="400"
+			maxAimTime="400"
+			roundsPerSecondOverride="3"
+			minShots="1"
+			maxShots="2"
+			resetTime="400"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+	
+	<AttackType name="CIA_PistolAimedFireShort9mil">
+		<ModifiableParams
+			minAimTime="400"
+			maxAimTime="500"
+			roundsPerSecondOverride="3.5"
+			minShots="1"
+			maxShots="1"
+			resetTime="280"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="20"
+			critChanceAdd="7"
+		/>
+	</AttackType>	
+	
+	<AttackType name="CIA_PistolAimedFireShort45">
+		<ModifiableParams
+			minAimTime="400"
+			maxAimTime="500"
+			roundsPerSecondOverride="3"
+			minShots="1"
+			maxShots="1"
+			resetTime="400"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="23"
+			critChanceAdd="10"
+		/>
+	</AttackType>
+
+	<AttackType name="Rangers_PistolAimedFire9mil">
+		<ModifiableParams
+			minAimTime="400"
+			maxAimTime="800"
+			roundsPerSecondOverride="2.5"
+			minShots="1"
+			maxShots="2"
+			resetTime="400"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="5"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+	
+	<AttackType name="CIA_PistolAimedFire9mil">
+		<ModifiableParams
+			minAimTime="500"
+			maxAimTime="800"
+			roundsPerSecondOverride="2.5"
+			minShots="1"
+			maxShots="1"
+			resetTime="400"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="10"
+			critChanceAdd="0"
+		/>
+	</AttackType>	
+	
+	<AttackType name="CIA_HKPistolAimedFire45">
+		<ModifiableParams
+			minAimTime="500"
+			maxAimTime="800"
+			roundsPerSecondOverride="2.3"
+			minShots="1"
+			maxShots="1"
+			resetTime="440"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="15"
+			critChanceAdd="5"
+		/>
+	</AttackType>
+
+	<AttackType name="CIA_HKPistolAimedFire45Sup">
+		<ModifiableParams
+			minAimTime="500"
+			maxAimTime="800"
+			roundsPerSecondOverride="2.5"
+			minShots="1"
+			maxShots="1"
+			resetTime="340"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="17"
+			critChanceAdd="6"
+		/>
+	</AttackType>	
+	
+
+	<AttackType name="Rangers_PistolAimedFireM9Sup">
+		<ModifiableParams
+			minAimTime="400"
+			maxAimTime="1000"
+			roundsPerSecondOverride="2.3"
+			minShots="1"
+			maxShots="1"
+			resetTime="250"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="5"
+			critChanceAdd="-5"
+		/>
+	</AttackType>
+
+	<AttackType name="Rangers_PistolAimedFireM9Sup ImpAcc">
+		<ModifiableParams
+			minAimTime="400"
+			maxAimTime="850"
+			roundsPerSecondOverride="2.5"
+			minShots="1"
+			maxShots="1"
+			resetTime="250"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="10"
+			critChanceAdd="5"
+		/>
+	</AttackType>
+
+
+
+	<AttackType name="Rangers_PistolAimedFireShort45">
+		<ModifiableParams
+			minAimTime="400"
+			maxAimTime="400"
+			roundsPerSecondOverride="3"
+			minShots="1"
+			maxShots="2"
+			resetTime="400"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="30"
+			critChanceAdd="15"
+		/>
+	</AttackType>
+
+	<AttackType name="Rangers_PistolAimedFire45">
+		<ModifiableParams
+			minAimTime="400"
+			maxAimTime="800"
+			roundsPerSecondOverride="2.5"
+			minShots="1"
+			maxShots="2"
+			resetTime="400"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="10"
+			critChanceAdd="15"
+		/>
+	</AttackType>
+
+
+	<AttackType name="Rangers_PistolAimedFireLong45">
+		<ModifiableParams
+			minAimTime="800"
+			maxAimTime="1100"
+			roundsPerSecondOverride="1"
+			minShots="1"
+			maxShots="1"
+			resetTime="200"
+			accuracyAdd="-40"
+			followupShotAccuracyAdd="3"
+			critChanceAdd="-10"
+		/>
+	</AttackType>
+
+	<AttackType name="Rangers_PistolAimedFireLong9mil">
+		<ModifiableParams
+			minAimTime="800"
+			maxAimTime="1050"
+			roundsPerSecondOverride="1.5"
+			minShots="1"
+			maxShots="1"
+			resetTime="175"
+			accuracyAdd="-30"
+			followupShotAccuracyAdd="5"
+			critChanceAdd="-10"
+		/>
+	</AttackType>
+
+	<AttackType name="Rangers_PistolAimedFireLongM9Sup">
+		<ModifiableParams
+			minAimTime="1000"
+			maxAimTime="1050"
+			roundsPerSecondOverride="1.2"
+			minShots="1"
+			maxShots="1"
+			resetTime="155"
+			accuracyAdd="-30"
+			followupShotAccuracyAdd="2"
+			critChanceAdd="-20"
+		/>
+	</AttackType>
+
+	<AttackType name="Rangers_PistolAimedFireLongM9Sup ImpAcc">
+		<ModifiableParams
+			minAimTime="975"
+			maxAimTime="1050"
+			roundsPerSecondOverride="1.3"
+			minShots="1"
+			maxShots="1"
+			resetTime="155"
+			accuracyAdd="-30"
+			followupShotAccuracyAdd="4"
+			critChanceAdd="-11"
+		/>
+	</AttackType>
+
+	<AttackType name="Rangers_PistolAimedFireLong45XX">
+		<ModifiableParams
+			minAimTime="1100"
+			maxAimTime="1100"
+			roundsPerSecondOverride="1"
+			minShots="1"
+			maxShots="1"
+			resetTime="250"
+			accuracyAdd="-50"
+			followupShotAccuracyAdd="1"
+			critChanceAdd="-30"
+		/>
+	</AttackType>
+
+	<AttackType name="Rangers_PistolAimedFireLong9milXX">
+		<ModifiableParams
+			minAimTime="1050"
+			maxAimTime="1100"
+			roundsPerSecondOverride="1"
+			minShots="1"
+			maxShots="1"
+			resetTime="175"
+			accuracyAdd="-50"
+			followupShotAccuracyAdd="2"
+			critChanceAdd="-35"
+		/>
+	</AttackType>
+
+	<!--
+		ENEMY ATTACK TYPES
+	-->
+
+
+	<AttackType name="Enemy_GruntPistolClose">
+		<ModifiableParams
+			minAimTime="250"
+			maxAimTime="350"
+			roundsPerSecondOverride="4.5"
+			minShots="1"
+			maxShots="-1"
+			resetTime="350"
+			accuracyAdd="-20"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="-10"
+		/>
+	</AttackType>
+	
+	<AttackType name="Enemy_GruntPistolHeavyClose">
+		<ModifiableParams
+			minAimTime="250"
+			maxAimTime="350"
+			roundsPerSecondOverride="3"		
+			minShots="1"
+			maxShots="-1"
+			resetTime="450"
+			accuracyAdd="-20"
+			followupShotAccuracyAdd="-4"
+			critChanceAdd="-10"
+		/>
+	</AttackType>	
+
+	<AttackType name="Enemy_GruntPistolMed">
+		<ModifiableParams
+			minAimTime="350"
+			maxAimTime="600"
+			minShots="1"
+			maxShots="1"
+			resetTime="450"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="1"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+	
+		<AttackType name="Enemy_GruntPistolHeavyMed">
+		<ModifiableParams
+			minAimTime="350"
+			maxAimTime="600"
+			minShots="1"
+			maxShots="1"
+			resetTime="550"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="-1"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="Enemy_GruntPistolLong">
+
+		<ModifiableParams
+			minAimTime="600"
+			maxAimTime="1100"
+			minShots="1"
+			maxShots="1"
+			resetTime="750"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="-25"
+		/>
+	</AttackType>
+	
+	<AttackType name="Enemy_GruntPistolLongXX">
+
+		<ModifiableParams
+			minAimTime="1100"
+			maxAimTime="1100"
+			minShots="1"
+			maxShots="1"
+			resetTime="1150"
+			accuracyAdd="-15"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="-100"
+		/>
+	</AttackType>
+
+	<!--
+		OLD (UNUSED?) ATTACK TYPES
+	-->
+
+	<AttackType name="SWAT_EmergencyFire45">
+		<ModifiableParams
+			minAimTime="200"
+			maxAimTime="200"
+			minShots="1"
+			maxShots="-1"
+			resetTime="200"
+			accuracyAdd="-60"
+			followupShotAccuracyAdd="-5"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="SWAT_DoubleTap45">
+		<ModifiableParams
+			minAimTime="200"
+			maxAimTime="200"
+			minShots="2"
+			maxShots="2"
+			resetTime="300"
+			accuracyAdd="-60"
+			followupShotAccuracyAdd="-5"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="SWAT_Mozambique45">
+		<ModifiableParams
+			minAimTime="200"
+			maxAimTime="200"
+			minShots="3"
+			maxShots="3"
+			resetTime="300"
+			accuracyAdd="-60"
+			followupShotAccuracyAdd="-5"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="SWAT_PistolAimedFireShort45">
+		<ModifiableParams
+			minAimTime="400"
+			maxAimTime="400"
+			accuracyAdd="-60"
+			minShots="1"
+			maxShots="1"
+			resetTime="0"
+			followupShotAccuracyAdd="50"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="SWAT_ControlledPair45">
+		<ModifiableParams
+			minAimTime="200"
+			maxAimTime="400"
+			roundsPerSecondOverride="4"
+			minShots="2"
+			maxShots="2"
+			resetTime="300"
+			accuracyAdd="-30"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="SWAT_MozambiqueLong45">
+		<ModifiableParams
+			minAimTime="200"
+			maxAimTime="400"
+			roundsPerSecondOverride="4"
+			minShots="3"
+			maxShots="3"
+			resetTime="300"
+			accuracyAdd="-30"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="SWAT_PistolAimedFire45">
+		<ModifiableParams
+			minAimTime="400"
+			maxAimTime="800"
+			roundsPerSecondOverride="2.5"
+			minShots="1"
+			maxShots="2"
+			resetTime="0"
+			accuracyAdd="-20"
+			followupShotAccuracyAdd="50"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="SWAT_PistolAimedFireLong45">
+		<ModifiableParams
+			minAimTime="800"
+			maxAimTime="1100"
+			minShots="1"
+			maxShots="1"
+			resetTime="200"
+			accuracyAdd="-70"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="SWAT_PistolAimedFireLong45XX">
+		<ModifiableParams
+			minAimTime="1100"
+			maxAimTime="1100"
+			minShots="1"
+			maxShots="1"
+			resetTime="200"
+			accuracyAdd="-70"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+
+
+
+
+	<!--
+		USED FOR SPECIAL IN-GAME ACTIONS (HARDCODED, NOT REFERENCED IN WEAPONS)
+	-->
+	<AttackType name="BlindFire_Auto">
+		<ModifiableParams
+			minAimTime="550"
+			maxAimTime="750"
+			minShots="4"
+			maxShots="10"
+			resetTime="1000"
+			accuracyAdd="-350"
+			followupShotAccuracyAdd="-5"
+			critChanceAdd="-15"
+		/>
+	</AttackType>
+	<AttackType name="BlindFire_Long">
+		<ModifiableParams
+			minAimTime="750"
+			maxAimTime="750"
+			minShots="1"
+			maxShots="4"
+			roundsPerSecondOverride="6"
+			resetTime="550"
+			accuracyAdd="-250"
+			followupShotAccuracyAdd="-5"
+			critChanceAdd="-15"
+		/>
+	</AttackType>
+	<AttackType name="BlindFire_Crazy">
+		<ModifiableParams
+			minAimTime="350"
+			maxAimTime="450"
+			minShots="10"
+			maxShots="20"
+			roundsPerSecondOverride="10"
+			resetTime="4000"
+			accuracyAdd="-650"
+			followupShotAccuracyAdd="-5"
+			critChanceAdd="-35"
+		/>
+	</AttackType>
+	<AttackType name="AreaSuppression_Auto">
+		<ModifiableParams
+			minAimTime="250"
+			maxAimTime="250"
+			minShots="8"
+			maxShots="12"
+			resetTime="500"
+			critChanceAdd="-25"
+		/>
+	</AttackType>
+</FirearmAttackTypes>

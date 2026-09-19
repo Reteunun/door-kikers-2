@@ -1,0 +1,227 @@
+<Equipment>
+<!--
+SUICIDE BOMB
+-->
+
+	<!-- NOTE: Don't change the name, it's hardcoded for RMG stuff -->
+	<SuicideBomb name="Suicide Bomb" inventoryBinding="Armor"
+			tooltip="@bombvest_name"
+			img="data/models/equipment/suicide_vest_ui.dds"
+			quantity="1"
+			animationSet="suicide_bomb"
+			soundUse="grenade_use"
+		>
+		<ModifiableParams
+			changeInTime="0"
+			changeOutTime="0"
+		/>
+
+		<Projectile
+			bodyTemplate="InvisibleProjectile"
+
+			soundExplosion="suicide_bomber_expl"
+
+			friendlyFire="true"
+			triggerOnImpact="true"
+
+			physicsDetonationForce="100"
+			audibleDetonationSoundRadius="40">
+
+			<FX
+				particles="SuicideExplosion"
+				entity1="ExplosionLight"
+				entity2="Blood Scorch Mark"
+				randRotation2="true"
+				entity3="FX_dust_large"
+				deleteAfterMS3="35000"
+			/>
+
+			<EffectRange radiusMeters="2">
+				<DamageEffect chancePercent="100" damage="700" damageType="2"/>
+				<SuppressEffect amount="40"/>
+				<SmokeEffect durationMSec="1000" />
+			</EffectRange>
+			<EffectRange radiusMeters="3">
+				<DamageEffect chancePercent="100" damage="700" damageType="1"/>
+				<SuppressEffect amount="40"/>
+				<SmokeEffect durationMSec="1000" />
+			</EffectRange>
+			<EffectRange radiusMeters="3.7">
+				<DamageEffect chancePercent="50" damage="15" damageType="1"/>
+				<ScatterEffect chancePercent="100" />
+				<SuppressEffect amount="10"/>
+				<StunEffect chancePercent="100" innerRangeTimeMSec="350" outerRangeTimeMSec="130"/>
+			</EffectRange>
+			<EffectRange radiusMeters="6">
+				<DamageEffect chancePercent="50" damage="10" damageType="1"/>
+				<ScatterEffect chancePercent="100" />
+				<StunEffect chancePercent="100" innerRangeTimeMSec="130" outerRangeTimeMSec="0"/>
+			</EffectRange>
+		</Projectile>
+	</SuicideBomb>
+
+	<Armor name="Bodyguard SoftArmor" inventoryBinding="Armor" unlockCost="0"
+			tooltip="@armor_enemy_softarmor_name"
+			img="data/models/equipment/armor_softleveliiia_ui.dds"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="0" turnSpeedModifierPercent="-5"/>
+
+		<!--
+		protectionArcDegrees: how wide around the trooper's origin the protection arc goes
+		coveragePercent: which percent of the bullets go through (they deal 1 damage if bullet piercing < protectionLevel or full damage otherwise)
+		piercingProtectionLevel: gets compared to the bullet's piercingLevel (recive 1 damage if > bulletPiercing and goes through CoveragePercent or normal damage otherwise)
+		-->
+		<Params>
+			<ProtectionArc degrees="90" coveragePercent="40" piercingProtectionLevel="40"/>
+			<ProtectionArc degrees="270" coveragePercent="20" piercingProtectionLevel="40"/>
+			<ProtectionArc degrees="360" coveragePercent="40" piercingProtectionLevel="40"/>
+		</Params>
+	</Armor>
+
+	<Armor name="Bodyguard HeavyArmor" inventoryBinding="Armor" unlockCost="0"
+			tooltip="@armor_enemy_heavyarmor_name"
+			img="data/models/equipment/armor_basic_ui.dds"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="0" turnSpeedModifierPercent="-10"/>
+
+		<!--
+		protectionArcDegrees: how wide around the trooper's origin the protection arc goes
+		coveragePercent: which percent of the bullets go through (they deal 1 damage if bullet piercing < protectionLevel or full damage otherwise)
+		piercingProtectionLevel: gets compared to the bullet's piercingLevel (recive 1 damage if > bulletPiercing and goes through CoveragePercent or normal damage otherwise)
+		-->
+		<Params>
+			<ProtectionArc degrees="90" coveragePercent="40" piercingProtectionLevel="50"/>
+			<ProtectionArc degrees="270" coveragePercent="20" piercingProtectionLevel="40"/>
+			<ProtectionArc degrees="360" coveragePercent="40" piercingProtectionLevel="50"/>
+		</Params>
+	</Armor>
+
+	<Helmet name="SSI HelmetFAST" inventoryBinding="Helmet"
+			tooltip="@helmet_rangers_fast_name"
+			description="@helmet_rangers_fast_desc"
+			img="data/models/humans/attachments/ranger_helmet_ui.dds"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="0" turnSpeedModifierPercent="0"/>
+		<ConcealmentModifier add="0" />
+
+		<Params>
+			<ProtectionArc degrees="360" coveragePercent="10" piercingProtectionLevel="30"/>
+		</Params>
+	</Helmet>
+
+	<Armor name="SSI Raid Vest" inventoryBinding="Armor"
+			tooltip="@armor_rangers_jump_swimmeriv_name"
+			description="@armor_rangers_jump_swimmeriv_desc"
+			img="data/models/equipment/armor_jump_swimmeriv_ui.dds"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-8" turnSpeedModifierPercent="0"/>
+		<ConcealmentModifier add="-3" />
+
+		<Params>
+			<ProtectionArc degrees="86" coveragePercent="34" piercingProtectionLevel="60"/>
+			<ProtectionArc degrees="270" coveragePercent="0" piercingProtectionLevel="0"/>
+			<ProtectionArc degrees="360" coveragePercent="34" piercingProtectionLevel="60"/>
+		</Params>
+	</Armor>
+
+	<HelmetNVG name="SSI NVG" inventoryBinding="HelmetNVG"
+			tooltip=""
+			description=""
+			img="data/models/humans/attachments/nvg_02_ui.dds"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="0" turnSpeedModifierPercent="-2"/>
+		<ConcealmentModifier add="0" />
+
+		<!-- fov params overwrite the base ones -->
+		<ModifiableParams
+			fovDegrees="60"
+			fovRadiusMeters="0.42"
+			fovRangeMeters="999"
+		/>
+
+		<!-- this is shown for daylight missions -->
+		<RenderObject3D model="data/models/humans/attachments/nvg_02_up.khm" diffuseTex="data/models/humans/attachments/nvg_02.dds" attachSlot="nvg">
+			<Specular shininess="8" intensity="1.3"/>
+		</RenderObject3D>
+
+		<!-- this is shown in night missions -->
+		<RenderObject3D model="data/models/humans/attachments/nvg_02.khm" diffuseTex="data/models/humans/attachments/nvg_02.dds" attachSlot="nvg">
+			<Specular shininess="8" intensity="1.3"/>
+		</RenderObject3D>
+		<RenderObject3D model="data/models/humans/attachments/nvg_02_lights.khm" diffuseTex="data/textures/fx/light_flare_01.dds" diffuseColor="84ff47" blendMode="add" attachSlot="nvg">
+		</RenderObject3D>
+	</HelmetNVG>
+
+	<Grenade name="Frag Grenade Enemy" inventoryBinding="UtilityPouch"
+			quantity="2"
+
+			tooltip="@grenade_frag_name"
+			description="@grenade_frag_desc"
+			img="data/models/equipment/frag_grenade_ui.dds"
+
+			animationSet="grenade"
+			soundUse="grenade_use"
+			soundUseVoice="VOX_GEAR_FRAG"
+		>
+		<RenderObject3D model="data/models/equipment/frag_grenade.khm" skipGOSSAO="true" diffuseTex="data/models/equipment/frag_grenade.dds"/>
+		<ConcealmentModifier add="-1"/>
+		<MobilityModifiers moveSpeedModifierPercent="-0.5" turnSpeedModifierPercent="0"/>
+
+		<ModifiableParams
+			changeInTime="800"
+			changeOutTime="0"
+			throwTime="2000"
+			throwTimeCorner="1400"
+		/>
+
+		<Projectile
+			bodyTemplate="FragGrenade"
+			pathIconTexture="data/textures/gui/contextual/pathicon_stinger_active.tga"
+
+			soundExplosion="frag_expl"
+			soundHitFloor="grenade_hit_floor"
+
+			friendlyFire="true"
+			triggerOnImpact="false"
+			triggerTimeAfterTargetHitMsec="2500"
+
+			accuracyPercent="50"
+
+			physicsDetonationForce="60"
+			audibleLaunchSoundRadius="0"
+			audibleDetonationSoundRadius="30">
+
+			<!-- spawn these when exploding -->
+			<FX
+				particles="FragGrenade"
+				entity1="ExplosionLight"
+				entity2="explosion_mark"
+				randRotation2="true"
+				entity3="FX_dust_small"
+				deleteAfterMS3="20000"
+				anim2D="">
+			</FX>
+
+			<EffectRange radiusMeters="1.7">
+				<StunEffect chancePercent="100" innerRangeTimeMSec="1500" outerRangeTimeMSec="1500"/>
+				<DamageEffect chancePercent="100" damage="100" damageType="1"  armorPenetration="0"/>
+				<ScatterEffect chancePercent="100" armorPenetration="30"/>
+				<SuppressEffect amount="20"/>
+				<SmokeEffect durationMSec="700" />
+			</EffectRange>
+			<EffectRange radiusMeters="2.0">
+				<StunEffect chancePercent="100" innerRangeTimeMSec="1500" outerRangeTimeMSec="1500"/>
+				<DamageEffect chancePercent="100" damage="100" damageType="1"/>
+				<ScatterEffect chancePercent="100" armorPenetration="30"/>
+				<SuppressEffect amount="20"/>
+			</EffectRange>
+			<EffectRange radiusMeters="4.2">
+				<StunEffect chancePercent="100" innerRangeTimeMSec="800" outerRangeTimeMSec="500"/>
+				<DamageEffect chancePercent="50" damage="20" damageType="1"/>
+				<ScatterEffect chancePercent="100" armorPenetration="0"/>
+				<SuppressEffect amount="20"/>
+			</EffectRange>
+		</Projectile>
+	</Grenade>
+
+</Equipment>

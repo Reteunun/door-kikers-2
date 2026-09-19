@@ -1,0 +1,5 @@
+The game expects a certain kind of file format here.
+Only keep the same kind of resource files in this folder.
+
+Mods can add more types of these files by recreating the same folder hierarchy and adding their own files.
+If a mod file has the same name as a file from the stock game, the mod file will replace the stock one.

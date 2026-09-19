@@ -1,0 +1,228 @@
+<Equipment>
+
+
+	<Ammo name="melee_ammo"
+			tooltip="@ammo_12GA00BUCK_name"
+			description="@ammo_12GA00BUCK_desc"
+			img="data/models/weapons/attachments/m162_buckshot_ammo_ui.dds"
+		>
+
+		<!-- defines base ROF and sound of weapon -->
+		<Params roundsPerSecond="1.4"
+				audibleSoundRadius="10"
+				physicsImpactForce="3.5"
+				>
+
+			<!-- the damage value is linearly interpolated in the given range, between min/max damage -->
+			<Damage start="10" end="5" startDist="0" endDist="4"/>
+
+			<!-- base value, can be modified by AttackType/Abilities/Doctrine/etc. -->
+			<CriticalChancePercent start="12" end="5" startDist="0" endDist="4"/>
+
+			<!-- i.e. divides distance range in (end - start) discrete intervals for AP -->
+			<ArmorPenetration start="70" end="70" startDist="0" endDist="20"/>
+		</Params>
+	</Ammo>
+
+	<Bind eqp="Melee Weapon">
+		<to name="melee_ammo"/>
+		<to name="IronSights"/>
+	</Bind>
+ 	<Firearm name="Melee Weapon" inventoryBinding="PrimaryWeapon" category="melee" unlockCost="6"
+			tooltip="@weapon_melee_name"
+			description=""
+			img="data/models/weapons/sword_ui.dds"
+
+			animationSet="melee"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-5" turnSpeedModifierPercent="-2"/>
+		<ConcealmentModifier add="-3" />
+		<RenderObject3D model="data/models/weapons/sword.khm" skipGOSSAO="true" diffuseTex="data/models/weapons/sword.dds">
+			<Specular shininess="32" intensity="4.0"/>
+		</RenderObject3D>
+
+		<!-- the efficiency percent is multiplied by hitTime time to get the final breaching time -->
+		<ModifiableParams
+			changeInTime="800"
+			changeOutTime="600"
+			efficiencyPercent="100"
+			audibleSoundRadius="12.0"
+			
+			meleeDamageBonus="30"
+			meleeReach="1.2"
+			meleeAttackCooldown="850"
+			meleeAttackDuration="600"
+			roundsPerMagazine="0"
+			
+			reloadTime="5"
+			reloadEmptyTime="5"
+			readyTime="350"
+			guardTime="200"
+
+			accuracyStart="100"
+			accuracyEnd="10"
+			accuracyStartDist="0"
+			accuracyEndDist="5"
+
+			suppressionScale="0.05"
+		/>
+
+		<Params
+			operationInfoText="@firearm_operation_pumpaction_name"
+		/>
+
+		<AttackTypes>
+			<AttackType name="Rangers_PumpAimedFire" rangeMeters="9999"/>
+		</AttackTypes>
+
+		<Sounds> <!-- max 4 variants for each action -->
+			<!-- <Equip name="870br_eqp"/> -->
+			<!-- <Unequip name="870br_neqp"/> -->
+			<Fire name="melee_hit"/>
+			<!-- <ShellDrop name="shotgun_shell_drop"/> -->
+		</Sounds>
+	</Firearm>
+
+	<Ammo name="execution_ammo"
+			tooltip="@ammo_12GA00BUCK_name"
+			description="@ammo_12GA00BUCK_desc"
+			img="data/models/weapons/attachments/m162_buckshot_ammo_ui.dds"
+		>
+
+		<!-- defines base ROF and sound of weapon -->
+		<Params roundsPerSecond="0.2"
+				audibleSoundRadius="10"
+				physicsImpactForce="0.1"
+				>
+
+			<!-- the damage value is linearly interpolated in the given range, between min/max damage -->
+			<Damage start="40" end="15" startDist="0" endDist="4"/>
+
+			<!-- base value, can be modified by AttackType/Abilities/Doctrine/etc. -->
+			<CriticalChancePercent start="100" end="5" startDist="1" endDist="4"/>
+
+			<!-- i.e. divides distance range in (end - start) discrete intervals for AP -->
+			<ArmorPenetration start="80" end="80" startDist="0" endDist="20"/>
+		</Params>
+	</Ammo>
+	
+	
+	<Bind eqp="Executioner Sword">
+		<to name="execution_ammo"/>
+		<to name="IronSights"/>
+	</Bind>
+ 	<Firearm name="Executioner Sword" inventoryBinding="PrimaryWeapon" category="melee" 
+			tooltip="@weapon_melee_name"
+			description=""
+			img="data/models/weapons/sword_ui.dds"
+
+			animationSet="melee"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-8" turnSpeedModifierPercent="-2"/>
+		<ConcealmentModifier add="-3" />
+		<RenderObject3D model="data/models/weapons/sword.khm" skipGOSSAO="true" diffuseTex="data/models/weapons/sword.dds">
+			<Specular shininess="32" intensity="4.0"/>
+		</RenderObject3D>
+
+		<!-- the efficiency percent is multiplied by hitTime time to get the final breaching time -->
+		<ModifiableParams
+			changeInTime="800"
+			changeOutTime="600"
+			efficiencyPercent="100"
+			audibleSoundRadius="12.0"
+			
+			meleeDamageBonus="100"
+			meleeReach="1.2"
+			meleeAttackCooldown="850"
+			meleeAttackDuration="1200"
+			roundsPerMagazine="0"
+			
+			reloadTime="5"
+			reloadEmptyTime="5"
+			readyTime="3350"
+			guardTime="1200"
+
+			accuracyStart="100"
+			accuracyEnd="10"
+			accuracyStartDist="0"
+			accuracyEndDist="5"
+
+			suppressionScale="0.05"
+		/>
+
+		<Params
+			operationInfoText="@firearm_operation_pumpaction_name"
+		/>
+
+		<AttackTypes>
+			<AttackType name="Rangers_PumpAimedFire" rangeMeters="9999"/>
+		</AttackTypes>
+
+		<Sounds> <!-- max 4 variants for each action -->
+			<!-- <Equip name="870br_eqp"/> -->
+			<!-- <Unequip name="870br_neqp"/> -->
+			<Fire name="melee_hit"/>
+			<!-- <ShellDrop name="shotgun_shell_drop"/> -->
+		</Sounds>
+	</Firearm>
+	
+	<Bind eqp="Kitchen Knife">
+		<to name="melee_ammo"/>
+		<to name="IronSights"/>
+	</Bind>
+ 	<Firearm name="Kitchen Knife" inventoryBinding="PrimaryWeapon" category="melee" unlockCost="6"
+			tooltip="@weapon_melee_name"
+			description=""
+			img="data/models/weapons/kitchen_knife_pickup_ui.dds"
+
+			animationSet="melee"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-2"/>
+		<ConcealmentModifier add="-1" />
+		<RenderObject3D model="data/models/weapons/kitchen_knife_pickup.khm" skipGOSSAO="true" diffuseTex="data/models/environment/interior/kitchenware_01.dds">
+			<Specular shininess="32" intensity="4.0"/>
+		</RenderObject3D>
+
+		<!-- the efficiency percent is multiplied by hitTime time to get the final breaching time -->
+		<ModifiableParams
+			changeInTime="300"
+			changeOutTime="400"
+			efficiencyPercent="100"
+			audibleSoundRadius="12.0"
+			
+			meleeDamageBonus="30"
+			meleeReach="1.0"
+			meleeAttackCooldown="250"
+			meleeAttackDuration="150"
+			roundsPerMagazine="0"
+			
+			reloadTime="5"
+			reloadEmptyTime="5"
+			readyTime="100"
+			guardTime="200"
+
+			accuracyStart="100"
+			accuracyEnd="10"
+			accuracyStartDist="0"
+			accuracyEndDist="5"
+
+			suppressionScale="0.05"
+		/>
+
+		<Params
+			operationInfoText="@firearm_operation_pumpaction_name"
+		/>
+
+		<AttackTypes>
+			<AttackType name="Rangers_PumpAimedFire" rangeMeters="9999"/>
+		</AttackTypes>
+
+		<Sounds> <!-- max 4 variants for each action -->
+			<!-- <Equip name="870br_eqp"/> -->
+			<!-- <Unequip name="870br_neqp"/> -->
+			<Fire name="melee_hit"/>
+			<!-- <ShellDrop name="shotgun_shell_drop"/> -->
+		</Sounds>
+	</Firearm>
+	
+</Equipment>

@@ -1,0 +1,81 @@
+<Equipment>
+
+	
+	<Ammo name="DSHK_Ammo">
+		<Params roundsPerSecond="10"
+				audibleSoundRadius="100"
+				physicsImpactForce="22.0"
+				damageType="0"
+				silenced="0">
+			<Damage start="28" end="28" startDist="0" endDist="100"/>
+			<CriticalChancePercent start="15" end="15" startDist="0" endDist="100"/>
+			<ArmorPenetration start="70" end="70" startDist="0" endDist="100"/>
+		</Params>
+	</Ammo>
+	<Bind eqp="DSHK_Mount">
+		<to name="DSHK_Ammo"/>
+	</Bind>
+	<Firearm name="DSHK_Mount" inventoryBinding="PrimaryWeapon" category="rifle" unlockCost="0"
+			tooltip="@mountedweap_dshk_name"
+			img="data/models/weapons/dshk_ui.dds"
+			animationSet="dshk"
+		>
+		<!-- NOTE: If you set the turnSpeedModifierPercent lower they will have a really hard time shooting sprinting targets -->
+		<MobilityModifiers moveSpeedModifierPercent="0" turnSpeedModifierPercent="-50"/>
+		<RenderObject3D model="data/models/environment/exterior/dshk_gun.khm" attachSlot="prop_back_rifle" skipGOSSAO="true" diffuseTex="data/models/environment/exterior/dshk.dds"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="50"
+			closedBolt="0"
+
+			cyclicReload="0"
+			reloadTime="12000"
+			reloadEmptyTime="12000"
+			changeInTime="1000"
+			changeOutTime="400"
+			readyTime="200"
+			guardTime="700"
+
+			accuracyStart="60"
+			accuracyEnd="25"
+			accuracyStartDist="20"
+			accuracyEndDist="100"
+
+			suppressionScale="1.8"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_127x108_name"
+			operationInfoText="@firearm_operation_fullauto_name"
+			ejectingShellEntity="BulletCasingLarge"
+			magazineEntity="dshk_mag"
+			ai_rangeMin="2.5"
+			ai_rangeOptimal="20.0"
+			ai_rangeMax="200.0"
+			ai_stopWhenShooting="false"
+		/>
+
+		<AttackTypes>
+			<AttackType name="RPKStrafeMedMounted" rangeMeters="30"/>
+			<AttackType name="RPKStrafeLongMounted" rangeMeters="9999"/>
+		</AttackTypes>
+
+		<MuzzleFlash lightTemplate="ShotLightLarge" tracerTemplate="Tracer_LMG">
+			<Flare particles="FX_MUZZLE_FLASH_LMG_01" />
+			<Flare particles="FX_MUZZLE_FLASH_LMG_02" />
+			<Flare particles="FX_MUZZLE_FLASH_LMG_03" />
+			<Flare particles="FX_MUZZLE_FLASH_LMG_04" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="rifle_eqp"/>
+			<Unequip name="rifle_neqp"/>
+			<Reload name="rifle_reld"/>
+			<ReloadEmpty name="rifle_reldempt"/>
+			<Fire name="dshka_fire"/>
+			<ShellDrop name="rifle_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+</Equipment>

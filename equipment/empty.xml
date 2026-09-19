@@ -1,0 +1,55 @@
+<Equipment>
+
+	<!--
+		these control where the Empty option shows up in the customization screen (for which slot/class combo)
+	-->
+
+	<Bind eqp="EmptyUtility" to="Rangers"/>
+	<Bind eqp="EmptyUtility" to="CIA"/>
+	<Bind eqp="EmptyUtility" to="Nowheraki"/>
+	<Empty name="EmptyUtility" inventoryBinding="UtilityPouch" tooltip="@menu_cust_item_empty">
+	</Empty>
+
+	<Bind eqp="EmptyPrimary" to="CIA"/>
+	<Bind eqp="EmptyPrimary" to="SwatAssaulter"/>
+	<Empty name="EmptyPrimary" inventoryBinding="PrimaryWeapon" tooltip="@menu_cust_item_empty">
+	</Empty>
+
+	<Bind eqp="EmptySecondary" to="Rangers"/>
+	<Bind eqp="EmptySecondary" to="CIA"/>
+	<Bind eqp="EmptySecondary" to="Nowheraki"/>
+	<Empty name="EmptySecondary" inventoryBinding="SecondaryWeapon" tooltip="@menu_cust_item_empty">
+	</Empty>
+
+	<Empty name="EmptyHelmet" inventoryBinding="Helmet" tooltip="@menu_cust_item_empty">
+	</Empty>
+
+	<Bind eqp="EmptyHelmetNVG" to="Rangers"/>
+	<Bind eqp="EmptyHelmetNVG" to="CIA"/>
+	<Bind eqp="EmptyHelmetNVG" to="Nowheraki"/>
+	<Empty name="EmptyHelmetNVG" inventoryBinding="HelmetNVG" tooltip="@menu_cust_item_empty">
+	</Empty>
+
+	<Bind eqp="EmptyArmor" to="CIA"/>
+	<Bind eqp="EmptyArmor" to="Nowheraki"/>
+	<Empty name="EmptyArmor" inventoryBinding="Armor" tooltip="@menu_cust_item_empty">
+	</Empty>
+
+	<Bind eqp="EmptySupportGear" to="Rangers"/>
+	<Bind eqp="EmptySupportGear" to="CIA"/>
+	<Bind eqp="EmptySupportGear" to="Nowheraki"/>
+	<Empty name="EmptySupportGear" inventoryBinding="SupportGear1" tooltip="@menu_cust_item_empty">
+	</Empty>
+
+	<Bind eqp="EmptyPrimaryMuzzle" to="Rangers"/>
+	<Bind eqp="EmptyPrimaryMuzzle" to="CIA"/>
+	<Bind eqp="EmptyPrimaryMuzzle" to="Nowheraki"/>
+	<Empty name="EmptyPrimaryMuzzle" inventoryBinding="PrimaryWeaponMuzzle" tooltip="@menu_cust_item_empty">
+	</Empty>
+
+	<Bind eqp="EmptySecondaryMuzzle" to="Rangers"/>
+	<Bind eqp="EmptySecondaryMuzzle" to="CIA"/>
+	<Bind eqp="EmptySecondaryMuzzle" to="Nowheraki"/>
+	<Empty name="EmptySecondaryMuzzle" inventoryBinding="SecondaryWeaponMuzzle" tooltip="@menu_cust_item_empty">
+	</Empty>
+</Equipment>
